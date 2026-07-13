@@ -70,6 +70,7 @@ fun BoardScreen(
     viewModel: BoardViewModel,
     onAboutPressed: () -> Unit,
     hapticEnabled: Boolean = false,
+    gridColumns: Int = 4,
 ) {
     val state by viewModel.uiState.collectAsState()
     val speaking by viewModel.speaking.collectAsState()
@@ -103,6 +104,7 @@ fun BoardScreen(
             )
             PictogramGrid(
                 cells = state.cells,
+                columns = gridColumns,
                 onPictogramTapped = viewModel::onPictogramTapped,
                 onFolderTapped = viewModel::onFolderTapped,
                 onBackToHome = viewModel::onBackToHome,
@@ -383,13 +385,15 @@ private const val CLEAR_HINT_MS = 2500L
 @Composable
 private fun PictogramGrid(
     cells: List<BoardCellUi>,
+    columns: Int,
     onPictogramTapped: (PictogramToken) -> Unit,
     onFolderTapped: (String) -> Unit,
     onBackToHome: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     LazyVerticalGrid(
-        columns = GridCells.Adaptive(minSize = 112.dp),
+        // Fixed (not Adaptive) so a pictogram keeps its position across rotation / screen size.
+        columns = GridCells.Fixed(columns),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = modifier.testTag("board-grid"),

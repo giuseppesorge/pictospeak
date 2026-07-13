@@ -20,6 +20,7 @@
     <string name="about_license_body">Il codice di PictoSpeak è distribuito con licenza Apache 2.0. Le licenze di simboli e lessico sono separate — vedi THIRD_PARTY_NOTICES.md nel repository.</string>
     <string name="settings_title">Impostazioni</string>
     <string name="settings_language">Lingua</string>
+    <string name="settings_grid_density">Colonne griglia</string>
     <string name="settings_language_it">Italiano</string>
     <string name="settings_language_en">English</string>
     <string name="settings_rate">Velocità voce</string>

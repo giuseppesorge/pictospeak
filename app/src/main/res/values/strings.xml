@@ -22,6 +22,7 @@
     <string name="about_license_body">PictoSpeak code is licensed under the Apache License 2.0. Symbol and lexicon licenses are separate — see THIRD_PARTY_NOTICES.md in the project repository.</string>
     <string name="settings_title">Settings</string>
     <string name="settings_language">Language</string>
+    <string name="settings_grid_density">Grid columns</string>
     <string name="settings_language_it">Italiano</string>
     <string name="settings_language_en">English</string>
     <string name="settings_rate">Speech rate</string>

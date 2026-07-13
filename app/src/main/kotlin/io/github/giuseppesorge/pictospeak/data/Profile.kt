@@ -19,8 +19,12 @@ data class Profile(
     val speakLabelOnTap: Boolean = false,
     /** A short confirmation vibration on selection/confirm. Off by default (docs/backlog.md). */
     val hapticFeedback: Boolean = false,
-    /** Grid cell minimum size in dp — larger = fewer, bigger cells. */
-    val gridMinCellDp: Int = DEFAULT_GRID_MIN_CELL_DP,
+    /**
+     * Number of grid columns (a caregiver density preset). A FIXED count keeps each pictogram
+     * in the same position across rotation and screen size — motor planning depends on it
+     * (docs/ui-conventions.md). Fewer columns = bigger cells.
+     */
+    val gridColumns: Int = DEFAULT_GRID_COLUMNS,
     /** Optional on-device LLM refiner (play flavor + capable device only). Default off. */
     val llmEnabled: Boolean = false,
     /** Recorded acceptance of the imported model's license terms (llm/NOTICE-models.md). */
@@ -29,8 +33,11 @@ data class Profile(
     val setupComplete: Boolean = false,
 ) {
     companion object {
-        const val DEFAULT_GRID_MIN_CELL_DP = 112
+        const val DEFAULT_GRID_COLUMNS = 4
         const val DEFAULT_LANGUAGE = "it"
         val SUPPORTED_LANGUAGES = listOf("it", "en")
+
+        /** Density presets (columns), 3×2 … 6×10 per docs/ui-conventions.md. */
+        val GRID_COLUMN_PRESETS = listOf(3, 4, 5, 6)
     }
 }

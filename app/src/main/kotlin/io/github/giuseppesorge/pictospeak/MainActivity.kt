@@ -94,6 +94,7 @@ private fun App(container: AppContainer) {
                 boardViewModel,
                 onAboutPressed = { screen = Screen.About },
                 hapticEnabled = profile.hapticFeedback,
+                gridColumns = profile.gridColumns,
             )
         }
         Screen.About ->

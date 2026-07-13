@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
@@ -72,6 +73,8 @@ fun SettingsScreen(
             )
 
             LanguageChooser(profile.language) { onProfileChange(profile.copy(language = it)) }
+
+            GridDensityChooser(profile.gridColumns) { onProfileChange(profile.copy(gridColumns = it)) }
 
             LabeledSlider(
                 label = stringResource(R.string.settings_rate),
@@ -156,6 +159,52 @@ private fun LanguageChooser(
                     languageName(lang),
                     style = MaterialTheme.typography.bodyLarge,
                     modifier = Modifier.padding(start = 8.dp),
+                )
+            }
+        }
+    }
+}
+
+/** Caregiver density preset: a fixed column count keeps pictogram positions stable. */
+@Composable
+private fun GridDensityChooser(
+    current: Int,
+    onSelect: (Int) -> Unit,
+) {
+    Text(
+        stringResource(R.string.settings_grid_density),
+        style = MaterialTheme.typography.titleMedium,
+        modifier = Modifier.semantics { heading() },
+    )
+    Row(
+        modifier = Modifier.selectableGroup(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Profile.GRID_COLUMN_PRESETS.forEach { columns ->
+            val selected = current == columns
+            Surface(
+                color =
+                    if (selected) {
+                        MaterialTheme.colorScheme.primary
+                    } else {
+                        MaterialTheme.colorScheme.surfaceContainerHighest
+                    },
+                contentColor =
+                    if (selected) {
+                        MaterialTheme.colorScheme.onPrimary
+                    } else {
+                        MaterialTheme.colorScheme.onSurface
+                    },
+                shape = MaterialTheme.shapes.small,
+                modifier =
+                    Modifier
+                        .heightIn(min = 48.dp)
+                        .selectable(selected = selected, role = Role.RadioButton) { onSelect(columns) },
+            ) {
+                Text(
+                    columns.toString(),
+                    style = MaterialTheme.typography.titleMedium,
+                    modifier = Modifier.padding(horizontal = 20.dp, vertical = 12.dp),
                 )
             }
         }
