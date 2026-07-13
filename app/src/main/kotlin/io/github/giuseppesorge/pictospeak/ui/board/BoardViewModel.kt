@@ -58,7 +58,8 @@ class BoardViewModel(
     private val sentenceEngine: SentenceEngine,
     private val sentenceRefiner: SentenceRefiner?,
     private val ttsGateway: TtsGateway,
-    private val vocabularyRepository: VocabularyRepository,
+    vocabularyRepository: VocabularyRepository,
+    private val speakLabelOnTap: Boolean = false,
     private val computeDispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(BoardUiState())
@@ -80,6 +81,9 @@ class BoardViewModel(
     }
 
     fun onPictogramTapped(token: PictogramToken) {
+        // Optional word preview: user-initiated speech of exactly the tapped label — not
+        // generated text — so it is compatible with INVARIANT-1 (docs/architecture.md).
+        if (speakLabelOnTap) ttsGateway.speakWordPreview(token)
         if (_uiState.value.selection.size >= MAX_SELECTION) return
         _uiState.update { it.copy(selection = it.selection + token) }
         recompute()

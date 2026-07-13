@@ -1,0 +1,121 @@
+package io.github.giuseppesorge.pictospeak.ui.settings
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Slider
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Switch
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
+import io.github.giuseppesorge.pictospeak.R
+import io.github.giuseppesorge.pictospeak.data.Profile
+
+/**
+ * Caregiver settings: language pack, speech rate/pitch, tap-to-hear. Separated from the
+ * user's communicating space; reached via the About/settings affordance. All changes are
+ * applied and persisted immediately by the caller.
+ */
+@Composable
+fun SettingsScreen(
+    profile: Profile,
+    onProfileChange: (Profile) -> Unit,
+    onBack: () -> Unit,
+) {
+    Surface(modifier = Modifier.fillMaxSize()) {
+        Column(
+            modifier =
+                Modifier
+                    .padding(24.dp)
+                    .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            TextButton(onClick = onBack) { Text(stringResource(R.string.board_back_home)) }
+            Text(stringResource(R.string.settings_title), style = MaterialTheme.typography.headlineMedium)
+
+            Text(stringResource(R.string.settings_language), style = MaterialTheme.typography.titleMedium)
+            Profile.SUPPORTED_LANGUAGES.forEach { lang ->
+                Row(
+                    modifier =
+                        Modifier
+                            .fillMaxWidth()
+                            .selectable(selected = profile.language == lang) {
+                                onProfileChange(profile.copy(language = lang))
+                            }.padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    RadioButton(selected = profile.language == lang, onClick = null)
+                    Text(
+                        languageName(lang),
+                        style = MaterialTheme.typography.bodyLarge,
+                        modifier = Modifier.padding(start = 8.dp),
+                    )
+                }
+            }
+
+            LabeledSlider(
+                label = stringResource(R.string.settings_rate),
+                value = profile.ttsRate,
+                range = RATE_MIN..RATE_MAX,
+                onChange = { onProfileChange(profile.copy(ttsRate = it)) },
+            )
+            LabeledSlider(
+                label = stringResource(R.string.settings_pitch),
+                value = profile.ttsPitch,
+                range = PITCH_MIN..PITCH_MAX,
+                onChange = { onProfileChange(profile.copy(ttsPitch = it)) },
+            )
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(stringResource(R.string.settings_speak_on_tap), style = MaterialTheme.typography.bodyLarge)
+                Switch(
+                    checked = profile.speakLabelOnTap,
+                    onCheckedChange = { onProfileChange(profile.copy(speakLabelOnTap = it)) },
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun LabeledSlider(
+    label: String,
+    value: Float,
+    range: ClosedFloatingPointRange<Float>,
+    onChange: (Float) -> Unit,
+) {
+    Column {
+        Text("$label  ${"%.1f".format(value)}", style = MaterialTheme.typography.bodyLarge)
+        Slider(value = value, onValueChange = onChange, valueRange = range)
+    }
+}
+
+@Composable
+private fun languageName(lang: String): String =
+    when (lang) {
+        "it" -> stringResource(R.string.settings_language_it)
+        "en" -> stringResource(R.string.settings_language_en)
+        else -> lang
+    }
+
+private const val RATE_MIN = 0.5f
+private const val RATE_MAX = 1.5f
+private const val PITCH_MIN = 0.5f
+private const val PITCH_MAX = 1.5f

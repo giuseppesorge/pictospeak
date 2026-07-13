@@ -14,4 +14,23 @@
     <string name="about_symbols_title">Pictographic symbols</string>
     <string name="about_license_title">License</string>
     <string name="about_license_body">PictoSpeak code is licensed under the Apache License 2.0. Symbol and lexicon licenses are separate — see THIRD_PARTY_NOTICES.md in the project repository.</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_it">Italiano</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_rate">Speech rate</string>
+    <string name="settings_pitch">Pitch</string>
+    <string name="settings_speak_on_tap">Speak word when tapped</string>
+    <string name="setup_title">Speech setup</string>
+    <string name="setup_test_voice">Test voice</string>
+    <string name="setup_install_voice">Install voice data</string>
+    <string name="setup_open_settings">Open settings</string>
+    <string name="setup_continue">Continue</string>
+    <string name="settings_open">Settings</string>
+    <string name="setup_status_initializing">Checking the speech engine…</string>
+    <string name="setup_status_ready_offline">An offline voice is ready. The device can speak without internet.</string>
+    <string name="setup_status_ready_online">A voice is ready, but it may need internet. Install an offline voice for full offline use.</string>
+    <string name="setup_status_missing_voice">A voice for this language must be downloaded once (needs internet for this step only).</string>
+    <string name="setup_status_no_language">This device has no voice for the selected language. Try another language in settings.</string>
+    <string name="setup_status_no_engine">No speech engine was found on this device.</string>
 </resources>

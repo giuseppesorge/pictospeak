@@ -21,7 +21,10 @@ import io.github.giuseppesorge.pictospeak.R
  * The ARASAAC attribution below is the official wording and must never be reworded.
  */
 @Composable
-fun AboutScreen(onBack: () -> Unit) {
+fun AboutScreen(
+    onBack: () -> Unit,
+    onOpenSettings: () -> Unit,
+) {
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier =
@@ -31,6 +34,7 @@ fun AboutScreen(onBack: () -> Unit) {
         ) {
             TextButton(onClick = onBack) { Text(stringResource(R.string.board_back_home)) }
             Text("PictoSpeak", style = MaterialTheme.typography.headlineMedium)
+            TextButton(onClick = onOpenSettings) { Text(stringResource(R.string.settings_open)) }
             Text(
                 stringResource(R.string.about_tagline),
                 style = MaterialTheme.typography.bodyLarge,

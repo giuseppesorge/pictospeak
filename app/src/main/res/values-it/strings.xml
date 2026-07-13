@@ -12,4 +12,23 @@
     <string name="about_symbols_title">Simboli pittografici</string>
     <string name="about_license_title">Licenza</string>
     <string name="about_license_body">Il codice di PictoSpeak è distribuito con licenza Apache 2.0. Le licenze di simboli e lessico sono separate — vedi THIRD_PARTY_NOTICES.md nel repository.</string>
+    <string name="settings_title">Impostazioni</string>
+    <string name="settings_language">Lingua</string>
+    <string name="settings_language_it">Italiano</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_rate">Velocità voce</string>
+    <string name="settings_pitch">Tono</string>
+    <string name="settings_speak_on_tap">Pronuncia la parola al tocco</string>
+    <string name="setup_title">Configurazione voce</string>
+    <string name="setup_test_voice">Prova la voce</string>
+    <string name="setup_install_voice">Installa i dati vocali</string>
+    <string name="setup_open_settings">Apri impostazioni</string>
+    <string name="setup_continue">Continua</string>
+    <string name="settings_open">Impostazioni</string>
+    <string name="setup_status_initializing">Controllo del motore vocale…</string>
+    <string name="setup_status_ready_offline">Una voce offline è pronta. Il dispositivo può parlare senza internet.</string>
+    <string name="setup_status_ready_online">Una voce è pronta, ma potrebbe richiedere internet. Installa una voce offline per l\'uso completo.</string>
+    <string name="setup_status_missing_voice">Una voce per questa lingua va scaricata una volta (serve internet solo per questo).</string>
+    <string name="setup_status_no_language">Questo dispositivo non ha una voce per la lingua scelta. Prova un\'altra lingua nelle impostazioni.</string>
+    <string name="setup_status_no_engine">Nessun motore vocale trovato su questo dispositivo.</string>
 </resources>

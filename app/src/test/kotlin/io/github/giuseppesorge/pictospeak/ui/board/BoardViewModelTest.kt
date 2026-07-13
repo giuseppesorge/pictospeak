@@ -35,12 +35,13 @@ class BoardViewModelTest {
         Dispatchers.resetMain()
     }
 
-    private fun viewModel() =
+    private fun viewModel(speakLabelOnTap: Boolean = false) =
         BoardViewModel(
             sentenceEngine = TemplateSentenceEngine.forLanguage("it", null),
             sentenceRefiner = null,
             ttsGateway = tts,
             vocabularyRepository = FakeVocabularyRepository(listOf(io, mangiare)),
+            speakLabelOnTap = speakLabelOnTap,
             computeDispatcher = dispatcher,
         )
 
@@ -161,6 +162,22 @@ class BoardViewModelTest {
             dispatcher.scheduler.advanceUntilIdle()
             vm.onSpeakPressed()
             assertTrue(tts.spoken.isEmpty())
+        }
+
+    @Test
+    fun `word preview fires on tap only when enabled - and is not generated speech`() =
+        runTest(dispatcher) {
+            val off = viewModel(speakLabelOnTap = false)
+            off.onPictogramTapped(io)
+            dispatcher.scheduler.advanceUntilIdle()
+            assertTrue("preview must not fire when disabled", tts.previews.isEmpty())
+            assertTrue("preview is not confirmed speech", tts.spoken.isEmpty())
+
+            val on = viewModel(speakLabelOnTap = true)
+            on.onPictogramTapped(io)
+            dispatcher.scheduler.advanceUntilIdle()
+            assertEquals(listOf(io), tts.previews)
+            assertTrue("word preview must never count as confirmed speech", tts.spoken.isEmpty())
         }
 
     private fun TurbineTestContext<BoardUiState>.expectMostRecentItemAfterIdle(): BoardUiState {

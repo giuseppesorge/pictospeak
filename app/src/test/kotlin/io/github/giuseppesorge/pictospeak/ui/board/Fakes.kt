@@ -32,6 +32,14 @@ class FakeTtsGateway : TtsGateway {
         stopCalls++
     }
 
+    override fun setLanguage(locale: java.util.Locale) = Unit
+
+    override fun setSpeechRate(rate: Float) = Unit
+
+    override fun setPitch(pitch: Float) = Unit
+
+    override fun installVoiceData() = Unit
+
     override fun shutdown() = Unit
 }
 

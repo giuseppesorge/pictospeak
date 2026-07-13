@@ -2,6 +2,7 @@ package io.github.giuseppesorge.pictospeak.speech
 
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 import kotlinx.coroutines.flow.StateFlow
+import java.util.Locale
 
 /**
  * The only path to audio output.
@@ -24,6 +25,16 @@ interface TtsGateway {
     fun speakWordPreview(token: PictogramToken)
 
     fun stop()
+
+    /** Switches the active voice locale (follows the profile language) and re-checks readiness. */
+    fun setLanguage(locale: Locale)
+
+    fun setSpeechRate(rate: Float)
+
+    fun setPitch(pitch: Float)
+
+    /** Launches the system voice-data install flow (first-run setup, MissingVoiceData). */
+    fun installVoiceData()
 
     fun shutdown()
 }

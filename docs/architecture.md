@@ -81,10 +81,21 @@ the same ViewModel (ADR-0001).
 
 Versioned JSON everywhere (`kotlinx.serialization`), atomic temp-file+rename writes,
 `schemaVersion` on every root. Read-only content ships in `assets/` (pipeline-generated,
-per-language); mutable state lives in `filesDir/` (profiles, settings, imported models).
-Import/export via the Storage Access Framework (zero permissions on API 29+). Board data
-is deliberately isomorphic to Open Board Format so `.obf/.obz` interop is mechanical later
-(ADR-0008). No Room (ADR-0002).
+per-language); mutable state lives in `filesDir/` (`settings.json` = the `Profile`, imported
+models). Import/export via the Storage Access Framework (zero permissions on API 29+). Board
+data is deliberately isomorphic to Open Board Format so `.obf/.obz` interop is mechanical
+later (ADR-0008). No Room (ADR-0002).
+
+## Profile, settings and first-run
+
+The `Profile` (language, speech rate/pitch, tap-to-hear, grid density, llmEnabled,
+setupComplete) is a `MutableStateFlow` in `AppContainer`, persisted by `ProfileRepository`.
+Every setting change saves immediately. The active LanguagePack, the TTS locale, and the
+speech rate/pitch all follow the profile — switching the language in Settings rebuilds the
+board (keyed by language) with the right engine, vocabulary, and voice; nothing else changes.
+On first run (or when TTS is not ready) the app shows the **TTS setup wizard**, which surfaces
+`TtsReadiness` and offers voice-data install and a voice test — a mute AAC device is shown,
+never assumed. Caregiver Settings are reached from the About screen.
 
 ## Threading
 
