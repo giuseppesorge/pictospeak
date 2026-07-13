@@ -3,10 +3,13 @@
 Everything needed to build, test, and release PictoSpeak without asking anyone.
 If a step here goes stale, fixing it is part of the change that broke it.
 
-## Build
+## Build & run
+
+New here? The `README.md` **Quickstart** is the fastest path (open in Android Studio, select
+`fossDebug`, Run). This runbook is the reference version.
 
 Prerequisites: JDK 17+ and the Android SDK. `local.properties` needs `sdk.dir=<path>` (not
-committed). On macOS with Android Studio installed:
+committed; Android Studio writes it on first open). On macOS with Android Studio installed:
 
 ```bash
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
@@ -17,6 +20,13 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 ./gradlew assembleFossDebug                       # installable debug APK (foss flavor)
 ./gradlew assembleFossRelease assemblePlayRelease # both flavors must always build
 scripts/check-licenses.sh                         # license/attribution gate
+```
+
+Run it on a connected device or emulator (Android 10+, `minSdk 29`):
+
+```bash
+./gradlew installFossDebug                        # build + install (use installPlayDebug for the LLM flavor)
+adb shell am start -n io.github.giuseppesorge.pictospeak/.MainActivity   # launch
 ```
 
 Module map and dependency rules: `architecture.md`. Version pins: `gradle/libs.versions.toml`
