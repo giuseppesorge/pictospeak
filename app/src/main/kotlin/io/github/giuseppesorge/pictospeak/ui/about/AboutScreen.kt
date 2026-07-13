@@ -1,16 +1,17 @@
 package io.github.giuseppesorge.pictospeak.ui.about
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.border
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -44,15 +45,23 @@ fun AboutScreen(
             TextButton(onClick = onBack) { Text(stringResource(R.string.board_back_home)) }
             Text("PictoSpeak", style = MaterialTheme.typography.headlineMedium)
             // Caregiver gate: long-press to reach Settings, so a user cannot open it by
-            // accident (a tap only shows a hint).
+            // accident (a tap only shows the hint). A single clickable surface — NOT a Button
+            // with a layered clickable, which would swallow the long-press.
             var showHint by remember { mutableStateOf(false) }
-            OutlinedButton(
-                onClick = { showHint = true },
+            Text(
+                text = stringResource(R.string.settings_open_hold),
+                style = MaterialTheme.typography.titleMedium,
                 modifier =
                     Modifier
+                        .padding(vertical = 8.dp)
                         .heightIn(min = 48.dp)
-                        .combinedClickable(onClick = { showHint = true }, onLongClick = onOpenSettings),
-            ) { Text(stringResource(R.string.settings_open_hold)) }
+                        .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(24.dp))
+                        .combinedClickable(
+                            onClickLabel = stringResource(R.string.settings_hold_hint),
+                            onClick = { showHint = true },
+                            onLongClick = onOpenSettings,
+                        ).padding(horizontal = 20.dp, vertical = 12.dp),
+            )
             if (showHint) {
                 Text(stringResource(R.string.settings_hold_hint), style = MaterialTheme.typography.bodySmall)
             }
