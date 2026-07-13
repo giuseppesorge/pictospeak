@@ -8,7 +8,7 @@ No entry = not yet measured. Emulator numbers are never recorded here.
 | Device | RAM | Android | Tier | Notes |
 |---|---|---|---|---|
 | *(floor tablet — to be acquired)* | ~2–3 GB | 10/11 | floor | launch-criterion device |
-| Redmi Note 15 | ≥4 GB | current | mainstream | also LLM-experiment device |
+| Redmi Note 15 (25098RA98G) | 8 GB | 16 (API 36) | mainstream | also LLM-experiment device; HyperOS quirks: shader-cache-drop broadcast blocked by process freezer (run with `androidx.benchmark.dropShaders.enable=false`), gestures need the "USB debugging (Security settings)" developer toggle |
 | Samsung phone | ≥4 GB | current | mainstream | |
 
 ## Results
@@ -23,10 +23,10 @@ How to run (on a PHYSICAL device with USB debugging):
 # TTS probe: install foss debug, airplane mode, compose, Speak; then voice-data install flow
 ```
 
-| Metric | Floor | Mainstream | Budget | Pass? |
+| Metric | Floor | Mainstream (Redmi, 2026-07-13) | Budget (floor) | Pass? |
 |---|---|---|---|---|
-| Cold TTID | — | — | ≤ 2.0 s | |
-| Jank (fast fling) | — | — | < 1% | |
+| Cold TTID | — | **681 ms median** (629–738, 5 iter, no baseline profile, shader-drop disabled) | ≤ 2.0 s | mainstream: well under |
+| Jank (fast fling) | — | *pending (gesture injection blocked until the HyperOS security toggle is enabled)* | < 1% | |
 
 TTS probe findings (engine present? offline voice for the active language? install flow?
 airplane-mode speak?): *to be recorded on physical devices.*

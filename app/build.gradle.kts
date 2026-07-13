@@ -48,6 +48,13 @@ android {
                 "proguard-rules.pro",
             )
         }
+        // Release-identical build installable on any device (debug-signed) — the target
+        // of :benchmark. Never shipped.
+        create("benchmark") {
+            initWith(getByName("release"))
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks += listOf("release")
+        }
     }
 }
 
