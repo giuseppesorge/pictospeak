@@ -32,16 +32,55 @@ speaks it with the native Android text-to-speech voice.
 Early development (POC phase). See `docs/` for architecture, performance budgets, and the
 frozen grammar scope. Not yet ready for end users.
 
-## Building
+## Quickstart — build & run
+
+### What you need
+
+- **[Android Studio](https://developer.android.com/studio)** (latest stable). It bundles a
+  JDK 17 and the Android SDK — installing it is the whole toolchain. (CLI-only alternative:
+  a JDK 17+ and the Android command-line SDK tools.)
+- **A device to run on:** either an Android phone/tablet on **Android 10 or newer**
+  (`minSdk 29`) with USB debugging enabled, **or** an emulator (create one below).
+
+### Run it in Android Studio (easiest)
+
+1. `git clone https://github.com/giuseppesorge/pictospeak.git` and **open the folder** in
+   Android Studio. Let the Gradle sync finish (first sync downloads dependencies).
+2. In **Build Variants** (bottom-left panel), select **`fossDebug`** for the `:app` module.
+3. Pick a device in the toolbar dropdown — your connected phone, or **Device Manager →
+   Create device** → any phone → a **system image with API 29+** (a ~2 GB profile mirrors the
+   real target).
+4. Press **Run ▶**. The app builds, installs, and launches.
+
+### Run it from the command line
 
 ```bash
-# Requires JDK 17+ and the Android SDK (see docs/handover.md for details)
-./gradlew check                                   # lint + all JVM tests
-./gradlew assembleFossDebug                       # installable debug build (FOSS flavor)
-./gradlew assembleFossRelease assemblePlayRelease # both flavors must always build
+# macOS with Android Studio installed (points JAVA_HOME at its bundled JDK):
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+# Opening the project in Android Studio once creates local.properties (sdk.dir=...).
+# For a pure CLI setup, set it yourself: echo "sdk.dir=$HOME/Library/Android/sdk" > local.properties
+
+./gradlew installFossDebug   # build + install the FOSS debug app on the connected device/emulator
+adb shell am start -n io.github.giuseppesorge.pictospeak/.MainActivity   # launch it
 ```
 
-Two build flavors:
+Other useful commands:
+
+```bash
+./gradlew check                                   # ktlint + detekt + all JVM tests
+./gradlew assembleFossDebug                       # just build the installable debug APK
+./gradlew assembleFossRelease assemblePlayRelease # both flavors must always build
+scripts/check-licenses.sh                         # license/attribution gate
+```
+
+**First launch:** the app opens a one-time speech-setup screen. Tap **Continue**; if the
+device has no offline voice for the language, it offers to install the voice data. Then you
+land on the board — tap pictograms, cycle the proposed sentence, and confirm to speak.
+
+More detail (SDK setup, release signing, asset pipelines) is in
+[`docs/handover.md`](docs/handover.md).
+
+### Two build flavors
 
 | Flavor | Purpose | Network permission | On-device LLM module |
 |---|---|---|---|
