@@ -29,11 +29,16 @@ class BaselineProfileGenerator {
             startActivityAndWait()
             val grid = device.wait(Until.findObject(By.res("board-grid")), FIND_TIMEOUT_MS)
             if (grid != null) {
-                grid.setGestureMargin(device.displayWidth / GESTURE_MARGIN_DIVISOR)
-                grid.fling(Direction.DOWN)
-                device.waitForIdle()
-                grid.fling(Direction.UP)
-                device.waitForIdle()
+                // Some OEM builds (e.g. HyperOS without its security toggle) block pointer
+                // injection from instrumentation. The startup + first-frame journey above is
+                // the bulk of the profile, so degrade gracefully instead of failing.
+                runCatching {
+                    grid.setGestureMargin(device.displayWidth / GESTURE_MARGIN_DIVISOR)
+                    grid.fling(Direction.DOWN)
+                    device.waitForIdle()
+                    grid.fling(Direction.UP)
+                    device.waitForIdle()
+                }.onFailure { android.util.Log.w("BaselineProfile", "scroll journey skipped: $it") }
             }
         }
     }

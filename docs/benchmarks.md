@@ -26,7 +26,13 @@ How to run (on a PHYSICAL device with USB debugging):
 | Metric | Floor | Mainstream (Redmi, 2026-07-13) | Budget (floor) | Pass? |
 |---|---|---|---|---|
 | Cold TTID | — | **681 ms median** (629–738, 5 iter, no baseline profile, shader-drop disabled) | ≤ 2.0 s | mainstream: well under |
-| Jank (fast fling) | — | *pending (gesture injection blocked until the HyperOS security toggle is enabled)* | < 1% | |
+| Jank (fast fling) | — | *pending — HyperOS blocks pointer injection even with the security toggle (device reboot may be required); measure on the floor tablet* | < 1% | |
+
+Baseline Profile: generated on the Redmi (2026-07-13, startup + first-frame journey;
+scroll journey skipped — pointer injection blocked) and committed to
+`app/src/main/baseline-prof.txt` (8,653 rules, verified packaged as
+`assets/dexopt/baseline.prof` in the release APK). Regenerate on a device with working
+gesture injection to add the scroll journey.
 
 TTS probe findings (engine present? offline voice for the active language? install flow?
 airplane-mode speak?): *to be recorded on physical devices.*
