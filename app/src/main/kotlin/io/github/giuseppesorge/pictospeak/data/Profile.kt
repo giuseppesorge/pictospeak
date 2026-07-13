@@ -17,6 +17,8 @@ data class Profile(
     val ttsPitch: Float = 1.0f,
     /** Speak a pictogram's own label when tapped (user-initiated; compatible with INVARIANT-1). */
     val speakLabelOnTap: Boolean = false,
+    /** A short confirmation vibration on selection/confirm. Off by default (docs/backlog.md). */
+    val hapticFeedback: Boolean = false,
     /** Grid cell minimum size in dp — larger = fewer, bigger cells. */
     val gridMinCellDp: Int = DEFAULT_GRID_MIN_CELL_DP,
     /** Optional on-device LLM refiner (play flavor + capable device only). Default off. */

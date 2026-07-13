@@ -33,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
@@ -64,7 +65,11 @@ fun SettingsScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             TextButton(onClick = onBack) { Text(stringResource(R.string.board_back_home)) }
-            Text(stringResource(R.string.settings_title), style = MaterialTheme.typography.headlineMedium)
+            Text(
+                stringResource(R.string.settings_title),
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.semantics { heading() },
+            )
 
             LanguageChooser(profile.language) { onProfileChange(profile.copy(language = it)) }
 
@@ -81,22 +86,18 @@ fun SettingsScreen(
                 onChange = { onProfileChange(profile.copy(ttsPitch = it)) },
             )
 
-            Row(
-                modifier =
-                    Modifier
-                        .fillMaxWidth()
-                        // Merge the label and switch into one named toggle for TalkBack.
-                        .toggleable(
-                            value = profile.speakLabelOnTap,
-                            role = Role.Switch,
-                            onValueChange = { onProfileChange(profile.copy(speakLabelOnTap = it)) },
-                        ),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                Text(stringResource(R.string.settings_speak_on_tap), style = MaterialTheme.typography.bodyLarge)
-                Switch(checked = profile.speakLabelOnTap, onCheckedChange = null)
-            }
+            SwitchRow(
+                label = stringResource(R.string.settings_speak_on_tap),
+                checked = profile.speakLabelOnTap,
+                enabled = true,
+                onCheckedChange = { onProfileChange(profile.copy(speakLabelOnTap = it)) },
+            )
+            SwitchRow(
+                label = stringResource(R.string.settings_haptic),
+                checked = profile.hapticFeedback,
+                enabled = true,
+                onCheckedChange = { onProfileChange(profile.copy(hapticFeedback = it)) },
+            )
 
             if (llm.supported) {
                 HorizontalDivider()
@@ -109,12 +110,24 @@ fun SettingsScreen(
             }
 
             HorizontalDivider()
-            Text(stringResource(R.string.settings_backup), style = MaterialTheme.typography.titleMedium)
-            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                OutlinedButton(onClick = onExport) { Text(stringResource(R.string.settings_export)) }
-                OutlinedButton(onClick = onImport) { Text(stringResource(R.string.settings_import)) }
-            }
+            BackupSection(onExport = onExport, onImport = onImport)
         }
+    }
+}
+
+@Composable
+private fun BackupSection(
+    onExport: () -> Unit,
+    onImport: () -> Unit,
+) {
+    Text(
+        stringResource(R.string.settings_backup),
+        style = MaterialTheme.typography.titleMedium,
+        modifier = Modifier.semantics { heading() },
+    )
+    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        OutlinedButton(onClick = onExport) { Text(stringResource(R.string.settings_export)) }
+        OutlinedButton(onClick = onImport) { Text(stringResource(R.string.settings_import)) }
     }
 }
 
@@ -123,7 +136,11 @@ private fun LanguageChooser(
     current: String,
     onSelect: (String) -> Unit,
 ) {
-    Text(stringResource(R.string.settings_language), style = MaterialTheme.typography.titleMedium)
+    Text(
+        stringResource(R.string.settings_language),
+        style = MaterialTheme.typography.titleMedium,
+        modifier = Modifier.semantics { heading() },
+    )
     Column(modifier = Modifier.selectableGroup()) {
         Profile.SUPPORTED_LANGUAGES.forEach { lang ->
             Row(
@@ -197,7 +214,11 @@ private fun LlmSection(
     val eligible = llm.capability?.eligible == true
     val hasModel = llm.modelName != null
 
-    Text(stringResource(R.string.settings_llm_title), style = MaterialTheme.typography.titleMedium)
+    Text(
+        stringResource(R.string.settings_llm_title),
+        style = MaterialTheme.typography.titleMedium,
+        modifier = Modifier.semantics { heading() },
+    )
     Text(stringResource(R.string.settings_llm_desc), style = MaterialTheme.typography.bodyMedium)
 
     val ramGib = "%.1f".format(llm.capability?.totalMemGib ?: 0.0)

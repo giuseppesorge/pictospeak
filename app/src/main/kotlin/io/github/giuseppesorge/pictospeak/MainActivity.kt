@@ -90,7 +90,11 @@ private fun App(container: AppContainer) {
                         speakLabelOnTap = profile.speakLabelOnTap,
                     )
                 }
-            BoardScreen(boardViewModel, onAboutPressed = { screen = Screen.About })
+            BoardScreen(
+                boardViewModel,
+                onAboutPressed = { screen = Screen.About },
+                hapticEnabled = profile.hapticFeedback,
+            )
         }
         Screen.About ->
             AboutScreen(

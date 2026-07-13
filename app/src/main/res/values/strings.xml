@@ -11,6 +11,10 @@
     <string name="board_back_home">Back</string>
     <string name="board_next_suggestion">Next suggestion</string>
     <string name="board_voice_not_ready">Voice not ready — open caregiver settings to set up speech.</string>
+    <string name="board_remove_selection">Remove</string>
+    <string name="board_clear_hold_hint">Press and hold Clear to erase the whole message.</string>
+    <string name="board_source_llm">AI suggestion</string>
+    <string name="board_source_concat">your words</string>
     <string name="about_open">\u2139</string>
     <string name="about_tagline">Free, open-source, offline AAC communicator. The user always has the last word.</string>
     <string name="about_symbols_title">Pictographic symbols</string>
@@ -23,6 +27,7 @@
     <string name="settings_rate">Speech rate</string>
     <string name="settings_pitch">Pitch</string>
     <string name="settings_speak_on_tap">Speak word when tapped</string>
+    <string name="settings_haptic">Vibrate on confirm</string>
     <string name="setup_title">Speech setup</string>
     <string name="setup_test_voice">Test voice</string>
     <string name="setup_install_voice">Install voice data</string>

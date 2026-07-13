@@ -54,6 +54,7 @@ data class BoardUiState(
     }
 }
 
+@Suppress("TooManyFunctions") // cohesive board controller: one handler per board interaction
 class BoardViewModel(
     private val sentenceEngine: SentenceEngine,
     private val sentenceRefiner: SentenceRefiner?,
@@ -95,6 +96,18 @@ class BoardViewModel(
 
     fun onBackspace() {
         _uiState.update { it.copy(selection = it.selection.dropLast(1)) }
+        recompute()
+    }
+
+    /** In-place repair: remove one wrongly-selected pictogram (docs/ui-conventions.md). */
+    fun onRemoveSelection(index: Int) {
+        _uiState.update { state ->
+            if (index in state.selection.indices) {
+                state.copy(selection = state.selection.filterIndexed { i, _ -> i != index })
+            } else {
+                state
+            }
+        }
         recompute()
     }
 

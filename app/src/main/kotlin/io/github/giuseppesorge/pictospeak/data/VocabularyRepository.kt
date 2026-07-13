@@ -28,28 +28,31 @@ class AssetVocabularyRepository(
 
     override suspend fun loadCatalog(): Map<String, PictogramToken> =
         withContext(Dispatchers.IO) {
-            // A missing catalog asset (unknown language) yields an empty board, never a crash.
-            val text =
-                runCatching {
+            // A missing OR malformed catalog asset yields an empty board, never a crash.
+            runCatching {
+                val text =
                     appContext.assets
                         .open("arasaac/catalog_$language.json")
                         .use { it.readBytes().decodeToString() }
-                }.getOrNull() ?: return@withContext emptyMap()
-            json.decodeFromString<List<PictogramToken>>(text).associateBy { it.id }
+                json.decodeFromString<List<PictogramToken>>(text).associateBy { it.id }
+            }.getOrDefault(emptyMap())
         }
 
     override suspend fun loadBoards(): Map<String, Board> =
         withContext(Dispatchers.IO) {
             val dir = "boards/default_$language"
             val files =
-                appContext.assets
-                    .list(dir)
-                    .orEmpty()
+                runCatching { appContext.assets.list(dir).orEmpty() }
+                    .getOrDefault(emptyArray())
                     .filter { it.endsWith(".json") }
-            files.associate { file ->
-                val text = appContext.assets.open("$dir/$file").use { it.readBytes().decodeToString() }
-                val board = json.decodeFromString<Board>(text)
-                board.id to board
-            }
+            // A single corrupt/truncated board asset must be skipped, not crash the whole app
+            // on launch ("a board must render, never crash"). Decode each independently.
+            files
+                .mapNotNull { file ->
+                    runCatching {
+                        val text = appContext.assets.open("$dir/$file").use { it.readBytes().decodeToString() }
+                        json.decodeFromString<Board>(text)
+                    }.getOrNull()
+                }.associateBy { it.id }
         }
 }

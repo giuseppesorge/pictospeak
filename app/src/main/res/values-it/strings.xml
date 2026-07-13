@@ -9,6 +9,10 @@
     <string name="board_back_home">Torna</string>
     <string name="board_next_suggestion">Suggerimento successivo</string>
     <string name="board_voice_not_ready">Voce non pronta — apri le impostazioni caregiver per configurarla.</string>
+    <string name="board_remove_selection">Rimuovi</string>
+    <string name="board_clear_hold_hint">Tieni premuto Cancella per cancellare tutta la frase.</string>
+    <string name="board_source_llm">suggerimento AI</string>
+    <string name="board_source_concat">parole tue</string>
     <string name="about_open">\u2139</string>
     <string name="about_tagline">Comunicatore CAA gratuito, open source e offline. L\'ultima parola è sempre dell\'utente.</string>
     <string name="about_symbols_title">Simboli pittografici</string>
@@ -21,6 +25,7 @@
     <string name="settings_rate">Velocità voce</string>
     <string name="settings_pitch">Tono</string>
     <string name="settings_speak_on_tap">Pronuncia la parola al tocco</string>
+    <string name="settings_haptic">Vibra alla conferma</string>
     <string name="setup_title">Configurazione voce</string>
     <string name="setup_test_voice">Prova la voce</string>
     <string name="setup_install_voice">Installa i dati vocali</string>

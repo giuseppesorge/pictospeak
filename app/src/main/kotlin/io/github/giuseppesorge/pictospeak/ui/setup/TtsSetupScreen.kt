@@ -16,6 +16,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import io.github.giuseppesorge.pictospeak.R
 import io.github.giuseppesorge.pictospeak.speech.TtsReadiness
@@ -42,7 +44,11 @@ fun TtsSetupScreen(
             verticalArrangement = Arrangement.spacedBy(12.dp),
             horizontalAlignment = Alignment.Start,
         ) {
-            Text(stringResource(R.string.setup_title), style = MaterialTheme.typography.headlineMedium)
+            Text(
+                stringResource(R.string.setup_title),
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.semantics { heading() },
+            )
             Text(statusText(readiness), style = MaterialTheme.typography.bodyLarge)
 
             when (readiness) {

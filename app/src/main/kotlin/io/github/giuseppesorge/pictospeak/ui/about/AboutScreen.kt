@@ -25,6 +25,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import io.github.giuseppesorge.pictospeak.R
 
@@ -47,29 +49,12 @@ fun AboutScreen(
                     .verticalScroll(rememberScrollState()),
         ) {
             TextButton(onClick = onBack) { Text(stringResource(R.string.board_back_home)) }
-            Text("PictoSpeak", style = MaterialTheme.typography.headlineMedium)
-            // Caregiver gate: long-press to reach Settings, so a user cannot open it by
-            // accident (a tap only shows the hint). A single clickable surface — NOT a Button
-            // with a layered clickable, which would swallow the long-press.
-            var showHint by remember { mutableStateOf(false) }
             Text(
-                text = stringResource(R.string.settings_open_hold),
-                style = MaterialTheme.typography.titleMedium,
-                modifier =
-                    Modifier
-                        .padding(vertical = 8.dp)
-                        .heightIn(min = 48.dp)
-                        .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(24.dp))
-                        .combinedClickable(
-                            onClickLabel = stringResource(R.string.settings_hold_hint),
-                            onLongClickLabel = stringResource(R.string.settings_open_hold),
-                            onClick = { showHint = true },
-                            onLongClick = onOpenSettings,
-                        ).padding(horizontal = 20.dp, vertical = 12.dp),
+                "PictoSpeak",
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.semantics { heading() },
             )
-            if (showHint) {
-                Text(stringResource(R.string.settings_hold_hint), style = MaterialTheme.typography.bodySmall)
-            }
+            CaregiverGate(onOpenSettings = onOpenSettings)
             Text(
                 stringResource(R.string.about_tagline),
                 style = MaterialTheme.typography.bodyLarge,
@@ -80,7 +65,7 @@ fun AboutScreen(
             Text(
                 stringResource(R.string.about_symbols_title),
                 style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.padding(top = 16.dp, bottom = 4.dp),
+                modifier = Modifier.padding(top = 16.dp, bottom = 4.dp).semantics { heading() },
             )
             Text(ARASAAC_ATTRIBUTION_EN, style = MaterialTheme.typography.bodyMedium)
             Text(
@@ -92,10 +77,39 @@ fun AboutScreen(
             Text(
                 stringResource(R.string.about_license_title),
                 style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.padding(top = 16.dp, bottom = 4.dp),
+                modifier = Modifier.padding(top = 16.dp, bottom = 4.dp).semantics { heading() },
             )
             Text(stringResource(R.string.about_license_body), style = MaterialTheme.typography.bodyMedium)
         }
+    }
+}
+
+/**
+ * Caregiver gate: long-press to reach Settings, so a user cannot open it by accident (a tap
+ * only shows the hint). A single clickable surface — NOT a Button with a layered clickable,
+ * which would swallow the long-press.
+ */
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun CaregiverGate(onOpenSettings: () -> Unit) {
+    var showHint by remember { mutableStateOf(false) }
+    Text(
+        text = stringResource(R.string.settings_open_hold),
+        style = MaterialTheme.typography.titleMedium,
+        modifier =
+            Modifier
+                .padding(vertical = 8.dp)
+                .heightIn(min = 48.dp)
+                .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(24.dp))
+                .combinedClickable(
+                    onClickLabel = stringResource(R.string.settings_hold_hint),
+                    onLongClickLabel = stringResource(R.string.settings_open_hold),
+                    onClick = { showHint = true },
+                    onLongClick = onOpenSettings,
+                ).padding(horizontal = 20.dp, vertical = 12.dp),
+    )
+    if (showHint) {
+        Text(stringResource(R.string.settings_hold_hint), style = MaterialTheme.typography.bodySmall)
     }
 }
 
