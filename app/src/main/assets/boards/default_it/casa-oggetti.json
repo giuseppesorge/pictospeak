@@ -1,0 +1,167 @@
+{
+    "id": "casa-oggetti",
+    "locale": "it",
+    "name": "Casa",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "2593"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5921"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2610"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2862"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6964"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2451"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4931"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2459"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2362"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "33070"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2250"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2858"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25479"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2370"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "17284"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2611"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2588"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3272"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3296"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "9813"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25900"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25191"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8619"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3329"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2549"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3241"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2282"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2532"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2522"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3244"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8094"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "24801"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3155"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2694"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8573"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "28099"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3129"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26479"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25498"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2475"
+        }
+    ]
+}

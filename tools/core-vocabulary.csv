@@ -1,5 +1,403 @@
-arasaacId,lemma,lang,category,boardPosition,rationale
-# Curated at M2: ~400 core-vocabulary entries per language (high-frequency words usable
-# across contexts) + category fringe. Pronoun pictograms (io/tu/lui/lei/noi/voi/loro) are
-# REQUIRED by the sentence engine's person selection. Every row needs a rationale — this
-# file is meant to be reviewed by speech therapists, not just developers.
+arasaacId,lemma,label,pos,lang,category,core,rationale
+6632,io,io,MISC,it,persone,true,Subject pronoun, sentence engine requires it; pronoun, not proper name
+6625,tu,tu,MISC,it,persone,true,Subject pronoun for addressing partner; pronoun despite ARASAAC type 1
+6480,lui,lui,MISC,it,persone,true,Third-person masculine subject pronoun, engine requirement; pronoun not proper name
+7028,lei,lei,MISC,it,persone,true,Third-person feminine subject pronoun, engine requirement; pronoun not proper name
+7183,noi,noi,MISC,it,persone,true,First-person plural subject pronoun, engine requirement; pronoun not proper name
+7304,voi,voi,MISC,it,persone,true,Second-person plural subject pronoun, engine requirement; pronoun not proper name
+7032,loro,loro,MISC,it,persone,true,Third-person plural subject pronoun, engine requirement; pronoun not proper name
+2458,mamma,mamma,NOUN,it,persone,false,Most-requested person word in child AAC use
+2497,papà,papà,NOUN,it,persone,false,Primary caregiver, daily requests and comments
+2243,nonna,nonna,NOUN,it,persone,false,Frequent caregiver in Italian families
+2244,nonno,nonno,NOUN,it,persone,false,Frequent caregiver in Italian families
+2423,fratello,fratello,NOUN,it,persone,false,Immediate family member, daily household talk
+2422,sorella,sorella,NOUN,it,persone,false,Immediate family member, daily household talk
+30255,zio,zio,NOUN,it,persone,false,Common extended-family figure, visits and stories
+30271,zia,zia,NOUN,it,persone,false,Common extended-family figure, visits and stories
+30340,cugino,cugino,NOUN,it,persone,false,Peer relative, frequent playmate in Italian families
+2392,famiglia,famiglia,NOUN,it,persone,false,Groups all relatives, useful when name unknown
+2485,bambino,bambino,NOUN,it,persone,false,Generic child reference for peers and self
+2484,bambina,bambina,NOUN,it,persone,false,Feminine child reference for peers and self
+2275,neonato,neonato,NOUN,it,persone,false,Talking about baby siblings, common life event
+8487,amico,amico,NOUN,it,persone,false,Key social relationship word at school and home
+8486,amica,amica,NOUN,it,persone,false,Feminine friend, key social relationship word
+2456,maestra,maestra,NOUN,it,persone,false,Daily school communication partner
+2467,dottore,dottore,NOUN,it,persone,false,Frequent medical appointments for AAC users
+2375,infermiera,infermiera,NOUN,it,persone,false,Regular healthcare contact for many AAC users
+2454,logopedista,logopedista,NOUN,it,persone,false,Weekly therapy figure for most AAC users
+4665,uomo,uomo,NOUN,it,persone,false,Generic adult male reference for strangers
+4703,donna,donna,NOUN,it,persone,false,Generic adult female reference for strangers
+5441,volere,volere,VERB,it,azioni,true,Modal of desire; the single most used AAC request word
+35949,potere,potere,VERB,it,azioni,true,Modal of ability/permission; core sentence builder
+15523,dovere,dovere,VERB,it,azioni,true,Modal of obligation; ARASAAC types it noun, used as verb
+5465,essere,essere,VERB,it,azioni,true,Copula; essential grammatical glue for any sentence
+7271,avere,avere,VERB,it,azioni,true,Possession and auxiliary; high-frequency across all contexts
+11749,fare,fare,VERB,it,azioni,true,Generic do/make; covers countless everyday constructions
+8142,andare,andare,VERB,it,azioni,true,Movement toward; requesting places and transitions daily
+11708,venire,venire,VERB,it,azioni,false,Calling someone over; complements andare
+6456,mangiare,mangiare,VERB,it,azioni,true,Basic need; among the first requested actions
+6061,bere,bere,VERB,it,azioni,true,Basic need; daily drink requests
+6479,dormire,dormire,VERB,it,azioni,false,Daily routine and tiredness expression
+6537,giocare,giocare,VERB,it,azioni,true,Primary leisure request for children and adults
+16907,guardare,guardare,VERB,it,azioni,true,Directs attention; requesting TV, books, joint attention
+2381,ascoltare,ascoltare,VERB,it,azioni,false,Music requests and attention directives
+6517,parlare,parlare,VERB,it,azioni,false,Metacommunication; asking to talk or be talked to
+28431,dare,dare,VERB,it,azioni,true,Transfer requests; dammi is constant daily speech act
+6453,prendere,prendere,VERB,it,azioni,false,Getting objects; complements dare
+6989,mettere,mettere,VERB,it,azioni,false,Placing objects; frequent in routines and instructions
+24825,aprire,aprire,VERB,it,azioni,false,Doors, boxes, bottles; constant assistance request
+24976,chiudere,chiudere,VERB,it,azioni,false,Opposite of aprire; equally frequent request
+34826,lavare,lavare,VERB,it,azioni,false,Hygiene routine verb; spec maps lavarsi to lavare
+2781,vestirsi,vestirsi,VERB,it,azioni,false,Dressing routine; spec maps vestirsi to vestire
+32648,aiutare,aiutare,VERB,it,azioni,true,Help request; critical safety and autonomy word
+5358,finire,finire,VERB,it,azioni,true,Marking task end; regulates transitions and refusals
+16697,aspettare,aspettare,VERB,it,azioni,false,Self-regulation and turn-taking staple
+6457,comprare,comprare,VERB,it,azioni,false,Shopping context; community participation verb
+7141,leggere,leggere,VERB,it,azioni,false,School and leisure activity request
+2380,scrivere,scrivere,VERB,it,azioni,false,Core school task verb
+8088,disegnare,disegnare,VERB,it,azioni,false,Favorite activity request at home and school
+6960,cantare,cantare,VERB,it,azioni,false,Music play; frequent preferred activity
+6044,camminare,camminare,VERB,it,azioni,false,Basic mobility verb for outings and therapy
+6465,correre,correre,VERB,it,azioni,false,Playground and movement vocabulary
+6611,sedersi,sedersi,VERB,it,azioni,false,Daily positioning instruction; reflexive keyword, lemma per spec
+6548,alzarsi,alzarsi,VERB,it,azioni,false,Getting up routine; reflexive keyword, lemma per spec
+6898,amare,amare,VERB,it,azioni,false,Expressing affection to family and friends
+37826,piacere,piacere,VERB,it,azioni,true,Preference expression; drives choice-making daily
+30194,sentire,sentire,VERB,it,azioni,false,Perception and feelings; health context reporting
+6564,vedere,vedere,VERB,it,azioni,false,Perception verb; wanting to see something
+6019,capire,capire,VERB,it,azioni,false,Comprehension repair; only pictogram, idea-themed but clear
+16885,sapere,sapere,VERB,it,azioni,false,Knowledge claims; pictogram shows raised hand, school sense
+9693,dire,dire,VERB,it,azioni,false,Reporting speech; high-frequency communication verb
+9847,chiedere,chiedere,VERB,it,azioni,false,Asking questions; pragmatic skill scaffold
+9031,rispondere,rispondere,VERB,it,azioni,false,Conversation and school participation verb
+6947,cercare,cercare,VERB,it,azioni,false,Looking for lost objects; daily problem solving
+24742,trovare,trovare,VERB,it,azioni,false,Completes cercare; reporting outcomes
+6553,portare,portare,VERB,it,azioni,false,Fetch requests; portami is frequent daily need
+39414,tenere,tenere,VERB,it,azioni,false,Holding objects; caregiving and play interactions
+6215,lasciare,lasciare,VERB,it,azioni,false,Letting go, leave-me alone; protest function
+6607,saltare,saltare,VERB,it,azioni,false,Gross-motor play; trampoline and games
+6052,ballare,ballare,VERB,it,azioni,false,Preferred activity; music and movement
+6568,nuotare,nuotare,VERB,it,azioni,false,Pool activity; common therapy and leisure context
+2795,salire,salire,VERB,it,azioni,false,Stairs, vehicles; mobility instruction
+2654,scendere,scendere,VERB,it,azioni,false,Opposite of salire; mobility instruction
+2742,entrare,entrare,VERB,it,azioni,false,Transitions between places; daily routine
+2806,uscire,uscire,VERB,it,azioni,false,Requesting to go out; strong motivator
+5431,cominciare,cominciare,VERB,it,azioni,false,Activity start marker; pairs with finire
+7196,fermare,fermare,VERB,it,azioni,false,Stop function; protest and safety
+8555,accendere,accendere,VERB,it,azioni,false,Lights and devices; constant home request
+20093,spegnere,spegnere,VERB,it,azioni,false,Turning off devices; sensory regulation too
+6604,rompere,rompere,VERB,it,azioni,false,Reporting broken things; frequent child narration
+3351,pulire,pulire,VERB,it,azioni,false,Chores and hygiene routine verb
+2342,cucinare,cucinare,VERB,it,azioni,false,Kitchen routine; shared activity request
+2547,tagliare,tagliare,VERB,it,azioni,false,Food prep and crafts; assistance request
+3293,toccare,toccare,VERB,it,azioni,false,Sensory exploration and non toccare boundary
+6062,baciare,baciare,VERB,it,azioni,false,Affection exchange with family
+6023,abbracciare,abbracciare,VERB,it,azioni,false,Requesting hugs; emotional regulation
+7147,piangere,piangere,VERB,it,azioni,false,Emotion reporting for self and others
+13354,ridere,ridere,VERB,it,azioni,false,Positive emotion sharing and narration
+6552,gridare,gridare,VERB,it,azioni,false,Behavior talk; covers urlare too
+37369,ricordare,ricordare,VERB,it,azioni,false,Memory talk; key for aphasia users
+26258,dimenticare,dimenticare,VERB,it,azioni,false,Explaining forgotten items or steps
+8029,imparare,imparare,VERB,it,azioni,false,School context; talking about new skills
+6495,studiare,studiare,VERB,it,azioni,false,Homework routine verb for students
+6624,lavorare,lavorare,VERB,it,azioni,false,Adult daily life; where family members are
+16643,riposare,riposare,VERB,it,azioni,false,Requesting breaks; fatigue management for ALS users
+8989,svegliarsi,svegliarsi,VERB,it,azioni,false,Morning routine anchor verb
+4691,telefonare,telefonare,VERB,it,azioni,false,Requesting calls to family; social lifeline
+9014,pagare,pagare,VERB,it,azioni,false,Shopping script; community autonomy
+8661,pensare,pensare,VERB,it,azioni,false,Mental state talk; opinions and reflection
+6067,cadere,cadere,VERB,it,azioni,false,Reporting falls; safety and health critical
+16713,fare pipì,fare pipì,VERB,it,azioni,false,Bathroom need; among most urgent daily requests
+3428,fare la cacca,fare la cacca,VERB,it,azioni,false,Bathroom need; dignity-critical request
+2326,lavare i denti,lavare i denti,VERB,it,azioni,false,Twice-daily hygiene routine step
+32464,acqua,acqua,NOUN,it,cibo,true,Most requested drink; vital daily need
+2445,latte,latte,NOUN,it,cibo,true,Daily breakfast drink, high-frequency child request
+11461,succo,succo,NOUN,it,cibo,false,Common drink request; covers succo di frutta
+2429,tè,tè,NOUN,it,cibo,false,Common hot drink for adults and children
+2494,pane,pane,NOUN,it,cibo,true,Italian staple present at every meal
+8652,pasta,pasta,NOUN,it,cibo,true,Default Italian lunch; daily request word
+2527,pizza,pizza,NOUN,it,cibo,false,Highly motivating, frequent favorite food
+39387,riso,riso,NOUN,it,cibo,false,Common staple dish; food sense pictogram
+2281,panino,panino,NOUN,it,cibo,false,Everyday snack and lunch option
+2316,carne,carne,NOUN,it,cibo,false,Basic meal component, menu choice word
+4952,pollo,pollo,NOUN,it,cibo,false,Most common meat served to children
+6502,pesce,pesce,NOUN,it,cibo,false,Weekly meal item; food-sense pictogram chosen
+2963,prosciutto,prosciutto,NOUN,it,cibo,false,Everyday Italian cold cut, sandwich filler
+2427,uovo,uovo,NOUN,it,cibo,false,Basic frequent food, simple to request
+2541,formaggio,formaggio,NOUN,it,cibo,false,Daily Italian table food
+2618,yogurt,yogurt,NOUN,it,cibo,false,Common snack and breakfast item
+2573,minestra,minestra,NOUN,it,cibo,false,Typical everyday soup; covers zuppa, brodo
+2377,insalata,insalata,NOUN,it,cibo,false,Common side dish, menu choice
+5400,patatine fritte,patatine fritte,NOUN,it,cibo,false,Highly motivating favorite; frequent request
+8295,biscotto,biscotto,NOUN,it,cibo,true,Top child snack request, strong reinforcer
+2502,torta,torta,NOUN,it,cibo,false,Dessert and birthday contexts
+35209,gelato,gelato,NOUN,it,cibo,false,Highly motivating treat, frequent request
+25940,cioccolato,cioccolato,NOUN,it,cibo,false,Strong reinforcer, common treat request
+2686,caramella,caramella,NOUN,it,cibo,false,Frequent treat request from children
+2470,marmellata,marmellata,NOUN,it,cibo,false,Breakfast staple, spread choice
+2461,burro,burro,NOUN,it,cibo,false,Common table and breakfast item
+2328,cereali,cereali,NOUN,it,cibo,false,Common breakfast choice; lexicalized plural
+28339,frutta,frutta,NOUN,it,cibo,true,Category word for daily snack requests
+2462,mela,mela,NOUN,it,cibo,false,Most common everyday fruit
+2530,banana,banana,NOUN,it,cibo,false,Frequent snack fruit, easy to recognize
+2483,arancia,arancia,NOUN,it,cibo,false,Common fruit and juice source
+2400,fragola,fragola,NOUN,it,cibo,false,Popular fruit and flavor word
+2561,pera,pera,NOUN,it,cibo,false,Common everyday fruit
+3247,uva,uva,NOUN,it,cibo,false,Common fruit, easy finger food
+8303,ciliegia,ciliegia,NOUN,it,cibo,false,Popular seasonal fruit
+2557,anguria,anguria,NOUN,it,cibo,false,Summer staple fruit, distinct pictogram
+2468,pesca,pesca,NOUN,it,cibo,false,Common fruit; fruit-sense pictogram, not fishing
+28343,verdura,verdura,NOUN,it,cibo,false,Category word for vegetables at meals
+2594,pomodoro,pomodoro,NOUN,it,cibo,false,Ubiquitous in Italian meals
+2503,patata,patata,NOUN,it,cibo,false,Common vegetable, frequent side dish
+2619,carota,carota,NOUN,it,cibo,false,Common vegetable, typical child food
+25560,zucchero,zucchero,NOUN,it,cibo,false,Table condiment, taste vocabulary
+25576,sale,sale,NOUN,it,cibo,false,Table condiment, taste vocabulary
+2246,olio,olio,NOUN,it,cibo,false,Italian table essential, condiment request
+4626,colazione,colazione,NOUN,it,cibo,false,Daily routine meal, schedule vocabulary
+4611,pranzo,pranzo,NOUN,it,cibo,false,Daily routine meal, schedule vocabulary
+4592,cena,cena,NOUN,it,cibo,false,Daily routine meal, schedule vocabulary
+4694,merenda,fare merenda,NOUN,it,cibo,true,High-frequency child request, daily routine
+35559,fame,fame,NOUN,it,cibo,true,Basic need expression, vital daily communication
+4963,sete,sete,NOUN,it,cibo,true,Basic need expression, vital daily communication
+6964,casa,casa,NOUN,it,casa-oggetti,true,Anchor place word: going home, being home, daily routines
+25900,letto,letto,NOUN,it,casa-oggetti,true,Requests sleep and rest, central daily routine
+5921,bagno,bagno,NOUN,it,casa-oggetti,true,Critical need word: asking for the toilet
+26479,telefono,telefono,NOUN,it,casa-oggetti,true,Requests calls and contact with family
+25498,televisione,televisione,NOUN,it,casa-oggetti,true,Very frequent leisure request at home
+9813,giocattolo,giocattolo,NOUN,it,casa-oggetti,true,Generic play request covering many toys
+24801,scarpe,scarpe,NOUN,it,casa-oggetti,true,Signals going out; daily dressing routine
+3129,tavolo,tavolo,NOUN,it,casa-oggetti,false,Mealtime and activity location, used daily
+3155,sedia,sedia,NOUN,it,casa-oggetti,false,Sitting requests and mealtime routine
+3244,porta,porta,NOUN,it,casa-oggetti,false,Open/close requests, transitions between rooms
+2611,finestra,finestra,NOUN,it,casa-oggetti,false,Open/close requests, sensory regulation
+33070,cucina,cucina,NOUN,it,casa-oggetti,false,Key room, pairs with food requests
+28099,tablet,tablet,NOUN,it,casa-oggetti,false,Highly motivating leisure and AAC device request
+25191,libro,libro,NOUN,it,casa-oggetti,false,Shared reading, common leisure request
+2282,penna,penna,NOUN,it,casa-oggetti,false,Everyday writing/drawing tool request
+2475,zaino,zaino,NOUN,it,casa-oggetti,false,School and outing routine object
+3241,palla,palla,NOUN,it,casa-oggetti,false,Classic motivating play request
+2610,bicchiere,bicchiere,NOUN,it,casa-oggetti,false,Supports drink requests at every meal
+2532,piatto,piatto,NOUN,it,casa-oggetti,false,Mealtime object, avoids cymbal homonym 8364
+2362,cucchiaio,cucchiaio,NOUN,it,casa-oggetti,false,Daily cutlery, feeding independence vocabulary
+2588,forchetta,forchetta,NOUN,it,casa-oggetti,false,Daily cutlery, feeding independence vocabulary
+4931,coltello,coltello,NOUN,it,casa-oggetti,false,Completes cutlery set for mealtime
+8094,sapone,sapone,NOUN,it,casa-oggetti,false,Handwashing routine, hygiene sequence step
+2593,asciugamano,asciugamano,NOUN,it,casa-oggetti,false,Washing and bathing routine object
+2694,spazzolino,spazzolino,NOUN,it,casa-oggetti,false,Toothbrushing routine, twice-daily use
+2858,dentifricio,dentifricio,NOUN,it,casa-oggetti,false,Pairs with spazzolino in hygiene sequence
+2862,carta igienica,carta igienica,NOUN,it,casa-oggetti,false,Toileting independence, frequent bathroom need
+17284,fazzoletto,fazzoletto,NOUN,it,casa-oggetti,false,Nose-wiping need, very frequent with children
+2522,pigiama,pigiama,NOUN,it,casa-oggetti,false,Bedtime routine dressing object
+3296,giacca,giacca,NOUN,it,casa-oggetti,false,Going-out routine, hot/cold communication
+3329,occhiali,occhiali,NOUN,it,casa-oggetti,false,Personal daily-worn item, often searched for
+2451,chiavi,chiavi,NOUN,it,casa-oggetti,false,Leaving-home routine, frequently requested object
+8619,luce,luce,NOUN,it,casa-oggetti,false,On/off requests, sensory comfort at bedtime
+25479,divano,divano,NOUN,it,casa-oggetti,false,Main rest and leisure spot at home
+2250,cuscino,cuscino,NOUN,it,casa-oggetti,false,Comfort object for sleep and rest
+2459,coperta,coperta,NOUN,it,casa-oggetti,false,Warmth/comfort request, bedtime routine
+8573,specchio,specchio,NOUN,it,casa-oggetti,false,Grooming routine, self-recognition activities
+2370,doccia,doccia,NOUN,it,casa-oggetti,false,Daily washing routine object
+3272,frigorifero,frigorifero,NOUN,it,casa-oggetti,false,Where food lives; supports snack requests
+2549,orologio,orologio,NOUN,it,casa-oggetti,false,Time talk: when, waiting, schedules
+2673,testa,testa,NOUN,it,corpo-salute,false,Parte del corpo base, indica dolore e bisogni
+2876,occhio,occhi,NOUN,it,corpo-salute,false,Pittogramma occhi (plurale) piu chiaro; uso quotidiano
+2871,orecchio,orecchio,NOUN,it,corpo-salute,false,Localizza dolore (otite) e riferimenti all'udito
+2887,naso,naso,NOUN,it,corpo-salute,false,Naso chiuso, soffiare il naso: bisogni frequenti
+2663,bocca,bocca,NOUN,it,corpo-salute,false,Legata a mangiare, bere, dolore orale
+10267,dente,dente,NOUN,it,corpo-salute,false,Mal di denti e igiene orale quotidiana
+2944,lingua,lingua,NOUN,it,corpo-salute,false,Parte del corpo visibile, gusto e articolazione
+2727,collo,collo,NOUN,it,corpo-salute,false,Localizza dolore cervicale e mal di gola
+2851,capelli,capelli,NOUN,it,corpo-salute,false,Cura personale quotidiana; plurale tantum in italiano
+2928,mano,mano,NOUN,it,corpo-salute,false,Parte del corpo piu usata: lavarsi, ferite
+2669,braccio,braccio,NOUN,it,corpo-salute,false,Localizza dolore e movimento; pittogramma core ARASAAC
+8666,gamba,gamba,NOUN,it,corpo-salute,false,Dolore e mobilita; pittogramma core ARASAAC
+25327,piede,piede,NOUN,it,corpo-salute,false,Dolore, scarpe, camminare; pittogramma core ARASAAC
+2786,pancia,pancia,NOUN,it,corpo-salute,false,Sede di dolori frequentissimi nei bambini
+2748,schiena,schiena,NOUN,it,corpo-salute,false,Dolore comune in adulti con disabilita motorie
+5504,male,male,DESCRIPTOR,it,corpo-salute,true,'Fa male/sto male': avverbio nonostante type 2 ARASAAC
+2367,dolore,dolore,NOUN,it,corpo-salute,false,Segnalare dolore e vitale e urgente
+28651,mal di testa,mal di testa,NOUN,it,corpo-salute,false,Sintomo composto frequentissimo, difficile da mimare
+39664,mal di pancia,mal di pancia,NOUN,it,corpo-salute,false,Sintomo quotidiano chiave per bambini non verbali
+32530,febbre,febbre,NOUN,it,corpo-salute,true,Sintomo urgente da comunicare; pittogramma core ARASAAC
+35585,tosse,tosse,NOUN,it,corpo-salute,false,Sintomo respiratorio comune e riconoscibile
+32296,malato,malato,DESCRIPTOR,it,corpo-salute,true,'Sono malato': stato generale, apre richieste di aiuto
+8163,medicina,medicina,NOUN,it,corpo-salute,true,Terapie quotidiane; richiedere o rifiutare farmaci
+3306,cerotto,cerotto,NOUN,it,corpo-salute,false,Piccole ferite: richiesta concreta e frequente
+32051,termometro,termometro,NOUN,it,corpo-salute,false,Routine febbre; pittogramma core ARASAAC
+2777,vomitare,vomitare,VERB,it,corpo-salute,false,Sintomo urgente, previene emergenze non comunicate
+35533,felice,felice,DESCRIPTOR,it,emozioni,true,Basic positive emotion, needed daily; consistent face set.
+35545,triste,triste,DESCRIPTOR,it,emozioni,true,Basic negative emotion, essential for self-report.
+35539,arrabbiato,arrabbiato,DESCRIPTOR,it,emozioni,true,Expressing anger prevents behavioral escalation.
+35537,stanco,stanco,DESCRIPTOR,it,emozioni,true,Frequent physical state; explains refusals and requests rest.
+35535,spaventato,spaventato,DESCRIPTOR,it,emozioni,false,Communicating fear is critical for safety and comfort.
+35531,annoiato,annoiato,DESCRIPTOR,it,emozioni,false,Lets user request activity change without acting out.
+35529,sorpreso,sorpreso,DESCRIPTOR,it,emozioni,false,Basic emotion, common in social commenting.
+35547,contento,contento,DESCRIPTOR,it,emozioni,false,Everyday Italian synonym of felice, very high frequency.
+35541,confuso,confuso,DESCRIPTOR,it,emozioni,false,Signals incomprehension; prompts partner to rephrase.
+31310,tranquillo,tranquillo,DESCRIPTOR,it,emozioni,false,Calm state; key word in self-regulation routines.
+38930,nervoso,nervoso,DESCRIPTOR,it,emozioni,false,Early warning of agitation, supports de-escalation.
+36341,preoccupato,preoccupato,DESCRIPTOR,it,emozioni,false,Common adult state; distinct from paura.
+5397,bene,bene,DESCRIPTOR,it,emozioni,false,High-frequency core adverb: sto bene, va bene.
+35571,paura,paura,NOUN,it,emozioni,false,Ho paura: fixed everyday phrase, safety-relevant.
+8020,amore,amore,NOUN,it,emozioni,false,Expressing affection; key for relationships and wellbeing.
+6945,bolle,bolle,NOUN,it,scuola-gioco,false,Soap bubbles, highly motivating request word in therapy
+4935,costruzioni,costruzioni,NOUN,it,scuola-gioco,false,Building blocks, everyday toy; plural is standard usage
+2540,puzzle,puzzle,NOUN,it,scuola-gioco,false,Common structured play activity at school and home
+26238,bambola,bambola,NOUN,it,scuola-gioco,false,Everyday pretend-play toy request
+2340,macchinina,macchinina,NOUN,it,scuola-gioco,false,Toy car, everyday play request
+4608,altalena,altalena,NOUN,it,scuola-gioco,false,Favorite playground request, strong sensory motivator
+2859,parco,parco,NOUN,it,scuola-gioco,true,Frequent outing request: andiamo al parco
+6935,bicicletta,bicicletta,NOUN,it,scuola-gioco,false,Common outdoor play and leisure activity
+2359,quaderno,quaderno,NOUN,it,scuola-gioco,false,Daily school object for writing tasks
+2440,matita,matita,NOUN,it,scuola-gioco,false,Basic daily writing tool at school
+17016,pastelli,pastelli,NOUN,it,scuola-gioco,false,Colored pencils, covers requested word colori; plural standard
+6664,forbici,forbici,NOUN,it,scuola-gioco,false,School scissors pictogram; forbici is everyday plurale tantum
+2709,colla,colla,NOUN,it,scuola-gioco,false,Daily craft material for school activities
+2348,colorare,colorare,VERB,it,scuola-gioco,false,Daily school and leisure activity verb
+24791,musica,musica,NOUN,it,scuola-gioco,true,Top leisure request; also covers canzone (same pictogram)
+8089,cartoni animati,cartoni animati,NOUN,it,scuola-gioco,true,Top screen-time request for children; plural is standard
+24797,film,film,NOUN,it,scuola-gioco,false,Common leisure request, relevant for adult users too
+7190,computer,computer,NOUN,it,scuola-gioco,false,School and adult leisure/work device request
+7099,festa,festa,NOUN,it,scuola-gioco,false,Key social event word: birthdays, school parties
+25381,regalo,regalo,NOUN,it,scuola-gioco,false,High-interest event word, birthdays and holidays
+2339,macchina,macchina,NOUN,it,luoghi-trasporti,true,Most common family transport, requested daily
+26654,autobus,autobus,NOUN,it,luoghi-trasporti,true,Everyday public transport, school and therapy commutes
+3389,supermercato,supermercato,NOUN,it,luoghi-trasporti,true,Routine shopping destination, anticipates weekly outings
+30516,piscina,piscina,NOUN,it,luoghi-trasporti,true,Frequent leisure and therapy activity destination
+35695,negozio,negozio,NOUN,it,luoghi-trasporti,false,Generic shop, covers many errand contexts
+36205,ospedale,ospedale,NOUN,it,luoghi-trasporti,false,Medical visits, essential for anticipating stressful routines
+3313,farmacia,farmacia,NOUN,it,luoghi-trasporti,false,Common errand tied to health needs
+3118,chiesa,chiesa,NOUN,it,luoghi-trasporti,false,Weekly family routine for many Italian users
+2925,mare,mare,NOUN,it,luoghi-trasporti,false,Major Italian leisure destination, motivating request word
+30518,spiaggia,spiaggia,NOUN,it,luoghi-trasporti,false,Concrete summer destination, complements mare
+2909,montagna,montagna,NOUN,it,luoghi-trasporti,false,Common trip destination, contrasts with mare
+2704,città,città,NOUN,it,luoghi-trasporti,false,Basic place concept, andare in città
+2302,strada,strada,NOUN,it,luoghi-trasporti,false,Everyday environment word, road-safety talk
+2603,treno,treno,NOUN,it,luoghi-trasporti,false,Common transport, high-interest word for many users
+2264,aereo,aereo,NOUN,it,luoghi-trasporti,false,Trips and airplane spotting, motivating vocabulary
+2480,moto,moto,NOUN,it,luoghi-trasporti,false,Frequent street vehicle, high-interest for children
+6932,barca,barca,NOUN,it,luoghi-trasporti,false,Generic watercraft, holidays and harbor contexts
+2580,taxi,taxi,NOUN,it,luoghi-trasporti,false,Alternative transport, useful for adults with aphasia
+26925,metropolitana,metropolitana,NOUN,it,luoghi-trasporti,false,Urban daily transport in larger Italian cities
+29905,stazione,stazione,NOUN,it,luoghi-trasporti,false,Transit landmark, anticipates train journeys
+2499,fermata,fermata,NOUN,it,luoghi-trasporti,false,Bus-stop routine, requesting and anticipating stops
+2567,semaforo,semaforo,NOUN,it,luoghi-trasporti,false,Street-crossing safety, concrete daily landmark
+2260,ascensore,ascensore,NOUN,it,luoghi-trasporti,false,Daily mobility choice, key for wheelchair users
+2379,scala,scala,NOUN,it,luoghi-trasporti,false,Daily mobility, contrasts with ascensore
+32408,ristorante,ristorante,NOUN,it,luoghi-trasporti,false,Family outing destination, meal-out requests
+32398,bar,bar,NOUN,it,luoghi-trasporti,false,Ubiquitous Italian social stop, breakfast and snacks
+32747,adesso,adesso,DESCRIPTOR,it,tempo-natura,true,Temporal core word, anchors requests to the present.
+13080,dopo,dopo,DESCRIPTOR,it,tempo-natura,true,Essential for schedules and waiting; adverb despite ARASAAC type 5.
+32745,prima,prima,DESCRIPTOR,it,tempo-natura,true,Sequencing events; pairs with dopo in daily routines.
+38276,oggi,oggi,DESCRIPTOR,it,tempo-natura,true,Daily time reference for plans and calendars.
+38278,domani,domani,DESCRIPTOR,it,tempo-natura,false,Talking about future plans, very frequent daily.
+38279,ieri,ieri,DESCRIPTOR,it,tempo-natura,false,Recounting past events, completes the day triad.
+26799,giorno,giorno,NOUN,it,tempo-natura,false,Basic time unit; ARASAAC core-vocabulary time pictogram.
+7181,notte,notte,NOUN,it,tempo-natura,false,Sleep and bedtime routines; day/night contrast.
+25704,mattina,mattina,NOUN,it,tempo-natura,false,Structures daily routine communication.
+26716,caldo,caldo,DESCRIPTOR,it,tempo-natura,false,Expressing temperature and discomfort, weather and food.
+26865,freddo,freddo,DESCRIPTOR,it,tempo-natura,false,Expressing temperature and discomfort; pairs with caldo.
+7252,sole,sole,NOUN,it,tempo-natura,false,Daily weather talk; common noun despite ARASAAC type 1.
+3123,pioggia,pioggia,NOUN,it,tempo-natura,false,Frequent weather word affecting daily plans.
+3135,neve,neve,NOUN,it,tempo-natura,false,Salient winter weather, high interest for children.
+23731,vento,vento,NOUN,it,tempo-natura,false,Completes basic weather set for daily comments.
+5604,estate,estate,NOUN,it,tempo-natura,false,Season word for holidays and calendar talk.
+5493,inverno,inverno,NOUN,it,tempo-natura,false,Season contrast with estate; clothing and weather contexts.
+3057,albero,albero,NOUN,it,tempo-natura,false,Common outdoor referent; ARASAAC core-vocabulary pictogram.
+7104,fiore,fiore,NOUN,it,tempo-natura,false,Everyday nature noun, motivating for commenting.
+2517,cane,cane,NOUN,it,tempo-natura,false,Most common pet, early-acquired high-interest noun.
+7114,gatto,gatto,NOUN,it,tempo-natura,false,Common pet, early-acquired high-interest noun.
+5584,sì,sì,SOCIAL,it,sociale,true,Affermazione base; ARASAAC t4 ma è interiezione sociale
+5526,no,no,SOCIAL,it,sociale,true,Negazione/rifiuto base; ARASAAC t4 ma interiezione sociale
+19524,aiuto,aiuto,NOUN,it,sociale,true,Richiesta di aiuto immediata, vitale per sicurezza
+28429,basta,basta!,SOCIAL,it,sociale,true,Protesta/terminazione: unico modo per dire stop
+37163,ancora,ancora,DESCRIPTOR,it,sociale,true,Richiesta di ripetizione, tra le parole AAC più usate
+5508,più,più,DESCRIPTOR,it,sociale,true,Richiedere quantità maggiore in ogni contesto
+6009,ciao,ciao,SOCIAL,it,sociale,false,Saluto universale di apertura conversazione
+5896,arrivederci,arrivederci,SOCIAL,it,sociale,false,Chiusura di conversazione e congedo quotidiano
+6944,buongiorno,buon giorno,SOCIAL,it,sociale,false,Saluto formale mattutino, routine quotidiana
+6942,buonanotte,buona notte,SOCIAL,it,sociale,false,Routine serale, congedo prima di dormire
+8128,grazie,grazie,SOCIAL,it,sociale,true,Cortesia fondamentale, usata più volte al giorno
+8194,per favore,per favore,SOCIAL,it,sociale,true,Modula ogni richiesta con cortesia
+11625,scusa,scusa,SOCIAL,it,sociale,false,Scusarsi/riparare; copre anche mi dispiace
+29635,va bene,va bene,SOCIAL,it,sociale,false,Accordo/accettazione; ARASAAC t3 ma formula sociale fissa
+7180,non lo so,non lo so,SOCIAL,it,sociale,false,Esprimere incertezza evita risposte forzate
+11597,come stai,come stai?,SOCIAL,it,sociale,false,Avvia conversazione, interesse per l'altro
+13630,sto bene,sto bene,SOCIAL,it,sociale,false,Risposta standard a come stai
+11591,anche io,anche io,SOCIAL,it,sociale,false,Condividere/aderire; sostituisce anche assente
+21917,mi piace,mi piace,SOCIAL,it,sociale,false,Commento positivo rapido su qualsiasi cosa
+37825,non mi piace,non mi piace,SOCIAL,it,sociale,false,Rifiuto garbato, alternativa a proteste fisiche
+6936,benvenuto,benvenuto,SOCIAL,it,sociale,false,Accogliere visitatori, cortesia domestica
+13018,auguri,auguri,SOCIAL,it,sociale,false,Feste e complimenti, partecipazione sociale
+11627,buon appetito,buon appetito!,SOCIAL,it,sociale,false,Rituale dei pasti, tre occasioni al giorno
+4658,grande,grande,DESCRIPTOR,it,descrittori,true,Basic size contrast, used across all contexts daily.
+4716,piccolo,piccolo,DESCRIPTOR,it,descrittori,true,Opposite of grande, essential size descriptor.
+5521,molto,molto,DESCRIPTOR,it,descrittori,true,Core quantifier; covers 'tanto', requests and intensification.
+5546,poco,poco,DESCRIPTOR,it,descrittori,true,Core quantifier, opposite of molto, regulates quantity.
+5596,tutto,tutto,DESCRIPTOR,it,descrittori,true,High-frequency quantifier, completion and totality.
+29839,niente,niente,DESCRIPTOR,it,descrittori,true,Core negation quantifier, refusing and reporting absence.
+17054,altro,altro,DESCRIPTOR,it,descrittori,true,Core word for requesting a different item.
+11194,bello,bello,DESCRIPTOR,it,descrittori,false,Everyday positive evaluation, commenting function.
+26090,brutto,brutto,DESCRIPTOR,it,descrittori,false,Everyday negative evaluation, opposite of bello.
+4581,buono,buono,DESCRIPTOR,it,descrittori,false,Frequent quality judgement, food and behavior.
+4690,cattivo,cattivo,DESCRIPTOR,it,descrittori,false,Opposite of buono, protest and evaluation.
+11316,nuovo,nuovo,DESCRIPTOR,it,descrittori,false,Distinguishes new items, frequent in daily talk.
+11394,vecchio,vecchio,DESCRIPTOR,it,descrittori,false,Opposite of nuovo, describes objects and people.
+26172,pulito,pulito,DESCRIPTOR,it,descrittori,false,Hygiene routines, describing clothes and objects.
+26459,sporco,sporco,DESCRIPTOR,it,descrittori,false,Reporting mess, requesting cleaning, daily hygiene.
+36309,aperto,aperto,DESCRIPTOR,it,descrittori,false,State of doors, containers, shops; daily use.
+36311,chiuso,chiuso,DESCRIPTOR,it,descrittori,false,Opposite of aperto, frequent state descriptor.
+37850,veloce,veloce,DESCRIPTOR,it,descrittori,false,Regulates pace of activities and movement.
+4676,lento,lento,DESCRIPTOR,it,descrittori,false,Opposite of veloce, requests slowing down.
+25782,alto,alto,DESCRIPTOR,it,descrittori,false,Basic spatial descriptor, height comparisons.
+25839,basso,basso,DESCRIPTOR,it,descrittori,false,Opposite of alto, basic spatial concept.
+4637,duro,duro,DESCRIPTOR,it,descrittori,false,Texture descriptor for food and objects.
+4578,morbido,morbido,DESCRIPTOR,it,descrittori,false,Texture descriptor, sensory preferences.
+10201,dolce,dolce,DESCRIPTOR,it,descrittori,false,Basic taste, expressing food preferences.
+4739,salato,salato,DESCRIPTOR,it,descrittori,false,Basic taste, opposite of dolce.
+26176,pieno,pieno,DESCRIPTOR,it,descrittori,false,Container state, mealtime and daily routines.
+26527,vuoto,vuoto,DESCRIPTOR,it,descrittori,false,Opposite of pieno, reporting finished containers.
+4667,uguale,uguale,DESCRIPTOR,it,descrittori,false,Comparison concept, requesting the same thing.
+4628,diverso,diverso,DESCRIPTOR,it,descrittori,false,Opposite of uguale; diverso verbatim among keywords.
+12264,mio,mio,DESCRIPTOR,it,descrittori,false,Possession claim, high-frequency early-developing word.
+12281,tuo,tuo,DESCRIPTOR,it,descrittori,false,Possessive contrast with mio, turn-taking talk.
+7095,questo,questo,DESCRIPTOR,it,descrittori,false,Demonstrative for pointing and choosing nearby items.
+6906,quello,quello,DESCRIPTOR,it,descrittori,false,Demonstrative for distant items, choice making.
+25253,bagnato,bagnato,DESCRIPTOR,it,descrittori,false,Reporting wet clothes, spills, toileting needs.
+4736,rotto,rotto,DESCRIPTOR,it,descrittori,false,Reporting broken items, requesting help or repair.
+26162,lungo,lungo,DESCRIPTOR,it,descrittori,false,Basic length descriptor, everyday comparisons.
+26002,corto,corto,DESCRIPTOR,it,descrittori,false,Opposite of lungo, basic length concept.
+2627,uno,uno,DESCRIPTOR,it,numeri-colori,false,Counting, quantity requests; first number learned.
+2628,due,due,DESCRIPTOR,it,numeri-colori,false,Daily counting and quantity requests.
+2629,tre,tre,DESCRIPTOR,it,numeri-colori,false,Daily counting and quantity requests.
+2630,quattro,quattro,DESCRIPTOR,it,numeri-colori,false,Daily counting and quantity requests.
+2631,cinque,cinque,DESCRIPTOR,it,numeri-colori,false,Daily counting; one hand of fingers.
+2632,sei,sei,DESCRIPTOR,it,numeri-colori,false,Completes 1-10 counting sequence.
+2633,sette,sette,DESCRIPTOR,it,numeri-colori,false,Completes 1-10 counting sequence.
+2634,otto,otto,DESCRIPTOR,it,numeri-colori,false,Completes 1-10 counting sequence.
+2635,nove,nove,DESCRIPTOR,it,numeri-colori,false,Completes 1-10 counting sequence.
+29254,dieci,dieci,DESCRIPTOR,it,numeri-colori,false,Completes 1-10; matches numeral series style.
+2808,rosso,rosso,DESCRIPTOR,it,numeri-colori,false,Basic color for describing and choosing objects.
+4869,blu,blu,DESCRIPTOR,it,numeri-colori,false,Basic color; only pictogram carrying keyword blu.
+2648,giallo,giallo,DESCRIPTOR,it,numeri-colori,false,Basic color for describing and choosing objects.
+4887,verde,verde,DESCRIPTOR,it,numeri-colori,false,Basic color; ARASAAC core-vocabulary-tagged variant chosen.
+2886,nero,nero,DESCRIPTOR,it,numeri-colori,false,Basic color for describing and choosing objects.
+8043,bianco,bianco,DESCRIPTOR,it,numeri-colori,false,Basic color; core-vocabulary-tagged variant over 2662.
+2888,arancione,arancione,DESCRIPTOR,it,numeri-colori,false,Basic color for describing and choosing objects.
+2807,rosa,rosa,DESCRIPTOR,it,numeri-colori,false,Color swatch chosen, avoids flower pictogram 3151.
+2907,viola,viola,DESCRIPTOR,it,numeri-colori,false,Color adjective chosen, avoids instrument pictogram 17332.
+2923,marrone,marrone,DESCRIPTOR,it,numeri-colori,false,Basic color for describing and choosing objects.
+7075,colore,colore,NOUN,it,numeri-colori,false,Category anchor; supports asking what color.
+2879,numero,numero,NOUN,it,numeri-colori,false,Category anchor; supports asking how many.
+7764,dove,dove,SOCIAL,it,sociale,true,Interrogativa di luogo, usata tutto il giorno (t4→SOCIAL)
+22620,che cosa,che cosa,SOCIAL,it,sociale,true,Chiedere/chiarire; evitato 11318 'cosa'=oggetto (t6→SOCIAL)
+9853,chi,chi,SOCIAL,it,sociale,false,Chiedere di persone che arrivano/partono (t6→SOCIAL)
+22621,quando,quando,SOCIAL,it,sociale,false,Domanda temporale; riduce ansia da routine (t4→SOCIAL)
+11348,perché,perché,SOCIAL,it,sociale,false,Protesta e riparazione della comprensione per afasia (t6→SOCIAL)
+12313,come,come,SOCIAL,it,sociale,false,Completa il set delle parole-domanda (t4→SOCIAL)
+5382,qui,qui,DESCRIPTOR,it,descrittori,false,Deittico ad altissima frequenza; supporta richieste indicative
+5375,là,là,DESCRIPTOR,it,descrittori,false,Deittico, coppia con qui: 'vai là / metti là'
+3082,scuola,scuola,NOUN,it,luoghi-trasporti,false,Luogo quotidiano principale del bambino
+2296,caffè,caffè,NOUN,it,cibo,false,Abitudine quotidiana adulti; bilancia lista troppo infantile
+5525,non,non,DESCRIPTOR,it,sociale,true,Negazione ('non voglio'); gesto di diniego, distinto da 5526

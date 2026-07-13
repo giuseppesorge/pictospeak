@@ -1,0 +1,163 @@
+{
+    "id": "descrittori",
+    "locale": "it",
+    "name": "Descrittori",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "25782"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "17054"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "36309"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25253"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25839"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11194"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26090"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4581"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4690"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "36311"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26002"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4628"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "10201"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4637"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4658"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4676"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26162"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5375"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "12264"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5521"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4578"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "29839"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11316"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4716"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26176"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5546"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26172"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6906"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7095"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5382"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4736"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4739"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26459"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "12281"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5596"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4667"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11394"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "37850"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26527"
+        }
+    ]
+}

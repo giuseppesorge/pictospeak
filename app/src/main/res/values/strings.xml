@@ -8,4 +8,10 @@
     <string name="board_stop">Stop</string>
     <string name="board_clear">Clear</string>
     <string name="board_backspace">Backspace</string>
+    <string name="board_back_home">Back</string>
+    <string name="about_open">\u2139</string>
+    <string name="about_tagline">Free, open-source, offline AAC communicator. The user always has the last word.</string>
+    <string name="about_symbols_title">Pictographic symbols</string>
+    <string name="about_license_title">License</string>
+    <string name="about_license_body">PictoSpeak code is licensed under the Apache License 2.0. Symbol and lexicon licenses are separate — see THIRD_PARTY_NOTICES.md in the project repository.</string>
 </resources>

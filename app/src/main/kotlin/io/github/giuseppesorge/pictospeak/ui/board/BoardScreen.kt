@@ -1,6 +1,7 @@
 package io.github.giuseppesorge.pictospeak.ui.board
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -39,11 +40,14 @@ import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 
 /**
  * The board: selection strip + proposal bar (with the confirm-to-speak button, the app's
- * ONLY speech entry point) + pictogram grid rendered from the bundled catalog.
- * testTags are exposed as resource ids for the Macrobenchmark scroll journey.
+ * ONLY speech entry point) + pictogram grid with category-folder navigation.
+ * testTags are exposed as resource ids for the Macrobenchmark journeys.
  */
 @Composable
-fun BoardScreen(viewModel: BoardViewModel) {
+fun BoardScreen(
+    viewModel: BoardViewModel,
+    onAboutPressed: () -> Unit,
+) {
     val state by viewModel.uiState.collectAsState()
     val speaking by viewModel.speaking.collectAsState()
     Surface(modifier = Modifier.fillMaxSize()) {
@@ -62,10 +66,13 @@ fun BoardScreen(viewModel: BoardViewModel) {
                 onStopPressed = viewModel::onStopPressed,
                 onBackspace = viewModel::onBackspace,
                 onClear = viewModel::onClear,
+                onAboutPressed = onAboutPressed,
             )
             PictogramGrid(
-                vocabulary = state.vocabulary,
+                cells = state.cells,
                 onPictogramTapped = viewModel::onPictogramTapped,
+                onFolderTapped = viewModel::onFolderTapped,
+                onBackToHome = viewModel::onBackToHome,
             )
         }
     }
@@ -102,6 +109,7 @@ private fun ProposalBar(
     onStopPressed: () -> Unit,
     onBackspace: () -> Unit,
     onClear: () -> Unit,
+    onAboutPressed: () -> Unit,
 ) {
     Row(
         modifier =
@@ -135,13 +143,16 @@ private fun ProposalBar(
         }
         TextButton(onClick = onBackspace) { Text(stringResource(R.string.board_backspace)) }
         TextButton(onClick = onClear) { Text(stringResource(R.string.board_clear)) }
+        TextButton(onClick = onAboutPressed) { Text(stringResource(R.string.about_open)) }
     }
 }
 
 @Composable
 private fun PictogramGrid(
-    vocabulary: List<PictogramToken>,
+    cells: List<BoardCellUi>,
     onPictogramTapped: (PictogramToken) -> Unit,
+    onFolderTapped: (String) -> Unit,
+    onBackToHome: () -> Unit,
 ) {
     LazyVerticalGrid(
         columns = GridCells.Adaptive(minSize = 112.dp),
@@ -149,27 +160,111 @@ private fun PictogramGrid(
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier.testTag("board-grid"),
     ) {
-        items(items = vocabulary, key = { it.id }, contentType = { "pictogram" }) { token ->
-            Column(
-                modifier =
-                    Modifier
-                        .background(Color(FitzgeraldSlot.fromPos(token.pos).argb))
-                        .clickable { onPictogramTapped(token) }
-                        .padding(6.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                AsyncImage(
-                    model = "file:///android_asset/arasaac/${token.id}.png",
-                    contentDescription = token.label,
-                    modifier = Modifier.size(88.dp),
-                )
-                Text(
-                    token.label,
-                    style = MaterialTheme.typography.labelLarge,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
+        items(
+            items = cells,
+            key = { cell ->
+                when (cell) {
+                    is BoardCellUi.Picto -> "p-${cell.token.id}"
+                    is BoardCellUi.Folder -> "f-${cell.boardId}"
+                    BoardCellUi.Back -> "back"
+                }
+            },
+            contentType = { cell ->
+                when (cell) {
+                    is BoardCellUi.Picto -> "pictogram"
+                    is BoardCellUi.Folder -> "folder"
+                    BoardCellUi.Back -> "back"
+                }
+            },
+        ) { cell ->
+            when (cell) {
+                is BoardCellUi.Picto -> PictoCell(cell.token, onPictogramTapped)
+                is BoardCellUi.Folder -> FolderCell(cell, onFolderTapped)
+                BoardCellUi.Back -> BackCell(onBackToHome)
             }
         }
     }
 }
+
+@Composable
+private fun PictoCell(
+    token: PictogramToken,
+    onPictogramTapped: (PictogramToken) -> Unit,
+) {
+    Column(
+        modifier =
+            Modifier
+                .background(Color(FitzgeraldSlot.fromPos(token.pos).argb))
+                .clickable { onPictogramTapped(token) }
+                .padding(6.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        AsyncImage(
+            model = "file:///android_asset/arasaac/${token.id}.png",
+            contentDescription = token.label,
+            modifier = Modifier.size(88.dp),
+        )
+        Text(
+            token.label,
+            style = MaterialTheme.typography.labelLarge,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+    }
+}
+
+@Composable
+private fun FolderCell(
+    folder: BoardCellUi.Folder,
+    onFolderTapped: (String) -> Unit,
+) {
+    Column(
+        modifier =
+            Modifier
+                .background(FOLDER_BACKGROUND)
+                .border(2.dp, FOLDER_BORDER)
+                .clickable { onFolderTapped(folder.boardId) }
+                .padding(6.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        if (folder.icon != null) {
+            AsyncImage(
+                model = "file:///android_asset/arasaac/${folder.icon.id}.png",
+                contentDescription = null,
+                modifier = Modifier.size(88.dp),
+            )
+        } else {
+            Box(modifier = Modifier.size(88.dp))
+        }
+        Text(
+            "📁 ${folder.name}",
+            style = MaterialTheme.typography.labelLarge,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+    }
+}
+
+@Composable
+private fun BackCell(onBackToHome: () -> Unit) {
+    Column(
+        modifier =
+            Modifier
+                .background(FOLDER_BACKGROUND)
+                .border(2.dp, FOLDER_BORDER)
+                .clickable { onBackToHome() }
+                .padding(6.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Box(modifier = Modifier.size(88.dp), contentAlignment = Alignment.Center) {
+            Text("⬅️", style = MaterialTheme.typography.displaySmall)
+        }
+        Text(stringResource(R.string.board_back_home), style = MaterialTheme.typography.labelLarge)
+    }
+}
+
+@Suppress("MagicNumber") // single documented folder palette (docs/ui-conventions.md)
+private val FOLDER_BACKGROUND = Color(0xFFEDEDED)
+
+@Suppress("MagicNumber")
+private val FOLDER_BORDER = Color(0xFFBDBDBD)

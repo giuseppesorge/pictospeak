@@ -45,11 +45,47 @@ class BoardViewModelTest {
         )
 
     @Test
-    fun `vocabulary loads into state`() =
+    fun `home board loads with pictogram and folder cells`() =
         runTest(dispatcher) {
             val vm = viewModel()
             dispatcher.scheduler.advanceUntilIdle()
-            assertEquals(listOf(io, mangiare), vm.uiState.value.vocabulary)
+            val state = vm.uiState.value
+            assertEquals("home", state.boardId)
+            assertEquals(
+                listOf(io, mangiare),
+                state.cells.filterIsInstance<BoardCellUi.Picto>().map { it.token },
+            )
+            assertEquals(
+                listOf("cibo"),
+                state.cells.filterIsInstance<BoardCellUi.Folder>().map { it.boardId },
+            )
+        }
+
+    @Test
+    fun `folder navigation adds a back cell and back returns home`() =
+        runTest(dispatcher) {
+            val vm = viewModel()
+            dispatcher.scheduler.advanceUntilIdle()
+            vm.onFolderTapped("cibo")
+            dispatcher.scheduler.advanceUntilIdle()
+            val inFolder = vm.uiState.value
+            assertEquals("cibo", inFolder.boardId)
+            assertEquals(BoardCellUi.Back, inFolder.cells.first())
+            vm.onBackToHome()
+            dispatcher.scheduler.advanceUntilIdle()
+            assertEquals("home", vm.uiState.value.boardId)
+        }
+
+    @Test
+    fun `navigating boards preserves the selection strip`() =
+        runTest(dispatcher) {
+            val vm = viewModel()
+            dispatcher.scheduler.advanceUntilIdle()
+            vm.onPictogramTapped(io)
+            vm.onFolderTapped("cibo")
+            vm.onPictogramTapped(mangiare)
+            dispatcher.scheduler.advanceUntilIdle()
+            assertEquals(listOf(io, mangiare), vm.uiState.value.selection)
         }
 
     @Test

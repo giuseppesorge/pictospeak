@@ -1,0 +1,87 @@
+{
+    "id": "scuola-gioco",
+    "locale": "it",
+    "name": "Scuola e gioco",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "4608"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26238"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6935"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6945"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8089"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2709"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2348"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7190"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4935"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7099"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "24797"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6664"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2340"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2440"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "24791"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2859"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "17016"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2540"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2359"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25381"
+        }
+    ]
+}

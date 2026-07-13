@@ -6,4 +6,10 @@
     <string name="board_stop">Stop</string>
     <string name="board_clear">Cancella</string>
     <string name="board_backspace">Indietro</string>
+    <string name="board_back_home">Torna</string>
+    <string name="about_open">\u2139</string>
+    <string name="about_tagline">Comunicatore CAA gratuito, open source e offline. L\'ultima parola è sempre dell\'utente.</string>
+    <string name="about_symbols_title">Simboli pittografici</string>
+    <string name="about_license_title">Licenza</string>
+    <string name="about_license_body">Il codice di PictoSpeak è distribuito con licenza Apache 2.0. Le licenze di simboli e lessico sono separate — vedi THIRD_PARTY_NOTICES.md nel repository.</string>
 </resources>

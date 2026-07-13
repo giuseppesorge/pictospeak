@@ -1,0 +1,339 @@
+{
+    "id": "azioni",
+    "locale": "it",
+    "name": "Azioni",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "6023"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8555"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "32648"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6548"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6898"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8142"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "24825"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2381"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "16697"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7271"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6062"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6052"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6061"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6067"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6044"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6960"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6019"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6947"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "9847"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "24976"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5431"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6457"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6465"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2342"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "28431"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26258"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "9693"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8088"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6479"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "15523"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2742"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5465"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11749"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3428"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "16713"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7196"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5358"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6537"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6552"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "16907"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8029"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6215"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "34826"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2326"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6624"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7141"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6456"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6989"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6568"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "9014"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6517"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8661"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "37826"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7147"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6553"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35949"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6453"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3351"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "37369"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "13354"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "16643"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "9031"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6604"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2795"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6607"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "16885"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2654"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2380"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6611"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "30194"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "20093"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6495"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8989"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2547"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4691"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "39414"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3293"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "24742"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2806"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6564"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11708"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2781"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5441"
+        }
+    ]
+}
