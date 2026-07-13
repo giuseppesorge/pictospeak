@@ -1,0 +1,14 @@
+# Project-wide detekt overrides — applied on top of the default config
+# (buildUponDefaultConfig = true in every module). Keep this file minimal;
+# every deviation from defaults needs a comment.
+
+naming:
+  FunctionNaming:
+    # Composable functions are PascalCase by Compose convention.
+    ignoreAnnotated: ['Composable']
+
+style:
+  MagicNumber:
+    # Enum constructor arguments (e.g. the Fitzgerald ARGB palette) are the named
+    # constants themselves — flagging them is noise.
+    ignoreEnums: true

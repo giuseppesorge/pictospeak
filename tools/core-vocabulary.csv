@@ -1,0 +1,5 @@
+arasaacId,lemma,lang,category,boardPosition,rationale
+# Curated at M2: ~400 core-vocabulary entries per language (high-frequency words usable
+# across contexts) + category fringe. Pronoun pictograms (io/tu/lui/lei/noi/voi/loro) are
+# REQUIRED by the sentence engine's person selection. Every row needs a rationale — this
+# file is meant to be reviewed by speech therapists, not just developers.
