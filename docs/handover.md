@@ -53,13 +53,33 @@ flavor never knew it existed.
 
 1. `./gradlew check assembleFossRelease bundlePlayRelease` must be green, plus
    `scripts/check-licenses.sh` and the CI no-`liblitertlm`-in-foss assertion.
-2. Physical-device checklist (budgets in `perf-budgets.md`; record in `benchmarks.md`),
-   including an airplane-mode end-to-end demo dry-run.
-3. Tag `vX.Y.Z` → `release.yml` builds the artifacts (signing: TODO — keys not yet
-   created; keep keystores out of the repo, document the signing config here when added).
+2. Physical-device checklist (budgets in `perf-budgets.md`; record in `benchmarks.md`):
+   run `scripts/perf/release-checklist.sh` and the airplane-mode `scripts/demo-dryrun.sh`.
+3. Tag `vX.Y.Z` → `release.yml` builds the artifacts.
 4. Distribution: GitHub Releases APK (foss). F-Droid and Play submission are post-POC
    steps; the foss flavor is already built for F-Droid's constraints (FOSS-only deps, no
    network, committed assets, reproducible-friendly).
+
+### Signing
+
+Release signing reads `keystore.properties` at the repo root — **gitignored, never
+committed**. To sign locally:
+
+```bash
+keytool -genkeypair -v -keystore pictospeak-release.jks -alias pictospeak \
+  -keyalg RSA -keysize 2048 -validity 10000
+cat > keystore.properties <<EOF
+storeFile=pictospeak-release.jks
+storePassword=…
+keyAlias=pictospeak
+keyPassword=…
+EOF
+./gradlew assembleFossRelease   # now signed
+```
+
+Without `keystore.properties` (CI, fresh clones) the release APK is left unsigned — sign it
+out of band, or add the file. Keep the `.jks` and the properties out of version control
+(both are already in `.gitignore`).
 
 ## Recurring obligations
 

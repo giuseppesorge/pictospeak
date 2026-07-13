@@ -31,4 +31,9 @@
     <string name="setup_status_missing_voice">Una voce per questa lingua va scaricata una volta (serve internet solo per questo).</string>
     <string name="setup_status_no_language">Questo dispositivo non ha una voce per la lingua scelta. Prova un\'altra lingua nelle impostazioni.</string>
     <string name="setup_status_no_engine">Nessun motore vocale trovato su questo dispositivo.</string>
+    <string name="settings_backup">Backup</string>
+    <string name="settings_export">Esporta impostazioni</string>
+    <string name="settings_import">Importa impostazioni</string>
+    <string name="settings_open_hold">Impostazioni caregiver</string>
+    <string name="settings_hold_hint">Tieni premuto per aprire le impostazioni caregiver.</string>
 </resources>

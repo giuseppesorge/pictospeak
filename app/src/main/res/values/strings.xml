@@ -33,4 +33,9 @@
     <string name="setup_status_missing_voice">A voice for this language must be downloaded once (needs internet for this step only).</string>
     <string name="setup_status_no_language">This device has no voice for the selected language. Try another language in settings.</string>
     <string name="setup_status_no_engine">No speech engine was found on this device.</string>
+    <string name="settings_backup">Backup</string>
+    <string name="settings_export">Export settings</string>
+    <string name="settings_import">Import settings</string>
+    <string name="settings_open_hold">Caregiver settings</string>
+    <string name="settings_hold_hint">Press and hold to open caregiver settings.</string>
 </resources>

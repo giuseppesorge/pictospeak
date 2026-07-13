@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
@@ -30,6 +31,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.compose.ui.text.style.TextOverflow
@@ -195,13 +199,18 @@ private fun PictoCell(
         modifier =
             Modifier
                 .background(Color(FitzgeraldSlot.fromPos(token.pos).argb))
-                .clickable { onPictogramTapped(token) }
+                .heightIn(min = 48.dp)
+                // TalkBack reads the whole cell as one labelled button.
+                .semantics(mergeDescendants = true) {
+                    role = Role.Button
+                    contentDescription = token.label
+                }.clickable { onPictogramTapped(token) }
                 .padding(6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         AsyncImage(
             model = "file:///android_asset/arasaac/${token.id}.png",
-            contentDescription = token.label,
+            contentDescription = null,
             modifier = Modifier.size(88.dp),
         )
         Text(
@@ -223,7 +232,11 @@ private fun FolderCell(
             Modifier
                 .background(FOLDER_BACKGROUND)
                 .border(2.dp, FOLDER_BORDER)
-                .clickable { onFolderTapped(folder.boardId) }
+                .heightIn(min = 48.dp)
+                .semantics(mergeDescendants = true) {
+                    role = Role.Button
+                    contentDescription = folder.name
+                }.clickable { onFolderTapped(folder.boardId) }
                 .padding(6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -247,12 +260,17 @@ private fun FolderCell(
 
 @Composable
 private fun BackCell(onBackToHome: () -> Unit) {
+    val backLabel = stringResource(R.string.board_back_home)
     Column(
         modifier =
             Modifier
                 .background(FOLDER_BACKGROUND)
                 .border(2.dp, FOLDER_BORDER)
-                .clickable { onBackToHome() }
+                .heightIn(min = 48.dp)
+                .semantics(mergeDescendants = true) {
+                    role = Role.Button
+                    contentDescription = backLabel
+                }.clickable { onBackToHome() }
                 .padding(6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {

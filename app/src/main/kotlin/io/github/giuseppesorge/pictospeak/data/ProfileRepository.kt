@@ -18,16 +18,19 @@ class ProfileRepository(
         }
     private val file = File(filesDir, FILE_NAME)
 
-    fun load(): Profile =
-        runCatching {
-            if (file.exists()) json.decodeFromString<Profile>(file.readText()) else Profile()
-        }.getOrDefault(Profile())
+    fun load(): Profile = deserialize(if (file.exists()) file.readText() else "") ?: Profile()
 
     fun save(profile: Profile) {
         val tmp = File(file.parentFile, "$FILE_NAME.tmp")
-        tmp.writeText(json.encodeToString(profile))
+        tmp.writeText(serialize(profile))
         check(tmp.renameTo(file)) { "failed to persist profile" }
     }
+
+    /** Serialize for SAF export. */
+    fun serialize(profile: Profile): String = json.encodeToString(profile)
+
+    /** Parse an imported profile; null if the content is not a valid profile (never throws). */
+    fun deserialize(text: String): Profile? = runCatching { json.decodeFromString<Profile>(text) }.getOrNull()
 
     private companion object {
         const val FILE_NAME = "settings.json"

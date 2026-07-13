@@ -10,6 +10,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Surface
@@ -33,6 +34,8 @@ import io.github.giuseppesorge.pictospeak.data.Profile
 fun SettingsScreen(
     profile: Profile,
     onProfileChange: (Profile) -> Unit,
+    onExport: () -> Unit,
+    onImport: () -> Unit,
     onBack: () -> Unit,
 ) {
     Surface(modifier = Modifier.fillMaxSize()) {
@@ -46,25 +49,7 @@ fun SettingsScreen(
             TextButton(onClick = onBack) { Text(stringResource(R.string.board_back_home)) }
             Text(stringResource(R.string.settings_title), style = MaterialTheme.typography.headlineMedium)
 
-            Text(stringResource(R.string.settings_language), style = MaterialTheme.typography.titleMedium)
-            Profile.SUPPORTED_LANGUAGES.forEach { lang ->
-                Row(
-                    modifier =
-                        Modifier
-                            .fillMaxWidth()
-                            .selectable(selected = profile.language == lang) {
-                                onProfileChange(profile.copy(language = lang))
-                            }.padding(vertical = 4.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    RadioButton(selected = profile.language == lang, onClick = null)
-                    Text(
-                        languageName(lang),
-                        style = MaterialTheme.typography.bodyLarge,
-                        modifier = Modifier.padding(start = 8.dp),
-                    )
-                }
-            }
+            LanguageChooser(profile.language) { onProfileChange(profile.copy(language = it)) }
 
             LabeledSlider(
                 label = stringResource(R.string.settings_rate),
@@ -90,6 +75,37 @@ fun SettingsScreen(
                     onCheckedChange = { onProfileChange(profile.copy(speakLabelOnTap = it)) },
                 )
             }
+
+            Text(stringResource(R.string.settings_backup), style = MaterialTheme.typography.titleMedium)
+            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                OutlinedButton(onClick = onExport) { Text(stringResource(R.string.settings_export)) }
+                OutlinedButton(onClick = onImport) { Text(stringResource(R.string.settings_import)) }
+            }
+        }
+    }
+}
+
+@Composable
+private fun LanguageChooser(
+    current: String,
+    onSelect: (String) -> Unit,
+) {
+    Text(stringResource(R.string.settings_language), style = MaterialTheme.typography.titleMedium)
+    Profile.SUPPORTED_LANGUAGES.forEach { lang ->
+        Row(
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .selectable(selected = current == lang) { onSelect(lang) }
+                    .padding(vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            RadioButton(selected = current == lang, onClick = null)
+            Text(
+                languageName(lang),
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.padding(start = 8.dp),
+            )
         }
     }
 }

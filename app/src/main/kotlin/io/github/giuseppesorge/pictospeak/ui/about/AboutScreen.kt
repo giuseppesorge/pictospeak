@@ -1,16 +1,24 @@
 package io.github.giuseppesorge.pictospeak.ui.about
 
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -20,6 +28,7 @@ import io.github.giuseppesorge.pictospeak.R
  * Attribution and license surface — a definition-of-done requirement (CLAUDE.md rule 4).
  * The ARASAAC attribution below is the official wording and must never be reworded.
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun AboutScreen(
     onBack: () -> Unit,
@@ -34,7 +43,19 @@ fun AboutScreen(
         ) {
             TextButton(onClick = onBack) { Text(stringResource(R.string.board_back_home)) }
             Text("PictoSpeak", style = MaterialTheme.typography.headlineMedium)
-            TextButton(onClick = onOpenSettings) { Text(stringResource(R.string.settings_open)) }
+            // Caregiver gate: long-press to reach Settings, so a user cannot open it by
+            // accident (a tap only shows a hint).
+            var showHint by remember { mutableStateOf(false) }
+            OutlinedButton(
+                onClick = { showHint = true },
+                modifier =
+                    Modifier
+                        .heightIn(min = 48.dp)
+                        .combinedClickable(onClick = { showHint = true }, onLongClick = onOpenSettings),
+            ) { Text(stringResource(R.string.settings_open_hold)) }
+            if (showHint) {
+                Text(stringResource(R.string.settings_hold_hint), style = MaterialTheme.typography.bodySmall)
+            }
             Text(
                 stringResource(R.string.about_tagline),
                 style = MaterialTheme.typography.bodyLarge,

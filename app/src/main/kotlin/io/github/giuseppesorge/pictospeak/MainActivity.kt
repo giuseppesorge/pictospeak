@@ -2,7 +2,9 @@ package io.github.giuseppesorge.pictospeak
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -11,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 import io.github.giuseppesorge.pictospeak.nlg.api.Pos
@@ -76,12 +79,7 @@ private fun App(container: AppContainer) {
                 onBack = { screen = Screen.Board },
                 onOpenSettings = { screen = Screen.Settings },
             )
-        Screen.Settings ->
-            SettingsScreen(
-                profile = profile,
-                onProfileChange = { updated -> container.updateProfile { updated } },
-                onBack = { screen = Screen.Board },
-            )
+        Screen.Settings -> SettingsRoute(container, profile) { screen = Screen.Board }
         Screen.Setup -> {
             val readiness by container.ttsGateway.readiness.collectAsState()
             TtsSetupScreen(
@@ -96,6 +94,41 @@ private fun App(container: AppContainer) {
             )
         }
     }
+}
+
+@Composable
+private fun SettingsRoute(
+    container: AppContainer,
+    profile: io.github.giuseppesorge.pictospeak.data.Profile,
+    onBack: () -> Unit,
+) {
+    val context = LocalContext.current
+    val exportLauncher =
+        rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
+            uri?.let {
+                context.contentResolver.openOutputStream(it)?.use { out ->
+                    out.write(container.profileRepository.serialize(profile).toByteArray())
+                }
+            }
+        }
+    val importLauncher =
+        rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+            uri?.let {
+                val text = context.contentResolver.openInputStream(it)?.use { ins -> ins.readBytes().decodeToString() }
+                text?.let { body ->
+                    container.profileRepository.deserialize(body)?.let { imported ->
+                        container.updateProfile { imported }
+                    }
+                }
+            }
+        }
+    SettingsScreen(
+        profile = profile,
+        onProfileChange = { updated -> container.updateProfile { updated } },
+        onExport = { exportLauncher.launch("pictospeak-settings.json") },
+        onImport = { importLauncher.launch(arrayOf("application/json")) },
+        onBack = onBack,
+    )
 }
 
 /** A throwaway token used only to sound out the voice on the setup screen. */

@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.compose.compiler)
@@ -5,6 +7,13 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.ktlint)
 }
+
+// Release signing reads from keystore.properties (gitignored) so no key material is ever
+// committed. Absent (CI, fresh clones) -> the release APK is left unsigned; sign it out of
+// band or provide the file. See docs/handover.md.
+val keystorePropsFile = rootProject.file("keystore.properties")
+val releaseSigning: Properties? =
+    keystorePropsFile.takeIf { it.exists() }?.let { f -> Properties().apply { f.inputStream().use { load(it) } } }
 
 android {
     namespace = "io.github.giuseppesorge.pictospeak"
@@ -16,6 +25,17 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "0.1.0-dev"
+    }
+
+    signingConfigs {
+        releaseSigning?.let { props ->
+            create("release") {
+                storeFile = file(props.getProperty("storeFile"))
+                storePassword = props.getProperty("storePassword")
+                keyAlias = props.getProperty("keyAlias")
+                keyPassword = props.getProperty("keyPassword")
+            }
+        }
     }
 
     compileOptions {
@@ -48,6 +68,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
+            // Signed only when keystore.properties is present (docs/handover.md); else unsigned.
+            signingConfig = signingConfigs.findByName("release")
         }
         // Release-identical build installable on any device (debug-signed) — the target
         // of :benchmark. Never shipped.

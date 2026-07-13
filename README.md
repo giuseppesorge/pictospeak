@@ -3,8 +3,8 @@
 **A free, open-source, 100% offline AAC communicator for Android.**
 
 PictoSpeak is a pictogram-based communication app (AAC — Augmentative and Alternative
-Communication / CAA — Comunicazione Aumentativa e Alternativa) for non-verbal people:
-autism, cerebral palsy, aphasia, ALS. The user composes a message by tapping pictograms;
+Communication) for non-verbal people: autism, cerebral palsy, aphasia, ALS. The user
+composes a message by tapping pictograms;
 PictoSpeak proposes a grammatically correct sentence; **the user confirms it**; the device
 speaks it with the native Android text-to-speech voice.
 
