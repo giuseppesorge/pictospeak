@@ -31,8 +31,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTagsAsResourceId
@@ -41,6 +43,7 @@ import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import io.github.giuseppesorge.pictospeak.R
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
+import io.github.giuseppesorge.pictospeak.speech.TtsReadiness
 
 /**
  * The board: selection strip + proposal bar (with the confirm-to-speak button, the app's
@@ -54,6 +57,7 @@ fun BoardScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val speaking by viewModel.speaking.collectAsState()
+    val readiness by viewModel.ttsReadiness.collectAsState()
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier =
@@ -65,6 +69,7 @@ fun BoardScreen(
             ProposalBar(
                 state = state,
                 speaking = speaking,
+                readiness = readiness,
                 onCandidateTapped = viewModel::onCandidateTapped,
                 onSpeakPressed = viewModel::onSpeakPressed,
                 onStopPressed = viewModel::onStopPressed,
@@ -108,6 +113,7 @@ private fun SelectionStrip(selection: List<PictogramToken>) {
 private fun ProposalBar(
     state: BoardUiState,
     speaking: Boolean,
+    readiness: TtsReadiness,
     onCandidateTapped: (Int) -> Unit,
     onSpeakPressed: () -> Unit,
     onStopPressed: () -> Unit,
@@ -115,39 +121,64 @@ private fun ProposalBar(
     onClear: () -> Unit,
     onAboutPressed: () -> Unit,
 ) {
-    Row(
-        modifier =
-            Modifier
-                .fillMaxWidth()
-                .padding(vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        val proposal = state.candidates.getOrNull(state.selectedCandidateIndex)
-        Text(
-            text = proposal?.text ?: stringResource(R.string.board_proposal_placeholder),
-            style = MaterialTheme.typography.headlineSmall,
+    val proposal = state.candidates.getOrNull(state.selectedCandidateIndex)
+    val voiceReady = readiness is TtsReadiness.Ready
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Row(
             modifier =
                 Modifier
-                    .weight(1f)
-                    .clickable {
-                        if (state.candidates.size > 1) {
-                            onCandidateTapped((state.selectedCandidateIndex + 1) % state.candidates.size)
-                        }
-                    },
-        )
-        if (speaking) {
-            Button(onClick = onStopPressed) { Text(stringResource(R.string.board_stop)) }
-        } else {
-            // The ONLY route to audio: explicit user confirmation of the visible proposal.
+                    .fillMaxWidth()
+                    .padding(vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            val canCycle = state.candidates.size > 1
+            val nextSuggestion = stringResource(R.string.board_next_suggestion)
+            Text(
+                text = proposal?.text ?: stringResource(R.string.board_proposal_placeholder),
+                style = MaterialTheme.typography.headlineSmall,
+                modifier =
+                    Modifier
+                        .weight(1f)
+                        // Only expose the cycle affordance when there is another candidate —
+                        // otherwise TalkBack would announce a dead double-tap.
+                        .then(
+                            if (canCycle) {
+                                Modifier.clickable(onClickLabel = nextSuggestion, role = Role.Button) {
+                                    onCandidateTapped((state.selectedCandidateIndex + 1) % state.candidates.size)
+                                }
+                            } else {
+                                Modifier
+                            },
+                        ),
+            )
+            // One persistent button whose label/action toggles, so TalkBack keeps focus and
+            // announces the state change instead of the node being replaced. Speak stays the
+            // ONLY route to audio: it invokes onSpeakPressed (the ConfirmationGate call site).
             Button(
-                onClick = onSpeakPressed,
-                enabled = proposal != null,
-                modifier = Modifier.testTag("board-speak"),
-            ) { Text(stringResource(R.string.board_speak)) }
+                onClick = { if (speaking) onStopPressed() else onSpeakPressed() },
+                enabled = speaking || (proposal != null && voiceReady),
+                modifier =
+                    Modifier
+                        .testTag("board-speak")
+                        .semantics { liveRegion = LiveRegionMode.Polite },
+            ) {
+                Text(
+                    stringResource(if (speaking) R.string.board_stop else R.string.board_speak),
+                )
+            }
+            TextButton(onClick = onBackspace) { Text(stringResource(R.string.board_backspace)) }
+            TextButton(onClick = onClear) { Text(stringResource(R.string.board_clear)) }
+            TextButton(onClick = onAboutPressed) { Text(stringResource(R.string.about_open)) }
         }
-        TextButton(onClick = onBackspace) { Text(stringResource(R.string.board_backspace)) }
-        TextButton(onClick = onClear) { Text(stringResource(R.string.board_clear)) }
-        TextButton(onClick = onAboutPressed) { Text(stringResource(R.string.about_open)) }
+        // Never leave a silent Speak: tell the caregiver the voice needs setting up.
+        if (!voiceReady && !speaking) {
+            Text(
+                stringResource(R.string.board_voice_not_ready),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.error,
+                modifier = Modifier.padding(bottom = 8.dp),
+            )
+        }
     }
 }
 

@@ -9,6 +9,8 @@
     <string name="board_clear">Clear</string>
     <string name="board_backspace">Backspace</string>
     <string name="board_back_home">Back</string>
+    <string name="board_next_suggestion">Next suggestion</string>
+    <string name="board_voice_not_ready">Voice not ready — open caregiver settings to set up speech.</string>
     <string name="about_open">\u2139</string>
     <string name="about_tagline">Free, open-source, offline AAC communicator. The user always has the last word.</string>
     <string name="about_symbols_title">Pictographic symbols</string>

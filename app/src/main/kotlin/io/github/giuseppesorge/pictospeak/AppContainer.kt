@@ -49,7 +49,10 @@ class AppContainer(
 
     fun sentenceEngine(language: String): SentenceEngine =
         engines.getOrPut(language) {
-            TemplateSentenceEngine.forLanguage(language, readAsset("lexicon/lexicon_$language.json"))
+            // A missing lexicon asset (unknown/typo'd language) must degrade to concat-only,
+            // never throw during composition. forLanguage tolerates a null lexicon.
+            val lexicon = runCatching { readAsset("lexicon/lexicon_$language.json") }.getOrNull()
+            TemplateSentenceEngine.forLanguage(language, lexicon)
         }
 
     fun vocabularyRepository(language: String): VocabularyRepository =

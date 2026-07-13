@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -18,9 +20,17 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import io.github.giuseppesorge.pictospeak.R
 import io.github.giuseppesorge.pictospeak.data.Profile
@@ -65,15 +75,20 @@ fun SettingsScreen(
             )
 
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier =
+                    Modifier
+                        .fillMaxWidth()
+                        // Merge the label and switch into one named toggle for TalkBack.
+                        .toggleable(
+                            value = profile.speakLabelOnTap,
+                            role = Role.Switch,
+                            onValueChange = { onProfileChange(profile.copy(speakLabelOnTap = it)) },
+                        ),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(stringResource(R.string.settings_speak_on_tap), style = MaterialTheme.typography.bodyLarge)
-                Switch(
-                    checked = profile.speakLabelOnTap,
-                    onCheckedChange = { onProfileChange(profile.copy(speakLabelOnTap = it)) },
-                )
+                Switch(checked = profile.speakLabelOnTap, onCheckedChange = null)
             }
 
             Text(stringResource(R.string.settings_backup), style = MaterialTheme.typography.titleMedium)
@@ -91,21 +106,23 @@ private fun LanguageChooser(
     onSelect: (String) -> Unit,
 ) {
     Text(stringResource(R.string.settings_language), style = MaterialTheme.typography.titleMedium)
-    Profile.SUPPORTED_LANGUAGES.forEach { lang ->
-        Row(
-            modifier =
-                Modifier
-                    .fillMaxWidth()
-                    .selectable(selected = current == lang) { onSelect(lang) }
-                    .padding(vertical = 4.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            RadioButton(selected = current == lang, onClick = null)
-            Text(
-                languageName(lang),
-                style = MaterialTheme.typography.bodyLarge,
-                modifier = Modifier.padding(start = 8.dp),
-            )
+    Column(modifier = Modifier.selectableGroup()) {
+        Profile.SUPPORTED_LANGUAGES.forEach { lang ->
+            Row(
+                modifier =
+                    Modifier
+                        .fillMaxWidth()
+                        .selectable(selected = current == lang, role = Role.RadioButton) { onSelect(lang) }
+                        .padding(vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                RadioButton(selected = current == lang, onClick = null)
+                Text(
+                    languageName(lang),
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier.padding(start = 8.dp),
+                )
+            }
         }
     }
 }
@@ -117,9 +134,25 @@ private fun LabeledSlider(
     range: ClosedFloatingPointRange<Float>,
     onChange: (Float) -> Unit,
 ) {
+    // Drag updates only transient UI state; persist once on release. Otherwise every
+    // intermediate tick would fire a synchronous main-thread save() + a TTS readiness
+    // re-eval — jank/ANR on the 2GB floor device.
+    var sliderValue by remember(value) { mutableStateOf(value) }
     Column {
-        Text("$label  ${"%.1f".format(value)}", style = MaterialTheme.typography.bodyLarge)
-        Slider(value = value, onValueChange = onChange, valueRange = range)
+        Text("$label  ${"%.1f".format(sliderValue)}", style = MaterialTheme.typography.bodyLarge)
+        Slider(
+            value = sliderValue,
+            onValueChange = { sliderValue = it },
+            onValueChangeFinished = { onChange(sliderValue) },
+            valueRange = range,
+            // Give the slider a real name and announce the actual value, not Compose's
+            // default "% of range" reading.
+            modifier =
+                Modifier.semantics {
+                    contentDescription = label
+                    stateDescription = "%.1f".format(sliderValue)
+                },
+        )
     }
 }
 

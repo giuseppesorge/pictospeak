@@ -58,6 +58,7 @@ fun AboutScreen(
                         .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(24.dp))
                         .combinedClickable(
                             onClickLabel = stringResource(R.string.settings_hold_hint),
+                            onLongClickLabel = stringResource(R.string.settings_open_hold),
                             onClick = { showHint = true },
                             onLongClick = onOpenSettings,
                         ).padding(horizontal = 20.dp, vertical = 12.dp),

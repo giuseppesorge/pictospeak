@@ -7,6 +7,8 @@
     <string name="board_clear">Cancella</string>
     <string name="board_backspace">Indietro</string>
     <string name="board_back_home">Torna</string>
+    <string name="board_next_suggestion">Suggerimento successivo</string>
+    <string name="board_voice_not_ready">Voce non pronta — apri le impostazioni caregiver per configurarla.</string>
     <string name="about_open">\u2139</string>
     <string name="about_tagline">Comunicatore CAA gratuito, open source e offline. L\'ultima parola è sempre dell\'utente.</string>
     <string name="about_symbols_title">Simboli pittografici</string>

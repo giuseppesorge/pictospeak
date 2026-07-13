@@ -30,7 +30,21 @@ class ProfileRepository(
     fun serialize(profile: Profile): String = json.encodeToString(profile)
 
     /** Parse an imported profile; null if the content is not a valid profile (never throws). */
-    fun deserialize(text: String): Profile? = runCatching { json.decodeFromString<Profile>(text) }.getOrNull()
+    fun deserialize(text: String): Profile? =
+        runCatching { json.decodeFromString<Profile>(text) }.getOrNull()?.let(::sanitize)
+
+    /**
+     * Trust boundary for hand-edited or SAF-imported settings: an unsupported [Profile.language]
+     * (e.g. "fr") would later make the engine read a non-existent lexicon asset and crash the
+     * board on every launch. Clamp it to a language that ships, so bad input degrades, never
+     * bricks the app.
+     */
+    private fun sanitize(profile: Profile): Profile =
+        if (profile.language in Profile.SUPPORTED_LANGUAGES) {
+            profile
+        } else {
+            profile.copy(language = Profile.DEFAULT_LANGUAGE)
+        }
 
     private companion object {
         const val FILE_NAME = "settings.json"

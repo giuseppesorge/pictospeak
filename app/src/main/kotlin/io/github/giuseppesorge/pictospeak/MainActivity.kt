@@ -12,6 +12,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -22,6 +23,8 @@ import io.github.giuseppesorge.pictospeak.ui.board.BoardScreen
 import io.github.giuseppesorge.pictospeak.ui.board.BoardViewModel
 import io.github.giuseppesorge.pictospeak.ui.settings.SettingsScreen
 import io.github.giuseppesorge.pictospeak.ui.setup.TtsSetupScreen
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.util.Locale
 
 /**
@@ -61,9 +64,11 @@ private fun App(container: AppContainer) {
 
     when (screen) {
         Screen.Board -> {
-            // Keyed by language so switching packs rebuilds the board with the right engine.
+            // Keyed by language AND speak-on-tap so a settings change takes effect on return
+            // (the VM captures speakLabelOnTap; same-language reuse would otherwise keep the
+            // stale value until app restart).
             val boardViewModel: BoardViewModel =
-                viewModel(key = "board-${profile.language}") {
+                viewModel(key = "board-${profile.language}-${profile.speakLabelOnTap}") {
                     BoardViewModel(
                         sentenceEngine = container.sentenceEngine(profile.language),
                         sentenceRefiner = container.sentenceRefiner,
@@ -103,21 +108,31 @@ private fun SettingsRoute(
     onBack: () -> Unit,
 ) {
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+    // SAF streams talk to another (possibly cloud-backed) provider process — that IPC can
+    // block for seconds, so keep it off the main thread.
     val exportLauncher =
         rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
             uri?.let {
-                context.contentResolver.openOutputStream(it)?.use { out ->
-                    out.write(container.profileRepository.serialize(profile).toByteArray())
+                scope.launch(Dispatchers.IO) {
+                    context.contentResolver.openOutputStream(it)?.use { out ->
+                        out.write(container.profileRepository.serialize(profile).toByteArray())
+                    }
                 }
             }
         }
     val importLauncher =
         rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
             uri?.let {
-                val text = context.contentResolver.openInputStream(it)?.use { ins -> ins.readBytes().decodeToString() }
-                text?.let { body ->
-                    container.profileRepository.deserialize(body)?.let { imported ->
-                        container.updateProfile { imported }
+                scope.launch(Dispatchers.IO) {
+                    val text =
+                        context.contentResolver
+                            .openInputStream(it)
+                            ?.use { ins -> ins.readBytes().decodeToString() }
+                    text?.let { body ->
+                        container.profileRepository.deserialize(body)?.let { imported ->
+                            container.updateProfile { imported }
+                        }
                     }
                 }
             }

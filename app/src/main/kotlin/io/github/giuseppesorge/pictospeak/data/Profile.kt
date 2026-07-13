@@ -26,6 +26,7 @@ data class Profile(
 ) {
     companion object {
         const val DEFAULT_GRID_MIN_CELL_DP = 112
+        const val DEFAULT_LANGUAGE = "it"
         val SUPPORTED_LANGUAGES = listOf("it", "en")
     }
 }

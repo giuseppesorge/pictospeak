@@ -51,4 +51,27 @@ class ProfileRepositoryTest {
     fun `deserialize of junk returns null, never throws`() {
         assertEquals(null, ProfileRepository(tempDir()).deserialize("not json at all"))
     }
+
+    // An imported/hand-edited unsupported language must be clamped, not persisted verbatim:
+    // otherwise the board later reads a non-existent lexicon asset and crash-loops on launch.
+    @Test
+    fun `deserialize clamps an unsupported language to a shipped one`() {
+        val imported = ProfileRepository(tempDir()).deserialize("""{"language":"fr","setupComplete":true}""")
+        assertEquals("it", imported?.language)
+        // Other fields survive the clamp.
+        assertTrue(imported?.setupComplete == true)
+    }
+
+    @Test
+    fun `load clamps an unsupported language written straight to disk`() {
+        val dir = tempDir()
+        File(dir, "settings.json").writeText("""{"language":"fr"}""")
+        assertEquals("it", ProfileRepository(dir).load().language)
+    }
+
+    @Test
+    fun `supported languages are preserved`() {
+        val repo = ProfileRepository(tempDir())
+        assertEquals("en", repo.deserialize("""{"language":"en"}""")?.language)
+    }
 }

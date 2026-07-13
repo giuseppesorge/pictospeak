@@ -28,10 +28,13 @@ class AssetVocabularyRepository(
 
     override suspend fun loadCatalog(): Map<String, PictogramToken> =
         withContext(Dispatchers.IO) {
+            // A missing catalog asset (unknown language) yields an empty board, never a crash.
             val text =
-                appContext.assets
-                    .open("arasaac/catalog_$language.json")
-                    .use { it.readBytes().decodeToString() }
+                runCatching {
+                    appContext.assets
+                        .open("arasaac/catalog_$language.json")
+                        .use { it.readBytes().decodeToString() }
+                }.getOrNull() ?: return@withContext emptyMap()
             json.decodeFromString<List<PictogramToken>>(text).associateBy { it.id }
         }
 

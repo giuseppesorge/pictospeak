@@ -25,7 +25,9 @@ AIRPLANE=$("$ADB" shell settings get global airplane_mode_on | tr -d '\r')
 sleep 4
 
 # 3. A TTS engine + a voice must exist (Google 'Speech Recognition & Synthesis' or similar).
-ENGINE=$("$ADB" shell "pm list packages | grep -iE 'com.google.android.tts|espeak|tts'" | head -1 | tr -d '\r')
+# `|| true`: under `set -euo pipefail` a no-match grep (device without a Google TTS package)
+# would abort the whole script before its own "no engine" warning below.
+ENGINE=$("$ADB" shell "pm list packages | grep -iE 'com.google.android.tts|espeak|tts' || true" | head -1 | tr -d '\r')
 [ -n "$ENGINE" ] && echo "  TTS engine present: $ENGINE" || echo "  WARNING: no TTS engine package found"
 
 cat <<'STEPS'
