@@ -179,3 +179,50 @@ order-of-magnitude (S ≈ days, M ≈ 1–2 weeks).
 - Extract a shared `BoardCell` chrome (single-source the a11y contract for Picto/Folder/Back),
   a `ScreenScaffold` (Surface + `safeDrawing` inset) reused by the four screens, and a single
   `arasaacModel(id)` helper for the license-fenced asset path. _(M total)_
+
+## From the pre-share review (deferred)
+
+The three "fix before sharing" items (allowBackup, gridColumns clamp, LLM-teardown threading)
+and the SIGSEGV race are done; these verified findings are legitimately deferrable — mostly
+confined to the optional off-by-default LLM feature, cold-path Compose, or DRY.
+
+### Optional-LLM feature (play flavor, off by default)
+- **Model swap has no effect while LLM enabled**: the board `viewModel(key=…)` omits model
+  identity, so importing/swapping a model reuses the cached refiner (stale/null) until restart.
+  Append `modelStore.current()?.sha256` (or a model-generation counter) to the key. _(S)_
+- **ModelStore metadata not atomic / unversioned**: `model.meta.json` is written without
+  temp-file+rename and without a `schemaVersion`; a crash mid-write orphans the model and a
+  strict decoder throws on new fields. Mirror ProfileRepository (atomic write, schemaVersion,
+  ignoreUnknownKeys). _(S)_
+- **Reserved meta filename**: a SAF pick named exactly `model.meta.json` would overwrite the
+  weights with metadata. Store model files under a distinct prefix / reserve the meta name. _(S)_
+
+### TTS (transient, non-crashing)
+- **Stale-locale speech window**: `setLanguage` now applies asynchronously on the readiness
+  thread, so a Speak in that window can use the previous engine locale. Apply the locale on the
+  speaking path (or gate speak until it matches); keep only voice enumeration off-thread. _(M)_
+- **`_speaking` can latch true**: a Speak→Stop race can leave the flag set (progress posts carry
+  no utterance id). Tag utterances with the existing `AtomicLong` id and ignore stale
+  callbacks. _(S)_
+
+### Compose (cold-path / robustness)
+- **Re-partition on every recomposition**: `BoardScreen` splits `state.cells` into nav/pictos
+  each recomposition (unstable param), so grid+nav never skip on a speak/stop tick. Wrap in
+  `remember(state.cells) { … }`. _(S)_
+- **Duplicate pictogram id crashes the grid**: an authored board with a repeated id would throw
+  in `LazyVerticalGrid` — against "a board must render, never crash". Key positionally or
+  de-dupe in `showBoard`. _(S)_
+- **Off-main model metadata read**: `ModelStore.current()` (disk) runs in a `remember{}`
+  initializer on the settings route; move it into a `LaunchedEffect` from a loading state. _(S)_
+- **LazyRow keys**: `CategoryNav`/`SelectionStrip` use `itemsIndexed` with no key — fine today;
+  key `CategoryNav` by boardId/"back" and document the selection-strip positional key. _(S)_
+
+### DRY (single-source, no behaviour change)
+- `val BoardUiState.proposal get() = candidates.getOrNull(selectedCandidateIndex)` — the value
+  Speak confirms, currently derived in the VM + two composables. _(S)_
+- `private fun PictogramToken.slotColor()` — the Fitzgerald slot→Color conversion is duplicated
+  across the two cell composables. _(S)_
+- Extract `closeRefiner()` + `Model.fitsDevice()` in AppContainer (repeated across the two
+  `@Synchronized` methods). _(S)_
+- One `withInputStream`/`withOutputStream` helper single-sourcing the SAF pick→`launch(IO)`→
+  `openStream.use` off-main guarantee across the three launchers. _(S)_
