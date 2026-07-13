@@ -42,7 +42,7 @@ frozen grammar scope. Not yet ready for end users.
 - **A device to run on:** either an Android phone/tablet on **Android 10 or newer**
   (`minSdk 29`) with USB debugging enabled, **or** an emulator (create one below).
 
-### Run it in Android Studio (easiest)
+### Run it in Android Studio (easiest — identical on Windows, macOS, Linux)
 
 1. `git clone https://github.com/giuseppesorge/pictospeak.git` and **open the folder** in
    Android Studio. Let the Gradle sync finish (first sync downloads dependencies).
@@ -54,24 +54,59 @@ frozen grammar scope. Not yet ready for end users.
 
 ### Run it from the command line
 
+`JAVA_HOME` must point at a JDK 17+ (Android Studio bundles one). Opening the project in
+Android Studio once creates `local.properties` (`sdk.dir=...`); for a pure CLI setup, create it
+yourself as shown. Use `./gradlew` on macOS/Linux and `.\gradlew.bat` on Windows.
+
+**macOS**
+
 ```bash
-# macOS with Android Studio installed (points JAVA_HOME at its bundled JDK):
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
-# Opening the project in Android Studio once creates local.properties (sdk.dir=...).
-# For a pure CLI setup, set it yourself: echo "sdk.dir=$HOME/Library/Android/sdk" > local.properties
+echo "sdk.dir=$HOME/Library/Android/sdk" > local.properties   # only if not already present
 
-./gradlew installFossDebug   # build + install the FOSS debug app on the connected device/emulator
-adb shell am start -n io.github.giuseppesorge.pictospeak/.MainActivity   # launch it
+./gradlew installFossDebug                                    # build + install on the connected device/emulator
+adb shell am start -n io.github.giuseppesorge.pictospeak/.MainActivity   # launch
 ```
 
-Other useful commands:
+**Linux**
 
 ```bash
-./gradlew check                                   # ktlint + detekt + all JVM tests
-./gradlew assembleFossDebug                       # just build the installable debug APK
-./gradlew assembleFossRelease assemblePlayRelease # both flavors must always build
-scripts/check-licenses.sh                         # license/attribution gate
+export JAVA_HOME="$HOME/android-studio/jbr"                   # or your JDK 17+ path
+echo "sdk.dir=$HOME/Android/Sdk" > local.properties           # only if not already present
+
+./gradlew installFossDebug
+adb shell am start -n io.github.giuseppesorge.pictospeak/.MainActivity
 ```
+
+**Windows** (PowerShell)
+
+```powershell
+$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+# only if local.properties is not already present (forward slashes are valid and avoid escaping):
+"sdk.dir=$($env:LOCALAPPDATA -replace '\\','/')/Android/Sdk" | Out-File -Encoding ascii local.properties
+
+.\gradlew.bat installFossDebug
+adb shell am start -n io.github.giuseppesorge.pictospeak/.MainActivity
+```
+
+> Windows notes: run from the repo root in **PowerShell**. If `adb` isn't on your `PATH`, it's at
+> `%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe`. In `local.properties`, write the `sdk.dir`
+> path with forward slashes (e.g. `C:/Users/you/AppData/Local/Android/Sdk`) — a Java properties
+> file treats a backslash as an escape character, so a raw Windows path needs `\\` instead.
+
+Other useful commands (prefix with `./gradlew` on macOS/Linux, `.\gradlew.bat` on Windows):
+
+```text
+gradlew assembleFossDebug                       # just build the installable debug APK
+gradlew assembleFossRelease assemblePlayRelease # both flavors must always build
+gradlew check                                   # ktlint + detekt + all JVM tests
+```
+
+The built APK lands at `app/build/outputs/apk/foss/debug/app-foss-debug.apk` — install it by
+hand with `adb install -r <that path>` if you prefer.
+
+The license/attribution gate `scripts/check-licenses.sh` is a Bash script: run it directly on
+macOS/Linux, and on Windows via **Git Bash** or **WSL** (`bash scripts/check-licenses.sh`).
 
 **First launch:** the app opens a one-time speech-setup screen. Tap **Continue**; if the
 device has no offline voice for the language, it offers to install the voice data. Then you
