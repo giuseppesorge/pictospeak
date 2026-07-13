@@ -35,7 +35,12 @@ scroll journey skipped — pointer injection blocked) and committed to
 gesture injection to add the scroll journey.
 
 TTS probe findings (engine present? offline voice for the active language? install flow?
-airplane-mode speak?): *to be recorded on physical devices.*
+airplane-mode speak?):
+
+- **Mainstream (Redmi, Android 16, 2026-07-13): PASS** — composed a pictogram sequence in
+  airplane mode, confirmed via the Speak button, device spoke the sentence with an Italian
+  voice fully offline (user-verified). Voice-data install flow and floor-device probe
+  still to be tested.
 
 Functional smoke (2026-07-13, 2GB-RAM tablet AVD — functional only, never performance):
 board renders the full 520-pictogram catalog with Fitzgerald coloring, selection strip +
