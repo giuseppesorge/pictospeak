@@ -135,3 +135,54 @@ only — S ≈ a few days, M ≈ one to two weeks, L ≈ several weeks, XL ≈ i
   documented, graceful fallback chain when the preferred voice is absent — so first-run never
   dead-ends on a missing or unintelligible voice. Extends the existing first-run TTS setup
   rather than replacing it. _(rough size: S–M)_
+
+## From the adversarial code/UX review
+
+Verified findings not yet actioned (the high-value "Now" items — reversible Clear, tap-to-
+remove chips, source labels, live regions, headings, board-load crash guard, opt-in
+confirm haptic, and the fixed-column density preset — are already implemented). Sizes are
+order-of-magnitude (S ≈ days, M ≈ 1–2 weeks).
+
+### Performance & lifecycle
+- **TTS readiness off the main thread**: `evaluateReadiness()` does synchronous binder IPC
+  (`tts.setLanguage`, `tts.voices`) on the main thread at startup and on every rate/pitch
+  change; move the IPC to a background dispatcher and post only the resulting `TtsReadiness`,
+  and decouple rate/pitch changes from a full language+voices re-evaluation. _(M)_
+- **Honor `onTrimMemory`**: `AacApplication.onTrimMemory` is an empty stub — drop the Coil
+  image cache on `TRIM_MEMORY_UI_HIDDEN` and cap on low-RAM, per docs/perf-budgets.md. _(S)_
+- **Keyed-ViewModel churn**: `viewModel(key = …)` accumulates orphaned `BoardViewModel`s and
+  re-parses catalog/boards on each settings toggle; cache the parsed vocabulary or scope the
+  VM so a toggle doesn't reload assets. _(M)_
+- **Dead `AndroidTtsGateway.shutdown()`**: wire it to teardown or remove it. _(S)_
+
+### AAC & access
+- **Fixed navigation for category folders**: folders sit at the tail of the scrolling home
+  board (after ~75 core cells); give category navigation a fixed, always-reachable position
+  (nav rail / pinned row) so it doesn't require scrolling past the vocabulary. _(M)_
+- **Optional acceptance/hold time + post-select debounce** on direct touch: a caregiver-set
+  activation delay and a brief post-selection cooldown reduce accidental brush/drag/double
+  activations for tremor/spasticity — pairs with the planned switch/dwell work. _(M)_
+- **Silent selection-cap feedback**: at `MAX_SELECTION` a tap is a bare `return` with no cue,
+  and `speakLabelOnTap` still speaks the rejected word; surface a transient "message full"
+  cue (+ TalkBack announce) and suppress the preview for a rejected tap. _(S)_
+- **Per-selection confirm haptic** (fast-follow): extend the opt-in haptic to a committed
+  pictogram selection — only after validating the confirm-to-speak tick on the 2 GB floor
+  tablet (a mushy low-end actuator must not turn reassurance into noise). _(S)_
+
+### Accessibility polish
+- **Non-color category cue**: the Fitzgerald word-category is conveyed by cell color alone
+  (fails WCAG 1.4.1); add a small corner glyph/shape per category so it survives grayscale /
+  color-vision differences. _(S)_
+- **Folder/Back boundary contrast**: the folder border (`outlineVariant`) is ~1.3:1 vs fill;
+  switch to `outline` (≈3.6:1 light / 3.9:1 dark) or deepen the fill tonal step. _(S)_
+- **Screen-change focus**: on the sealed-`Screen` `when` swap, request initial a11y focus on
+  the destination title so TalkBack announces arrival (a consequence of the no-nav-library
+  ADR). _(M)_
+- **Settings-gate role + timing alternative**: add `role = Role.Button` to the About caregiver
+  gate's `combinedClickable` (behavior-preserving); consider a non-hold entry path weighed
+  against the gate's deliberate obscurity. _(S)_
+
+### DRY / maintainability
+- Extract a shared `BoardCell` chrome (single-source the a11y contract for Picto/Folder/Back),
+  a `ScreenScaffold` (Surface + `safeDrawing` inset) reused by the four screens, and a single
+  `arasaacModel(id)` helper for the license-fenced asset path. _(M total)_
