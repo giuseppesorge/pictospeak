@@ -1,0 +1,211 @@
+{
+    "id": "cibo",
+    "locale": "en",
+    "name": "Food",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "2462"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2530"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2494"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4626"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2461"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2502"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2619"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2328"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2541"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8303"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4952"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5400"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25940"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2296"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4592"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2427"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6502"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "28339"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3247"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2963"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35559"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35209"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2429"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2470"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11461"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4611"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2316"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2445"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2246"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2483"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8652"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2468"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2561"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2527"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2503"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "39387"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2377"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25576"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2281"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4694"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2573"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8295"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2400"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25560"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2686"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4963"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2594"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "28343"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "32464"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2557"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2618"
+        }
+    ]
+}

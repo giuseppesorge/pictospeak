@@ -1,0 +1,111 @@
+{
+    "id": "persone",
+    "locale": "en",
+    "name": "People",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "6632"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "30271"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2275"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2485"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2423"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "30340"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2467"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2392"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2497"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8487"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2484"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2244"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2243"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6480"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4665"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2458"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2375"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7028"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2422"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2454"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2456"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7032"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "30255"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7183"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4703"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6625"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "id": "numeri-colori",
+    "locale": "en",
+    "name": "Numbers & colours",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "2886"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4869"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2923"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2634"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2631"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2630"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "4887"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2635"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2879"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2627"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2807"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2907"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2808"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2633"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2632"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "29254"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2629"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2628"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8043"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2648"
+        }
+    ]
+}

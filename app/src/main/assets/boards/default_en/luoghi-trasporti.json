@@ -1,0 +1,115 @@
+{
+    "id": "luoghi-trasporti",
+    "locale": "en",
+    "name": "Places",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "2264"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "32398"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "30518"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6932"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26654"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2499"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2339"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3118"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2704"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "36205"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2260"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "26925"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2480"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2909"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3313"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "32408"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2302"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3082"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2925"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35695"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2379"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3389"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "30516"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2580"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2567"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2603"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "29905"
+        }
+    ]
+}

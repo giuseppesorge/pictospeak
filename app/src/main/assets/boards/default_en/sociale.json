@@ -1,0 +1,123 @@
+{
+    "id": "sociale",
+    "locale": "en",
+    "name": "Social words",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "13630"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7180"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "37825"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "21917"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "37163"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11348"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "13018"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11627"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "28429"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6944"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6942"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5896"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6009"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "12313"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11597"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11591"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5508"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5526"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5525"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "29635"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8194"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "11625"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8128"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "6936"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "22620"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "22621"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "7764"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "9853"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5584"
+        }
+    ]
+}

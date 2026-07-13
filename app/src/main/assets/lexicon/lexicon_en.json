@@ -1,0 +1,2038 @@
+{
+    "language": "en",
+    "entries": [
+        {
+            "type": "noun",
+            "lemma": "mum",
+            "singular": "mum",
+            "plural": "mums"
+        },
+        {
+            "type": "noun",
+            "lemma": "father",
+            "singular": "father",
+            "plural": "fathers"
+        },
+        {
+            "type": "noun",
+            "lemma": "grandmother",
+            "singular": "grandmother",
+            "plural": "grandmothers"
+        },
+        {
+            "type": "noun",
+            "lemma": "grandfather",
+            "singular": "grandfather",
+            "plural": "grandfathers"
+        },
+        {
+            "type": "noun",
+            "lemma": "brother",
+            "singular": "brother",
+            "plural": "brothers"
+        },
+        {
+            "type": "noun",
+            "lemma": "sister",
+            "singular": "sister",
+            "plural": "sisters"
+        },
+        {
+            "type": "noun",
+            "lemma": "uncle",
+            "singular": "uncle",
+            "plural": "uncles"
+        },
+        {
+            "type": "noun",
+            "lemma": "aunt",
+            "singular": "aunt",
+            "plural": "aunts"
+        },
+        {
+            "type": "noun",
+            "lemma": "cousin",
+            "singular": "cousin",
+            "plural": "cousins"
+        },
+        {
+            "type": "noun",
+            "lemma": "family",
+            "singular": "family",
+            "plural": "families"
+        },
+        {
+            "type": "noun",
+            "lemma": "boy",
+            "singular": "boy",
+            "plural": "boys"
+        },
+        {
+            "type": "noun",
+            "lemma": "girl",
+            "singular": "girl",
+            "plural": "girls"
+        },
+        {
+            "type": "noun",
+            "lemma": "baby",
+            "singular": "baby",
+            "plural": "babies"
+        },
+        {
+            "type": "noun",
+            "lemma": "friend",
+            "singular": "friend",
+            "plural": "friends"
+        },
+        {
+            "type": "noun",
+            "lemma": "teacher",
+            "singular": "teacher",
+            "plural": "teachers"
+        },
+        {
+            "type": "noun",
+            "lemma": "doctor",
+            "singular": "doctor",
+            "plural": "doctors"
+        },
+        {
+            "type": "noun",
+            "lemma": "nurse",
+            "singular": "nurse",
+            "plural": "nurses"
+        },
+        {
+            "type": "noun",
+            "lemma": "man",
+            "singular": "man",
+            "plural": "men"
+        },
+        {
+            "type": "noun",
+            "lemma": "woman",
+            "singular": "woman",
+            "plural": "women"
+        },
+        {
+            "type": "verb",
+            "lemma": "want",
+            "base": "want",
+            "thirdSingular": "wants",
+            "past": "wanted",
+            "pastParticiple": "wanted",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "can",
+            "base": "can",
+            "thirdSingular": "cans",
+            "past": "canned",
+            "pastParticiple": "canned",
+            "modal": true
+        },
+        {
+            "type": "verb",
+            "lemma": "must",
+            "base": "must",
+            "thirdSingular": "musts",
+            "past": "musted",
+            "pastParticiple": "musted",
+            "modal": true
+        },
+        {
+            "type": "verb",
+            "lemma": "be",
+            "base": "be",
+            "thirdSingular": "is",
+            "past": "was",
+            "pastParticiple": "been"
+        },
+        {
+            "type": "verb",
+            "lemma": "have",
+            "base": "have",
+            "thirdSingular": "has",
+            "past": "had",
+            "pastParticiple": "had",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "make",
+            "base": "make",
+            "thirdSingular": "makes",
+            "past": "made",
+            "pastParticiple": "made",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "go",
+            "base": "go",
+            "thirdSingular": "goes",
+            "past": "went",
+            "pastParticiple": "gone"
+        },
+        {
+            "type": "verb",
+            "lemma": "come",
+            "base": "come",
+            "thirdSingular": "comes",
+            "past": "came",
+            "pastParticiple": "come"
+        },
+        {
+            "type": "verb",
+            "lemma": "eat",
+            "base": "eat",
+            "thirdSingular": "eats",
+            "past": "ate",
+            "pastParticiple": "eaten",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "drink",
+            "base": "drink",
+            "thirdSingular": "drinks",
+            "past": "drank",
+            "pastParticiple": "drunk",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "sleep",
+            "base": "sleep",
+            "thirdSingular": "sleeps",
+            "past": "slept",
+            "pastParticiple": "slept"
+        },
+        {
+            "type": "verb",
+            "lemma": "play",
+            "base": "play",
+            "thirdSingular": "plays",
+            "past": "played",
+            "pastParticiple": "played"
+        },
+        {
+            "type": "verb",
+            "lemma": "watch",
+            "base": "watch",
+            "thirdSingular": "watches",
+            "past": "watched",
+            "pastParticiple": "watched",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "listen",
+            "base": "listen",
+            "thirdSingular": "listens",
+            "past": "listened",
+            "pastParticiple": "listened",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "talk",
+            "base": "talk",
+            "thirdSingular": "talks",
+            "past": "talked",
+            "pastParticiple": "talked"
+        },
+        {
+            "type": "verb",
+            "lemma": "give",
+            "base": "give",
+            "thirdSingular": "gives",
+            "past": "gave",
+            "pastParticiple": "given",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "take",
+            "base": "take",
+            "thirdSingular": "takes",
+            "past": "took",
+            "pastParticiple": "taken",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "put",
+            "base": "put",
+            "thirdSingular": "puts",
+            "past": "put",
+            "pastParticiple": "put",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "open",
+            "base": "open",
+            "thirdSingular": "opens",
+            "past": "opened",
+            "pastParticiple": "opened",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "close",
+            "base": "close",
+            "thirdSingular": "closes",
+            "past": "closed",
+            "pastParticiple": "closed",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "wash",
+            "base": "wash",
+            "thirdSingular": "washes",
+            "past": "washed",
+            "pastParticiple": "washed",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "dress",
+            "base": "dress",
+            "thirdSingular": "dresses",
+            "past": "dressed",
+            "pastParticiple": "dressed"
+        },
+        {
+            "type": "verb",
+            "lemma": "help",
+            "base": "help",
+            "thirdSingular": "helps",
+            "past": "helped",
+            "pastParticiple": "helped",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "finish",
+            "base": "finish",
+            "thirdSingular": "finishes",
+            "past": "finished",
+            "pastParticiple": "finished",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "wait",
+            "base": "wait",
+            "thirdSingular": "waits",
+            "past": "waited",
+            "pastParticiple": "waited",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "buy",
+            "base": "buy",
+            "thirdSingular": "buys",
+            "past": "bought",
+            "pastParticiple": "bought",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "read",
+            "base": "read",
+            "thirdSingular": "reads",
+            "past": "read",
+            "pastParticiple": "read",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "write",
+            "base": "write",
+            "thirdSingular": "writes",
+            "past": "wrote",
+            "pastParticiple": "written",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "draw",
+            "base": "draw",
+            "thirdSingular": "draws",
+            "past": "drew",
+            "pastParticiple": "drawn",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "sing",
+            "base": "sing",
+            "thirdSingular": "sings",
+            "past": "sang",
+            "pastParticiple": "sung",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "walk",
+            "base": "walk",
+            "thirdSingular": "walks",
+            "past": "walked",
+            "pastParticiple": "walked"
+        },
+        {
+            "type": "verb",
+            "lemma": "run",
+            "base": "run",
+            "thirdSingular": "runs",
+            "past": "ran",
+            "pastParticiple": "run"
+        },
+        {
+            "type": "verb",
+            "lemma": "sit",
+            "base": "sit",
+            "thirdSingular": "sits",
+            "past": "sat",
+            "pastParticiple": "sat"
+        },
+        {
+            "type": "verb",
+            "lemma": "love",
+            "base": "love",
+            "thirdSingular": "loves",
+            "past": "loved",
+            "pastParticiple": "loved",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "like",
+            "base": "like",
+            "thirdSingular": "likes",
+            "past": "liked",
+            "pastParticiple": "liked"
+        },
+        {
+            "type": "verb",
+            "lemma": "feel",
+            "base": "feel",
+            "thirdSingular": "feels",
+            "past": "felt",
+            "pastParticiple": "felt",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "see",
+            "base": "see",
+            "thirdSingular": "sees",
+            "past": "saw",
+            "pastParticiple": "seen",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "realise",
+            "base": "realise",
+            "thirdSingular": "realises",
+            "past": "realised",
+            "pastParticiple": "realised",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "know",
+            "base": "know",
+            "thirdSingular": "knows",
+            "past": "knew",
+            "pastParticiple": "known",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "say",
+            "base": "say",
+            "thirdSingular": "says",
+            "past": "said",
+            "pastParticiple": "said",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "ask",
+            "base": "ask",
+            "thirdSingular": "asks",
+            "past": "asked",
+            "pastParticiple": "asked",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "answer",
+            "base": "answer",
+            "thirdSingular": "answers",
+            "past": "answered",
+            "pastParticiple": "answered"
+        },
+        {
+            "type": "verb",
+            "lemma": "search",
+            "base": "search",
+            "thirdSingular": "searches",
+            "past": "searched",
+            "pastParticiple": "searched",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "find",
+            "base": "find",
+            "thirdSingular": "finds",
+            "past": "found",
+            "pastParticiple": "found",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "carry",
+            "base": "carry",
+            "thirdSingular": "carries",
+            "past": "carried",
+            "pastParticiple": "carried",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "hold",
+            "base": "hold",
+            "thirdSingular": "holds",
+            "past": "held",
+            "pastParticiple": "held",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "jump",
+            "base": "jump",
+            "thirdSingular": "jumps",
+            "past": "jumped",
+            "pastParticiple": "jumped"
+        },
+        {
+            "type": "verb",
+            "lemma": "dance",
+            "base": "dance",
+            "thirdSingular": "dances",
+            "past": "danced",
+            "pastParticiple": "danced"
+        },
+        {
+            "type": "verb",
+            "lemma": "swim",
+            "base": "swim",
+            "thirdSingular": "swims",
+            "past": "swam",
+            "pastParticiple": "swum"
+        },
+        {
+            "type": "verb",
+            "lemma": "enter",
+            "base": "enter",
+            "thirdSingular": "enters",
+            "past": "entered",
+            "pastParticiple": "entered"
+        },
+        {
+            "type": "verb",
+            "lemma": "start",
+            "base": "start",
+            "thirdSingular": "starts",
+            "past": "started",
+            "pastParticiple": "started",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "stop",
+            "base": "stop",
+            "thirdSingular": "stops",
+            "past": "stopped",
+            "pastParticiple": "stopped",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "break",
+            "base": "break",
+            "thirdSingular": "breaks",
+            "past": "broke",
+            "pastParticiple": "broken",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "clean",
+            "base": "clean",
+            "thirdSingular": "cleans",
+            "past": "cleaned",
+            "pastParticiple": "cleaned",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "cook",
+            "base": "cook",
+            "thirdSingular": "cooks",
+            "past": "cooked",
+            "pastParticiple": "cooked",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "touch",
+            "base": "touch",
+            "thirdSingular": "touches",
+            "past": "touched",
+            "pastParticiple": "touched",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "kiss",
+            "base": "kiss",
+            "thirdSingular": "kisses",
+            "past": "kissed",
+            "pastParticiple": "kissed",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "hug",
+            "base": "hug",
+            "thirdSingular": "hugs",
+            "past": "hugged",
+            "pastParticiple": "hugged",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "cry",
+            "base": "cry",
+            "thirdSingular": "cries",
+            "past": "cried",
+            "pastParticiple": "cried"
+        },
+        {
+            "type": "verb",
+            "lemma": "laugh",
+            "base": "laugh",
+            "thirdSingular": "laughs",
+            "past": "laughed",
+            "pastParticiple": "laughed"
+        },
+        {
+            "type": "verb",
+            "lemma": "shout",
+            "base": "shout",
+            "thirdSingular": "shouts",
+            "past": "shouted",
+            "pastParticiple": "shouted"
+        },
+        {
+            "type": "verb",
+            "lemma": "remember",
+            "base": "remember",
+            "thirdSingular": "remembers",
+            "past": "remembered",
+            "pastParticiple": "remembered",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "forget",
+            "base": "forget",
+            "thirdSingular": "forgets",
+            "past": "forgot",
+            "pastParticiple": "forgotten",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "learn",
+            "base": "learn",
+            "thirdSingular": "learns",
+            "past": "learned",
+            "pastParticiple": "learned",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "study",
+            "base": "study",
+            "thirdSingular": "studies",
+            "past": "studied",
+            "pastParticiple": "studied",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "work",
+            "base": "work",
+            "thirdSingular": "works",
+            "past": "worked",
+            "pastParticiple": "worked"
+        },
+        {
+            "type": "verb",
+            "lemma": "rest",
+            "base": "rest",
+            "thirdSingular": "rests",
+            "past": "rested",
+            "pastParticiple": "rested"
+        },
+        {
+            "type": "verb",
+            "lemma": "phone",
+            "base": "phone",
+            "thirdSingular": "phones",
+            "past": "phoned",
+            "pastParticiple": "phoned"
+        },
+        {
+            "type": "verb",
+            "lemma": "pay",
+            "base": "pay",
+            "thirdSingular": "pays",
+            "past": "paid",
+            "pastParticiple": "paid",
+            "transitive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "think",
+            "base": "think",
+            "thirdSingular": "thinks",
+            "past": "thought",
+            "pastParticiple": "thought"
+        },
+        {
+            "type": "verb",
+            "lemma": "fall",
+            "base": "fall",
+            "thirdSingular": "falls",
+            "past": "fell",
+            "pastParticiple": "fallen"
+        },
+        {
+            "type": "verb",
+            "lemma": "pee",
+            "base": "pee",
+            "thirdSingular": "pees",
+            "past": "peed",
+            "pastParticiple": "peed"
+        },
+        {
+            "type": "verb",
+            "lemma": "ca-ca",
+            "base": "ca-ca",
+            "thirdSingular": "ca-cas",
+            "past": "ca-caed",
+            "pastParticiple": "ca-caed"
+        },
+        {
+            "type": "noun",
+            "lemma": "water",
+            "singular": "water",
+            "plural": "waters"
+        },
+        {
+            "type": "noun",
+            "lemma": "milk",
+            "singular": "milk",
+            "plural": "milks"
+        },
+        {
+            "type": "noun",
+            "lemma": "juice",
+            "singular": "juice",
+            "plural": "juices"
+        },
+        {
+            "type": "noun",
+            "lemma": "infusion",
+            "singular": "infusion",
+            "plural": "infusions"
+        },
+        {
+            "type": "noun",
+            "lemma": "bread",
+            "singular": "bread",
+            "plural": "breads"
+        },
+        {
+            "type": "noun",
+            "lemma": "pasta",
+            "singular": "pasta",
+            "plural": "pastas"
+        },
+        {
+            "type": "noun",
+            "lemma": "pizza",
+            "singular": "pizza",
+            "plural": "pizzas"
+        },
+        {
+            "type": "noun",
+            "lemma": "rice",
+            "singular": "rice",
+            "plural": "rices"
+        },
+        {
+            "type": "noun",
+            "lemma": "sandwich",
+            "singular": "sandwich",
+            "plural": "sandwiches"
+        },
+        {
+            "type": "noun",
+            "lemma": "meat",
+            "singular": "meat",
+            "plural": "meats"
+        },
+        {
+            "type": "noun",
+            "lemma": "chicken",
+            "singular": "chicken",
+            "plural": "chickens"
+        },
+        {
+            "type": "noun",
+            "lemma": "fish",
+            "singular": "fish",
+            "plural": "fish"
+        },
+        {
+            "type": "noun",
+            "lemma": "ham",
+            "singular": "ham",
+            "plural": "hams"
+        },
+        {
+            "type": "noun",
+            "lemma": "egg",
+            "singular": "egg",
+            "plural": "eggs"
+        },
+        {
+            "type": "noun",
+            "lemma": "cheese",
+            "singular": "cheese",
+            "plural": "cheeses"
+        },
+        {
+            "type": "noun",
+            "lemma": "yogurt",
+            "singular": "yogurt",
+            "plural": "yogurts"
+        },
+        {
+            "type": "noun",
+            "lemma": "soup",
+            "singular": "soup",
+            "plural": "soups"
+        },
+        {
+            "type": "noun",
+            "lemma": "salad",
+            "singular": "salad",
+            "plural": "salads"
+        },
+        {
+            "type": "noun",
+            "lemma": "chips",
+            "singular": "chips",
+            "plural": "chipses"
+        },
+        {
+            "type": "noun",
+            "lemma": "cake",
+            "singular": "cake",
+            "plural": "cakes"
+        },
+        {
+            "type": "noun",
+            "lemma": "ice-cream",
+            "singular": "ice-cream",
+            "plural": "ice-creams"
+        },
+        {
+            "type": "noun",
+            "lemma": "chocolate",
+            "singular": "chocolate",
+            "plural": "chocolates"
+        },
+        {
+            "type": "noun",
+            "lemma": "sweet",
+            "singular": "sweet",
+            "plural": "sweets"
+        },
+        {
+            "type": "noun",
+            "lemma": "jam",
+            "singular": "jam",
+            "plural": "jams"
+        },
+        {
+            "type": "noun",
+            "lemma": "butter",
+            "singular": "butter",
+            "plural": "butters"
+        },
+        {
+            "type": "noun",
+            "lemma": "cereal",
+            "singular": "cereal",
+            "plural": "cereals"
+        },
+        {
+            "type": "noun",
+            "lemma": "fruit",
+            "singular": "fruit",
+            "plural": "fruits"
+        },
+        {
+            "type": "noun",
+            "lemma": "apple",
+            "singular": "apple",
+            "plural": "apples"
+        },
+        {
+            "type": "noun",
+            "lemma": "banana",
+            "singular": "banana",
+            "plural": "bananas"
+        },
+        {
+            "type": "noun",
+            "lemma": "orange",
+            "singular": "orange",
+            "plural": "oranges"
+        },
+        {
+            "type": "noun",
+            "lemma": "strawberry",
+            "singular": "strawberry",
+            "plural": "strawberries"
+        },
+        {
+            "type": "noun",
+            "lemma": "pear",
+            "singular": "pear",
+            "plural": "pears"
+        },
+        {
+            "type": "noun",
+            "lemma": "grape",
+            "singular": "grape",
+            "plural": "grapes"
+        },
+        {
+            "type": "noun",
+            "lemma": "cherry",
+            "singular": "cherry",
+            "plural": "cherries"
+        },
+        {
+            "type": "noun",
+            "lemma": "watermelon",
+            "singular": "watermelon",
+            "plural": "watermelons"
+        },
+        {
+            "type": "noun",
+            "lemma": "peach",
+            "singular": "peach",
+            "plural": "peaches"
+        },
+        {
+            "type": "noun",
+            "lemma": "vegetable",
+            "singular": "vegetable",
+            "plural": "vegetables"
+        },
+        {
+            "type": "noun",
+            "lemma": "tomato",
+            "singular": "tomato",
+            "plural": "tomatos"
+        },
+        {
+            "type": "noun",
+            "lemma": "potato",
+            "singular": "potato",
+            "plural": "potatos"
+        },
+        {
+            "type": "noun",
+            "lemma": "carrot",
+            "singular": "carrot",
+            "plural": "carrots"
+        },
+        {
+            "type": "noun",
+            "lemma": "sugar",
+            "singular": "sugar",
+            "plural": "sugars"
+        },
+        {
+            "type": "noun",
+            "lemma": "salt",
+            "singular": "salt",
+            "plural": "salts"
+        },
+        {
+            "type": "noun",
+            "lemma": "oil",
+            "singular": "oil",
+            "plural": "oils"
+        },
+        {
+            "type": "noun",
+            "lemma": "breakfast",
+            "singular": "breakfast",
+            "plural": "breakfasts"
+        },
+        {
+            "type": "noun",
+            "lemma": "lunch",
+            "singular": "lunch",
+            "plural": "lunches"
+        },
+        {
+            "type": "noun",
+            "lemma": "dinner",
+            "singular": "dinner",
+            "plural": "dinners"
+        },
+        {
+            "type": "noun",
+            "lemma": "snack",
+            "singular": "snack",
+            "plural": "snacks"
+        },
+        {
+            "type": "noun",
+            "lemma": "hunger",
+            "singular": "hunger",
+            "plural": "hungers"
+        },
+        {
+            "type": "noun",
+            "lemma": "thirsty",
+            "singular": "thirsty",
+            "plural": "thirsties"
+        },
+        {
+            "type": "noun",
+            "lemma": "house",
+            "singular": "house",
+            "plural": "houses"
+        },
+        {
+            "type": "noun",
+            "lemma": "bed",
+            "singular": "bed",
+            "plural": "beds"
+        },
+        {
+            "type": "noun",
+            "lemma": "toilet",
+            "singular": "toilet",
+            "plural": "toilets"
+        },
+        {
+            "type": "noun",
+            "lemma": "television",
+            "singular": "television",
+            "plural": "televisions"
+        },
+        {
+            "type": "noun",
+            "lemma": "toy",
+            "singular": "toy",
+            "plural": "toys"
+        },
+        {
+            "type": "noun",
+            "lemma": "shoe",
+            "singular": "shoe",
+            "plural": "shoes"
+        },
+        {
+            "type": "noun",
+            "lemma": "table",
+            "singular": "table",
+            "plural": "tables"
+        },
+        {
+            "type": "noun",
+            "lemma": "chair",
+            "singular": "chair",
+            "plural": "chairs"
+        },
+        {
+            "type": "noun",
+            "lemma": "door",
+            "singular": "door",
+            "plural": "doors"
+        },
+        {
+            "type": "noun",
+            "lemma": "window",
+            "singular": "window",
+            "plural": "windows"
+        },
+        {
+            "type": "noun",
+            "lemma": "kitchen",
+            "singular": "kitchen",
+            "plural": "kitchens"
+        },
+        {
+            "type": "noun",
+            "lemma": "tablet",
+            "singular": "tablet",
+            "plural": "tablets"
+        },
+        {
+            "type": "noun",
+            "lemma": "book",
+            "singular": "book",
+            "plural": "books"
+        },
+        {
+            "type": "noun",
+            "lemma": "backpack",
+            "singular": "backpack",
+            "plural": "backpacks"
+        },
+        {
+            "type": "noun",
+            "lemma": "ball",
+            "singular": "ball",
+            "plural": "balls"
+        },
+        {
+            "type": "noun",
+            "lemma": "glass",
+            "singular": "glass",
+            "plural": "glasses"
+        },
+        {
+            "type": "noun",
+            "lemma": "plate",
+            "singular": "plate",
+            "plural": "plates"
+        },
+        {
+            "type": "noun",
+            "lemma": "spoon",
+            "singular": "spoon",
+            "plural": "spoons"
+        },
+        {
+            "type": "noun",
+            "lemma": "fork",
+            "singular": "fork",
+            "plural": "forks"
+        },
+        {
+            "type": "noun",
+            "lemma": "knife",
+            "singular": "knife",
+            "plural": "knives"
+        },
+        {
+            "type": "noun",
+            "lemma": "soap",
+            "singular": "soap",
+            "plural": "soaps"
+        },
+        {
+            "type": "noun",
+            "lemma": "towel",
+            "singular": "towel",
+            "plural": "towels"
+        },
+        {
+            "type": "noun",
+            "lemma": "toothbrush",
+            "singular": "toothbrush",
+            "plural": "toothbrushes"
+        },
+        {
+            "type": "noun",
+            "lemma": "toothpaste",
+            "singular": "toothpaste",
+            "plural": "toothpastes"
+        },
+        {
+            "type": "noun",
+            "lemma": "handkerchief",
+            "singular": "handkerchief",
+            "plural": "handkerchiefs"
+        },
+        {
+            "type": "noun",
+            "lemma": "pyjama",
+            "singular": "pyjama",
+            "plural": "pyjamas"
+        },
+        {
+            "type": "noun",
+            "lemma": "jacket",
+            "singular": "jacket",
+            "plural": "jackets"
+        },
+        {
+            "type": "noun",
+            "lemma": "glasses",
+            "singular": "glasses",
+            "plural": "glasseses"
+        },
+        {
+            "type": "noun",
+            "lemma": "key",
+            "singular": "key",
+            "plural": "keys"
+        },
+        {
+            "type": "noun",
+            "lemma": "light",
+            "singular": "light",
+            "plural": "lights"
+        },
+        {
+            "type": "noun",
+            "lemma": "sofa",
+            "singular": "sofa",
+            "plural": "sofas"
+        },
+        {
+            "type": "noun",
+            "lemma": "pillow",
+            "singular": "pillow",
+            "plural": "pillows"
+        },
+        {
+            "type": "noun",
+            "lemma": "blanket",
+            "singular": "blanket",
+            "plural": "blankets"
+        },
+        {
+            "type": "noun",
+            "lemma": "mirror",
+            "singular": "mirror",
+            "plural": "mirrors"
+        },
+        {
+            "type": "noun",
+            "lemma": "shower",
+            "singular": "shower",
+            "plural": "showers"
+        },
+        {
+            "type": "noun",
+            "lemma": "fridge",
+            "singular": "fridge",
+            "plural": "fridges"
+        },
+        {
+            "type": "noun",
+            "lemma": "head",
+            "singular": "head",
+            "plural": "heads"
+        },
+        {
+            "type": "noun",
+            "lemma": "eye",
+            "singular": "eye",
+            "plural": "eyes"
+        },
+        {
+            "type": "noun",
+            "lemma": "ear",
+            "singular": "ear",
+            "plural": "ears"
+        },
+        {
+            "type": "noun",
+            "lemma": "nose",
+            "singular": "nose",
+            "plural": "noses"
+        },
+        {
+            "type": "noun",
+            "lemma": "mouth",
+            "singular": "mouth",
+            "plural": "mouths"
+        },
+        {
+            "type": "noun",
+            "lemma": "tooth",
+            "singular": "tooth",
+            "plural": "teeth"
+        },
+        {
+            "type": "noun",
+            "lemma": "tongue",
+            "singular": "tongue",
+            "plural": "tongues"
+        },
+        {
+            "type": "noun",
+            "lemma": "neck",
+            "singular": "neck",
+            "plural": "necks"
+        },
+        {
+            "type": "noun",
+            "lemma": "hair",
+            "singular": "hair",
+            "plural": "hairs"
+        },
+        {
+            "type": "noun",
+            "lemma": "hand",
+            "singular": "hand",
+            "plural": "hands"
+        },
+        {
+            "type": "noun",
+            "lemma": "arm",
+            "singular": "arm",
+            "plural": "arms"
+        },
+        {
+            "type": "noun",
+            "lemma": "leg",
+            "singular": "leg",
+            "plural": "legs"
+        },
+        {
+            "type": "noun",
+            "lemma": "foot",
+            "singular": "foot",
+            "plural": "feet"
+        },
+        {
+            "type": "noun",
+            "lemma": "tummy",
+            "singular": "tummy",
+            "plural": "tummies"
+        },
+        {
+            "type": "noun",
+            "lemma": "back",
+            "singular": "back",
+            "plural": "backs"
+        },
+        {
+            "type": "adjective",
+            "lemma": "bad",
+            "word": "bad"
+        },
+        {
+            "type": "noun",
+            "lemma": "pain",
+            "singular": "pain",
+            "plural": "pains"
+        },
+        {
+            "type": "noun",
+            "lemma": "headache",
+            "singular": "headache",
+            "plural": "headaches"
+        },
+        {
+            "type": "noun",
+            "lemma": "fever",
+            "singular": "fever",
+            "plural": "fevers"
+        },
+        {
+            "type": "noun",
+            "lemma": "cough",
+            "singular": "cough",
+            "plural": "coughs"
+        },
+        {
+            "type": "adjective",
+            "lemma": "sick",
+            "word": "sick"
+        },
+        {
+            "type": "noun",
+            "lemma": "medicine",
+            "singular": "medicine",
+            "plural": "medicines"
+        },
+        {
+            "type": "noun",
+            "lemma": "thermometer",
+            "singular": "thermometer",
+            "plural": "thermometers"
+        },
+        {
+            "type": "verb",
+            "lemma": "vomit",
+            "base": "vomit",
+            "thirdSingular": "vomits",
+            "past": "vomited",
+            "pastParticiple": "vomited"
+        },
+        {
+            "type": "adjective",
+            "lemma": "happy",
+            "word": "happy"
+        },
+        {
+            "type": "adjective",
+            "lemma": "sad",
+            "word": "sad"
+        },
+        {
+            "type": "adjective",
+            "lemma": "angry",
+            "word": "angry"
+        },
+        {
+            "type": "adjective",
+            "lemma": "tired",
+            "word": "tired"
+        },
+        {
+            "type": "adjective",
+            "lemma": "scared",
+            "word": "scared"
+        },
+        {
+            "type": "adjective",
+            "lemma": "bored",
+            "word": "bored"
+        },
+        {
+            "type": "adjective",
+            "lemma": "surprised",
+            "word": "surprised"
+        },
+        {
+            "type": "adjective",
+            "lemma": "content",
+            "word": "content"
+        },
+        {
+            "type": "adjective",
+            "lemma": "confused",
+            "word": "confused"
+        },
+        {
+            "type": "adjective",
+            "lemma": "calm",
+            "word": "calm"
+        },
+        {
+            "type": "adjective",
+            "lemma": "nervous",
+            "word": "nervous"
+        },
+        {
+            "type": "adjective",
+            "lemma": "worried",
+            "word": "worried"
+        },
+        {
+            "type": "noun",
+            "lemma": "fright",
+            "singular": "fright",
+            "plural": "frights"
+        },
+        {
+            "type": "noun",
+            "lemma": "bubble",
+            "singular": "bubble",
+            "plural": "bubbles"
+        },
+        {
+            "type": "noun",
+            "lemma": "block",
+            "singular": "block",
+            "plural": "blocks"
+        },
+        {
+            "type": "noun",
+            "lemma": "puzzle",
+            "singular": "puzzle",
+            "plural": "puzzles"
+        },
+        {
+            "type": "noun",
+            "lemma": "doll",
+            "singular": "doll",
+            "plural": "dolls"
+        },
+        {
+            "type": "noun",
+            "lemma": "swing",
+            "singular": "swing",
+            "plural": "swings"
+        },
+        {
+            "type": "noun",
+            "lemma": "playground",
+            "singular": "playground",
+            "plural": "playgrounds"
+        },
+        {
+            "type": "noun",
+            "lemma": "bike",
+            "singular": "bike",
+            "plural": "bikes"
+        },
+        {
+            "type": "noun",
+            "lemma": "notebook",
+            "singular": "notebook",
+            "plural": "notebooks"
+        },
+        {
+            "type": "noun",
+            "lemma": "pencil",
+            "singular": "pencil",
+            "plural": "pencils"
+        },
+        {
+            "type": "noun",
+            "lemma": "crayon",
+            "singular": "crayon",
+            "plural": "crayons"
+        },
+        {
+            "type": "noun",
+            "lemma": "scissors",
+            "singular": "scissors",
+            "plural": "scissorses"
+        },
+        {
+            "type": "noun",
+            "lemma": "glue",
+            "singular": "glue",
+            "plural": "glues"
+        },
+        {
+            "type": "verb",
+            "lemma": "colour",
+            "base": "colour",
+            "thirdSingular": "colours",
+            "past": "coloured",
+            "pastParticiple": "coloured",
+            "transitive": true
+        },
+        {
+            "type": "noun",
+            "lemma": "music",
+            "singular": "music",
+            "plural": "musics"
+        },
+        {
+            "type": "noun",
+            "lemma": "cartoon",
+            "singular": "cartoon",
+            "plural": "cartoons"
+        },
+        {
+            "type": "noun",
+            "lemma": "film",
+            "singular": "film",
+            "plural": "films"
+        },
+        {
+            "type": "noun",
+            "lemma": "computer",
+            "singular": "computer",
+            "plural": "computers"
+        },
+        {
+            "type": "noun",
+            "lemma": "party",
+            "singular": "party",
+            "plural": "parties"
+        },
+        {
+            "type": "noun",
+            "lemma": "present",
+            "singular": "present",
+            "plural": "presents"
+        },
+        {
+            "type": "noun",
+            "lemma": "car",
+            "singular": "car",
+            "plural": "cars"
+        },
+        {
+            "type": "noun",
+            "lemma": "bus",
+            "singular": "bus",
+            "plural": "buses"
+        },
+        {
+            "type": "noun",
+            "lemma": "supermarket",
+            "singular": "supermarket",
+            "plural": "supermarkets"
+        },
+        {
+            "type": "noun",
+            "lemma": "shop",
+            "singular": "shop",
+            "plural": "shops"
+        },
+        {
+            "type": "noun",
+            "lemma": "hospital",
+            "singular": "hospital",
+            "plural": "hospitals"
+        },
+        {
+            "type": "noun",
+            "lemma": "pharmacy",
+            "singular": "pharmacy",
+            "plural": "pharmacies"
+        },
+        {
+            "type": "noun",
+            "lemma": "church",
+            "singular": "church",
+            "plural": "churches"
+        },
+        {
+            "type": "noun",
+            "lemma": "sea",
+            "singular": "sea",
+            "plural": "seas"
+        },
+        {
+            "type": "noun",
+            "lemma": "beach",
+            "singular": "beach",
+            "plural": "beaches"
+        },
+        {
+            "type": "noun",
+            "lemma": "mountain",
+            "singular": "mountain",
+            "plural": "mountains"
+        },
+        {
+            "type": "noun",
+            "lemma": "city",
+            "singular": "city",
+            "plural": "cities"
+        },
+        {
+            "type": "noun",
+            "lemma": "road",
+            "singular": "road",
+            "plural": "roads"
+        },
+        {
+            "type": "noun",
+            "lemma": "train",
+            "singular": "train",
+            "plural": "trains"
+        },
+        {
+            "type": "noun",
+            "lemma": "aeroplane",
+            "singular": "aeroplane",
+            "plural": "aeroplanes"
+        },
+        {
+            "type": "noun",
+            "lemma": "motorbike",
+            "singular": "motorbike",
+            "plural": "motorbikes"
+        },
+        {
+            "type": "noun",
+            "lemma": "boat",
+            "singular": "boat",
+            "plural": "boats"
+        },
+        {
+            "type": "noun",
+            "lemma": "taxi",
+            "singular": "taxi",
+            "plural": "taxis"
+        },
+        {
+            "type": "noun",
+            "lemma": "metro",
+            "singular": "metro",
+            "plural": "metros"
+        },
+        {
+            "type": "noun",
+            "lemma": "lift",
+            "singular": "lift",
+            "plural": "lifts"
+        },
+        {
+            "type": "noun",
+            "lemma": "stairs",
+            "singular": "stairs",
+            "plural": "stairses"
+        },
+        {
+            "type": "noun",
+            "lemma": "restaurant",
+            "singular": "restaurant",
+            "plural": "restaurants"
+        },
+        {
+            "type": "noun",
+            "lemma": "bar",
+            "singular": "bar",
+            "plural": "bars"
+        },
+        {
+            "type": "noun",
+            "lemma": "day",
+            "singular": "day",
+            "plural": "days"
+        },
+        {
+            "type": "noun",
+            "lemma": "night",
+            "singular": "night",
+            "plural": "nights"
+        },
+        {
+            "type": "noun",
+            "lemma": "morning",
+            "singular": "morning",
+            "plural": "mornings"
+        },
+        {
+            "type": "adjective",
+            "lemma": "hot",
+            "word": "hot"
+        },
+        {
+            "type": "adjective",
+            "lemma": "cold",
+            "word": "cold"
+        },
+        {
+            "type": "noun",
+            "lemma": "sun",
+            "singular": "sun",
+            "plural": "suns"
+        },
+        {
+            "type": "noun",
+            "lemma": "rain",
+            "singular": "rain",
+            "plural": "rains"
+        },
+        {
+            "type": "noun",
+            "lemma": "snow",
+            "singular": "snow",
+            "plural": "snows"
+        },
+        {
+            "type": "noun",
+            "lemma": "wind",
+            "singular": "wind",
+            "plural": "winds"
+        },
+        {
+            "type": "noun",
+            "lemma": "summer",
+            "singular": "summer",
+            "plural": "summers"
+        },
+        {
+            "type": "noun",
+            "lemma": "winter",
+            "singular": "winter",
+            "plural": "winters"
+        },
+        {
+            "type": "noun",
+            "lemma": "tree",
+            "singular": "tree",
+            "plural": "trees"
+        },
+        {
+            "type": "noun",
+            "lemma": "flower",
+            "singular": "flower",
+            "plural": "flowers"
+        },
+        {
+            "type": "noun",
+            "lemma": "dog",
+            "singular": "dog",
+            "plural": "dogs"
+        },
+        {
+            "type": "noun",
+            "lemma": "cat",
+            "singular": "cat",
+            "plural": "cats"
+        },
+        {
+            "type": "adjective",
+            "lemma": "big",
+            "word": "big"
+        },
+        {
+            "type": "adjective",
+            "lemma": "small",
+            "word": "small"
+        },
+        {
+            "type": "adjective",
+            "lemma": "beautiful",
+            "word": "beautiful"
+        },
+        {
+            "type": "adjective",
+            "lemma": "ugly",
+            "word": "ugly"
+        },
+        {
+            "type": "adjective",
+            "lemma": "good",
+            "word": "good"
+        },
+        {
+            "type": "adjective",
+            "lemma": "new",
+            "word": "new"
+        },
+        {
+            "type": "adjective",
+            "lemma": "old",
+            "word": "old"
+        },
+        {
+            "type": "adjective",
+            "lemma": "dirty",
+            "word": "dirty"
+        },
+        {
+            "type": "adjective",
+            "lemma": "closed",
+            "word": "closed"
+        },
+        {
+            "type": "adjective",
+            "lemma": "fast",
+            "word": "fast"
+        },
+        {
+            "type": "adjective",
+            "lemma": "slow",
+            "word": "slow"
+        },
+        {
+            "type": "adjective",
+            "lemma": "tall",
+            "word": "tall"
+        },
+        {
+            "type": "adjective",
+            "lemma": "short",
+            "word": "short"
+        },
+        {
+            "type": "adjective",
+            "lemma": "hard",
+            "word": "hard"
+        },
+        {
+            "type": "adjective",
+            "lemma": "soft",
+            "word": "soft"
+        },
+        {
+            "type": "adjective",
+            "lemma": "salty",
+            "word": "salty"
+        },
+        {
+            "type": "adjective",
+            "lemma": "full",
+            "word": "full"
+        },
+        {
+            "type": "adjective",
+            "lemma": "empty",
+            "word": "empty"
+        },
+        {
+            "type": "adjective",
+            "lemma": "same",
+            "word": "same"
+        },
+        {
+            "type": "adjective",
+            "lemma": "different",
+            "word": "different"
+        },
+        {
+            "type": "adjective",
+            "lemma": "wet",
+            "word": "wet"
+        },
+        {
+            "type": "adjective",
+            "lemma": "broken",
+            "word": "broken"
+        },
+        {
+            "type": "adjective",
+            "lemma": "long",
+            "word": "long"
+        },
+        {
+            "type": "adjective",
+            "lemma": "red",
+            "word": "red"
+        },
+        {
+            "type": "adjective",
+            "lemma": "blue",
+            "word": "blue"
+        },
+        {
+            "type": "adjective",
+            "lemma": "yellow",
+            "word": "yellow"
+        },
+        {
+            "type": "adjective",
+            "lemma": "green",
+            "word": "green"
+        },
+        {
+            "type": "adjective",
+            "lemma": "black",
+            "word": "black"
+        },
+        {
+            "type": "adjective",
+            "lemma": "white",
+            "word": "white"
+        },
+        {
+            "type": "adjective",
+            "lemma": "pink",
+            "word": "pink"
+        },
+        {
+            "type": "adjective",
+            "lemma": "purple",
+            "word": "purple"
+        },
+        {
+            "type": "adjective",
+            "lemma": "brown",
+            "word": "brown"
+        },
+        {
+            "type": "noun",
+            "lemma": "number",
+            "singular": "number",
+            "plural": "numbers"
+        },
+        {
+            "type": "noun",
+            "lemma": "school",
+            "singular": "school",
+            "plural": "schools"
+        },
+        {
+            "type": "noun",
+            "lemma": "coffee",
+            "singular": "coffee",
+            "plural": "coffees"
+        }
+    ],
+    "unsupported": [
+        "a lot",
+        "after",
+        "again",
+        "all",
+        "ball-point pen",
+        "before",
+        "brush teeth",
+        "bus stop",
+        "cut out",
+        "eight",
+        "five",
+        "four",
+        "go down the stairs",
+        "go out",
+        "go upstairs",
+        "here",
+        "let go",
+        "little",
+        "more",
+        "my",
+        "nine",
+        "nothing",
+        "now",
+        "one",
+        "other",
+        "seven",
+        "six",
+        "speech therapist",
+        "sponge cake",
+        "stand up",
+        "sticking plaster",
+        "stomach ache",
+        "swimming pool",
+        "ten",
+        "that",
+        "there",
+        "this",
+        "three",
+        "today",
+        "toilet paper",
+        "tomorrow",
+        "toy car",
+        "traffic lights",
+        "train station",
+        "turn off the TV",
+        "turn on the TV",
+        "two",
+        "wake up",
+        "well",
+        "yesterday",
+        "your"
+    ]
+}

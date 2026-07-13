@@ -1,0 +1,2336 @@
+[
+    {
+        "id": "9031",
+        "lemma": "answer",
+        "pos": "VERB",
+        "label": "answer"
+    },
+    {
+        "id": "9847",
+        "lemma": "ask",
+        "pos": "VERB",
+        "label": "ask"
+    },
+    {
+        "id": "5465",
+        "lemma": "be",
+        "pos": "VERB",
+        "label": "be"
+    },
+    {
+        "id": "6604",
+        "lemma": "break",
+        "pos": "VERB",
+        "label": "break"
+    },
+    {
+        "id": "2326",
+        "lemma": "brush teeth",
+        "pos": "VERB",
+        "label": "brush teeth"
+    },
+    {
+        "id": "6457",
+        "lemma": "buy",
+        "pos": "VERB",
+        "label": "buy"
+    },
+    {
+        "id": "3428",
+        "lemma": "ca-ca",
+        "pos": "VERB",
+        "label": "ca-ca"
+    },
+    {
+        "id": "35949",
+        "lemma": "can",
+        "pos": "VERB",
+        "label": "can"
+    },
+    {
+        "id": "6553",
+        "lemma": "carry",
+        "pos": "VERB",
+        "label": "carry"
+    },
+    {
+        "id": "3351",
+        "lemma": "clean",
+        "pos": "VERB",
+        "label": "clean"
+    },
+    {
+        "id": "24976",
+        "lemma": "close",
+        "pos": "VERB",
+        "label": "close"
+    },
+    {
+        "id": "11708",
+        "lemma": "come",
+        "pos": "VERB",
+        "label": "come"
+    },
+    {
+        "id": "2342",
+        "lemma": "cook",
+        "pos": "VERB",
+        "label": "cook"
+    },
+    {
+        "id": "7147",
+        "lemma": "cry",
+        "pos": "VERB",
+        "label": "cry"
+    },
+    {
+        "id": "2547",
+        "lemma": "cut out",
+        "pos": "VERB",
+        "label": "cut out"
+    },
+    {
+        "id": "6052",
+        "lemma": "dance",
+        "pos": "VERB",
+        "label": "dance"
+    },
+    {
+        "id": "8088",
+        "lemma": "draw",
+        "pos": "VERB",
+        "label": "draw"
+    },
+    {
+        "id": "2781",
+        "lemma": "dress",
+        "pos": "VERB",
+        "label": "dress"
+    },
+    {
+        "id": "6061",
+        "lemma": "drink",
+        "pos": "VERB",
+        "label": "drink"
+    },
+    {
+        "id": "6456",
+        "lemma": "eat",
+        "pos": "VERB",
+        "label": "eat"
+    },
+    {
+        "id": "2742",
+        "lemma": "enter",
+        "pos": "VERB",
+        "label": "enter"
+    },
+    {
+        "id": "6067",
+        "lemma": "fall",
+        "pos": "VERB",
+        "label": "fall"
+    },
+    {
+        "id": "30194",
+        "lemma": "feel",
+        "pos": "VERB",
+        "label": "feel"
+    },
+    {
+        "id": "24742",
+        "lemma": "find",
+        "pos": "VERB",
+        "label": "find"
+    },
+    {
+        "id": "5358",
+        "lemma": "finish",
+        "pos": "VERB",
+        "label": "finish"
+    },
+    {
+        "id": "26258",
+        "lemma": "forget",
+        "pos": "VERB",
+        "label": "forget"
+    },
+    {
+        "id": "28431",
+        "lemma": "give",
+        "pos": "VERB",
+        "label": "give"
+    },
+    {
+        "id": "8142",
+        "lemma": "go",
+        "pos": "VERB",
+        "label": "go"
+    },
+    {
+        "id": "2654",
+        "lemma": "go down the stairs",
+        "pos": "VERB",
+        "label": "go down the stairs"
+    },
+    {
+        "id": "2806",
+        "lemma": "go out",
+        "pos": "VERB",
+        "label": "go out"
+    },
+    {
+        "id": "2795",
+        "lemma": "go upstairs",
+        "pos": "VERB",
+        "label": "go upstairs"
+    },
+    {
+        "id": "7271",
+        "lemma": "have",
+        "pos": "VERB",
+        "label": "have"
+    },
+    {
+        "id": "32648",
+        "lemma": "help",
+        "pos": "VERB",
+        "label": "help"
+    },
+    {
+        "id": "39414",
+        "lemma": "hold",
+        "pos": "VERB",
+        "label": "hold"
+    },
+    {
+        "id": "6023",
+        "lemma": "hug",
+        "pos": "VERB",
+        "label": "hug"
+    },
+    {
+        "id": "6607",
+        "lemma": "jump",
+        "pos": "VERB",
+        "label": "jump"
+    },
+    {
+        "id": "6062",
+        "lemma": "kiss",
+        "pos": "VERB",
+        "label": "kiss"
+    },
+    {
+        "id": "16885",
+        "lemma": "know",
+        "pos": "VERB",
+        "label": "know"
+    },
+    {
+        "id": "13354",
+        "lemma": "laugh",
+        "pos": "VERB",
+        "label": "laugh"
+    },
+    {
+        "id": "8029",
+        "lemma": "learn",
+        "pos": "VERB",
+        "label": "learn"
+    },
+    {
+        "id": "6215",
+        "lemma": "let go",
+        "pos": "VERB",
+        "label": "let go"
+    },
+    {
+        "id": "37826",
+        "lemma": "like",
+        "pos": "VERB",
+        "label": "like"
+    },
+    {
+        "id": "2381",
+        "lemma": "listen",
+        "pos": "VERB",
+        "label": "listen"
+    },
+    {
+        "id": "6898",
+        "lemma": "love",
+        "pos": "VERB",
+        "label": "love"
+    },
+    {
+        "id": "11749",
+        "lemma": "make",
+        "pos": "VERB",
+        "label": "make"
+    },
+    {
+        "id": "15523",
+        "lemma": "must",
+        "pos": "VERB",
+        "label": "must"
+    },
+    {
+        "id": "24825",
+        "lemma": "open",
+        "pos": "VERB",
+        "label": "open"
+    },
+    {
+        "id": "9014",
+        "lemma": "pay",
+        "pos": "VERB",
+        "label": "pay"
+    },
+    {
+        "id": "16713",
+        "lemma": "pee",
+        "pos": "VERB",
+        "label": "pee"
+    },
+    {
+        "id": "4691",
+        "lemma": "phone",
+        "pos": "VERB",
+        "label": "phone"
+    },
+    {
+        "id": "6537",
+        "lemma": "play",
+        "pos": "VERB",
+        "label": "play"
+    },
+    {
+        "id": "6989",
+        "lemma": "put",
+        "pos": "VERB",
+        "label": "put"
+    },
+    {
+        "id": "7141",
+        "lemma": "read",
+        "pos": "VERB",
+        "label": "read"
+    },
+    {
+        "id": "6019",
+        "lemma": "realise",
+        "pos": "VERB",
+        "label": "realise"
+    },
+    {
+        "id": "37369",
+        "lemma": "remember",
+        "pos": "VERB",
+        "label": "remember"
+    },
+    {
+        "id": "16643",
+        "lemma": "rest",
+        "pos": "VERB",
+        "label": "rest"
+    },
+    {
+        "id": "6465",
+        "lemma": "run",
+        "pos": "VERB",
+        "label": "run"
+    },
+    {
+        "id": "9693",
+        "lemma": "say",
+        "pos": "VERB",
+        "label": "say"
+    },
+    {
+        "id": "6947",
+        "lemma": "search",
+        "pos": "VERB",
+        "label": "search"
+    },
+    {
+        "id": "6564",
+        "lemma": "see",
+        "pos": "VERB",
+        "label": "see"
+    },
+    {
+        "id": "6552",
+        "lemma": "shout",
+        "pos": "VERB",
+        "label": "shout"
+    },
+    {
+        "id": "6960",
+        "lemma": "sing",
+        "pos": "VERB",
+        "label": "sing"
+    },
+    {
+        "id": "6611",
+        "lemma": "sit",
+        "pos": "VERB",
+        "label": "sit"
+    },
+    {
+        "id": "6479",
+        "lemma": "sleep",
+        "pos": "VERB",
+        "label": "sleep"
+    },
+    {
+        "id": "6548",
+        "lemma": "stand up",
+        "pos": "VERB",
+        "label": "stand up"
+    },
+    {
+        "id": "5431",
+        "lemma": "start",
+        "pos": "VERB",
+        "label": "start"
+    },
+    {
+        "id": "7196",
+        "lemma": "stop",
+        "pos": "VERB",
+        "label": "stop"
+    },
+    {
+        "id": "6495",
+        "lemma": "study",
+        "pos": "VERB",
+        "label": "study"
+    },
+    {
+        "id": "6568",
+        "lemma": "swim",
+        "pos": "VERB",
+        "label": "swim"
+    },
+    {
+        "id": "6453",
+        "lemma": "take",
+        "pos": "VERB",
+        "label": "take"
+    },
+    {
+        "id": "6517",
+        "lemma": "talk",
+        "pos": "VERB",
+        "label": "talk"
+    },
+    {
+        "id": "8661",
+        "lemma": "think",
+        "pos": "VERB",
+        "label": "think"
+    },
+    {
+        "id": "3293",
+        "lemma": "touch",
+        "pos": "VERB",
+        "label": "touch"
+    },
+    {
+        "id": "20093",
+        "lemma": "turn off the TV",
+        "pos": "VERB",
+        "label": "turn off the TV"
+    },
+    {
+        "id": "8555",
+        "lemma": "turn on the TV",
+        "pos": "VERB",
+        "label": "turn on the TV"
+    },
+    {
+        "id": "16697",
+        "lemma": "wait",
+        "pos": "VERB",
+        "label": "wait"
+    },
+    {
+        "id": "8989",
+        "lemma": "wake up",
+        "pos": "VERB",
+        "label": "wake up"
+    },
+    {
+        "id": "6044",
+        "lemma": "walk",
+        "pos": "VERB",
+        "label": "walk"
+    },
+    {
+        "id": "5441",
+        "lemma": "want",
+        "pos": "VERB",
+        "label": "want"
+    },
+    {
+        "id": "34826",
+        "lemma": "wash",
+        "pos": "VERB",
+        "label": "wash"
+    },
+    {
+        "id": "16907",
+        "lemma": "watch",
+        "pos": "VERB",
+        "label": "watch"
+    },
+    {
+        "id": "6624",
+        "lemma": "work",
+        "pos": "VERB",
+        "label": "work"
+    },
+    {
+        "id": "2380",
+        "lemma": "write",
+        "pos": "VERB",
+        "label": "write"
+    },
+    {
+        "id": "2475",
+        "lemma": "backpack",
+        "pos": "NOUN",
+        "label": "backpack"
+    },
+    {
+        "id": "3241",
+        "lemma": "ball",
+        "pos": "NOUN",
+        "label": "ball"
+    },
+    {
+        "id": "2282",
+        "lemma": "ball-point pen",
+        "pos": "NOUN",
+        "label": "ball-point pen"
+    },
+    {
+        "id": "25900",
+        "lemma": "bed",
+        "pos": "NOUN",
+        "label": "bed"
+    },
+    {
+        "id": "2459",
+        "lemma": "blanket",
+        "pos": "NOUN",
+        "label": "blanket"
+    },
+    {
+        "id": "25191",
+        "lemma": "book",
+        "pos": "NOUN",
+        "label": "book"
+    },
+    {
+        "id": "3155",
+        "lemma": "chair",
+        "pos": "NOUN",
+        "label": "chair"
+    },
+    {
+        "id": "3244",
+        "lemma": "door",
+        "pos": "NOUN",
+        "label": "door"
+    },
+    {
+        "id": "2588",
+        "lemma": "fork",
+        "pos": "NOUN",
+        "label": "fork"
+    },
+    {
+        "id": "3272",
+        "lemma": "fridge",
+        "pos": "NOUN",
+        "label": "fridge"
+    },
+    {
+        "id": "2610",
+        "lemma": "glass",
+        "pos": "NOUN",
+        "label": "glass"
+    },
+    {
+        "id": "3329",
+        "lemma": "glasses",
+        "pos": "NOUN",
+        "label": "glasses"
+    },
+    {
+        "id": "17284",
+        "lemma": "handkerchief",
+        "pos": "NOUN",
+        "label": "handkerchief"
+    },
+    {
+        "id": "6964",
+        "lemma": "house",
+        "pos": "NOUN",
+        "label": "house"
+    },
+    {
+        "id": "3296",
+        "lemma": "jacket",
+        "pos": "NOUN",
+        "label": "jacket"
+    },
+    {
+        "id": "2451",
+        "lemma": "key",
+        "pos": "NOUN",
+        "label": "keys"
+    },
+    {
+        "id": "33070",
+        "lemma": "kitchen",
+        "pos": "NOUN",
+        "label": "kitchen"
+    },
+    {
+        "id": "4931",
+        "lemma": "knife",
+        "pos": "NOUN",
+        "label": "knife"
+    },
+    {
+        "id": "8619",
+        "lemma": "light",
+        "pos": "NOUN",
+        "label": "light"
+    },
+    {
+        "id": "8573",
+        "lemma": "mirror",
+        "pos": "NOUN",
+        "label": "mirror"
+    },
+    {
+        "id": "2250",
+        "lemma": "pillow",
+        "pos": "NOUN",
+        "label": "pillow"
+    },
+    {
+        "id": "2532",
+        "lemma": "plate",
+        "pos": "NOUN",
+        "label": "plate"
+    },
+    {
+        "id": "2522",
+        "lemma": "pyjama",
+        "pos": "NOUN",
+        "label": "pyjama"
+    },
+    {
+        "id": "24801",
+        "lemma": "shoe",
+        "pos": "NOUN",
+        "label": "shoes"
+    },
+    {
+        "id": "2370",
+        "lemma": "shower",
+        "pos": "NOUN",
+        "label": "shower"
+    },
+    {
+        "id": "8094",
+        "lemma": "soap",
+        "pos": "NOUN",
+        "label": "soap"
+    },
+    {
+        "id": "25479",
+        "lemma": "sofa",
+        "pos": "NOUN",
+        "label": "sofa"
+    },
+    {
+        "id": "2362",
+        "lemma": "spoon",
+        "pos": "NOUN",
+        "label": "spoon"
+    },
+    {
+        "id": "3129",
+        "lemma": "table",
+        "pos": "NOUN",
+        "label": "table"
+    },
+    {
+        "id": "28099",
+        "lemma": "tablet",
+        "pos": "NOUN",
+        "label": "tablet"
+    },
+    {
+        "id": "25498",
+        "lemma": "television",
+        "pos": "NOUN",
+        "label": "television"
+    },
+    {
+        "id": "5921",
+        "lemma": "toilet",
+        "pos": "NOUN",
+        "label": "toilet"
+    },
+    {
+        "id": "2862",
+        "lemma": "toilet paper",
+        "pos": "NOUN",
+        "label": "toilet paper"
+    },
+    {
+        "id": "2694",
+        "lemma": "toothbrush",
+        "pos": "NOUN",
+        "label": "toothbrush"
+    },
+    {
+        "id": "2858",
+        "lemma": "toothpaste",
+        "pos": "NOUN",
+        "label": "toothpaste"
+    },
+    {
+        "id": "2593",
+        "lemma": "towel",
+        "pos": "NOUN",
+        "label": "towel"
+    },
+    {
+        "id": "9813",
+        "lemma": "toy",
+        "pos": "NOUN",
+        "label": "toy"
+    },
+    {
+        "id": "2611",
+        "lemma": "window",
+        "pos": "NOUN",
+        "label": "window"
+    },
+    {
+        "id": "2462",
+        "lemma": "apple",
+        "pos": "NOUN",
+        "label": "apple"
+    },
+    {
+        "id": "2530",
+        "lemma": "banana",
+        "pos": "NOUN",
+        "label": "banana"
+    },
+    {
+        "id": "2494",
+        "lemma": "bread",
+        "pos": "NOUN",
+        "label": "bread"
+    },
+    {
+        "id": "4626",
+        "lemma": "breakfast",
+        "pos": "NOUN",
+        "label": "breakfast"
+    },
+    {
+        "id": "2461",
+        "lemma": "butter",
+        "pos": "NOUN",
+        "label": "butter"
+    },
+    {
+        "id": "2502",
+        "lemma": "cake",
+        "pos": "NOUN",
+        "label": "cake"
+    },
+    {
+        "id": "2619",
+        "lemma": "carrot",
+        "pos": "NOUN",
+        "label": "carrot"
+    },
+    {
+        "id": "2328",
+        "lemma": "cereal",
+        "pos": "NOUN",
+        "label": "cereals"
+    },
+    {
+        "id": "2541",
+        "lemma": "cheese",
+        "pos": "NOUN",
+        "label": "cheese"
+    },
+    {
+        "id": "8303",
+        "lemma": "cherry",
+        "pos": "NOUN",
+        "label": "cherry"
+    },
+    {
+        "id": "4952",
+        "lemma": "chicken",
+        "pos": "NOUN",
+        "label": "chicken"
+    },
+    {
+        "id": "5400",
+        "lemma": "chips",
+        "pos": "NOUN",
+        "label": "chips"
+    },
+    {
+        "id": "25940",
+        "lemma": "chocolate",
+        "pos": "NOUN",
+        "label": "chocolate"
+    },
+    {
+        "id": "2296",
+        "lemma": "coffee",
+        "pos": "NOUN",
+        "label": "coffee"
+    },
+    {
+        "id": "4592",
+        "lemma": "dinner",
+        "pos": "NOUN",
+        "label": "dinner"
+    },
+    {
+        "id": "2427",
+        "lemma": "egg",
+        "pos": "NOUN",
+        "label": "egg"
+    },
+    {
+        "id": "6502",
+        "lemma": "fish",
+        "pos": "NOUN",
+        "label": "fish"
+    },
+    {
+        "id": "28339",
+        "lemma": "fruit",
+        "pos": "NOUN",
+        "label": "fruit"
+    },
+    {
+        "id": "3247",
+        "lemma": "grape",
+        "pos": "NOUN",
+        "label": "grapes"
+    },
+    {
+        "id": "2963",
+        "lemma": "ham",
+        "pos": "NOUN",
+        "label": "ham"
+    },
+    {
+        "id": "35559",
+        "lemma": "hunger",
+        "pos": "NOUN",
+        "label": "hunger"
+    },
+    {
+        "id": "35209",
+        "lemma": "ice-cream",
+        "pos": "NOUN",
+        "label": "ice-cream"
+    },
+    {
+        "id": "2429",
+        "lemma": "infusion",
+        "pos": "NOUN",
+        "label": "infusion"
+    },
+    {
+        "id": "2470",
+        "lemma": "jam",
+        "pos": "NOUN",
+        "label": "jam"
+    },
+    {
+        "id": "11461",
+        "lemma": "juice",
+        "pos": "NOUN",
+        "label": "juice"
+    },
+    {
+        "id": "4611",
+        "lemma": "lunch",
+        "pos": "NOUN",
+        "label": "lunch"
+    },
+    {
+        "id": "2316",
+        "lemma": "meat",
+        "pos": "NOUN",
+        "label": "meat"
+    },
+    {
+        "id": "2445",
+        "lemma": "milk",
+        "pos": "NOUN",
+        "label": "milk"
+    },
+    {
+        "id": "2246",
+        "lemma": "oil",
+        "pos": "NOUN",
+        "label": "oil"
+    },
+    {
+        "id": "2483",
+        "lemma": "orange",
+        "pos": "NOUN",
+        "label": "orange"
+    },
+    {
+        "id": "8652",
+        "lemma": "pasta",
+        "pos": "NOUN",
+        "label": "pasta"
+    },
+    {
+        "id": "2468",
+        "lemma": "peach",
+        "pos": "NOUN",
+        "label": "peach"
+    },
+    {
+        "id": "2561",
+        "lemma": "pear",
+        "pos": "NOUN",
+        "label": "pear"
+    },
+    {
+        "id": "2527",
+        "lemma": "pizza",
+        "pos": "NOUN",
+        "label": "pizza"
+    },
+    {
+        "id": "2503",
+        "lemma": "potato",
+        "pos": "NOUN",
+        "label": "potato"
+    },
+    {
+        "id": "39387",
+        "lemma": "rice",
+        "pos": "NOUN",
+        "label": "rice"
+    },
+    {
+        "id": "2377",
+        "lemma": "salad",
+        "pos": "NOUN",
+        "label": "salad"
+    },
+    {
+        "id": "25576",
+        "lemma": "salt",
+        "pos": "NOUN",
+        "label": "salt"
+    },
+    {
+        "id": "2281",
+        "lemma": "sandwich",
+        "pos": "NOUN",
+        "label": "sandwich"
+    },
+    {
+        "id": "4694",
+        "lemma": "snack",
+        "pos": "NOUN",
+        "label": "snack"
+    },
+    {
+        "id": "2573",
+        "lemma": "soup",
+        "pos": "NOUN",
+        "label": "soup"
+    },
+    {
+        "id": "8295",
+        "lemma": "sponge cake",
+        "pos": "NOUN",
+        "label": "sponge cake"
+    },
+    {
+        "id": "2400",
+        "lemma": "strawberry",
+        "pos": "NOUN",
+        "label": "strawberry"
+    },
+    {
+        "id": "25560",
+        "lemma": "sugar",
+        "pos": "NOUN",
+        "label": "sugar"
+    },
+    {
+        "id": "2686",
+        "lemma": "sweet",
+        "pos": "NOUN",
+        "label": "sweet"
+    },
+    {
+        "id": "4963",
+        "lemma": "thirsty",
+        "pos": "NOUN",
+        "label": "thirsty"
+    },
+    {
+        "id": "2594",
+        "lemma": "tomato",
+        "pos": "NOUN",
+        "label": "tomato"
+    },
+    {
+        "id": "28343",
+        "lemma": "vegetable",
+        "pos": "NOUN",
+        "label": "vegetables"
+    },
+    {
+        "id": "32464",
+        "lemma": "water",
+        "pos": "NOUN",
+        "label": "water"
+    },
+    {
+        "id": "2557",
+        "lemma": "watermelon",
+        "pos": "NOUN",
+        "label": "watermelon"
+    },
+    {
+        "id": "2618",
+        "lemma": "yogurt",
+        "pos": "NOUN",
+        "label": "yogurt"
+    },
+    {
+        "id": "2669",
+        "lemma": "arm",
+        "pos": "NOUN",
+        "label": "arm"
+    },
+    {
+        "id": "2748",
+        "lemma": "back",
+        "pos": "NOUN",
+        "label": "back"
+    },
+    {
+        "id": "5504",
+        "lemma": "bad",
+        "pos": "DESCRIPTOR",
+        "label": "bad"
+    },
+    {
+        "id": "35585",
+        "lemma": "cough",
+        "pos": "NOUN",
+        "label": "cough"
+    },
+    {
+        "id": "2871",
+        "lemma": "ear",
+        "pos": "NOUN",
+        "label": "ear"
+    },
+    {
+        "id": "2876",
+        "lemma": "eye",
+        "pos": "NOUN",
+        "label": "eyes"
+    },
+    {
+        "id": "32530",
+        "lemma": "fever",
+        "pos": "NOUN",
+        "label": "fever"
+    },
+    {
+        "id": "25327",
+        "lemma": "foot",
+        "pos": "NOUN",
+        "label": "foot"
+    },
+    {
+        "id": "2851",
+        "lemma": "hair",
+        "pos": "NOUN",
+        "label": "hair"
+    },
+    {
+        "id": "2928",
+        "lemma": "hand",
+        "pos": "NOUN",
+        "label": "hand"
+    },
+    {
+        "id": "2673",
+        "lemma": "head",
+        "pos": "NOUN",
+        "label": "head"
+    },
+    {
+        "id": "28651",
+        "lemma": "headache",
+        "pos": "NOUN",
+        "label": "headache"
+    },
+    {
+        "id": "8666",
+        "lemma": "leg",
+        "pos": "NOUN",
+        "label": "leg"
+    },
+    {
+        "id": "8163",
+        "lemma": "medicine",
+        "pos": "NOUN",
+        "label": "medicine"
+    },
+    {
+        "id": "2663",
+        "lemma": "mouth",
+        "pos": "NOUN",
+        "label": "mouth"
+    },
+    {
+        "id": "2727",
+        "lemma": "neck",
+        "pos": "NOUN",
+        "label": "neck"
+    },
+    {
+        "id": "2887",
+        "lemma": "nose",
+        "pos": "NOUN",
+        "label": "nose"
+    },
+    {
+        "id": "2367",
+        "lemma": "pain",
+        "pos": "NOUN",
+        "label": "pain"
+    },
+    {
+        "id": "32296",
+        "lemma": "sick",
+        "pos": "DESCRIPTOR",
+        "label": "sick"
+    },
+    {
+        "id": "3306",
+        "lemma": "sticking plaster",
+        "pos": "NOUN",
+        "label": "sticking plaster"
+    },
+    {
+        "id": "39664",
+        "lemma": "stomach ache",
+        "pos": "NOUN",
+        "label": "stomach ache"
+    },
+    {
+        "id": "32051",
+        "lemma": "thermometer",
+        "pos": "NOUN",
+        "label": "thermometer"
+    },
+    {
+        "id": "2944",
+        "lemma": "tongue",
+        "pos": "NOUN",
+        "label": "tongue"
+    },
+    {
+        "id": "10267",
+        "lemma": "tooth",
+        "pos": "NOUN",
+        "label": "tooth"
+    },
+    {
+        "id": "2786",
+        "lemma": "tummy",
+        "pos": "NOUN",
+        "label": "tummy"
+    },
+    {
+        "id": "2777",
+        "lemma": "vomit",
+        "pos": "VERB",
+        "label": "vomit"
+    },
+    {
+        "id": "5521",
+        "lemma": "a lot",
+        "pos": "DESCRIPTOR",
+        "label": "a lot"
+    },
+    {
+        "id": "5596",
+        "lemma": "all",
+        "pos": "DESCRIPTOR",
+        "label": "all"
+    },
+    {
+        "id": "11194",
+        "lemma": "beautiful",
+        "pos": "DESCRIPTOR",
+        "label": "beautiful"
+    },
+    {
+        "id": "4658",
+        "lemma": "big",
+        "pos": "DESCRIPTOR",
+        "label": "big"
+    },
+    {
+        "id": "4736",
+        "lemma": "broken",
+        "pos": "DESCRIPTOR",
+        "label": "broken"
+    },
+    {
+        "id": "36311",
+        "lemma": "closed",
+        "pos": "DESCRIPTOR",
+        "label": "closed"
+    },
+    {
+        "id": "4628",
+        "lemma": "different",
+        "pos": "DESCRIPTOR",
+        "label": "different"
+    },
+    {
+        "id": "26459",
+        "lemma": "dirty",
+        "pos": "DESCRIPTOR",
+        "label": "dirty"
+    },
+    {
+        "id": "26527",
+        "lemma": "empty",
+        "pos": "DESCRIPTOR",
+        "label": "empty"
+    },
+    {
+        "id": "37850",
+        "lemma": "fast",
+        "pos": "DESCRIPTOR",
+        "label": "fast"
+    },
+    {
+        "id": "26176",
+        "lemma": "full",
+        "pos": "DESCRIPTOR",
+        "label": "full"
+    },
+    {
+        "id": "4581",
+        "lemma": "good",
+        "pos": "DESCRIPTOR",
+        "label": "good"
+    },
+    {
+        "id": "4637",
+        "lemma": "hard",
+        "pos": "DESCRIPTOR",
+        "label": "hard"
+    },
+    {
+        "id": "5382",
+        "lemma": "here",
+        "pos": "DESCRIPTOR",
+        "label": "here"
+    },
+    {
+        "id": "5546",
+        "lemma": "little",
+        "pos": "DESCRIPTOR",
+        "label": "little"
+    },
+    {
+        "id": "26162",
+        "lemma": "long",
+        "pos": "DESCRIPTOR",
+        "label": "long"
+    },
+    {
+        "id": "12264",
+        "lemma": "my",
+        "pos": "DESCRIPTOR",
+        "label": "my"
+    },
+    {
+        "id": "11316",
+        "lemma": "new",
+        "pos": "DESCRIPTOR",
+        "label": "new"
+    },
+    {
+        "id": "29839",
+        "lemma": "nothing",
+        "pos": "DESCRIPTOR",
+        "label": "nothing"
+    },
+    {
+        "id": "11394",
+        "lemma": "old",
+        "pos": "DESCRIPTOR",
+        "label": "old"
+    },
+    {
+        "id": "17054",
+        "lemma": "other",
+        "pos": "DESCRIPTOR",
+        "label": "other"
+    },
+    {
+        "id": "4739",
+        "lemma": "salty",
+        "pos": "DESCRIPTOR",
+        "label": "salty"
+    },
+    {
+        "id": "4667",
+        "lemma": "same",
+        "pos": "DESCRIPTOR",
+        "label": "same"
+    },
+    {
+        "id": "25839",
+        "lemma": "short",
+        "pos": "DESCRIPTOR",
+        "label": "short"
+    },
+    {
+        "id": "4676",
+        "lemma": "slow",
+        "pos": "DESCRIPTOR",
+        "label": "slow"
+    },
+    {
+        "id": "4716",
+        "lemma": "small",
+        "pos": "DESCRIPTOR",
+        "label": "small"
+    },
+    {
+        "id": "4578",
+        "lemma": "soft",
+        "pos": "DESCRIPTOR",
+        "label": "soft"
+    },
+    {
+        "id": "25782",
+        "lemma": "tall",
+        "pos": "DESCRIPTOR",
+        "label": "tall"
+    },
+    {
+        "id": "6906",
+        "lemma": "that",
+        "pos": "DESCRIPTOR",
+        "label": "that"
+    },
+    {
+        "id": "5375",
+        "lemma": "there",
+        "pos": "DESCRIPTOR",
+        "label": "there"
+    },
+    {
+        "id": "7095",
+        "lemma": "this",
+        "pos": "DESCRIPTOR",
+        "label": "this"
+    },
+    {
+        "id": "26090",
+        "lemma": "ugly",
+        "pos": "DESCRIPTOR",
+        "label": "ugly"
+    },
+    {
+        "id": "25253",
+        "lemma": "wet",
+        "pos": "DESCRIPTOR",
+        "label": "wet"
+    },
+    {
+        "id": "12281",
+        "lemma": "your",
+        "pos": "DESCRIPTOR",
+        "label": "your"
+    },
+    {
+        "id": "35539",
+        "lemma": "angry",
+        "pos": "DESCRIPTOR",
+        "label": "angry"
+    },
+    {
+        "id": "35531",
+        "lemma": "bored",
+        "pos": "DESCRIPTOR",
+        "label": "bored"
+    },
+    {
+        "id": "31310",
+        "lemma": "calm",
+        "pos": "DESCRIPTOR",
+        "label": "calm"
+    },
+    {
+        "id": "35541",
+        "lemma": "confused",
+        "pos": "DESCRIPTOR",
+        "label": "confused"
+    },
+    {
+        "id": "35547",
+        "lemma": "content",
+        "pos": "DESCRIPTOR",
+        "label": "content"
+    },
+    {
+        "id": "35571",
+        "lemma": "fright",
+        "pos": "NOUN",
+        "label": "fright"
+    },
+    {
+        "id": "35533",
+        "lemma": "happy",
+        "pos": "DESCRIPTOR",
+        "label": "happy"
+    },
+    {
+        "id": "38930",
+        "lemma": "nervous",
+        "pos": "DESCRIPTOR",
+        "label": "nervous"
+    },
+    {
+        "id": "35545",
+        "lemma": "sad",
+        "pos": "DESCRIPTOR",
+        "label": "sad"
+    },
+    {
+        "id": "35535",
+        "lemma": "scared",
+        "pos": "DESCRIPTOR",
+        "label": "scared"
+    },
+    {
+        "id": "35529",
+        "lemma": "surprised",
+        "pos": "DESCRIPTOR",
+        "label": "surprised"
+    },
+    {
+        "id": "35537",
+        "lemma": "tired",
+        "pos": "DESCRIPTOR",
+        "label": "tired"
+    },
+    {
+        "id": "5397",
+        "lemma": "well",
+        "pos": "DESCRIPTOR",
+        "label": "well"
+    },
+    {
+        "id": "36341",
+        "lemma": "worried",
+        "pos": "DESCRIPTOR",
+        "label": "worried"
+    },
+    {
+        "id": "2264",
+        "lemma": "aeroplane",
+        "pos": "NOUN",
+        "label": "aeroplane"
+    },
+    {
+        "id": "32398",
+        "lemma": "bar",
+        "pos": "NOUN",
+        "label": "bar"
+    },
+    {
+        "id": "30518",
+        "lemma": "beach",
+        "pos": "NOUN",
+        "label": "beach"
+    },
+    {
+        "id": "6932",
+        "lemma": "boat",
+        "pos": "NOUN",
+        "label": "boat"
+    },
+    {
+        "id": "26654",
+        "lemma": "bus",
+        "pos": "NOUN",
+        "label": "bus"
+    },
+    {
+        "id": "2499",
+        "lemma": "bus stop",
+        "pos": "NOUN",
+        "label": "bus stop"
+    },
+    {
+        "id": "2339",
+        "lemma": "car",
+        "pos": "NOUN",
+        "label": "car"
+    },
+    {
+        "id": "3118",
+        "lemma": "church",
+        "pos": "NOUN",
+        "label": "church"
+    },
+    {
+        "id": "2704",
+        "lemma": "city",
+        "pos": "NOUN",
+        "label": "city"
+    },
+    {
+        "id": "36205",
+        "lemma": "hospital",
+        "pos": "NOUN",
+        "label": "hospital"
+    },
+    {
+        "id": "2260",
+        "lemma": "lift",
+        "pos": "NOUN",
+        "label": "lift"
+    },
+    {
+        "id": "26925",
+        "lemma": "metro",
+        "pos": "NOUN",
+        "label": "metro"
+    },
+    {
+        "id": "2480",
+        "lemma": "motorbike",
+        "pos": "NOUN",
+        "label": "motorbike"
+    },
+    {
+        "id": "2909",
+        "lemma": "mountain",
+        "pos": "NOUN",
+        "label": "mountain"
+    },
+    {
+        "id": "3313",
+        "lemma": "pharmacy",
+        "pos": "NOUN",
+        "label": "pharmacy"
+    },
+    {
+        "id": "32408",
+        "lemma": "restaurant",
+        "pos": "NOUN",
+        "label": "restaurant"
+    },
+    {
+        "id": "2302",
+        "lemma": "road",
+        "pos": "NOUN",
+        "label": "road"
+    },
+    {
+        "id": "3082",
+        "lemma": "school",
+        "pos": "NOUN",
+        "label": "school"
+    },
+    {
+        "id": "2925",
+        "lemma": "sea",
+        "pos": "NOUN",
+        "label": "sea"
+    },
+    {
+        "id": "35695",
+        "lemma": "shop",
+        "pos": "NOUN",
+        "label": "shop"
+    },
+    {
+        "id": "2379",
+        "lemma": "stairs",
+        "pos": "NOUN",
+        "label": "stairs"
+    },
+    {
+        "id": "3389",
+        "lemma": "supermarket",
+        "pos": "NOUN",
+        "label": "supermarket"
+    },
+    {
+        "id": "30516",
+        "lemma": "swimming pool",
+        "pos": "NOUN",
+        "label": "swimming pool"
+    },
+    {
+        "id": "2580",
+        "lemma": "taxi",
+        "pos": "NOUN",
+        "label": "taxi"
+    },
+    {
+        "id": "2567",
+        "lemma": "traffic lights",
+        "pos": "NOUN",
+        "label": "traffic lights"
+    },
+    {
+        "id": "2603",
+        "lemma": "train",
+        "pos": "NOUN",
+        "label": "train"
+    },
+    {
+        "id": "29905",
+        "lemma": "train station",
+        "pos": "NOUN",
+        "label": "train station"
+    },
+    {
+        "id": "2886",
+        "lemma": "black",
+        "pos": "DESCRIPTOR",
+        "label": "black"
+    },
+    {
+        "id": "4869",
+        "lemma": "blue",
+        "pos": "DESCRIPTOR",
+        "label": "blue"
+    },
+    {
+        "id": "2923",
+        "lemma": "brown",
+        "pos": "DESCRIPTOR",
+        "label": "brown"
+    },
+    {
+        "id": "2634",
+        "lemma": "eight",
+        "pos": "DESCRIPTOR",
+        "label": "eight"
+    },
+    {
+        "id": "2631",
+        "lemma": "five",
+        "pos": "DESCRIPTOR",
+        "label": "five"
+    },
+    {
+        "id": "2630",
+        "lemma": "four",
+        "pos": "DESCRIPTOR",
+        "label": "four"
+    },
+    {
+        "id": "4887",
+        "lemma": "green",
+        "pos": "DESCRIPTOR",
+        "label": "green"
+    },
+    {
+        "id": "2635",
+        "lemma": "nine",
+        "pos": "DESCRIPTOR",
+        "label": "nine"
+    },
+    {
+        "id": "2879",
+        "lemma": "number",
+        "pos": "NOUN",
+        "label": "number"
+    },
+    {
+        "id": "2627",
+        "lemma": "one",
+        "pos": "DESCRIPTOR",
+        "label": "one"
+    },
+    {
+        "id": "2807",
+        "lemma": "pink",
+        "pos": "DESCRIPTOR",
+        "label": "pink"
+    },
+    {
+        "id": "2907",
+        "lemma": "purple",
+        "pos": "DESCRIPTOR",
+        "label": "purple"
+    },
+    {
+        "id": "2808",
+        "lemma": "red",
+        "pos": "DESCRIPTOR",
+        "label": "red"
+    },
+    {
+        "id": "2633",
+        "lemma": "seven",
+        "pos": "DESCRIPTOR",
+        "label": "seven"
+    },
+    {
+        "id": "2632",
+        "lemma": "six",
+        "pos": "DESCRIPTOR",
+        "label": "six"
+    },
+    {
+        "id": "29254",
+        "lemma": "ten",
+        "pos": "DESCRIPTOR",
+        "label": "ten"
+    },
+    {
+        "id": "2629",
+        "lemma": "three",
+        "pos": "DESCRIPTOR",
+        "label": "three"
+    },
+    {
+        "id": "2628",
+        "lemma": "two",
+        "pos": "DESCRIPTOR",
+        "label": "two"
+    },
+    {
+        "id": "8043",
+        "lemma": "white",
+        "pos": "DESCRIPTOR",
+        "label": "white"
+    },
+    {
+        "id": "2648",
+        "lemma": "yellow",
+        "pos": "DESCRIPTOR",
+        "label": "yellow"
+    },
+    {
+        "id": "6632",
+        "lemma": "I",
+        "pos": "MISC",
+        "label": "I"
+    },
+    {
+        "id": "30271",
+        "lemma": "aunt",
+        "pos": "NOUN",
+        "label": "aunt"
+    },
+    {
+        "id": "2275",
+        "lemma": "baby",
+        "pos": "NOUN",
+        "label": "baby"
+    },
+    {
+        "id": "2485",
+        "lemma": "boy",
+        "pos": "NOUN",
+        "label": "boy"
+    },
+    {
+        "id": "2423",
+        "lemma": "brother",
+        "pos": "NOUN",
+        "label": "brother"
+    },
+    {
+        "id": "30340",
+        "lemma": "cousin",
+        "pos": "NOUN",
+        "label": "cousin"
+    },
+    {
+        "id": "2467",
+        "lemma": "doctor",
+        "pos": "NOUN",
+        "label": "doctor"
+    },
+    {
+        "id": "2392",
+        "lemma": "family",
+        "pos": "NOUN",
+        "label": "family"
+    },
+    {
+        "id": "2497",
+        "lemma": "father",
+        "pos": "NOUN",
+        "label": "father"
+    },
+    {
+        "id": "8487",
+        "lemma": "friend",
+        "pos": "NOUN",
+        "label": "friend"
+    },
+    {
+        "id": "2484",
+        "lemma": "girl",
+        "pos": "NOUN",
+        "label": "girl"
+    },
+    {
+        "id": "2244",
+        "lemma": "grandfather",
+        "pos": "NOUN",
+        "label": "grandfather"
+    },
+    {
+        "id": "2243",
+        "lemma": "grandmother",
+        "pos": "NOUN",
+        "label": "grandmother"
+    },
+    {
+        "id": "6480",
+        "lemma": "he",
+        "pos": "MISC",
+        "label": "he"
+    },
+    {
+        "id": "4665",
+        "lemma": "man",
+        "pos": "NOUN",
+        "label": "man"
+    },
+    {
+        "id": "2458",
+        "lemma": "mum",
+        "pos": "NOUN",
+        "label": "mum"
+    },
+    {
+        "id": "2375",
+        "lemma": "nurse",
+        "pos": "NOUN",
+        "label": "nurse"
+    },
+    {
+        "id": "7028",
+        "lemma": "she",
+        "pos": "MISC",
+        "label": "she"
+    },
+    {
+        "id": "2422",
+        "lemma": "sister",
+        "pos": "NOUN",
+        "label": "sister"
+    },
+    {
+        "id": "2454",
+        "lemma": "speech therapist",
+        "pos": "NOUN",
+        "label": "speech therapist"
+    },
+    {
+        "id": "2456",
+        "lemma": "teacher",
+        "pos": "NOUN",
+        "label": "teacher"
+    },
+    {
+        "id": "7032",
+        "lemma": "they",
+        "pos": "MISC",
+        "label": "they"
+    },
+    {
+        "id": "30255",
+        "lemma": "uncle",
+        "pos": "NOUN",
+        "label": "uncle"
+    },
+    {
+        "id": "7183",
+        "lemma": "we",
+        "pos": "MISC",
+        "label": "we"
+    },
+    {
+        "id": "4703",
+        "lemma": "woman",
+        "pos": "NOUN",
+        "label": "woman"
+    },
+    {
+        "id": "6625",
+        "lemma": "you",
+        "pos": "MISC",
+        "label": "you"
+    },
+    {
+        "id": "6935",
+        "lemma": "bike",
+        "pos": "NOUN",
+        "label": "bike"
+    },
+    {
+        "id": "4935",
+        "lemma": "block",
+        "pos": "NOUN",
+        "label": "blocks"
+    },
+    {
+        "id": "6945",
+        "lemma": "bubble",
+        "pos": "NOUN",
+        "label": "bubbles"
+    },
+    {
+        "id": "8089",
+        "lemma": "cartoon",
+        "pos": "NOUN",
+        "label": "cartoon"
+    },
+    {
+        "id": "2348",
+        "lemma": "colour",
+        "pos": "VERB",
+        "label": "colour"
+    },
+    {
+        "id": "7190",
+        "lemma": "computer",
+        "pos": "NOUN",
+        "label": "computer"
+    },
+    {
+        "id": "17016",
+        "lemma": "crayon",
+        "pos": "NOUN",
+        "label": "crayons"
+    },
+    {
+        "id": "26238",
+        "lemma": "doll",
+        "pos": "NOUN",
+        "label": "doll"
+    },
+    {
+        "id": "24797",
+        "lemma": "film",
+        "pos": "NOUN",
+        "label": "film"
+    },
+    {
+        "id": "2709",
+        "lemma": "glue",
+        "pos": "NOUN",
+        "label": "glue"
+    },
+    {
+        "id": "24791",
+        "lemma": "music",
+        "pos": "NOUN",
+        "label": "music"
+    },
+    {
+        "id": "2359",
+        "lemma": "notebook",
+        "pos": "NOUN",
+        "label": "notebook"
+    },
+    {
+        "id": "7099",
+        "lemma": "party",
+        "pos": "NOUN",
+        "label": "party"
+    },
+    {
+        "id": "2440",
+        "lemma": "pencil",
+        "pos": "NOUN",
+        "label": "pencil"
+    },
+    {
+        "id": "2859",
+        "lemma": "playground",
+        "pos": "NOUN",
+        "label": "playground"
+    },
+    {
+        "id": "25381",
+        "lemma": "present",
+        "pos": "NOUN",
+        "label": "present"
+    },
+    {
+        "id": "2540",
+        "lemma": "puzzle",
+        "pos": "NOUN",
+        "label": "puzzle"
+    },
+    {
+        "id": "6664",
+        "lemma": "scissors",
+        "pos": "NOUN",
+        "label": "scissors"
+    },
+    {
+        "id": "4608",
+        "lemma": "swing",
+        "pos": "NOUN",
+        "label": "swing"
+    },
+    {
+        "id": "2340",
+        "lemma": "toy car",
+        "pos": "NOUN",
+        "label": "toy car"
+    },
+    {
+        "id": "13630",
+        "lemma": "I am fine",
+        "pos": "SOCIAL",
+        "label": "I am fine"
+    },
+    {
+        "id": "7180",
+        "lemma": "I don't know",
+        "pos": "SOCIAL",
+        "label": "I don't know"
+    },
+    {
+        "id": "37825",
+        "lemma": "I don't like that",
+        "pos": "SOCIAL",
+        "label": "I don't like that"
+    },
+    {
+        "id": "21917",
+        "lemma": "I like that",
+        "pos": "SOCIAL",
+        "label": "I like that"
+    },
+    {
+        "id": "37163",
+        "lemma": "again",
+        "pos": "DESCRIPTOR",
+        "label": "again"
+    },
+    {
+        "id": "11348",
+        "lemma": "because",
+        "pos": "SOCIAL",
+        "label": "because"
+    },
+    {
+        "id": "13018",
+        "lemma": "congratulations",
+        "pos": "SOCIAL",
+        "label": "congratulations"
+    },
+    {
+        "id": "11627",
+        "lemma": "enjoy your meal",
+        "pos": "SOCIAL",
+        "label": "enjoy your meal!"
+    },
+    {
+        "id": "28429",
+        "lemma": "enough is enough",
+        "pos": "SOCIAL",
+        "label": "enough is enough"
+    },
+    {
+        "id": "6944",
+        "lemma": "good morning",
+        "pos": "SOCIAL",
+        "label": "good morning"
+    },
+    {
+        "id": "6942",
+        "lemma": "good night",
+        "pos": "SOCIAL",
+        "label": "good night"
+    },
+    {
+        "id": "5896",
+        "lemma": "goodbye",
+        "pos": "SOCIAL",
+        "label": "goodbye"
+    },
+    {
+        "id": "6009",
+        "lemma": "hello",
+        "pos": "SOCIAL",
+        "label": "hello"
+    },
+    {
+        "id": "12313",
+        "lemma": "how",
+        "pos": "SOCIAL",
+        "label": "how"
+    },
+    {
+        "id": "11597",
+        "lemma": "how are you?",
+        "pos": "SOCIAL",
+        "label": "how are you?"
+    },
+    {
+        "id": "11591",
+        "lemma": "me too",
+        "pos": "SOCIAL",
+        "label": "me too!"
+    },
+    {
+        "id": "5508",
+        "lemma": "more",
+        "pos": "DESCRIPTOR",
+        "label": "more"
+    },
+    {
+        "id": "5526",
+        "lemma": "no",
+        "pos": "SOCIAL",
+        "label": "no"
+    },
+    {
+        "id": "5525",
+        "lemma": "not",
+        "pos": "MISC",
+        "label": "not"
+    },
+    {
+        "id": "29635",
+        "lemma": "pass",
+        "pos": "SOCIAL",
+        "label": "pass"
+    },
+    {
+        "id": "8194",
+        "lemma": "please",
+        "pos": "SOCIAL",
+        "label": "please"
+    },
+    {
+        "id": "11625",
+        "lemma": "sorry",
+        "pos": "SOCIAL",
+        "label": "sorry"
+    },
+    {
+        "id": "8128",
+        "lemma": "thank you",
+        "pos": "SOCIAL",
+        "label": "thank you"
+    },
+    {
+        "id": "6936",
+        "lemma": "welcome",
+        "pos": "SOCIAL",
+        "label": "welcome"
+    },
+    {
+        "id": "22620",
+        "lemma": "what",
+        "pos": "SOCIAL",
+        "label": "what"
+    },
+    {
+        "id": "22621",
+        "lemma": "when",
+        "pos": "SOCIAL",
+        "label": "when"
+    },
+    {
+        "id": "7764",
+        "lemma": "where",
+        "pos": "SOCIAL",
+        "label": "where"
+    },
+    {
+        "id": "9853",
+        "lemma": "who",
+        "pos": "SOCIAL",
+        "label": "who"
+    },
+    {
+        "id": "5584",
+        "lemma": "yes",
+        "pos": "SOCIAL",
+        "label": "yes"
+    },
+    {
+        "id": "13080",
+        "lemma": "after",
+        "pos": "DESCRIPTOR",
+        "label": "after"
+    },
+    {
+        "id": "32745",
+        "lemma": "before",
+        "pos": "DESCRIPTOR",
+        "label": "before"
+    },
+    {
+        "id": "7114",
+        "lemma": "cat",
+        "pos": "NOUN",
+        "label": "cat"
+    },
+    {
+        "id": "26865",
+        "lemma": "cold",
+        "pos": "DESCRIPTOR",
+        "label": "cold"
+    },
+    {
+        "id": "26799",
+        "lemma": "day",
+        "pos": "NOUN",
+        "label": "day"
+    },
+    {
+        "id": "2517",
+        "lemma": "dog",
+        "pos": "NOUN",
+        "label": "dog"
+    },
+    {
+        "id": "7104",
+        "lemma": "flower",
+        "pos": "NOUN",
+        "label": "flower"
+    },
+    {
+        "id": "26716",
+        "lemma": "hot",
+        "pos": "DESCRIPTOR",
+        "label": "hot"
+    },
+    {
+        "id": "25704",
+        "lemma": "morning",
+        "pos": "NOUN",
+        "label": "morning"
+    },
+    {
+        "id": "7181",
+        "lemma": "night",
+        "pos": "NOUN",
+        "label": "night"
+    },
+    {
+        "id": "32747",
+        "lemma": "now",
+        "pos": "DESCRIPTOR",
+        "label": "now"
+    },
+    {
+        "id": "3123",
+        "lemma": "rain",
+        "pos": "NOUN",
+        "label": "rain"
+    },
+    {
+        "id": "3135",
+        "lemma": "snow",
+        "pos": "NOUN",
+        "label": "snow"
+    },
+    {
+        "id": "5604",
+        "lemma": "summer",
+        "pos": "NOUN",
+        "label": "summer"
+    },
+    {
+        "id": "7252",
+        "lemma": "sun",
+        "pos": "NOUN",
+        "label": "Sun"
+    },
+    {
+        "id": "38276",
+        "lemma": "today",
+        "pos": "DESCRIPTOR",
+        "label": "today"
+    },
+    {
+        "id": "38278",
+        "lemma": "tomorrow",
+        "pos": "DESCRIPTOR",
+        "label": "tomorrow"
+    },
+    {
+        "id": "3057",
+        "lemma": "tree",
+        "pos": "NOUN",
+        "label": "tree"
+    },
+    {
+        "id": "23731",
+        "lemma": "wind",
+        "pos": "NOUN",
+        "label": "wind"
+    },
+    {
+        "id": "5493",
+        "lemma": "winter",
+        "pos": "NOUN",
+        "label": "winter"
+    },
+    {
+        "id": "38279",
+        "lemma": "yesterday",
+        "pos": "DESCRIPTOR",
+        "label": "yesterday"
+    }
+]

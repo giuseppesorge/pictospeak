@@ -1,7 +1,7 @@
 {
     "source": "https://api.arasaac.org/v1/pictograms/all",
     "snapshot": "snapshot-2026-07-13",
-    "pictograms": "402",
+    "pictograms": "389",
     "imageFormat": "300px PNG (as served by static.arasaac.org; WebP conversion deliberately deferred)",
     "generatedBy": "tools/arasaac-fetch (curated vocabulary: tools/core-vocabulary.csv)"
 }

@@ -1,0 +1,111 @@
+{
+    "id": "corpo-salute",
+    "locale": "en",
+    "name": "Body",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "2669"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2748"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5504"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35585"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2871"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2876"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "32530"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "25327"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2851"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2928"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2673"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "28651"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8666"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "8163"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2663"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2727"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2887"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2367"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "32296"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "3306"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "39664"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "32051"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2944"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "10267"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2786"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "2777"
+        }
+    ]
+}

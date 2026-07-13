@@ -1,0 +1,63 @@
+{
+    "id": "emozioni",
+    "locale": "en",
+    "name": "Feelings",
+    "cells": [
+        {
+            "type": "pictogram",
+            "pictogramId": "35539"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35531"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "31310"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35541"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35547"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35571"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35533"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "38930"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35545"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35535"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35529"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "35537"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "5397"
+        },
+        {
+            "type": "pictogram",
+            "pictogramId": "36341"
+        }
+    ]
+}

@@ -34,21 +34,28 @@ private const val RATE_LIMIT_MS = 350L
 private const val CSV_FIELDS = 8
 private const val PROGRESS_EVERY = 25
 private const val HTTP_OK = 200
-internal val CATEGORY_TITLES =
+
+// Per-language folder titles. Keys are the language-agnostic category ids.
+internal val CATEGORY_TITLES: Map<String, Map<String, String>> =
     mapOf(
-        "persone" to "Persone",
-        "azioni" to "Azioni",
-        "cibo" to "Cibo",
-        "casa-oggetti" to "Casa",
-        "corpo-salute" to "Corpo",
-        "emozioni" to "Emozioni",
-        "scuola-gioco" to "Scuola e gioco",
-        "luoghi-trasporti" to "Luoghi",
-        "tempo-natura" to "Tempo e natura",
-        "sociale" to "Parole sociali",
-        "descrittori" to "Descrittori",
-        "numeri-colori" to "Numeri e colori",
+        "persone" to mapOf("it" to "Persone", "en" to "People"),
+        "azioni" to mapOf("it" to "Azioni", "en" to "Actions"),
+        "cibo" to mapOf("it" to "Cibo", "en" to "Food"),
+        "casa-oggetti" to mapOf("it" to "Casa", "en" to "Home"),
+        "corpo-salute" to mapOf("it" to "Corpo", "en" to "Body"),
+        "emozioni" to mapOf("it" to "Emozioni", "en" to "Feelings"),
+        "scuola-gioco" to mapOf("it" to "Scuola e gioco", "en" to "School & play"),
+        "luoghi-trasporti" to mapOf("it" to "Luoghi", "en" to "Places"),
+        "tempo-natura" to mapOf("it" to "Tempo e natura", "en" to "Time & nature"),
+        "sociale" to mapOf("it" to "Parole sociali", "en" to "Social words"),
+        "descrittori" to mapOf("it" to "Descrittori", "en" to "Describing words"),
+        "numeri-colori" to mapOf("it" to "Numeri e colori", "en" to "Numbers & colours"),
     )
+
+internal fun categoryTitle(
+    category: String,
+    lang: String,
+): String = CATEGORY_TITLES.getValue(category).let { it[lang] ?: it.getValue("it") }
 
 data class Row(
     val arasaacId: String,
@@ -82,7 +89,8 @@ fun main(args: Array<String>) {
     validate(rows, snapshot)
 
     downloadMissing(rows, assetsDir)
-    pruneStaleImages(rows, assetsDir)
+    // Images are SHARED across language packs, so keep any id referenced by ANY language.
+    pruneStaleImages(allLanguageIds(csvPath), assetsDir)
     writeCatalog(rows, assetsDir.resolve("catalog_$lang.json"))
     writeBoards(rows, lang, boardsDir)
     writeManifest(rows, snapshotPath, assetsDir.resolve("attribution-manifest.json"))
@@ -160,7 +168,10 @@ private fun validate(
                 val keywords = snapshot[r.arasaacId]
                 when {
                     keywords == null -> add("${r.lemma}: id ${r.arasaacId} not in snapshot")
-                    r.label.lowercase() !in keywords ->
+                    // Label must be a real ARASAAC keyword, or an intentionally curated label
+                    // equal to the lemma (e.g. the modal "can"/"must", whose only keywords are
+                    // periphrastic "be able to"/"obligation").
+                    r.label.lowercase() !in keywords && r.label.lowercase() != r.lemma.lowercase() ->
                         add("${r.lemma}: label '${r.label}' not a keyword of ${r.arasaacId}")
                 }
                 if (r.category !in CATEGORY_TITLES) add("${r.lemma}: unknown category '${r.category}'")
@@ -210,12 +221,20 @@ private fun downloadMissing(
     }
 }
 
-/** Remove bundled images that are no longer referenced by any catalog row (e.g. the M1 spike set). */
+/** Every pictogram id referenced by any language row in the vocabulary (images are shared). */
+@Suppress("MagicNumber")
+private fun allLanguageIds(csvPath: Path): Set<String> =
+    Files
+        .readAllLines(csvPath)
+        .drop(1)
+        .filter { it.isNotBlank() && !it.trimStart().startsWith("#") }
+        .map { it.split(",", limit = 8)[0].trim() }
+        .toSet()
+
 private fun pruneStaleImages(
-    rows: List<Row>,
+    wanted: Set<String>,
     assetsDir: Path,
 ) {
-    val wanted = rows.map { it.arasaacId }.toSet()
     val stale = assetsDir.listDirectoryEntries("*.png").filter { it.nameWithoutExtension !in wanted }
     stale.forEach(Files::delete)
     if (stale.isNotEmpty()) println("pruned ${stale.size} stale image(s)")

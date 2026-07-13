@@ -401,3 +401,392 @@ arasaacId,lemma,label,pos,lang,category,core,rationale
 3082,scuola,scuola,NOUN,it,luoghi-trasporti,false,Luogo quotidiano principale del bambino
 2296,caffè,caffè,NOUN,it,cibo,false,Abitudine quotidiana adulti; bilancia lista troppo infantile
 5525,non,non,DESCRIPTOR,it,sociale,true,Negazione ('non voglio'); gesto di diniego, distinto da 5526
+6632,I,I,MISC,en,persone,true,subject pronoun io
+6625,you,you,MISC,en,persone,true,tu -> you (keep both rows)
+6480,he,he,MISC,en,persone,true,lui -> he
+7028,she,she,MISC,en,persone,true,lei -> she
+7183,we,we,MISC,en,persone,true,noi -> we
+7032,they,they,MISC,en,persone,true,loro -> they
+2458,mum,mum,NOUN,en,persone,false,mamma; British form
+2497,father,father,NOUN,en,persone,false,only keyword available
+2243,grandmother,grandmother,NOUN,en,persone,false,nonna
+2244,grandfather,grandfather,NOUN,en,persone,false,nonno
+2423,brother,brother,NOUN,en,persone,false,fratello
+2422,sister,sister,NOUN,en,persone,false,sorella
+30255,uncle,uncle,NOUN,en,persone,false,zio
+30271,aunt,aunt,NOUN,en,persone,false,zia
+30340,cousin,cousin,NOUN,en,persone,false,cugino
+2392,family,family,NOUN,en,persone,false,famiglia
+2485,boy,boy,NOUN,en,persone,false,bambino; pairs with girl
+2484,girl,girl,NOUN,en,persone,false,bambina
+2275,baby,baby,NOUN,en,persone,false,neonato
+8487,friend,friend,NOUN,en,persone,false,amico
+2456,teacher,teacher,NOUN,en,persone,false,maestra
+2467,doctor,doctor,NOUN,en,persone,false,dottore
+2375,nurse,nurse,NOUN,en,persone,false,infermiera
+2454,speech therapist,speech therapist,NOUN,en,persone,false,logopedista
+4665,man,man,NOUN,en,persone,false,uomo
+4703,woman,woman,NOUN,en,persone,false,donna
+5441,want,want,VERB,en,azioni,true,volere -> want
+35949,can,can,VERB,en,azioni,true,modal can; only periphrastic keyword
+15523,must,must,VERB,en,azioni,true,modal must; no verb keyword; kept first
+5465,be,be,VERB,en,azioni,true,essere -> be
+7271,have,have,VERB,en,azioni,true,avere -> have
+11749,make,make,VERB,en,azioni,true,fare -> make (per rule)
+8142,go,go,VERB,en,azioni,true,andare
+11708,come,come,VERB,en,azioni,false,venire
+6456,eat,eat,VERB,en,azioni,true,mangiare
+6061,drink,drink,VERB,en,azioni,true,bere
+6479,sleep,sleep,VERB,en,azioni,false,dormire
+6537,play,play,VERB,en,azioni,true,giocare
+16907,watch,watch,VERB,en,azioni,true,guardare
+2381,listen,listen,VERB,en,azioni,false,ascoltare -> listen
+6517,talk,talk,VERB,en,azioni,false,parlare
+28431,give,give,VERB,en,azioni,true,dare
+6453,take,take,VERB,en,azioni,false,prendere
+6989,put,put,VERB,en,azioni,false,mettere
+24825,open,open,VERB,en,azioni,false,aprire
+24976,close,close,VERB,en,azioni,false,chiudere
+34826,wash,wash,VERB,en,azioni,false,lavare
+2781,dress,dress,VERB,en,azioni,false,vestirsi; base form
+32648,help,help,VERB,en,azioni,true,aiutare
+5358,finish,finish,VERB,en,azioni,true,finire
+16697,wait,wait,VERB,en,azioni,false,aspettare
+6457,buy,buy,VERB,en,azioni,false,comprare
+7141,read,read,VERB,en,azioni,false,leggere
+2380,write,write,VERB,en,azioni,false,scrivere
+8088,draw,draw,VERB,en,azioni,false,disegnare
+6960,sing,sing,VERB,en,azioni,false,cantare
+6044,walk,walk,VERB,en,azioni,false,camminare
+6465,run,run,VERB,en,azioni,false,correre
+6611,sit,sit,VERB,en,azioni,false,sedersi
+6548,stand up,stand up,VERB,en,azioni,false,alzarsi
+6898,love,love,VERB,en,azioni,false,amare
+37826,like,like,VERB,en,azioni,true,piacere -> like
+30194,feel,feel,VERB,en,azioni,false,sentire
+6564,see,see,VERB,en,azioni,false,vedere
+6019,realise,realise,VERB,en,azioni,false,capire; no 'understand' keyword; realise closest
+16885,know,know,VERB,en,azioni,false,sapere
+9693,say,say,VERB,en,azioni,false,dire
+9847,ask,ask,VERB,en,azioni,false,chiedere
+9031,answer,answer,VERB,en,azioni,false,rispondere
+6947,search,search,VERB,en,azioni,false,cercare
+24742,find,find,VERB,en,azioni,false,trovare
+6553,carry,carry,VERB,en,azioni,false,portare; distinct from take
+39414,hold,hold,VERB,en,azioni,false,tenere
+6215,let go,let go,VERB,en,azioni,false,lasciare
+6607,jump,jump,VERB,en,azioni,false,saltare
+6052,dance,dance,VERB,en,azioni,false,ballare
+6568,swim,swim,VERB,en,azioni,false,nuotare
+2795,go upstairs,go upstairs,VERB,en,azioni,false,salire
+2654,go down the stairs,go down the stairs,VERB,en,azioni,false,scendere; only keyword
+2742,enter,enter,VERB,en,azioni,false,entrare
+2806,go out,go out,VERB,en,azioni,false,uscire
+5431,start,start,VERB,en,azioni,false,cominciare
+7196,stop,stop,VERB,en,azioni,false,fermare
+8555,turn on the TV,turn on the TV,VERB,en,azioni,false,accendere; child-relatable variant
+20093,turn off the TV,turn off the TV,VERB,en,azioni,false,spegnere; parallels turn on
+6604,break,break,VERB,en,azioni,false,rompere
+3351,clean,clean,VERB,en,azioni,false,pulire
+2342,cook,cook,VERB,en,azioni,false,cucinare
+2547,cut out,cut out,VERB,en,azioni,false,tagliare; no bare 'cut'
+3293,touch,touch,VERB,en,azioni,false,toccare
+6062,kiss,kiss,VERB,en,azioni,false,baciare
+6023,hug,hug,VERB,en,azioni,false,abbracciare
+7147,cry,cry,VERB,en,azioni,false,piangere
+13354,laugh,laugh,VERB,en,azioni,false,ridere
+6552,shout,shout,VERB,en,azioni,false,gridare
+37369,remember,remember,VERB,en,azioni,false,ricordare
+26258,forget,forget,VERB,en,azioni,false,dimenticare
+8029,learn,learn,VERB,en,azioni,false,imparare
+6495,study,study,VERB,en,azioni,false,studiare
+6624,work,work,VERB,en,azioni,false,lavorare
+16643,rest,rest,VERB,en,azioni,false,riposare
+8989,wake up,wake up,VERB,en,azioni,false,svegliarsi
+4691,phone,phone,VERB,en,azioni,false,telefonare
+9014,pay,pay,VERB,en,azioni,false,pagare
+8661,think,think,VERB,en,azioni,false,pensare
+6067,fall,fall,VERB,en,azioni,false,cadere
+16713,pee,pee,VERB,en,azioni,false,fare pipì; child term
+3428,ca-ca,ca-ca,VERB,en,azioni,false,fare la cacca; child term; avoid vulgar
+2326,brush teeth,brush teeth,VERB,en,azioni,false,lavare i denti
+32464,water,water,NOUN,en,cibo,true,acqua
+2445,milk,milk,NOUN,en,cibo,true,latte
+11461,juice,juice,NOUN,en,cibo,false,succo
+2429,infusion,infusion,NOUN,en,cibo,false,tè; no 'tea' keyword; only infusion
+2494,bread,bread,NOUN,en,cibo,true,pane
+8652,pasta,pasta,NOUN,en,cibo,true,pasta
+2527,pizza,pizza,NOUN,en,cibo,false,pizza
+39387,rice,rice,NOUN,en,cibo,false,riso
+2281,sandwich,sandwich,NOUN,en,cibo,false,panino
+2316,meat,meat,NOUN,en,cibo,false,carne
+4952,chicken,chicken,NOUN,en,cibo,false,pollo
+6502,fish,fish,NOUN,en,cibo,false,pesce
+2963,ham,ham,NOUN,en,cibo,false,prosciutto
+2427,egg,egg,NOUN,en,cibo,false,uovo
+2541,cheese,cheese,NOUN,en,cibo,false,formaggio
+2618,yogurt,yogurt,NOUN,en,cibo,false,yogurt
+2573,soup,soup,NOUN,en,cibo,false,minestra
+2377,salad,salad,NOUN,en,cibo,false,insalata
+5400,chips,chips,NOUN,en,cibo,false,patatine fritte; British chips
+8295,sponge cake,sponge cake,NOUN,en,cibo,true,biscotto; no biscuit/cookie keyword
+2502,cake,cake,NOUN,en,cibo,false,torta
+35209,ice-cream,ice-cream,NOUN,en,cibo,false,gelato; singular
+25940,chocolate,chocolate,NOUN,en,cibo,false,cioccolato
+2686,sweet,sweet,NOUN,en,cibo,false,caramella; British sweet
+2470,jam,jam,NOUN,en,cibo,false,marmellata
+2461,butter,butter,NOUN,en,cibo,false,burro
+2328,cereal,cereals,NOUN,en,cibo,false,cereali; only plural keyword
+28339,fruit,fruit,NOUN,en,cibo,true,frutta
+2462,apple,apple,NOUN,en,cibo,false,mela
+2530,banana,banana,NOUN,en,cibo,false,banana
+2483,orange,orange,NOUN,en,cibo,false,arancia; fruit
+2400,strawberry,strawberry,NOUN,en,cibo,false,fragola
+2561,pear,pear,NOUN,en,cibo,false,pera
+3247,grape,grapes,NOUN,en,cibo,false,uva; only plural keyword
+8303,cherry,cherry,NOUN,en,cibo,false,ciliegia
+2557,watermelon,watermelon,NOUN,en,cibo,false,anguria
+2468,peach,peach,NOUN,en,cibo,false,pesca
+28343,vegetable,vegetables,NOUN,en,cibo,false,verdura; only plural keyword
+2594,tomato,tomato,NOUN,en,cibo,false,pomodoro
+2503,potato,potato,NOUN,en,cibo,false,patata
+2619,carrot,carrot,NOUN,en,cibo,false,carota
+25560,sugar,sugar,NOUN,en,cibo,false,zucchero
+25576,salt,salt,NOUN,en,cibo,false,sale
+2246,oil,oil,NOUN,en,cibo,false,olio
+4626,breakfast,breakfast,NOUN,en,cibo,false,colazione
+4611,lunch,lunch,NOUN,en,cibo,false,pranzo
+4592,dinner,dinner,NOUN,en,cibo,false,cena
+4694,snack,snack,NOUN,en,cibo,true,merenda
+35559,hunger,hunger,NOUN,en,cibo,true,fame
+4963,thirsty,thirsty,NOUN,en,cibo,true,sete; only 'thirsty' keyword
+6964,house,house,NOUN,en,casa-oggetti,true,casa
+25900,bed,bed,NOUN,en,casa-oggetti,true,letto
+5921,toilet,toilet,NOUN,en,casa-oggetti,true,bagno; functional AAC term
+25498,television,television,NOUN,en,casa-oggetti,true,televisione
+9813,toy,toy,NOUN,en,casa-oggetti,true,giocattolo; singular
+24801,shoe,shoes,NOUN,en,casa-oggetti,true,scarpe; only plural keyword
+3129,table,table,NOUN,en,casa-oggetti,false,tavolo
+3155,chair,chair,NOUN,en,casa-oggetti,false,sedia
+3244,door,door,NOUN,en,casa-oggetti,false,porta
+2611,window,window,NOUN,en,casa-oggetti,false,finestra
+33070,kitchen,kitchen,NOUN,en,casa-oggetti,false,cucina
+28099,tablet,tablet,NOUN,en,casa-oggetti,false,tablet
+25191,book,book,NOUN,en,casa-oggetti,false,libro
+2282,ball-point pen,ball-point pen,NOUN,en,casa-oggetti,false,penna; no bare 'pen'
+2475,backpack,backpack,NOUN,en,casa-oggetti,false,zaino
+3241,ball,ball,NOUN,en,casa-oggetti,false,palla
+2610,glass,glass,NOUN,en,casa-oggetti,false,bicchiere
+2532,plate,plate,NOUN,en,casa-oggetti,false,piatto
+2362,spoon,spoon,NOUN,en,casa-oggetti,false,cucchiaio
+2588,fork,fork,NOUN,en,casa-oggetti,false,forchetta
+4931,knife,knife,NOUN,en,casa-oggetti,false,coltello
+8094,soap,soap,NOUN,en,casa-oggetti,false,sapone
+2593,towel,towel,NOUN,en,casa-oggetti,false,asciugamano
+2694,toothbrush,toothbrush,NOUN,en,casa-oggetti,false,spazzolino
+2858,toothpaste,toothpaste,NOUN,en,casa-oggetti,false,dentifricio
+2862,toilet paper,toilet paper,NOUN,en,casa-oggetti,false,carta igienica
+17284,handkerchief,handkerchief,NOUN,en,casa-oggetti,false,fazzoletto
+2522,pyjama,pyjama,NOUN,en,casa-oggetti,false,pigiama; British
+3296,jacket,jacket,NOUN,en,casa-oggetti,false,giacca
+3329,glasses,glasses,NOUN,en,casa-oggetti,false,occhiali; inherently plural
+2451,key,keys,NOUN,en,casa-oggetti,false,chiavi; only plural keyword
+8619,light,light,NOUN,en,casa-oggetti,false,luce
+25479,sofa,sofa,NOUN,en,casa-oggetti,false,divano
+2250,pillow,pillow,NOUN,en,casa-oggetti,false,cuscino
+2459,blanket,blanket,NOUN,en,casa-oggetti,false,coperta
+8573,mirror,mirror,NOUN,en,casa-oggetti,false,specchio
+2370,shower,shower,NOUN,en,casa-oggetti,false,doccia
+3272,fridge,fridge,NOUN,en,casa-oggetti,false,frigorifero
+2673,head,head,NOUN,en,corpo-salute,false,testa
+2876,eye,eyes,NOUN,en,corpo-salute,false,occhio; only plural keyword
+2871,ear,ear,NOUN,en,corpo-salute,false,orecchio
+2887,nose,nose,NOUN,en,corpo-salute,false,naso
+2663,mouth,mouth,NOUN,en,corpo-salute,false,bocca
+10267,tooth,tooth,NOUN,en,corpo-salute,false,dente; singular
+2944,tongue,tongue,NOUN,en,corpo-salute,false,lingua
+2727,neck,neck,NOUN,en,corpo-salute,false,collo
+2851,hair,hair,NOUN,en,corpo-salute,false,capelli
+2928,hand,hand,NOUN,en,corpo-salute,false,mano
+2669,arm,arm,NOUN,en,corpo-salute,false,braccio
+8666,leg,leg,NOUN,en,corpo-salute,false,gamba
+25327,foot,foot,NOUN,en,corpo-salute,false,piede; singular
+2786,tummy,tummy,NOUN,en,corpo-salute,false,pancia; child term
+2748,back,back,NOUN,en,corpo-salute,false,schiena
+5504,bad,bad,DESCRIPTOR,en,corpo-salute,true,male; feeling bad; only keyword
+2367,pain,pain,NOUN,en,corpo-salute,false,dolore
+28651,headache,headache,NOUN,en,corpo-salute,false,mal di testa
+39664,stomach ache,stomach ache,NOUN,en,corpo-salute,false,mal di pancia
+32530,fever,fever,NOUN,en,corpo-salute,true,febbre
+35585,cough,cough,NOUN,en,corpo-salute,false,tosse
+32296,sick,sick,DESCRIPTOR,en,corpo-salute,true,malato
+8163,medicine,medicine,NOUN,en,corpo-salute,true,medicina; singular
+3306,sticking plaster,sticking plaster,NOUN,en,corpo-salute,false,cerotto; British plaster
+32051,thermometer,thermometer,NOUN,en,corpo-salute,false,termometro
+2777,vomit,vomit,VERB,en,corpo-salute,false,vomitare
+35533,happy,happy,DESCRIPTOR,en,emozioni,true,felice
+35545,sad,sad,DESCRIPTOR,en,emozioni,true,triste
+35539,angry,angry,DESCRIPTOR,en,emozioni,true,arrabbiato
+35537,tired,tired,DESCRIPTOR,en,emozioni,true,stanco
+35535,scared,scared,DESCRIPTOR,en,emozioni,false,spaventato
+35531,bored,bored,DESCRIPTOR,en,emozioni,false,annoiato
+35529,surprised,surprised,DESCRIPTOR,en,emozioni,false,sorpreso
+35547,content,content,DESCRIPTOR,en,emozioni,false,contento; distinct from happy
+35541,confused,confused,DESCRIPTOR,en,emozioni,false,confuso
+31310,calm,calm,DESCRIPTOR,en,emozioni,false,tranquillo
+38930,nervous,nervous,DESCRIPTOR,en,emozioni,false,nervoso
+36341,worried,worried,DESCRIPTOR,en,emozioni,false,preoccupato
+5397,well,well,DESCRIPTOR,en,emozioni,false,bene
+35571,fright,fright,NOUN,en,emozioni,false,paura; only 'fright' keyword
+6945,bubble,bubbles,NOUN,en,scuola-gioco,false,bolle; only plural keyword
+4935,block,blocks,NOUN,en,scuola-gioco,false,costruzioni; building blocks
+2540,puzzle,puzzle,NOUN,en,scuola-gioco,false,puzzle
+26238,doll,doll,NOUN,en,scuola-gioco,false,bambola
+2340,toy car,toy car,NOUN,en,scuola-gioco,false,macchinina
+4608,swing,swing,NOUN,en,scuola-gioco,false,altalena
+2859,playground,playground,NOUN,en,scuola-gioco,true,parco
+6935,bike,bike,NOUN,en,scuola-gioco,false,bicicletta
+2359,notebook,notebook,NOUN,en,scuola-gioco,false,quaderno
+2440,pencil,pencil,NOUN,en,scuola-gioco,false,matita
+17016,crayon,crayons,NOUN,en,scuola-gioco,false,pastelli; only plural keyword
+6664,scissors,scissors,NOUN,en,scuola-gioco,false,forbici; inherently plural
+2709,glue,glue,NOUN,en,scuola-gioco,false,colla
+2348,colour,colour,VERB,en,scuola-gioco,false,colorare; British spelling
+24791,music,music,NOUN,en,scuola-gioco,true,musica
+8089,cartoon,cartoon,NOUN,en,scuola-gioco,true,cartoni animati
+24797,film,film,NOUN,en,scuola-gioco,false,film; British
+7190,computer,computer,NOUN,en,scuola-gioco,false,computer
+7099,party,party,NOUN,en,scuola-gioco,false,festa
+25381,present,present,NOUN,en,scuola-gioco,false,regalo
+2339,car,car,NOUN,en,luoghi-trasporti,true,macchina
+26654,bus,bus,NOUN,en,luoghi-trasporti,true,autobus
+3389,supermarket,supermarket,NOUN,en,luoghi-trasporti,true,supermercato
+30516,swimming pool,swimming pool,NOUN,en,luoghi-trasporti,true,piscina
+35695,shop,shop,NOUN,en,luoghi-trasporti,false,negozio; British
+36205,hospital,hospital,NOUN,en,luoghi-trasporti,false,ospedale
+3313,pharmacy,pharmacy,NOUN,en,luoghi-trasporti,false,farmacia
+3118,church,church,NOUN,en,luoghi-trasporti,false,chiesa
+2925,sea,sea,NOUN,en,luoghi-trasporti,false,mare
+30518,beach,beach,NOUN,en,luoghi-trasporti,false,spiaggia
+2909,mountain,mountain,NOUN,en,luoghi-trasporti,false,montagna
+2704,city,city,NOUN,en,luoghi-trasporti,false,città
+2302,road,road,NOUN,en,luoghi-trasporti,false,strada
+2603,train,train,NOUN,en,luoghi-trasporti,false,treno
+2264,aeroplane,aeroplane,NOUN,en,luoghi-trasporti,false,aereo; British
+2480,motorbike,motorbike,NOUN,en,luoghi-trasporti,false,moto
+6932,boat,boat,NOUN,en,luoghi-trasporti,false,barca
+2580,taxi,taxi,NOUN,en,luoghi-trasporti,false,taxi
+26925,metro,metro,NOUN,en,luoghi-trasporti,false,metropolitana
+29905,train station,train station,NOUN,en,luoghi-trasporti,false,stazione
+2499,bus stop,bus stop,NOUN,en,luoghi-trasporti,false,fermata
+2567,traffic lights,traffic lights,NOUN,en,luoghi-trasporti,false,semaforo; British
+2260,lift,lift,NOUN,en,luoghi-trasporti,false,ascensore; British
+2379,stairs,stairs,NOUN,en,luoghi-trasporti,false,scala; inherently plural
+32408,restaurant,restaurant,NOUN,en,luoghi-trasporti,false,ristorante
+32398,bar,bar,NOUN,en,luoghi-trasporti,false,bar
+32747,now,now,DESCRIPTOR,en,tempo-natura,true,adesso
+13080,after,after,DESCRIPTOR,en,tempo-natura,true,dopo; pairs with before
+32745,before,before,DESCRIPTOR,en,tempo-natura,true,prima
+38276,today,today,DESCRIPTOR,en,tempo-natura,true,oggi
+38278,tomorrow,tomorrow,DESCRIPTOR,en,tempo-natura,false,domani
+38279,yesterday,yesterday,DESCRIPTOR,en,tempo-natura,false,ieri
+26799,day,day,NOUN,en,tempo-natura,false,giorno
+7181,night,night,NOUN,en,tempo-natura,false,notte
+25704,morning,morning,NOUN,en,tempo-natura,false,mattina
+26716,hot,hot,DESCRIPTOR,en,tempo-natura,false,caldo
+26865,cold,cold,DESCRIPTOR,en,tempo-natura,false,freddo
+7252,sun,Sun,NOUN,en,tempo-natura,false,sole; keyword capitalized
+3123,rain,rain,NOUN,en,tempo-natura,false,pioggia
+3135,snow,snow,NOUN,en,tempo-natura,false,neve
+23731,wind,wind,NOUN,en,tempo-natura,false,vento
+5604,summer,summer,NOUN,en,tempo-natura,false,estate
+5493,winter,winter,NOUN,en,tempo-natura,false,inverno
+3057,tree,tree,NOUN,en,tempo-natura,false,albero
+7104,flower,flower,NOUN,en,tempo-natura,false,fiore
+2517,dog,dog,NOUN,en,tempo-natura,false,cane
+7114,cat,cat,NOUN,en,tempo-natura,false,gatto
+5584,yes,yes,SOCIAL,en,sociale,true,sì
+5526,no,no,SOCIAL,en,sociale,true,no
+28429,enough is enough,enough is enough,SOCIAL,en,sociale,true,basta; enough sense
+37163,again,again,DESCRIPTOR,en,sociale,true,ancora
+5508,more,more,DESCRIPTOR,en,sociale,true,più
+6009,hello,hello,SOCIAL,en,sociale,false,ciao
+5896,goodbye,goodbye,SOCIAL,en,sociale,false,arrivederci
+6944,good morning,good morning,SOCIAL,en,sociale,false,buongiorno
+6942,good night,good night,SOCIAL,en,sociale,false,buonanotte
+8128,thank you,thank you,SOCIAL,en,sociale,true,grazie
+8194,please,please,SOCIAL,en,sociale,true,per favore
+11625,sorry,sorry,SOCIAL,en,sociale,false,scusa
+29635,pass,pass,SOCIAL,en,sociale,false,va bene; only keyword; weak fit
+7180,I don't know,I don't know,SOCIAL,en,sociale,false,non lo so
+11597,how are you?,how are you?,SOCIAL,en,sociale,false,come stai
+13630,I am fine,I am fine,SOCIAL,en,sociale,false,sto bene
+11591,me too,me too!,SOCIAL,en,sociale,false,anche io; keyword has '!'
+21917,I like that,I like that,SOCIAL,en,sociale,false,mi piace
+37825,I don't like that,I don't like that,SOCIAL,en,sociale,false,non mi piace
+6936,welcome,welcome,SOCIAL,en,sociale,false,benvenuto
+13018,congratulations,congratulations,SOCIAL,en,sociale,false,auguri
+11627,enjoy your meal,enjoy your meal!,SOCIAL,en,sociale,false,buon appetito; keyword has '!'
+4658,big,big,DESCRIPTOR,en,descrittori,true,grande
+4716,small,small,DESCRIPTOR,en,descrittori,true,piccolo
+5521,a lot,a lot,DESCRIPTOR,en,descrittori,true,molto
+5546,little,little,DESCRIPTOR,en,descrittori,true,poco; small amount
+5596,all,all,DESCRIPTOR,en,descrittori,true,tutto
+29839,nothing,nothing,DESCRIPTOR,en,descrittori,true,niente
+17054,other,other,DESCRIPTOR,en,descrittori,true,altro
+11194,beautiful,beautiful,DESCRIPTOR,en,descrittori,false,bello
+26090,ugly,ugly,DESCRIPTOR,en,descrittori,false,brutto
+4581,good,good,DESCRIPTOR,en,descrittori,false,buono
+11316,new,new,DESCRIPTOR,en,descrittori,false,nuovo
+11394,old,old,DESCRIPTOR,en,descrittori,false,vecchio
+26459,dirty,dirty,DESCRIPTOR,en,descrittori,false,sporco
+36311,closed,closed,DESCRIPTOR,en,descrittori,false,chiuso
+37850,fast,fast,DESCRIPTOR,en,descrittori,false,veloce
+4676,slow,slow,DESCRIPTOR,en,descrittori,false,lento
+25782,tall,tall,DESCRIPTOR,en,descrittori,false,alto
+25839,short,short,DESCRIPTOR,en,descrittori,false,basso; short in height
+4637,hard,hard,DESCRIPTOR,en,descrittori,false,duro
+4578,soft,soft,DESCRIPTOR,en,descrittori,false,morbido
+4739,salty,salty,DESCRIPTOR,en,descrittori,false,salato
+26176,full,full,DESCRIPTOR,en,descrittori,false,pieno
+26527,empty,empty,DESCRIPTOR,en,descrittori,false,vuoto
+4667,same,same,DESCRIPTOR,en,descrittori,false,uguale
+4628,different,different,DESCRIPTOR,en,descrittori,false,diverso
+12264,my,my,DESCRIPTOR,en,descrittori,false,mio; possessive determiner
+12281,your,your,DESCRIPTOR,en,descrittori,false,tuo
+7095,this,this,DESCRIPTOR,en,descrittori,false,questo
+6906,that,that,DESCRIPTOR,en,descrittori,false,quello
+25253,wet,wet,DESCRIPTOR,en,descrittori,false,bagnato
+4736,broken,broken,DESCRIPTOR,en,descrittori,false,rotto
+26162,long,long,DESCRIPTOR,en,descrittori,false,lungo
+2627,one,one,DESCRIPTOR,en,numeri-colori,false,uno
+2628,two,two,DESCRIPTOR,en,numeri-colori,false,due
+2629,three,three,DESCRIPTOR,en,numeri-colori,false,tre
+2630,four,four,DESCRIPTOR,en,numeri-colori,false,quattro
+2631,five,five,DESCRIPTOR,en,numeri-colori,false,cinque; snapshot keyword has trailing space
+2632,six,six,DESCRIPTOR,en,numeri-colori,false,sei
+2633,seven,seven,DESCRIPTOR,en,numeri-colori,false,sette
+2634,eight,eight,DESCRIPTOR,en,numeri-colori,false,otto
+2635,nine,nine,DESCRIPTOR,en,numeri-colori,false,nove
+29254,ten,ten,DESCRIPTOR,en,numeri-colori,false,dieci
+2808,red,red,DESCRIPTOR,en,numeri-colori,false,rosso
+4869,blue,blue,DESCRIPTOR,en,numeri-colori,false,blu
+2648,yellow,yellow,DESCRIPTOR,en,numeri-colori,false,giallo
+4887,green,green,DESCRIPTOR,en,numeri-colori,false,verde
+2886,black,black,DESCRIPTOR,en,numeri-colori,false,nero
+8043,white,white,DESCRIPTOR,en,numeri-colori,false,bianco
+2807,pink,pink,DESCRIPTOR,en,numeri-colori,false,rosa
+2907,purple,purple,DESCRIPTOR,en,numeri-colori,false,viola
+2923,brown,brown,DESCRIPTOR,en,numeri-colori,false,marrone
+2879,number,number,NOUN,en,numeri-colori,false,numero; singular
+7764,where,where,SOCIAL,en,sociale,true,dove
+22620,what,what,SOCIAL,en,sociale,true,che cosa
+9853,who,who,SOCIAL,en,sociale,false,chi
+22621,when,when,SOCIAL,en,sociale,false,quando
+11348,because,because,SOCIAL,en,sociale,false,perché; only 'because' keyword
+12313,how,how,SOCIAL,en,sociale,false,come
+5382,here,here,DESCRIPTOR,en,descrittori,false,qui
+5375,there,there,DESCRIPTOR,en,descrittori,false,là
+3082,school,school,NOUN,en,luoghi-trasporti,false,scuola
+2296,coffee,coffee,NOUN,en,cibo,false,caffè
+5525,not,not,MISC,en,sociale,true,non; negation; no 'not' keyword

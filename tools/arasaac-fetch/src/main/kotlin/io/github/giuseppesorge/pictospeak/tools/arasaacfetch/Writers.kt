@@ -36,7 +36,7 @@ internal fun writeBoards(
             Board(
                 id = category,
                 locale = lang,
-                name = CATEGORY_TITLES.getValue(category),
+                name = categoryTitle(category, lang),
                 cells = categoryRows.sortedBy { it.lemma }.map { BoardCell.Pictogram(it.arasaacId) },
             )
         Files.writeString(boardsDir.resolve("$category.json"), json.encodeToString(board))
@@ -53,7 +53,7 @@ internal fun writeBoards(
                     byCategory.map { (category, categoryRows) ->
                         BoardCell.Link(
                             boardId = category,
-                            name = CATEGORY_TITLES.getValue(category),
+                            name = categoryTitle(category, lang),
                             iconPictogramId = (categoryRows.firstOrNull { it.core } ?: categoryRows.first()).arasaacId,
                         )
                     },
