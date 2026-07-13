@@ -103,4 +103,30 @@ valid experiment result.
 
 ## Results
 
-*None yet.*
+### 2026-07-13 — first on-device run, ≥4 GB tier (Redmi Note 15 5G, Android 16, 7.2 GB, MediaTek Dimensity)
+
+Model: **Qwen3-0.6B int4** (`litert-community/Qwen3-0.6B`, `qwen3_0_6b_mixed_int4.litertlm`,
+498 MB, Apache-2.0, ungated — no account/token), **base (not fine-tuned)**, imported via SAF,
+CPU/XNNPACK backend.
+
+| Criterion | Threshold | Result |
+|---|---|---|
+| Pipeline works end-to-end | — | **PASS** — model imported, opened, XNNPACK CPU delegate initialized, generation runs (logcat: `litert_lm_loader` → `TfLiteXNNPackDelegate`) |
+| Engine load time | < 10 s | ~6 s to build both subgraphs (acceptable) |
+| Full-sentence latency | ≤ 4 s | **FAIL** — a single generation ran **>120 s** (logcat monitor-contention). The base model rambles toward the token cap; the device was also swapping heavily (~1.6 GB) under normal app load |
+| Grammatical acceptability | ≥ 90% | not measured (needs the fine-tuned model) |
+| Human preference | ≥ 60% | not measured |
+
+**Verdict (≥4 GB tier, base model): NO-GO at the 4 s interactive budget.** The wiring is proven
+on real hardware, but an un-fine-tuned 0.6B is far too slow. Follow-on fixes shipped from this
+run: total-token cap 512→128 and `Session.cancelProcess()` on timeout so a runaway generation
+no longer holds the engine lock for minutes.
+
+**2 GB floor tier:** gated out by design (RAM < the 3 GB `DeviceGate` floor) — **templates-only**,
+as intended.
+
+**Decision:** M6 closed as a documented measurement. The template engine carries the product
+(IT+EN, offline sentence NLG); the LLM stays an optional, off-by-default extra. A bounded QLoRA
+fine-tune (short output → likely fast) remains available in `tools/llm-lab/README.md` if a
+mainstream-device "AI suggestion" demo is ever wanted, but it is not on the critical path and
+does not affect the 2 GB launch criterion.
