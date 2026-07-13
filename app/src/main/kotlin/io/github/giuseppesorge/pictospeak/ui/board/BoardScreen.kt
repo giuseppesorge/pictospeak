@@ -3,9 +3,9 @@
 package io.github.giuseppesorge.pictospeak.ui.board
 
 import android.view.HapticFeedbackConstants
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
@@ -102,13 +102,88 @@ fun BoardScreen(
                 onClear = viewModel::onClear,
                 onAboutPressed = onAboutPressed,
             )
+            // Category navigation (folders + Back) lives in a FIXED bar above the grid, so it
+            // is always reachable without scrolling past the vocabulary — better for motor and
+            // switch/dwell access (docs/ui-conventions.md).
+            val navCells = state.cells.filterNot { it is BoardCellUi.Picto }
+            if (navCells.isNotEmpty()) {
+                CategoryNav(
+                    cells = navCells,
+                    onFolderTapped = viewModel::onFolderTapped,
+                    onBackToHome = viewModel::onBackToHome,
+                )
+            }
             PictogramGrid(
-                cells = state.cells,
+                cells = state.cells.filterIsInstance<BoardCellUi.Picto>(),
                 columns = gridColumns,
                 onPictogramTapped = viewModel::onPictogramTapped,
-                onFolderTapped = viewModel::onFolderTapped,
-                onBackToHome = viewModel::onBackToHome,
                 modifier = Modifier.weight(1f),
+            )
+        }
+    }
+}
+
+/** A fixed, horizontally-scrolling bar of category folders (and Back) — never scrolls away. */
+@Composable
+private fun CategoryNav(
+    cells: List<BoardCellUi>,
+    onFolderTapped: (String) -> Unit,
+    onBackToHome: () -> Unit,
+) {
+    val backLabel = stringResource(R.string.board_back_home)
+    LazyRow(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        itemsIndexed(cells) { _, cell ->
+            when (cell) {
+                is BoardCellUi.Folder -> CategoryChip(cell.name, cell.icon) { onFolderTapped(cell.boardId) }
+                BoardCellUi.Back -> CategoryChip(backLabel, icon = null, isBack = true, onClick = onBackToHome)
+                is BoardCellUi.Picto -> Unit // partitioned out before this composable
+            }
+        }
+    }
+}
+
+@Composable
+private fun CategoryChip(
+    name: String,
+    icon: PictogramToken?,
+    isBack: Boolean = false,
+    onClick: () -> Unit,
+) {
+    Surface(
+        color = MaterialTheme.colorScheme.surfaceContainerHighest,
+        contentColor = MaterialTheme.colorScheme.onSurface,
+        shape = MaterialTheme.shapes.small,
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        modifier =
+            Modifier
+                .heightIn(min = 48.dp)
+                .semantics(mergeDescendants = true) {
+                    role = Role.Button
+                    contentDescription = name
+                }.clickable { onClick() },
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            if (isBack) {
+                Text("⬅️", style = MaterialTheme.typography.titleLarge)
+            } else if (icon != null) {
+                AsyncImage(
+                    model = "file:///android_asset/arasaac/${icon.id}.png",
+                    contentDescription = null,
+                    modifier = Modifier.size(40.dp),
+                )
+            }
+            Text(
+                name,
+                style = MaterialTheme.typography.labelLarge,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
             )
         }
     }
@@ -384,11 +459,9 @@ private const val CLEAR_HINT_MS = 2500L
 
 @Composable
 private fun PictogramGrid(
-    cells: List<BoardCellUi>,
+    cells: List<BoardCellUi.Picto>,
     columns: Int,
     onPictogramTapped: (PictogramToken) -> Unit,
-    onFolderTapped: (String) -> Unit,
-    onBackToHome: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     LazyVerticalGrid(
@@ -400,26 +473,10 @@ private fun PictogramGrid(
     ) {
         items(
             items = cells,
-            key = { cell ->
-                when (cell) {
-                    is BoardCellUi.Picto -> "p-${cell.token.id}"
-                    is BoardCellUi.Folder -> "f-${cell.boardId}"
-                    BoardCellUi.Back -> "back"
-                }
-            },
-            contentType = { cell ->
-                when (cell) {
-                    is BoardCellUi.Picto -> "pictogram"
-                    is BoardCellUi.Folder -> "folder"
-                    BoardCellUi.Back -> "back"
-                }
-            },
+            key = { "p-${it.token.id}" },
+            contentType = { "pictogram" },
         ) { cell ->
-            when (cell) {
-                is BoardCellUi.Picto -> PictoCell(cell.token, onPictogramTapped)
-                is BoardCellUi.Folder -> FolderCell(cell, onFolderTapped)
-                BoardCellUi.Back -> BackCell(onBackToHome)
-            }
+            PictoCell(cell.token, onPictogramTapped)
         }
     }
 }
@@ -454,71 +511,6 @@ private fun PictoCell(
             color = OnPictogram,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
-        )
-    }
-}
-
-@Composable
-private fun FolderCell(
-    folder: BoardCellUi.Folder,
-    onFolderTapped: (String) -> Unit,
-) {
-    // Folders are chrome, not content — they follow the theme (adapt to dark mode).
-    Column(
-        modifier =
-            Modifier
-                .background(MaterialTheme.colorScheme.surfaceContainerHighest)
-                .border(2.dp, MaterialTheme.colorScheme.outlineVariant)
-                .heightIn(min = 48.dp)
-                .semantics(mergeDescendants = true) {
-                    role = Role.Button
-                    contentDescription = folder.name
-                }.clickable { onFolderTapped(folder.boardId) }
-                .padding(6.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        if (folder.icon != null) {
-            AsyncImage(
-                model = "file:///android_asset/arasaac/${folder.icon.id}.png",
-                contentDescription = null,
-                modifier = Modifier.size(88.dp),
-            )
-        } else {
-            Box(modifier = Modifier.size(88.dp))
-        }
-        Text(
-            "📁 ${folder.name}",
-            style = MaterialTheme.typography.labelLarge,
-            color = MaterialTheme.colorScheme.onSurface,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-        )
-    }
-}
-
-@Composable
-private fun BackCell(onBackToHome: () -> Unit) {
-    val backLabel = stringResource(R.string.board_back_home)
-    Column(
-        modifier =
-            Modifier
-                .background(MaterialTheme.colorScheme.surfaceContainerHighest)
-                .border(2.dp, MaterialTheme.colorScheme.outlineVariant)
-                .heightIn(min = 48.dp)
-                .semantics(mergeDescendants = true) {
-                    role = Role.Button
-                    contentDescription = backLabel
-                }.clickable { onBackToHome() }
-                .padding(6.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        Box(modifier = Modifier.size(88.dp), contentAlignment = Alignment.Center) {
-            Text("⬅️", style = MaterialTheme.typography.displaySmall)
-        }
-        Text(
-            stringResource(R.string.board_back_home),
-            style = MaterialTheme.typography.labelLarge,
-            color = MaterialTheme.colorScheme.onSurface,
         )
     }
 }

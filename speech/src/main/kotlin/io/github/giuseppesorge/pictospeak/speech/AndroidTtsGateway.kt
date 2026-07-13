@@ -3,6 +3,7 @@ package io.github.giuseppesorge.pictospeak.speech
 import android.content.Context
 import android.content.Intent
 import android.os.Handler
+import android.os.HandlerThread
 import android.os.Looper
 import android.speech.tts.TextToSpeech
 import android.speech.tts.TextToSpeech.Engine
@@ -32,6 +33,12 @@ class AndroidTtsGateway(
     override val speaking: StateFlow<Boolean> = _speaking.asStateFlow()
 
     private val mainHandler = Handler(Looper.getMainLooper())
+
+    // Readiness evaluation talks to the engine process over Binder (setLanguage + voices
+    // enumeration), which can be slow; do it here, off the main thread, and post only the result.
+    private val readinessThread = HandlerThread("tts-readiness").apply { start() }
+    private val readinessHandler = Handler(readinessThread.looper)
+
     private val utteranceCounter = AtomicLong(0)
 
     @Volatile private var locale: Locale = initialLocale
@@ -59,26 +66,29 @@ class AndroidTtsGateway(
     }
 
     private fun evaluateReadiness() {
-        val availability =
-            if (initialized) {
-                when (tts.setLanguage(locale)) {
-                    TextToSpeech.LANG_MISSING_DATA -> TtsReadinessMachine.LanguageAvailability.MISSING_DATA
-                    TextToSpeech.LANG_NOT_SUPPORTED -> TtsReadinessMachine.LanguageAvailability.NOT_SUPPORTED
-                    else -> TtsReadinessMachine.LanguageAvailability.AVAILABLE
+        readinessHandler.post {
+            val currentLocale = locale
+            val availability =
+                if (initialized) {
+                    when (tts.setLanguage(currentLocale)) {
+                        TextToSpeech.LANG_MISSING_DATA -> TtsReadinessMachine.LanguageAvailability.MISSING_DATA
+                        TextToSpeech.LANG_NOT_SUPPORTED -> TtsReadinessMachine.LanguageAvailability.NOT_SUPPORTED
+                        else -> TtsReadinessMachine.LanguageAvailability.AVAILABLE
+                    }
+                } else {
+                    null
                 }
-            } else {
-                null
-            }
-        val voices = if (initialized) runCatching { tts.voices }.getOrNull().orEmpty() else emptySet()
-        val localeVoices = voices.filter { it.locale.language == locale.language }
-        val readiness =
-            TtsReadinessMachine.decide(
-                engineAvailable = initialized,
-                languageAvailability = availability,
-                offlineVoiceName = localeVoices.firstOrNull { !it.isNetworkConnectionRequired }?.name,
-                anyVoiceName = localeVoices.firstOrNull()?.name,
-            )
-        mainHandler.post { _readiness.value = readiness }
+            val voices = if (initialized) runCatching { tts.voices }.getOrNull().orEmpty() else emptySet()
+            val localeVoices = voices.filter { it.locale.language == currentLocale.language }
+            val readiness =
+                TtsReadinessMachine.decide(
+                    engineAvailable = initialized,
+                    languageAvailability = availability,
+                    offlineVoiceName = localeVoices.firstOrNull { !it.isNetworkConnectionRequired }?.name,
+                    anyVoiceName = localeVoices.firstOrNull()?.name,
+                )
+            mainHandler.post { _readiness.value = readiness }
+        }
     }
 
     private fun attachProgressListener() {
@@ -134,5 +144,6 @@ class AndroidTtsGateway(
 
     override fun shutdown() {
         tts.shutdown()
+        readinessThread.quitSafely()
     }
 }

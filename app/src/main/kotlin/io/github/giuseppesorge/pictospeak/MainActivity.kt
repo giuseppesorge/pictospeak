@@ -68,9 +68,12 @@ private fun App(container: AppContainer) {
     val profile by container.profile.collectAsState()
     var screen by remember { mutableStateOf<Screen>(if (profile.setupComplete) Screen.Board else Screen.Setup) }
 
-    // The voice follows the profile: locale, rate and pitch are applied whenever they change.
-    LaunchedEffect(profile.language, profile.ttsRate, profile.ttsPitch) {
+    // Language change re-evaluates readiness (which voice, offline?). Rate/pitch are cheap
+    // setters kept separate, so moving a slider never triggers a voices re-scan.
+    LaunchedEffect(profile.language) {
         container.ttsGateway.setLanguage(Locale.forLanguageTag(profile.language))
+    }
+    LaunchedEffect(profile.ttsRate, profile.ttsPitch) {
         container.ttsGateway.setSpeechRate(profile.ttsRate)
         container.ttsGateway.setPitch(profile.ttsPitch)
     }

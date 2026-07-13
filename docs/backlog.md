@@ -144,10 +144,6 @@ confirm haptic, and the fixed-column density preset — are already implemented)
 order-of-magnitude (S ≈ days, M ≈ 1–2 weeks).
 
 ### Performance & lifecycle
-- **TTS readiness off the main thread**: `evaluateReadiness()` does synchronous binder IPC
-  (`tts.setLanguage`, `tts.voices`) on the main thread at startup and on every rate/pitch
-  change; move the IPC to a background dispatcher and post only the resulting `TtsReadiness`,
-  and decouple rate/pitch changes from a full language+voices re-evaluation. _(M)_
 - **Honor `onTrimMemory`**: `AacApplication.onTrimMemory` is an empty stub — drop the Coil
   image cache on `TRIM_MEMORY_UI_HIDDEN` and cap on low-RAM, per docs/perf-budgets.md. _(S)_
 - **Keyed-ViewModel churn**: `viewModel(key = …)` accumulates orphaned `BoardViewModel`s and
@@ -156,9 +152,6 @@ order-of-magnitude (S ≈ days, M ≈ 1–2 weeks).
 - **Dead `AndroidTtsGateway.shutdown()`**: wire it to teardown or remove it. _(S)_
 
 ### AAC & access
-- **Fixed navigation for category folders**: folders sit at the tail of the scrolling home
-  board (after ~75 core cells); give category navigation a fixed, always-reachable position
-  (nav rail / pinned row) so it doesn't require scrolling past the vocabulary. _(M)_
 - **Optional acceptance/hold time + post-select debounce** on direct touch: a caregiver-set
   activation delay and a brief post-selection cooldown reduce accidental brush/drag/double
   activations for tremor/spasticity — pairs with the planned switch/dwell work. _(M)_
