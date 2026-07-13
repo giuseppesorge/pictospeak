@@ -10,6 +10,7 @@ import io.github.giuseppesorge.pictospeak.nlg.api.SentenceCandidate
 import io.github.giuseppesorge.pictospeak.nlg.api.SentenceRefiner
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.withContext
 
 /**
@@ -47,12 +48,25 @@ class LiteRtSentenceRefiner(
     ): SentenceCandidate? =
         withContext(inferenceDispatcher) {
             val prompt = LlmRewrite.buildPrompt(tokens, baseline)
+            val job = coroutineContext[Job]
             val raw =
                 runCatching {
                     synchronized(engineLock) {
                         val ready = engine ?: buildEngine().also { engine = it }
                         ready.createSession(SessionConfig()).use { session ->
-                            session.generateContent(listOf(InputData.Text(prompt)))
+                            // The native generateContent is a blocking, non-interruptible call.
+                            // If the caller's timeout cancels this coroutine, stop the native
+                            // generation so it releases the engine lock in seconds, not minutes,
+                            // instead of running the model to its token cap in the background.
+                            val cancel =
+                                job?.invokeOnCompletion { cause ->
+                                    if (cause != null) runCatching { session.cancelProcess() }
+                                }
+                            try {
+                                session.generateContent(listOf(InputData.Text(prompt)))
+                            } finally {
+                                cancel?.dispose()
+                            }
                         }
                     }
                 }.getOrNull() ?: return@withContext null
@@ -79,8 +93,9 @@ class LiteRtSentenceRefiner(
     }
 
     private companion object {
-        // Bounds total context; the rewrite prompt is short and the output is a single
-        // sentence. The per-tier value is refined by the M6 measurements.
-        const val DEFAULT_MAX_TOKENS = 512
+        // Bounds total context (prompt ~40 tok + output). Kept small so a base model that
+        // "rambles" can't run for minutes on a low-end CPU — the whole feature has a few-second
+        // interactive budget. A fine-tuned model emits one sentence + EOS and stops well short.
+        const val DEFAULT_MAX_TOKENS = 128
     }
 }
