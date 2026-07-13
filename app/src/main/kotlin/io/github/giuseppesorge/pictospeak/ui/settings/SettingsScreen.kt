@@ -11,6 +11,7 @@ import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
@@ -47,6 +48,8 @@ fun SettingsScreen(
     onExport: () -> Unit,
     onImport: () -> Unit,
     onBack: () -> Unit,
+    llm: LlmSettingsState = LlmSettingsState(supported = false, capability = null, modelName = null),
+    onImportModel: () -> Unit = {},
 ) {
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(
@@ -91,6 +94,17 @@ fun SettingsScreen(
                 Switch(checked = profile.speakLabelOnTap, onCheckedChange = null)
             }
 
+            if (llm.supported) {
+                HorizontalDivider()
+                LlmSection(
+                    profile = profile,
+                    onProfileChange = onProfileChange,
+                    llm = llm,
+                    onImportModel = onImportModel,
+                )
+            }
+
+            HorizontalDivider()
             Text(stringResource(R.string.settings_backup), style = MaterialTheme.typography.titleMedium)
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 OutlinedButton(onClick = onExport) { Text(stringResource(R.string.settings_export)) }
@@ -163,6 +177,83 @@ private fun languageName(lang: String): String =
         "en" -> stringResource(R.string.settings_language_en)
         else -> lang
     }
+
+/**
+ * Optional on-device LLM controls (play flavor only). The feature stays off until every
+ * gate is satisfied: an eligible device, an imported model, its license accepted, and the
+ * explicit opt-in. Templates remain the product regardless (CLAUDE.md hard rule 3).
+ */
+@Composable
+private fun LlmSection(
+    profile: Profile,
+    onProfileChange: (Profile) -> Unit,
+    llm: LlmSettingsState,
+    onImportModel: () -> Unit,
+) {
+    val eligible = llm.capability?.eligible == true
+    val hasModel = llm.modelName != null
+
+    Text(stringResource(R.string.settings_llm_title), style = MaterialTheme.typography.titleMedium)
+    Text(stringResource(R.string.settings_llm_desc), style = MaterialTheme.typography.bodyMedium)
+
+    val ramGib = "%.1f".format(llm.capability?.totalMemGib ?: 0.0)
+    Text(
+        stringResource(
+            if (eligible) R.string.settings_llm_device_ok else R.string.settings_llm_device_no,
+            ramGib,
+        ),
+        style = MaterialTheme.typography.bodyMedium,
+        color = if (eligible) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.error,
+    )
+
+    OutlinedButton(onClick = onImportModel, enabled = eligible) {
+        Text(stringResource(R.string.settings_llm_import_model))
+    }
+    Text(
+        llm.modelName?.let { stringResource(R.string.settings_llm_model_label, it) }
+            ?: stringResource(R.string.settings_llm_no_model),
+        style = MaterialTheme.typography.bodySmall,
+    )
+
+    SwitchRow(
+        label = stringResource(R.string.settings_llm_license_accept),
+        checked = profile.llmModelLicenseAccepted,
+        enabled = hasModel,
+        onCheckedChange = { onProfileChange(profile.copy(llmModelLicenseAccepted = it)) },
+    )
+    SwitchRow(
+        label = stringResource(R.string.settings_llm_enable),
+        checked = profile.llmEnabled,
+        enabled = eligible && hasModel && profile.llmModelLicenseAccepted,
+        onCheckedChange = { onProfileChange(profile.copy(llmEnabled = it)) },
+    )
+}
+
+/** A label + Switch merged into one named toggle for TalkBack (see the speak-on-tap row). */
+@Composable
+private fun SwitchRow(
+    label: String,
+    checked: Boolean,
+    enabled: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
+) {
+    Row(
+        modifier =
+            Modifier
+                .fillMaxWidth()
+                .toggleable(
+                    value = checked,
+                    enabled = enabled,
+                    role = Role.Switch,
+                    onValueChange = onCheckedChange,
+                ),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(label, style = MaterialTheme.typography.bodyLarge)
+        Switch(checked = checked, onCheckedChange = null, enabled = enabled)
+    }
+}
 
 private const val RATE_MIN = 0.5f
 private const val RATE_MAX = 1.5f

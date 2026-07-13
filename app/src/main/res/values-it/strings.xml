@@ -38,4 +38,13 @@
     <string name="settings_import">Importa impostazioni</string>
     <string name="settings_open_hold">Impostazioni caregiver</string>
     <string name="settings_hold_hint">Tieni premuto per aprire le impostazioni caregiver.</string>
+    <string name="settings_llm_title">Assistente AI (sperimentale)</string>
+    <string name="settings_llm_desc">Se attivo, un modello sul dispositivo può aggiungere UN suggerimento di frase in più, chiaramente etichettato. Non sostituisce mai i modelli linguistici e non viene mai pronunciato senza la tua conferma. Del tutto opzionale.</string>
+    <string name="settings_llm_device_ok">Dispositivo idoneo · RAM %1$s GB</string>
+    <string name="settings_llm_device_no">Dispositivo non idoneo · RAM %1$s GB</string>
+    <string name="settings_llm_import_model">Importa modello…</string>
+    <string name="settings_llm_no_model">Nessun modello importato.</string>
+    <string name="settings_llm_model_label">Modello: %1$s</string>
+    <string name="settings_llm_license_accept">Accetto i termini di licenza del modello</string>
+    <string name="settings_llm_enable">Usa i suggerimenti AI</string>
 </resources>

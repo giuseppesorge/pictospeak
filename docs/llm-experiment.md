@@ -25,6 +25,30 @@ rule 3). This document is the protocol; results are appended as they are measure
 Runtime: LiteRT-LM (`com.google.ai.edge.litertlm`, pinned in the version catalog),
 CPU backend only. All symbols confined to `LiteRtSentenceRefiner` (ADR-0004).
 
+## Implementation status (M6 code — done; measurement — pending hardware + model)
+
+The full software path is wired, compiles into the **play flavor only**, and is unit-tested;
+what remains is the QLoRA fine-tune (free Colab) and the on-device measurements below.
+
+- `:llm/LiteRtSentenceRefiner` drives LiteRT-LM (`Engine(EngineConfig(modelPath, Backend.CPU(),
+  maxNumTokens)).initialize()` → `createSession(SessionConfig())` →
+  `generateContent(listOf(InputData.Text(prompt)))`). The engine is loaded lazily and kept
+  warm; inference is serialized; `close()` releases native memory on `onTrimMemory`. It NEVER
+  throws — any error degrades to null ("no proposal"); the template candidates are always
+  already published.
+- `:llm/LlmRewrite` (pure, JVM-tested) builds the language-neutral prompt and cleans the
+  response (first line, strip label/quotes, collapse whitespace, reject blank / over-long /
+  duplicate-of-draft). **`tools/llm-lab/prompt-template.txt` mirrors this — fine-tune on it.**
+- Device gate `:app/DeviceGate`: `arm64-v8a` ∈ `SUPPORTED_64_BIT_ABIS` ∧ `!isLowRamDevice` ∧
+  `totalMem ≥ DEFAULT_MIN_TOTAL_MEM_BYTES` (3.5 GB default — the 270M-on-2GB threshold is an
+  OUTPUT of this experiment; lower it only once measured).
+- Model handling `:app/ModelStore`: SAF import into `filesDir/models/`, streamed SHA-256 +
+  size, single-model (re-import replaces), atomic write. License acceptance is recorded in the
+  profile (`llmModelLicenseAccepted`); weights are never bundled (llm/NOTICE-models.md).
+- The refiner is assembled only when EVERY gate passes: play flavor ∧ `llmEnabled` ∧
+  `llmModelLicenseAccepted` ∧ device eligible ∧ a model imported. Otherwise null. Default OFF.
+- Runbook to obtain numbers: `tools/llm-lab/README.md`.
+
 ## Device gate (before the feature is even visible)
 
 `arm64-v8a ∈ Build.SUPPORTED_64_BIT_ABIS` (the runtime has no 32-bit libs) AND

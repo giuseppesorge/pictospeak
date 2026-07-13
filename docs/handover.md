@@ -49,6 +49,16 @@ the pinned artifact in the version catalog and `THIRD_PARTY_NOTICES.md`. To remo
 entirely: delete `:llm`, the play `RefinerFactory`, and the settings include — the foss
 flavor never knew it existed.
 
+### Importing / measuring a model (play flavor)
+
+Weights are never bundled (`llm/NOTICE-models.md`). To run the M6 experiment: build/install
+the **play** flavor, then Settings → "AI assistant (experimental)" → Import model → accept
+the license → enable. `ModelStore` copies the file into `filesDir/models/`, shows its SHA-256
+and size, and keeps a single model (re-import replaces). The engine loads lazily, stays warm,
+and is released on `onTrimMemory`. Fine-tune, convert, and measure per `tools/llm-lab/README.md`;
+record numbers in `docs/llm-experiment.md`. The gate (`DeviceGate`: arm64 + not low-RAM +
+RAM ≥ threshold) hides the whole feature on ineligible devices.
+
 ## Release
 
 1. `./gradlew check assembleFossRelease bundlePlayRelease` must be green, plus

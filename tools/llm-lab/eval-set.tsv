@@ -1,0 +1,52 @@
+# M6 LLM evaluation set. Columns: lang <TAB> words (tapped labels, space-separated) <TAB> gold sentence.
+# The "words" column is the telegraphic pictogram sequence the user selects; "gold" is a
+# natural, faithful sentence a native speaker would accept. Used to score both the raw
+# baseline model and the fine-tuned 270M (docs/llm-experiment.md). Reuses / extends the
+# nlg golden corpus with realistic board compositions. Extend freely; keep it therapist-
+# reviewable. Grammatical-acceptability and human-preference are scored per row.
+lang	words	gold
+it	io mangiare	io mangio
+it	io volere mangiare pizza	io voglio mangiare la pizza
+it	io volere bere acqua	io voglio bere l'acqua
+it	io mangiare pane	io mangio il pane
+it	io volere giocare	io voglio giocare
+it	io andare casa	io vado a casa
+it	io volere andare bagno	io voglio andare in bagno
+it	io avere fame	ho fame
+it	io avere sete	ho sete
+it	io stare male	sto male
+it	io essere stanco	sono stanco
+it	io essere felice	sono felice
+it	io essere triste	sono triste
+it	io non volere mangiare	non voglio mangiare
+it	io non stare bene	non sto bene
+it	tu volere giocare	tu vuoi giocare
+it	noi volere guardare televisione	noi vogliamo guardare la televisione
+it	io volere mangiare biscotto	io voglio mangiare il biscotto
+it	io volere frutta	io voglio la frutta
+it	io volere latte	io voglio il latte
+it	io volere fare merenda	io voglio fare merenda
+it	io volere musica	io voglio la musica
+it	io volere dormire	io voglio dormire
+it	io volere andare parco	io voglio andare al parco
+it	io avere febbre	ho la febbre
+it	io volere medicina	io voglio la medicina
+it	io volere scarpe	io voglio le scarpe
+it	io volere giocattolo	io voglio il giocattolo
+it	io essere arrabbiato	sono arrabbiato
+it	io volere telefono	io voglio il telefono
+en	I eat	I eat
+en	I want eat pizza	I want to eat pizza
+en	I want drink water	I want to drink water
+en	I eat bread	I eat the bread
+en	I want play	I want to play
+en	I go home	I go home
+en	I am hungry	I am hungry
+en	I am thirsty	I am thirsty
+en	I feel sick	I feel sick
+en	I am tired	I am tired
+en	I am happy	I am happy
+en	I not want eat	I do not want to eat
+en	you want play	you want to play
+en	we want watch television	we want to watch television
+en	I want eat biscuit	I want to eat the biscuit

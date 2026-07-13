@@ -40,4 +40,13 @@
     <string name="settings_import">Import settings</string>
     <string name="settings_open_hold">Caregiver settings</string>
     <string name="settings_hold_hint">Press and hold to open caregiver settings.</string>
+    <string name="settings_llm_title">AI assistant (experimental)</string>
+    <string name="settings_llm_desc">When on, an on-device model may add ONE extra, clearly labeled sentence suggestion. It never replaces the templates and is never spoken without your confirmation. Fully optional.</string>
+    <string name="settings_llm_device_ok">Device eligible · RAM %1$s GB</string>
+    <string name="settings_llm_device_no">Device not eligible · RAM %1$s GB</string>
+    <string name="settings_llm_import_model">Import model…</string>
+    <string name="settings_llm_no_model">No model imported.</string>
+    <string name="settings_llm_model_label">Model: %1$s</string>
+    <string name="settings_llm_license_accept">I accept the model\'s license terms</string>
+    <string name="settings_llm_enable">Use AI suggestions</string>
 </resources>

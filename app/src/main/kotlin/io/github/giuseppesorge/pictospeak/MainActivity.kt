@@ -21,6 +21,7 @@ import io.github.giuseppesorge.pictospeak.nlg.api.Pos
 import io.github.giuseppesorge.pictospeak.ui.about.AboutScreen
 import io.github.giuseppesorge.pictospeak.ui.board.BoardScreen
 import io.github.giuseppesorge.pictospeak.ui.board.BoardViewModel
+import io.github.giuseppesorge.pictospeak.ui.settings.LlmSettingsState
 import io.github.giuseppesorge.pictospeak.ui.settings.SettingsScreen
 import io.github.giuseppesorge.pictospeak.ui.setup.TtsSetupScreen
 import kotlinx.coroutines.Dispatchers
@@ -48,6 +49,14 @@ class MainActivity : ComponentActivity() {
         val container = (application as AacApplication).container
         setContent { MaterialTheme { App(container) } }
     }
+
+    override fun onTrimMemory(level: Int) {
+        super.onTrimMemory(level)
+        // Give back the LLM engine's native memory under pressure; it reloads on next use.
+        if (level >= TRIM_MEMORY_RUNNING_LOW) {
+            (application as AacApplication).container.releaseLlm()
+        }
+    }
 }
 
 @Composable
@@ -64,14 +73,14 @@ private fun App(container: AppContainer) {
 
     when (screen) {
         Screen.Board -> {
-            // Keyed by language AND speak-on-tap so a settings change takes effect on return
-            // (the VM captures speakLabelOnTap; same-language reuse would otherwise keep the
-            // stale value until app restart).
+            // Keyed by language, speak-on-tap AND llm-enabled so a settings change takes
+            // effect on return (the VM captures these; same-key reuse would otherwise keep
+            // the stale values until app restart).
             val boardViewModel: BoardViewModel =
-                viewModel(key = "board-${profile.language}-${profile.speakLabelOnTap}") {
+                viewModel(key = "board-${profile.language}-${profile.speakLabelOnTap}-${profile.llmEnabled}") {
                     BoardViewModel(
                         sentenceEngine = container.sentenceEngine(profile.language),
-                        sentenceRefiner = container.sentenceRefiner,
+                        sentenceRefiner = container.sentenceRefiner(profile),
                         ttsGateway = container.ttsGateway,
                         vocabularyRepository = container.vocabularyRepository(profile.language),
                         speakLabelOnTap = profile.speakLabelOnTap,
@@ -137,12 +146,35 @@ private fun SettingsRoute(
                 }
             }
         }
+
+    // LLM model import (play flavor only). Any picked file is copied privately; the caregiver
+    // then accepts its license and enables the feature. Never bundled (llm/NOTICE-models.md).
+    var modelName by remember { mutableStateOf(container.modelStore.current()?.fileName) }
+    val modelImportLauncher =
+        rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+            uri?.let {
+                scope.launch(Dispatchers.IO) {
+                    context.contentResolver.openInputStream(it)?.use { ins ->
+                        val info = container.modelStore.importFrom(ins, it.lastPathSegment ?: "model.litertlm")
+                        modelName = info.fileName
+                    }
+                }
+            }
+        }
+
     SettingsScreen(
         profile = profile,
         onProfileChange = { updated -> container.updateProfile { updated } },
         onExport = { exportLauncher.launch("pictospeak-settings.json") },
         onImport = { importLauncher.launch(arrayOf("application/json")) },
         onBack = onBack,
+        llm =
+            LlmSettingsState(
+                supported = container.llmFlavor,
+                capability = if (container.llmFlavor) container.deviceCapability else null,
+                modelName = modelName,
+            ),
+        onImportModel = { modelImportLauncher.launch(arrayOf("*/*")) },
     )
 }
 

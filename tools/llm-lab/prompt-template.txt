@@ -1,0 +1,4 @@
+Rewrite the words into one short, natural sentence in the same language. Keep it faithful to the words, add only function words. Reply with only the sentence, nothing else.
+Words: {WORDS}
+Draft: {DRAFT}
+Sentence:

@@ -21,6 +21,8 @@ data class Profile(
     val gridMinCellDp: Int = DEFAULT_GRID_MIN_CELL_DP,
     /** Optional on-device LLM refiner (play flavor + capable device only). Default off. */
     val llmEnabled: Boolean = false,
+    /** Recorded acceptance of the imported model's license terms (llm/NOTICE-models.md). */
+    val llmModelLicenseAccepted: Boolean = false,
     /** Set once the caregiver has completed the first-run setup. */
     val setupComplete: Boolean = false,
 ) {
