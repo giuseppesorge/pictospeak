@@ -24,6 +24,13 @@ Mandatory build mitigations from release one: app-specific Baseline Profile +
 R8 full mode (minify + shrink resources) — both are wired in `app/build.gradle.kts`
 and must never be disabled "temporarily".
 
+Baseline Profile procedure (manual until the androidx.baselineprofile plugin supports
+AGP 9): run `BaselineProfileGenerator` from `:benchmark` on a device/emulator
+(`./gradlew :benchmark:connectedBenchmarkAndroidTest` filtered to the generator, or via
+Android Studio), pull the generated `baseline-prof.txt` from the test outputs, commit it
+to `app/src/main/baseline-prof.txt` (AGP compiles it into the APK natively), and re-run
+the startup benchmark to confirm the gain.
+
 Memory tactics: only visible grid cells resident (single-density 256px WebP, hardware
 bitmaps via Coil, off-Java-heap); originals never decoded; image cache bounded;
 `onTrimMemory(TRIM_MEMORY_UI_HIDDEN)` drops caches and releases the LLM engine;

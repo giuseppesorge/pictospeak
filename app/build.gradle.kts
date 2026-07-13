@@ -78,3 +78,9 @@ dependencies {
     testImplementation(libs.coroutines.test)
     testImplementation(libs.turbine)
 }
+
+// Baseline Profile: the androidx.baselineprofile plugin (1.4.1) does not yet support
+// AGP 9 modules, so the profile is generated manually with :benchmark's
+// BaselineProfileGenerator and committed to app/src/main/baseline-prof.txt, which AGP
+// compiles into the APK natively. Procedure: docs/perf-budgets.md. Revisit when the
+// plugin gains AGP 9 support.
