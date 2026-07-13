@@ -34,17 +34,23 @@ class ProfileRepository(
         runCatching { json.decodeFromString<Profile>(text) }.getOrNull()?.let(::sanitize)
 
     /**
-     * Trust boundary for hand-edited or SAF-imported settings: an unsupported [Profile.language]
-     * (e.g. "fr") would later make the engine read a non-existent lexicon asset and crash the
-     * board on every launch. Clamp it to a language that ships, so bad input degrades, never
-     * bricks the app.
+     * Trust boundary for hand-edited or SAF-imported settings. Bad values must degrade, never
+     * brick the board: an unsupported [Profile.language] would make the engine read a
+     * non-existent lexicon asset, and a `gridColumns` ≤ 0 would make `GridCells.Fixed` throw —
+     * either one crash-loops the app on every launch. Clamp both to safe values.
      */
     private fun sanitize(profile: Profile): Profile =
-        if (profile.language in Profile.SUPPORTED_LANGUAGES) {
-            profile
-        } else {
-            profile.copy(language = Profile.DEFAULT_LANGUAGE)
-        }
+        profile.copy(
+            language =
+                if (profile.language in
+                    Profile.SUPPORTED_LANGUAGES
+                ) {
+                    profile.language
+                } else {
+                    Profile.DEFAULT_LANGUAGE
+                },
+            gridColumns = profile.gridColumns.coerceIn(Profile.GRID_COLUMNS_MIN, Profile.GRID_COLUMNS_MAX),
+        )
 
     private companion object {
         const val FILE_NAME = "settings.json"

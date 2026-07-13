@@ -151,8 +151,10 @@ private fun SettingsRoute(
                             .openInputStream(it)
                             ?.use { ins -> ins.readBytes().decodeToString() }
                     text?.let { body ->
+                        // withoutLlmConsent: the model's license must be accepted deliberately
+                        // in-app, never smuggled in through an imported settings file.
                         container.profileRepository.deserialize(body)?.let { imported ->
-                            container.updateProfile { imported }
+                            container.updateProfile { imported.withoutLlmConsent() }
                         }
                     }
                 }
@@ -190,6 +192,10 @@ private fun SettingsRoute(
         onImportModel = { modelImportLauncher.launch(arrayOf("*/*")) },
     )
 }
+
+/** LLM consent must be a deliberate in-app action, never carried in by an imported settings file. */
+private fun io.github.giuseppesorge.pictospeak.data.Profile.withoutLlmConsent() =
+    copy(llmModelLicenseAccepted = false, llmEnabled = false)
 
 /** A throwaway token used only to sound out the voice on the setup screen. */
 private fun voiceTestToken(language: String): PictogramToken {

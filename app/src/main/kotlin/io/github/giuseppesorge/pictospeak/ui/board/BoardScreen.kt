@@ -466,7 +466,8 @@ private fun PictogramGrid(
 ) {
     LazyVerticalGrid(
         // Fixed (not Adaptive) so a pictogram keeps its position across rotation / screen size.
-        columns = GridCells.Fixed(columns),
+        // coerceAtLeast(1): Fixed(0) throws — the profile is clamped, this guards every other path.
+        columns = GridCells.Fixed(columns.coerceAtLeast(1)),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = modifier.testTag("board-grid"),

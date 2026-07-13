@@ -74,4 +74,25 @@ class ProfileRepositoryTest {
         val repo = ProfileRepository(tempDir())
         assertEquals("en", repo.deserialize("""{"language":"en"}""")?.language)
     }
+
+    // gridColumns <= 0 would make GridCells.Fixed throw and crash-loop the board — clamp it.
+    @Test
+    fun `deserialize clamps a non-positive gridColumns`() {
+        val repo = ProfileRepository(tempDir())
+        assertTrue((repo.deserialize("""{"gridColumns":0}""")?.gridColumns ?: 0) >= Profile.GRID_COLUMNS_MIN)
+        assertTrue((repo.deserialize("""{"gridColumns":-3}""")?.gridColumns ?: 0) >= Profile.GRID_COLUMNS_MIN)
+    }
+
+    @Test
+    fun `deserialize caps an absurd gridColumns`() {
+        assertEquals(
+            Profile.GRID_COLUMNS_MAX,
+            ProfileRepository(tempDir()).deserialize("""{"gridColumns":999}""")?.gridColumns,
+        )
+    }
+
+    @Test
+    fun `a valid gridColumns is preserved`() {
+        assertEquals(5, ProfileRepository(tempDir()).deserialize("""{"gridColumns":5}""")?.gridColumns)
+    }
 }

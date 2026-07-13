@@ -34,6 +34,10 @@ data class Profile(
 ) {
     companion object {
         const val DEFAULT_GRID_COLUMNS = 4
+
+        /** Safe column bounds; GridCells.Fixed(n) requires n ≥ 1, so a bad value must be clamped. */
+        const val GRID_COLUMNS_MIN = 2
+        const val GRID_COLUMNS_MAX = 12
         const val DEFAULT_LANGUAGE = "it"
         val SUPPORTED_LANGUAGES = listOf("it", "en")
 
