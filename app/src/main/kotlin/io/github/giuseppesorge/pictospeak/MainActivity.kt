@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -46,6 +47,9 @@ sealed interface Screen {
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Android 15+ forces edge-to-edge; opt in explicitly and let each screen inset its
+        // own content (WindowInsets.safeDrawing) so nothing hides under the status/nav bars.
+        enableEdgeToEdge()
         val container = (application as AacApplication).container
         setContent { MaterialTheme { App(container) } }
     }

@@ -7,12 +7,14 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -62,15 +64,18 @@ fun BoardScreen(
         Column(
             modifier =
                 Modifier
-                    .padding(12.dp)
+                    .fillMaxSize()
+                    // Keep content clear of the status/nav bars (the app draws edge-to-edge).
+                    .windowInsetsPadding(WindowInsets.safeDrawing)
+                    .padding(horizontal = 12.dp, vertical = 8.dp)
                     .semantics { testTagsAsResourceId = true },
+            verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-            SelectionStrip(state.selection)
-            ProposalBar(
+            MessageArea(state = state, onCandidateTapped = viewModel::onCandidateTapped)
+            ActionRow(
                 state = state,
                 speaking = speaking,
                 readiness = readiness,
-                onCandidateTapped = viewModel::onCandidateTapped,
                 onSpeakPressed = viewModel::onSpeakPressed,
                 onStopPressed = viewModel::onStopPressed,
                 onBackspace = viewModel::onBackspace,
@@ -82,64 +87,48 @@ fun BoardScreen(
                 onPictogramTapped = viewModel::onPictogramTapped,
                 onFolderTapped = viewModel::onFolderTapped,
                 onBackToHome = viewModel::onBackToHome,
+                modifier = Modifier.weight(1f),
             )
         }
     }
 }
 
+/**
+ * The message window: the selected pictograms as chips plus the composed sentence, on their
+ * own rows in a tonal container so the sentence has room to read (crucial on a narrow phone).
+ */
 @Composable
-private fun SelectionStrip(selection: List<PictogramToken>) {
-    LazyRow(
-        modifier =
-            Modifier
-                .fillMaxWidth()
-                .height(64.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        items(selection) { token ->
-            Box(
-                modifier =
-                    Modifier
-                        .background(Color(FitzgeraldSlot.fromPos(token.pos).argb))
-                        .padding(horizontal = 12.dp, vertical = 8.dp),
-            ) {
-                Text(token.label, style = MaterialTheme.typography.titleMedium)
-            }
-        }
-    }
-}
-
-@Composable
-private fun ProposalBar(
+private fun MessageArea(
     state: BoardUiState,
-    speaking: Boolean,
-    readiness: TtsReadiness,
     onCandidateTapped: (Int) -> Unit,
-    onSpeakPressed: () -> Unit,
-    onStopPressed: () -> Unit,
-    onBackspace: () -> Unit,
-    onClear: () -> Unit,
-    onAboutPressed: () -> Unit,
 ) {
     val proposal = state.candidates.getOrNull(state.selectedCandidateIndex)
-    val voiceReady = readiness is TtsReadiness.Ready
-    Column(modifier = Modifier.fillMaxWidth()) {
-        Row(
-            modifier =
-                Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically,
+    val canCycle = state.candidates.size > 1
+    val nextSuggestion = stringResource(R.string.board_next_suggestion)
+    Surface(
+        color = MaterialTheme.colorScheme.surfaceContainerHigh,
+        shape = MaterialTheme.shapes.large,
+        modifier = Modifier.fillMaxWidth(),
+    ) {
+        Column(
+            modifier = Modifier.padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-            val canCycle = state.candidates.size > 1
-            val nextSuggestion = stringResource(R.string.board_next_suggestion)
+            if (state.selection.isNotEmpty()) SelectionStrip(state.selection)
             Text(
                 text = proposal?.text ?: stringResource(R.string.board_proposal_placeholder),
                 style = MaterialTheme.typography.headlineSmall,
+                color =
+                    if (proposal == null) {
+                        MaterialTheme.colorScheme.onSurfaceVariant
+                    } else {
+                        MaterialTheme.colorScheme.onSurface
+                    },
                 modifier =
                     Modifier
-                        .weight(1f)
-                        // Only expose the cycle affordance when there is another candidate —
+                        .fillMaxWidth()
+                        .heightIn(min = 48.dp)
+                        // Expose the cycle affordance only when there is another candidate —
                         // otherwise TalkBack would announce a dead double-tap.
                         .then(
                             if (canCycle) {
@@ -151,23 +140,89 @@ private fun ProposalBar(
                             },
                         ),
             )
+            if (canCycle) {
+                Text(
+                    "${state.selectedCandidateIndex + 1}/${state.candidates.size} · $nextSuggestion",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun SelectionStrip(selection: List<PictogramToken>) {
+    LazyRow(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        items(selection) { token ->
+            Surface(
+                color = Color(FitzgeraldSlot.fromPos(token.pos).argb),
+                shape = MaterialTheme.shapes.small,
+            ) {
+                Text(
+                    token.label,
+                    style = MaterialTheme.typography.titleMedium,
+                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Actions on their own row so the sentence above keeps full width. Speak is the prominent,
+ * full-weight primary target (also the ONLY route to audio — it invokes onSpeakPressed, the
+ * ConfirmationGate call site); editing/nav actions are secondary text buttons.
+ */
+@Composable
+private fun ActionRow(
+    state: BoardUiState,
+    speaking: Boolean,
+    readiness: TtsReadiness,
+    onSpeakPressed: () -> Unit,
+    onStopPressed: () -> Unit,
+    onBackspace: () -> Unit,
+    onClear: () -> Unit,
+    onAboutPressed: () -> Unit,
+) {
+    val proposal = state.candidates.getOrNull(state.selectedCandidateIndex)
+    val voiceReady = readiness is TtsReadiness.Ready
+    val hasSelection = state.selection.isNotEmpty()
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
             // One persistent button whose label/action toggles, so TalkBack keeps focus and
-            // announces the state change instead of the node being replaced. Speak stays the
-            // ONLY route to audio: it invokes onSpeakPressed (the ConfirmationGate call site).
+            // announces the state change instead of the node being replaced.
             Button(
                 onClick = { if (speaking) onStopPressed() else onSpeakPressed() },
                 enabled = speaking || (proposal != null && voiceReady),
                 modifier =
                     Modifier
+                        .weight(1f)
+                        .heightIn(min = 56.dp)
                         .testTag("board-speak")
                         .semantics { liveRegion = LiveRegionMode.Polite },
             ) {
                 Text(
                     stringResource(if (speaking) R.string.board_stop else R.string.board_speak),
+                    style = MaterialTheme.typography.titleMedium,
                 )
             }
-            TextButton(onClick = onBackspace) { Text(stringResource(R.string.board_backspace)) }
-            TextButton(onClick = onClear) { Text(stringResource(R.string.board_clear)) }
+            TextButton(onClick = onBackspace, enabled = hasSelection) {
+                Text(stringResource(R.string.board_backspace))
+            }
+            TextButton(onClick = onClear, enabled = hasSelection) {
+                Text(stringResource(R.string.board_clear))
+            }
             TextButton(onClick = onAboutPressed) { Text(stringResource(R.string.about_open)) }
         }
         // Never leave a silent Speak: tell the caregiver the voice needs setting up.
@@ -176,7 +231,6 @@ private fun ProposalBar(
                 stringResource(R.string.board_voice_not_ready),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.error,
-                modifier = Modifier.padding(bottom = 8.dp),
             )
         }
     }
@@ -188,12 +242,13 @@ private fun PictogramGrid(
     onPictogramTapped: (PictogramToken) -> Unit,
     onFolderTapped: (String) -> Unit,
     onBackToHome: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     LazyVerticalGrid(
         columns = GridCells.Adaptive(minSize = 112.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = Modifier.testTag("board-grid"),
+        modifier = modifier.testTag("board-grid"),
     ) {
         items(
             items = cells,
