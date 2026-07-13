@@ -1,0 +1,115 @@
+# Golden corpus — the executable spec of grammar v1 (Italian).
+# Format: space-separated tokens "lemma:POS" <TAB> expected DEFAULT candidate.
+# "CONCAT" means: no pattern may match — the only candidate is the concat fallback.
+# Change lines only with linguistic justification in the PR (docs/grammar-v1.md).
+#
+# --- presente indicativo, S-V, all six persons -------------------------------
+io:MISC mangiare:VERB	io mangio
+tu:MISC mangiare:VERB	tu mangi
+lui:MISC mangiare:VERB	lui mangia
+lei:MISC mangiare:VERB	lei mangia
+noi:MISC mangiare:VERB	noi mangiamo
+voi:MISC mangiare:VERB	voi mangiate
+loro:MISC mangiare:VERB	loro mangiano
+io:MISC andare:VERB	io vado
+tu:MISC andare:VERB	tu vai
+lui:MISC andare:VERB	lui va
+noi:MISC andare:VERB	noi andiamo
+voi:MISC andare:VERB	voi andate
+loro:MISC andare:VERB	loro vanno
+io:MISC dormire:VERB	io dormo
+lei:MISC dormire:VERB	lei dorme
+loro:MISC dormire:VERB	loro dormono
+# --- pro-drop default: no subject -> first person, no pronoun ----------------
+mangiare:VERB	mangio
+dormire:VERB	dormo
+andare:VERB	vado
+giocare:VERB	gioco
+# --- S-V-O with definite article default -------------------------------------
+io:MISC mangiare:VERB pizza:NOUN	io mangio la pizza
+mangiare:VERB pizza:NOUN	mangio la pizza
+tu:MISC bere:VERB acqua:NOUN	tu bevi l'acqua
+lui:MISC volere:VERB gelato:NOUN	lui vuole il gelato
+noi:MISC mangiare:VERB pizza:NOUN	noi mangiamo la pizza
+loro:MISC bere:VERB acqua:NOUN	loro bevono l'acqua
+# --- article phonological rules ----------------------------------------------
+io:MISC volere:VERB zaino:NOUN	io voglio lo zaino
+io:MISC volere:VERB gnomo:NOUN	io voglio lo gnomo
+io:MISC volere:VERB yogurt:NOUN	io voglio lo yogurt
+io:MISC volere:VERB amico:NOUN	io voglio l'amico
+io:MISC volere:VERB amica:NOUN	io voglio l'amica
+io:MISC volere:VERB acqua:NOUN	io voglio l'acqua
+io:MISC volere:VERB gelato:NOUN	io voglio il gelato
+io:MISC volere:VERB pizza:NOUN	io voglio la pizza
+io:MISC volere:VERB casa:NOUN	io voglio la casa
+# --- modal as main verb -------------------------------------------------------
+volere:VERB pizza:NOUN	voglio la pizza
+io:MISC potere:VERB	io posso
+tu:MISC dovere:VERB	tu devi
+# --- modal + infinitive (the flagship example) --------------------------------
+io:MISC volere:VERB mangiare:VERB pizza:NOUN	io voglio mangiare la pizza
+volere:VERB mangiare:VERB pizza:NOUN	voglio mangiare la pizza
+tu:MISC volere:VERB bere:VERB acqua:NOUN	tu vuoi bere l'acqua
+lui:MISC potere:VERB andare:VERB	lui può andare
+noi:MISC dovere:VERB dormire:VERB	noi dobbiamo dormire
+lei:MISC volere:VERB giocare:VERB	lei vuole giocare
+loro:MISC volere:VERB mangiare:VERB gelato:NOUN	loro vogliono mangiare il gelato
+# --- noun subject (third person + subject article) ----------------------------
+mamma:NOUN mangiare:VERB	la mamma mangia
+mamma:NOUN volere:VERB pizza:NOUN	la mamma vuole la pizza
+amico:NOUN dormire:VERB	l'amico dorme
+gnomo:NOUN mangiare:VERB gelato:NOUN	lo gnomo mangia il gelato
+# --- copula + adjective agreement ---------------------------------------------
+io:MISC essere:VERB felice:DESCRIPTOR	io sono felice
+tu:MISC essere:VERB stanco:DESCRIPTOR	tu sei stanco
+lui:MISC essere:VERB stanco:DESCRIPTOR	lui è stanco
+lei:MISC essere:VERB stanco:DESCRIPTOR	lei è stanca
+noi:MISC essere:VERB stanco:DESCRIPTOR	noi siamo stanchi
+voi:MISC essere:VERB felice:DESCRIPTOR	voi siete felici
+loro:MISC essere:VERB stanco:DESCRIPTOR	loro sono stanchi
+essere:VERB felice:DESCRIPTOR	sono felice
+mamma:NOUN essere:VERB stanco:DESCRIPTOR	la mamma è stanca
+# --- object adjective agreement ------------------------------------------------
+io:MISC volere:VERB pizza:NOUN grande:DESCRIPTOR	io voglio la pizza grande
+io:MISC volere:VERB pizza:NOUN rosso:DESCRIPTOR	io voglio la pizza rossa
+io:MISC volere:VERB gelato:NOUN grande:DESCRIPTOR	io voglio il gelato grande
+io:MISC volere:VERB zaino:NOUN rosso:DESCRIPTOR	io voglio lo zaino rosso
+io:MISC volere:VERB mangiare:VERB pizza:NOUN grande:DESCRIPTOR	io voglio mangiare la pizza grande
+# --- negation -------------------------------------------------------------------
+io:MISC non:DESCRIPTOR volere:VERB acqua:NOUN	io non voglio l'acqua
+non:DESCRIPTOR volere:VERB acqua:NOUN	non voglio l'acqua
+tu:MISC non:DESCRIPTOR mangiare:VERB	tu non mangi
+lei:MISC non:DESCRIPTOR essere:VERB stanco:DESCRIPTOR	lei non è stanca
+non:DESCRIPTOR volere:VERB mangiare:VERB	non voglio mangiare
+mamma:NOUN non:DESCRIPTOR dormire:VERB	la mamma non dorme
+# --- unsupported object noun: citation form, never a guessed article ------------
+io:MISC volere:VERB patatine_fritte:NOUN	io voglio patatine fritte
+# --- regressions: adversarial review 2026-07-13 (must stay CONCAT / correct) ------
+# intransitive verb + place noun needs a preposition we don't build ("vado a casa")
+io:MISC andare:VERB casa:NOUN	CONCAT
+andare:VERB casa:NOUN	CONCAT
+dormire:VERB casa:NOUN	CONCAT
+# object governed by an intransitive infinitive
+io:MISC volere:VERB andare:VERB casa:NOUN	CONCAT
+# 'non' before a noun subject must not be silently relocated
+non:DESCRIPTOR mamma:NOUN dormire:VERB	CONCAT
+# adjective before the object noun (out of order) must not re-attach
+io:MISC essere:VERB stanco:DESCRIPTOR mamma:NOUN	CONCAT
+# essere is intransitive: predicate nominative "io sono la pizza" is out of scope
+io:MISC essere:VERB pizza:NOUN	CONCAT
+# masculine 'uovo' (data-bug regression): agreement and article must be masculine
+uovo:NOUN essere:VERB rotto:DESCRIPTOR	l'uovo è rotto
+io:MISC volere:VERB uovo:NOUN	io voglio l'uovo
+# --- out-of-scope input degrades to concat, never throws, never drops words -----
+pizza:NOUN grande:DESCRIPTOR	CONCAT
+ciao:SOCIAL	CONCAT
+io:MISC sedersi:VERB	CONCAT
+io:MISC mangiare:VERB bere:VERB	CONCAT
+io:MISC mangiare:VERB grande:DESCRIPTOR	CONCAT
+grande:DESCRIPTOR mangiare:VERB	CONCAT
+io:MISC volere:VERB sedersi:VERB	CONCAT
+mangiare:VERB io:MISC	CONCAT
+io:MISC non:DESCRIPTOR non:DESCRIPTOR mangiare:VERB	CONCAT
+# noun subjects are realized grammatically even when semantically odd — the engine has
+# no animacy data and never guesses; the user cycles or picks the concat alternative.
+pizza:NOUN mangiare:VERB	la pizza mangia

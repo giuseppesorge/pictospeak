@@ -30,14 +30,15 @@ fun main(args: Array<String>) {
     if (!morphItFile.exists()) fail("Morph-it! not found — see PROVENANCE.md for the download procedure")
 
     val vocabulary = parseVocabulary(repoRoot.resolve("tools/core-vocabulary.csv"), lang)
-    val auxTable = parseAuxTable(repoRoot.resolve("tools/lexicon-build/aux_it.csv"))
+    val verbTable = parseVerbTable(repoRoot.resolve("tools/lexicon-build/verbs_it.csv"))
+    val nonAttributive = parseNonAttributive(repoRoot.resolve("tools/lexicon-build/non_attributive_it.csv"))
 
     val wantedLemmas = buildWantedLemmas(vocabulary)
     val rows = readMorphIt(morphItFile, wantedLemmas)
     println("morph-it: ${rows.size} rows for ${wantedLemmas.size} candidate lemmas")
 
     val overrides = parseOverrides(repoRoot.resolve("tools/lexicon-build/overrides_it.csv"))
-    val builder = LexiconBuilder(rows.groupBy { it.lemma }, auxTable, overrides)
+    val builder = LexiconBuilder(rows.groupBy { it.lemma }, verbTable, nonAttributive, overrides)
     val entries = mutableListOf<LexiconEntry>()
     val unsupported = mutableListOf<String>()
     val problems = mutableListOf<String>()
@@ -54,7 +55,7 @@ fun main(args: Array<String>) {
     }
     if (problems.isNotEmpty()) {
         problems.forEach { System.err.println("LEXICON: $it") }
-        fail("${problems.size} problem(s) — fix aux_it.csv or the vocabulary")
+        fail("${problems.size} problem(s) — fix verbs_it.csv or the vocabulary")
     }
 
     val assetsDir = repoRoot.resolve("app/src/main/assets/lexicon")

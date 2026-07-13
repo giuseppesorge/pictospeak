@@ -27,16 +27,20 @@ hi/ja/ur** (not in the API's language list). Languages beyond ARASAAC's coverage
 different symbol source (e.g. the Global Symbols aggregator: Mulberry, Tawasol, Jellow)
 and are out of scope until the symbol layer supports multiple sets.
 
-## Rollout tiers
+## Language strategy: depth first, extension by design
 
-- **Now**: `it` (reference implementation), `en` (contract proof).
-- **Next**: `es` (ARASAAC's native language), `fr`.
-- **Then**: `de`, `pt-BR`, optionally `nl`.
-- **Later**: `he` (first RTL pack — cheapest RTL pilot: 98% symbol coverage + common
-  offline TTS voice), `ar` (needs symbol supplementation + MSA-vs-dialect decision),
-  `zh` (isolating grammar = cheap realizer; offline TTS availability varies by device),
-  `ru` (largest morphology effort).
-- **Blocked on symbol strategy**: `hi`, `ja`, `ur`.
+The project ships **few languages at high accuracy** rather than many at low accuracy:
+`it` and `en` are the supported packs, each with its own golden corpus (the executable
+spec), curated lexicon, and native-speaker review before release. A grammar bug in a
+communication device is worse than a missing language.
+
+Further languages are *design-supported, not scheduled*. When one is considered, the
+groundwork above applies; a realistic order given symbol coverage, NLG resources and
+offline TTS would be: `es`/`fr` → `de`/`pt-BR` → `he` (first RTL pack — 98% symbol
+coverage + common offline TTS voice) → `ar` (needs symbol supplementation + MSA-vs-dialect
+decision) → `zh` (isolating grammar = cheap realizer; offline TTS varies by device) →
+`ru` (largest morphology effort). `hi`, `ja`, `ur` are blocked on a multi-symbol-set
+layer regardless.
 
 Per-language TTS caveats: Google's offline-capable TTS covers the tiers above except
 Persian; devices without Google services need a documented fallback engine (e.g.

@@ -57,6 +57,13 @@ data class VerbEntry(
     /** Present indicative, all six persons. */
     val presentIndicative: Map<Person, String>,
     /**
+     * Whether the verb takes a bare direct object. Intransitive verbs (andare, dormire…)
+     * take prepositional complements ("vado A casa"), which grammar v1 does not build — so
+     * an object noun after an intransitive verb must degrade to concat, never become a
+     * guessed direct object ("vado la casa"). Curated data, not rule-derivable.
+     */
+    val transitive: Boolean = false,
+    /**
      * Reflexive verbs conjugate with clitics, which grammar v1 excludes — the engine uses
      * citation form for them until clitics enter the grammar scope (requires an ADR).
      */

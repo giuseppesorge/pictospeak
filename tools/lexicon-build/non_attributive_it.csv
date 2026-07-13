@@ -1,0 +1,28 @@
+lemma,reason
+# DESCRIPTOR catalog lemmas that must NOT become agreeing postnominal adjectives.
+# The v1 realizer only builds postnominal descriptive adjectives ("la pizza rossa").
+# Quantifiers, demonstratives, possessives and adverbs are prenominal or invariable
+# ("molta pizza", "la mia pizza", "dopo"), so agreeing/postposing them is wrong. These
+# go to the lexicon's `unsupported` list and the realizer degrades their sentences to
+# concat rather than speak wrong grammar. Reviewable by a linguist.
+dopo,adverb (invariable; Morph-it! wrongly inflects it to dopa/dopi)
+prima,adverb
+adesso,adverb
+oggi,adverb
+domani,adverb
+ieri,adverb
+qui,place adverb
+là,place adverb
+bene,manner adverb
+male,manner adverb
+ancora,adverb
+più,adverb
+molto,quantifier (prenominal: "molta pizza", not "pizza molta")
+poco,quantifier (prenominal)
+tutto,quantifier/pronoun (prenominal: "tutta la pizza")
+niente,negative pronoun
+altro,prenominal ("un altro")
+mio,possessive (prenominal: "la mia pizza")
+tuo,possessive (prenominal; also a Morph-it! data gap: masc.plur "tuo")
+questo,demonstrative (prenominal)
+quello,demonstrative (prenominal)

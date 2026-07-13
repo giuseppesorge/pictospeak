@@ -1,7 +1,6 @@
 package io.github.giuseppesorge.pictospeak.tools.lexiconbuild
 
 import io.github.giuseppesorge.pictospeak.nlg.api.AdjectiveEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Auxiliary
 import io.github.giuseppesorge.pictospeak.nlg.api.Gender
 import io.github.giuseppesorge.pictospeak.nlg.api.LexiconEntry
 import io.github.giuseppesorge.pictospeak.nlg.api.NounEntry
@@ -32,7 +31,8 @@ sealed interface BuildResult {
 
 class LexiconBuilder(
     private val byLemma: Map<String, List<MorphRow>>,
-    private val auxTable: Map<String, Pair<Auxiliary, Boolean>>,
+    private val verbTable: Map<String, VerbFacts>,
+    private val nonAttributive: Set<String>,
     private val overrides: Overrides,
 ) {
     fun build(item: VocabularyItem): BuildResult {
@@ -49,9 +49,9 @@ class LexiconBuilder(
     private fun verb(lemma: String): BuildResult {
         val rows = byLemma[baseLemma(lemma.lowercase())].orEmpty().filter { it.features.startsWith("VER:") }
         if (rows.isEmpty()) return BuildResult.Unsupported
-        val aux =
-            auxTable[lemma.lowercase()]
-                ?: return BuildResult.Problem("$lemma: found in Morph-it! but missing from aux_it.csv")
+        val facts =
+            verbTable[lemma.lowercase()]
+                ?: return BuildResult.Problem("$lemma: found in Morph-it! but missing from verbs_it.csv")
         val formPatches = overrides.verbForms[lemma.lowercase()].orEmpty()
         val present = mutableMapOf<Person, String>()
         for ((tag, person) in PERSON_TAGS) {
@@ -78,42 +78,45 @@ class LexiconBuilder(
         return BuildResult.Entry(
             VerbEntry(
                 lemma = lemma,
-                auxiliary = aux.first,
+                auxiliary = facts.auxiliary,
                 pastParticiple = participle,
                 presentIndicative = present,
-                reflexive = aux.second,
+                transitive = facts.transitive,
+                reflexive = facts.reflexive,
             ),
         )
     }
 
+    // Morph-it! encodes some accented finals as ASCII apostrophe ("citta'"); prefer the
+    // properly accented variant when both are present (never speak an apostrophe).
+    private fun bestForm(candidates: List<String>): String? =
+        candidates
+            .filterNot { it.endsWith("'") }
+            .maxWithOrNull(compareBy({ it.length }, { it }))
+            ?: candidates.maxWithOrNull(compareBy({ it.length }, { it }))
+
     private fun noun(lemma: String): BuildResult {
         val rows = byLemma[lemma.lowercase()].orEmpty().filter { it.features.startsWith("NOUN-") }
         if (rows.isEmpty()) return BuildResult.Unsupported
-        val gender = if (rows.any { it.features.startsWith("NOUN-F") }) Gender.FEMININE else Gender.MASCULINE
-        val genderTag = if (gender == Gender.FEMININE) "NOUN-F" else "NOUN-M"
-        val singular =
-            rows
-                .filter { it.features == "$genderTag:s" }
-                .map { it.form }
-                .maxWithOrNull(compareBy({ it.length }, { it })) ?: lemma
-        val plural =
-            rows
-                .filter { it.features == "$genderTag:p" }
-                .map { it.form }
-                .maxWithOrNull(compareBy({ it.length }, { it }))
+        val gender =
+            overrides.nounGenders[lemma.lowercase()]
+                ?: if (rows.any { it.features.startsWith("NOUN-F") }) Gender.FEMININE else Gender.MASCULINE
+        // Forms are the same strings whatever gender Morph-it! tagged them (the override only
+        // corrects the gender label), so select by number suffix across all noun rows.
+        val singular = bestForm(rows.filter { it.features.endsWith(":s") }.map { it.form }) ?: lemma
+        val plural = bestForm(rows.filter { it.features.endsWith(":p") }.map { it.form })
         return BuildResult.Entry(NounEntry(lemma = lemma, gender = gender, singular = singular, plural = plural))
     }
 
     @Suppress("ReturnCount") // early-return validation style is deliberate
     private fun adjective(lemma: String): BuildResult {
+        // Quantifiers, demonstratives, possessives and adverbs are not postnominal agreeing
+        // adjectives — the realizer would misplace or wrongly inflect them (non_attributive_it.csv).
+        if (lemma.lowercase() in nonAttributive) return BuildResult.Unsupported
         val rows = byLemma[lemma.lowercase()].orEmpty().filter { it.features.startsWith("ADJ:pos+") }
         if (rows.isEmpty()) return BuildResult.Unsupported
 
-        fun form(tag: String): String? =
-            rows
-                .filter { it.features == "ADJ:pos+$tag" && !it.form.endsWith("'") }
-                .map { it.form }
-                .maxWithOrNull(compareBy({ it.length }, { it }))
+        fun form(tag: String): String? = bestForm(rows.filter { it.features == "ADJ:pos+$tag" }.map { it.form })
         val ms = form("m+s") ?: return BuildResult.Unsupported
         return BuildResult.Entry(
             AdjectiveEntry(

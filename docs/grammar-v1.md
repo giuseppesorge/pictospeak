@@ -52,8 +52,24 @@ Explicitly excluded (v1): clitics, subjunctive, passives, passato remoto, impera
 questions.
 
 Lexicon entry (Italian): lemma, POS, gender, singular/plural, verb class, auxiliary,
-past participle, irregular present forms. Derived offline from Morph-it! (LGPL option)
-intersected with a curated core vocabulary (`tools/core-vocabulary.csv`).
+past participle, **transitivity**, irregular present forms. Derived offline from Morph-it!
+(LGPL option) intersected with a curated core vocabulary (`tools/core-vocabulary.csv`).
+
+Not-rule-derivable facts that are **curated data**, reviewed by a linguist:
+- `tools/lexicon-build/verbs_it.csv` — auxiliary (essere/avere), reflexivity, and
+  **transitivity**. An object noun after an *intransitive* verb needs a preposition
+  ("vado **a** casa") which v1 does not build, so it degrades to concat — never "vado la casa".
+- `tools/lexicon-build/non_attributive_it.csv` — DESCRIPTOR lemmas that are NOT postnominal
+  agreeing adjectives (quantifiers "molto", possessives "tuo", demonstratives "questo",
+  adverbs "dopo"). The realizer builds only postnominal descriptive adjectives ("la pizza
+  rossa"); these are marked unsupported and their sentences degrade to concat rather than
+  being misplaced ("*pizza molta") or wrongly inflected ("*dopa").
+- `tools/lexicon-build/overrides_it.csv` — patches for Morph-it! data errors (wrong gender,
+  variant-form selection, apostrophe-encoded accents), each documented.
+
+The realizer refuses (→ concat) rather than guess when: the object noun is unsupported and
+carries an adjective (cannot agree it); an adjective precedes its object noun; "non" precedes
+the subject; or two finite verbs appear. It never drops a user-selected word.
 
 ## Adding a language
 

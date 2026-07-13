@@ -153,7 +153,8 @@
                 "FIRST_PLURAL": "vogliamo",
                 "SECOND_PLURAL": "volete",
                 "THIRD_PLURAL": "vogliono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -209,7 +210,8 @@
                 "FIRST_PLURAL": "abbiamo",
                 "SECOND_PLURAL": "avete",
                 "THIRD_PLURAL": "hanno"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -223,7 +225,8 @@
                 "FIRST_PLURAL": "facciamo",
                 "SECOND_PLURAL": "fate",
                 "THIRD_PLURAL": "fanno"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -265,7 +268,8 @@
                 "FIRST_PLURAL": "mangiamo",
                 "SECOND_PLURAL": "mangiate",
                 "THIRD_PLURAL": "mangiano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -279,7 +283,8 @@
                 "FIRST_PLURAL": "beviamo",
                 "SECOND_PLURAL": "bevete",
                 "THIRD_PLURAL": "bevono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -321,7 +326,8 @@
                 "FIRST_PLURAL": "guardiamo",
                 "SECOND_PLURAL": "guardate",
                 "THIRD_PLURAL": "guardano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -335,7 +341,8 @@
                 "FIRST_PLURAL": "ascoltiamo",
                 "SECOND_PLURAL": "ascoltate",
                 "THIRD_PLURAL": "ascoltano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -363,7 +370,8 @@
                 "FIRST_PLURAL": "diamo",
                 "SECOND_PLURAL": "date",
                 "THIRD_PLURAL": "danno"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -377,7 +385,8 @@
                 "FIRST_PLURAL": "prendiamo",
                 "SECOND_PLURAL": "prendete",
                 "THIRD_PLURAL": "prendono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -391,7 +400,8 @@
                 "FIRST_PLURAL": "mettiamo",
                 "SECOND_PLURAL": "mettete",
                 "THIRD_PLURAL": "mettono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -405,7 +415,8 @@
                 "FIRST_PLURAL": "apriamo",
                 "SECOND_PLURAL": "aprite",
                 "THIRD_PLURAL": "aprono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -419,7 +430,8 @@
                 "FIRST_PLURAL": "chiudiamo",
                 "SECOND_PLURAL": "chiudete",
                 "THIRD_PLURAL": "chiudono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -433,7 +445,8 @@
                 "FIRST_PLURAL": "laviamo",
                 "SECOND_PLURAL": "lavate",
                 "THIRD_PLURAL": "lavano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -462,7 +475,8 @@
                 "FIRST_PLURAL": "aiutiamo",
                 "SECOND_PLURAL": "aiutate",
                 "THIRD_PLURAL": "aiutano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -476,7 +490,8 @@
                 "FIRST_PLURAL": "finiamo",
                 "SECOND_PLURAL": "finite",
                 "THIRD_PLURAL": "finiscono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -490,7 +505,8 @@
                 "FIRST_PLURAL": "aspettiamo",
                 "SECOND_PLURAL": "aspettate",
                 "THIRD_PLURAL": "aspettano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -504,7 +520,8 @@
                 "FIRST_PLURAL": "compriamo",
                 "SECOND_PLURAL": "comprate",
                 "THIRD_PLURAL": "comprano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -518,7 +535,8 @@
                 "FIRST_PLURAL": "leggiamo",
                 "SECOND_PLURAL": "leggete",
                 "THIRD_PLURAL": "leggono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -532,7 +550,8 @@
                 "FIRST_PLURAL": "scriviamo",
                 "SECOND_PLURAL": "scrivete",
                 "THIRD_PLURAL": "scrivono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -546,7 +565,8 @@
                 "FIRST_PLURAL": "disegniamo",
                 "SECOND_PLURAL": "disegnate",
                 "THIRD_PLURAL": "disegnano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -560,7 +580,8 @@
                 "FIRST_PLURAL": "cantiamo",
                 "SECOND_PLURAL": "cantate",
                 "THIRD_PLURAL": "cantano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -632,7 +653,8 @@
                 "FIRST_PLURAL": "amiamo",
                 "SECOND_PLURAL": "amate",
                 "THIRD_PLURAL": "amano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -660,7 +682,8 @@
                 "FIRST_PLURAL": "sentiamo",
                 "SECOND_PLURAL": "sentite",
                 "THIRD_PLURAL": "sentono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -674,7 +697,8 @@
                 "FIRST_PLURAL": "vediamo",
                 "SECOND_PLURAL": "vedete",
                 "THIRD_PLURAL": "vedono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -688,7 +712,8 @@
                 "FIRST_PLURAL": "capiamo",
                 "SECOND_PLURAL": "capite",
                 "THIRD_PLURAL": "capiscono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -702,7 +727,8 @@
                 "FIRST_PLURAL": "sappiamo",
                 "SECOND_PLURAL": "sapete",
                 "THIRD_PLURAL": "sanno"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -716,7 +742,8 @@
                 "FIRST_PLURAL": "diciamo",
                 "SECOND_PLURAL": "dite",
                 "THIRD_PLURAL": "dicono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -730,7 +757,8 @@
                 "FIRST_PLURAL": "chiediamo",
                 "SECOND_PLURAL": "chiedete",
                 "THIRD_PLURAL": "chiedono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -758,7 +786,8 @@
                 "FIRST_PLURAL": "cerchiamo",
                 "SECOND_PLURAL": "cercate",
                 "THIRD_PLURAL": "cercano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -772,7 +801,8 @@
                 "FIRST_PLURAL": "troviamo",
                 "SECOND_PLURAL": "trovate",
                 "THIRD_PLURAL": "trovano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -786,7 +816,8 @@
                 "FIRST_PLURAL": "portiamo",
                 "SECOND_PLURAL": "portate",
                 "THIRD_PLURAL": "portano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -800,7 +831,8 @@
                 "FIRST_PLURAL": "teniamo",
                 "SECOND_PLURAL": "tenete",
                 "THIRD_PLURAL": "tengono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -814,7 +846,8 @@
                 "FIRST_PLURAL": "lasciamo",
                 "SECOND_PLURAL": "lasciate",
                 "THIRD_PLURAL": "lasciano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -926,7 +959,8 @@
                 "FIRST_PLURAL": "cominciamo",
                 "SECOND_PLURAL": "cominciate",
                 "THIRD_PLURAL": "cominciano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -940,7 +974,8 @@
                 "FIRST_PLURAL": "fermiamo",
                 "SECOND_PLURAL": "fermate",
                 "THIRD_PLURAL": "fermano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -954,7 +989,8 @@
                 "FIRST_PLURAL": "accendiamo",
                 "SECOND_PLURAL": "accendete",
                 "THIRD_PLURAL": "accendono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -968,7 +1004,8 @@
                 "FIRST_PLURAL": "spegniamo",
                 "SECOND_PLURAL": "spegnete",
                 "THIRD_PLURAL": "spengono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -982,7 +1019,8 @@
                 "FIRST_PLURAL": "rompiamo",
                 "SECOND_PLURAL": "rompete",
                 "THIRD_PLURAL": "rompono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -996,7 +1034,8 @@
                 "FIRST_PLURAL": "puliamo",
                 "SECOND_PLURAL": "pulite",
                 "THIRD_PLURAL": "puliscono"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1010,7 +1049,8 @@
                 "FIRST_PLURAL": "cuciniamo",
                 "SECOND_PLURAL": "cucinate",
                 "THIRD_PLURAL": "cucinano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1024,7 +1064,8 @@
                 "FIRST_PLURAL": "tagliamo",
                 "SECOND_PLURAL": "tagliate",
                 "THIRD_PLURAL": "tagliano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1038,7 +1079,8 @@
                 "FIRST_PLURAL": "tocchiamo",
                 "SECOND_PLURAL": "toccate",
                 "THIRD_PLURAL": "toccano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1052,7 +1094,8 @@
                 "FIRST_PLURAL": "baciamo",
                 "SECOND_PLURAL": "baciate",
                 "THIRD_PLURAL": "baciano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1066,7 +1109,8 @@
                 "FIRST_PLURAL": "abbracciamo",
                 "SECOND_PLURAL": "abbracciate",
                 "THIRD_PLURAL": "abbracciano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1122,7 +1166,8 @@
                 "FIRST_PLURAL": "ricordiamo",
                 "SECOND_PLURAL": "ricordate",
                 "THIRD_PLURAL": "ricordano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1136,7 +1181,8 @@
                 "FIRST_PLURAL": "dimentichiamo",
                 "SECOND_PLURAL": "dimenticate",
                 "THIRD_PLURAL": "dimenticano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1150,7 +1196,8 @@
                 "FIRST_PLURAL": "impariamo",
                 "SECOND_PLURAL": "imparate",
                 "THIRD_PLURAL": "imparano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1164,7 +1211,8 @@
                 "FIRST_PLURAL": "studiamo",
                 "SECOND_PLURAL": "studiate",
                 "THIRD_PLURAL": "studiano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1235,7 +1283,8 @@
                 "FIRST_PLURAL": "paghiamo",
                 "SECOND_PLURAL": "pagate",
                 "THIRD_PLURAL": "pagano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "verb",
@@ -1319,7 +1368,7 @@
             "lemma": "riso",
             "gender": "FEMININE",
             "singular": "riso",
-            "plural": "risa"
+            "plural": "risi"
         },
         {
             "type": "noun",
@@ -1359,7 +1408,7 @@
         {
             "type": "noun",
             "lemma": "uovo",
-            "gender": "FEMININE",
+            "gender": "MASCULINE",
             "singular": "uovo",
             "plural": "uova"
         },
@@ -2193,7 +2242,8 @@
                 "FIRST_PLURAL": "coloriamo",
                 "SECOND_PLURAL": "colorate",
                 "THIRD_PLURAL": "colorano"
-            }
+            },
+            "transitive": true
         },
         {
             "type": "noun",
@@ -2311,8 +2361,8 @@
             "type": "noun",
             "lemma": "città",
             "gender": "FEMININE",
-            "singular": "citta'",
-            "plural": "citta'"
+            "singular": "città",
+            "plural": "città"
         },
         {
             "type": "noun",
@@ -2411,14 +2461,6 @@
             "gender": "MASCULINE",
             "singular": "bar",
             "plural": "bar"
-        },
-        {
-            "type": "adjective",
-            "lemma": "dopo",
-            "masculineSingular": "dopo",
-            "feminineSingular": "dopa",
-            "masculinePlural": "dopi",
-            "femininePlural": "dope"
         },
         {
             "type": "noun",
@@ -2549,38 +2591,6 @@
             "feminineSingular": "piccola",
             "masculinePlural": "piccoli",
             "femininePlural": "piccole"
-        },
-        {
-            "type": "adjective",
-            "lemma": "molto",
-            "masculineSingular": "molto",
-            "feminineSingular": "molta",
-            "masculinePlural": "molti",
-            "femininePlural": "molte"
-        },
-        {
-            "type": "adjective",
-            "lemma": "poco",
-            "masculineSingular": "poco",
-            "feminineSingular": "poca",
-            "masculinePlural": "pochi",
-            "femininePlural": "poche"
-        },
-        {
-            "type": "adjective",
-            "lemma": "tutto",
-            "masculineSingular": "tutto",
-            "feminineSingular": "tutta",
-            "masculinePlural": "tutti",
-            "femininePlural": "tutte"
-        },
-        {
-            "type": "adjective",
-            "lemma": "altro",
-            "masculineSingular": "altro",
-            "feminineSingular": "altra",
-            "masculinePlural": "altri",
-            "femininePlural": "altre"
         },
         {
             "type": "adjective",
@@ -2760,14 +2770,6 @@
         },
         {
             "type": "adjective",
-            "lemma": "tuo",
-            "masculineSingular": "tuo",
-            "feminineSingular": "tua",
-            "masculinePlural": "tuo",
-            "femininePlural": "tue"
-        },
-        {
-            "type": "adjective",
             "lemma": "bagnato",
             "masculineSingular": "bagnato",
             "feminineSingular": "bagnata",
@@ -2909,6 +2911,7 @@
     ],
     "unsupported": [
         "adesso",
+        "altro",
         "ancora",
         "bene",
         "bolle",
@@ -2921,6 +2924,7 @@
         "costruzioni",
         "dieci",
         "domani",
+        "dopo",
         "due",
         "fare la cacca",
         "fare pipì",
@@ -2933,6 +2937,7 @@
         "mal di testa",
         "male",
         "mio",
+        "molto",
         "niente",
         "non",
         "nove",
@@ -2942,6 +2947,7 @@
         "pastelli",
         "patatine fritte",
         "più",
+        "poco",
         "prima",
         "quattro",
         "quello",
@@ -2952,6 +2958,8 @@
         "sette",
         "tablet",
         "tre",
+        "tuo",
+        "tutto",
         "uno"
     ]
 }
