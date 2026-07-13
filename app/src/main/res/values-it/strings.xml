@@ -50,6 +50,7 @@
     <string name="settings_llm_device_no">Dispositivo non idoneo · RAM %1$s GB</string>
     <string name="settings_llm_import_model">Importa modello…</string>
     <string name="settings_llm_no_model">Nessun modello importato.</string>
+    <string name="settings_llm_model_too_large">Questo modello è troppo grande per la RAM del dispositivo. Importa un modello più piccolo.</string>
     <string name="settings_llm_model_label">Modello: %1$s</string>
     <string name="settings_llm_license_accept">Accetto i termini di licenza del modello</string>
     <string name="settings_llm_enable">Usa i suggerimenti AI</string>

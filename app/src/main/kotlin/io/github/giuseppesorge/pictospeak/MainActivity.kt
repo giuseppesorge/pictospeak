@@ -185,6 +185,7 @@ private fun SettingsRoute(
                 supported = container.llmFlavor,
                 capability = if (container.llmFlavor) container.deviceCapability else null,
                 modelName = modelName,
+                modelFits = modelName == null || container.importedModelFitsDevice(),
             ),
         onImportModel = { modelImportLauncher.launch(arrayOf("*/*")) },
     )

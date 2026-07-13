@@ -288,17 +288,25 @@ private fun LlmSection(
             ?: stringResource(R.string.settings_llm_no_model),
         style = MaterialTheme.typography.bodySmall,
     )
+    // The RAM need scales with the model — warn (don't silently no-op) if it's too big here.
+    if (hasModel && !llm.modelFits) {
+        Text(
+            stringResource(R.string.settings_llm_model_too_large),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.error,
+        )
+    }
 
     SwitchRow(
         label = stringResource(R.string.settings_llm_license_accept),
         checked = profile.llmModelLicenseAccepted,
-        enabled = hasModel,
+        enabled = hasModel && llm.modelFits,
         onCheckedChange = { onProfileChange(profile.copy(llmModelLicenseAccepted = it)) },
     )
     SwitchRow(
         label = stringResource(R.string.settings_llm_enable),
         checked = profile.llmEnabled,
-        enabled = eligible && hasModel && profile.llmModelLicenseAccepted,
+        enabled = eligible && hasModel && llm.modelFits && profile.llmModelLicenseAccepted,
         onCheckedChange = { onProfileChange(profile.copy(llmEnabled = it)) },
     )
 }

@@ -37,17 +37,42 @@ data class DeviceCapability(
  * Pure, testable device-gate logic plus the thin Android reader. The gate is the FIRST of
  * several conditions (also: play flavor ∧ profile opt-in ∧ a model imported ∧ its license
  * accepted) — see AppContainer.
+ *
+ * Minimum characteristics to run a free, fully-offline on-device LLM (docs/llm-experiment.md):
+ * - **arm64-v8a** ABI (the LiteRT-LM runtime ships no 32-bit libraries) — hard requirement.
+ * - **not** flagged `isLowRamDevice`.
+ * - RAM ≥ an absolute floor AND ≥ a multiple of the imported model's size. The RAM need is
+ *   driven by the MODEL, not a fixed number: a ~300 MB Gemma-3-270M needs far less headroom
+ *   than a ~1 GB Qwen3-0.6B, so we scale the requirement to the actual file ([fitsModel]).
+ * There is NO monetary cost and no network at any point — the model runs locally.
  */
 object DeviceGate {
     /**
-     * Conservative default RAM floor for the *visible* feature. The plan calls for ≥3.5–4 GB
-     * for 0.6B-class models; a lower threshold for the 270M model is an OUTPUT of the M6
-     * experiment, not an assumption — lower this only once measured on the floor tablet.
+     * Absolute RAM floor below which the feature is never offered, regardless of model size —
+     * the OS + app + any LLM need some headroom. The 2 GB floor tablet is intentionally below
+     * this until a soak test proves a tiny model survives its low-memory killer (an OUTPUT of
+     * the M6 experiment, not an assumption).
      */
-    const val DEFAULT_MIN_TOTAL_MEM_BYTES = 3_500_000_000L
+    const val DEFAULT_MIN_TOTAL_MEM_BYTES = 3_000_000_000L
+
+    /**
+     * Total RAM must be at least this multiple of the model file size. The model's peak
+     * resident set is roughly its weights + KV cache/activations (≈2× for our short prompts),
+     * and that peak should stay near half of total RAM (the go/no-go RSS budget) → ~4×.
+     */
+    const val RAM_TO_MODEL_FACTOR = 4L
 
     /** The runtime ships no 32-bit libraries, so arm64 is mandatory (docs/adr/0004). */
     private const val REQUIRED_ABI = "arm64-v8a"
+
+    /**
+     * Does this device have enough RAM for a model of [modelSizeBytes]? Combines the absolute
+     * floor with the model-size-relative headroom, so a bigger model needs a bigger device.
+     */
+    fun fitsModel(
+        totalMemBytes: Long,
+        modelSizeBytes: Long,
+    ): Boolean = totalMemBytes >= maxOf(DEFAULT_MIN_TOTAL_MEM_BYTES, modelSizeBytes * RAM_TO_MODEL_FACTOR)
 
     fun evaluate(
         supportsArm64: Boolean,

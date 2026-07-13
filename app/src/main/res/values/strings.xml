@@ -52,6 +52,7 @@
     <string name="settings_llm_device_no">Device not eligible · RAM %1$s GB</string>
     <string name="settings_llm_import_model">Import model…</string>
     <string name="settings_llm_no_model">No model imported.</string>
+    <string name="settings_llm_model_too_large">This model is too large for this device\'s RAM. Import a smaller model.</string>
     <string name="settings_llm_model_label">Model: %1$s</string>
     <string name="settings_llm_license_accept">I accept the model\'s license terms</string>
     <string name="settings_llm_enable">Use AI suggestions</string>

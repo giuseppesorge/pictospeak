@@ -65,7 +65,10 @@ class AppContainer(
                 profile.llmEnabled &&
                 profile.llmModelLicenseAccepted &&
                 deviceCapability.eligible &&
-                model != null
+                model != null &&
+                // The RAM requirement scales with the imported model: a 2GB device may run a
+                // 300MB model but not a 1GB one (docs/llm-experiment.md, minimum characteristics).
+                DeviceGate.fitsModel(deviceCapability.totalMemBytes, model.sizeBytes)
         val key = "$gatePassed:${model?.sha256.orEmpty()}"
         if (key != refinerKey) {
             (cachedRefiner as? AutoCloseable)?.close()
@@ -73,6 +76,12 @@ class AppContainer(
             refinerKey = key
         }
         return cachedRefiner
+    }
+
+    /** True if an imported model exists AND this device has the RAM to run it (for the UI). */
+    fun importedModelFitsDevice(): Boolean {
+        val model = modelStore.current() ?: return false
+        return DeviceGate.fitsModel(deviceCapability.totalMemBytes, model.sizeBytes)
     }
 
     /** Release the LLM engine's native memory (low-memory callback). */

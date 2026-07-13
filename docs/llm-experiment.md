@@ -49,12 +49,35 @@ what remains is the QLoRA fine-tune (free Colab) and the on-device measurements 
   `llmModelLicenseAccepted` ∧ device eligible ∧ a model imported. Otherwise null. Default OFF.
 - Runbook to obtain numbers: `tools/llm-lab/README.md`.
 
-## Device gate (before the feature is even visible)
+## Device gate — minimum characteristics (no cost, fully offline, local)
 
-`arm64-v8a ∈ Build.SUPPORTED_64_BIT_ABIS` (the runtime has no 32-bit libs) AND
-`!ActivityManager.isLowRamDevice()` AND `totalMem` above a per-model threshold
-(≥3.5–4 GB for anything 0.6B+; the 270M threshold is an experiment OUTPUT, not an
-assumption). Plus: play flavor ∧ per-profile opt-in (default off).
+The on-device LLM is **free and offline**: it runs locally with no network and no per-token
+billing (a "token" here is only the free Hugging Face access string used to *download* the
+open weights). The gate is purely about whether the hardware can run the model well.
+
+Minimum characteristics (`:app/DeviceGate`):
+
+- **`arm64-v8a`** ∈ `Build.SUPPORTED_64_BIT_ABIS` — the LiteRT-LM runtime ships no 32-bit
+  libraries. Hard requirement.
+- **not** `ActivityManager.isLowRamDevice()`.
+- **RAM ≥ max(absolute floor 3 GB, model file size × 4)** — the requirement scales with the
+  imported model, because the model's peak RSS ≈ weights + KV/activations (≈2×) and that peak
+  must stay near half of total RAM (the go/no-go budget). So:
+
+  | Model | Approx. file | Min device RAM (× 4, ≥ floor) | Runs on the 2 GB floor? |
+  |---|---|---|---|
+  | Gemma 3 270M (int4 QAT ~125 MB / q8 ~300 MB) | ~0.1–0.3 GB | **~3 GB** (the floor) | maybe — an experiment OUTPUT (soak/LMK), not an assumption |
+  | Qwen3-0.6B (int4) | ~1 GB | **~4 GB** | no |
+
+- Storage: room for the model file (~0.1–1 GB) in `filesDir/models/`.
+- OS: Android 10+ (app minSdk 29).
+- Plus the non-hardware gates: play flavor ∧ per-profile opt-in (default off) ∧ model imported
+  ∧ its license accepted.
+
+The 3 GB absolute floor is deliberately above the 2 GB launch-floor tablet until a soak test
+proves a tiny model survives that device's low-memory killer — a measured OUTPUT of this
+experiment. If a model is imported that the device's RAM can't satisfy, Settings says so
+(never a silent no-op) and the feature stays off.
 
 ## Protocol
 

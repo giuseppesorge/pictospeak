@@ -42,4 +42,25 @@ class DeviceGateTest {
             DeviceGate.evaluate(supportsArm64 = true, isLowRamDevice = false, totalMemBytes = exactly - 1).eligible,
         )
     }
+
+    private val mb = 1024L * 1024
+    private val threeGb = 3L * 1024 * 1024 * 1024
+
+    @Test
+    fun `a small 300MB model fits a 3GB device but a 1GB model does not`() {
+        // 300MB Gemma-3-270M: 3GB >= max(floor, 300MB*4 = 1.2GB) -> fits.
+        assertTrue(DeviceGate.fitsModel(totalMemBytes = threeGb, modelSizeBytes = 300 * mb))
+        // 1GB Qwen3-0.6B: needs max(floor, 1GB*4 = 4GB) -> does NOT fit 3GB.
+        assertFalse(DeviceGate.fitsModel(totalMemBytes = threeGb, modelSizeBytes = 1024 * mb))
+    }
+
+    @Test
+    fun `even a tiny model is refused below the absolute RAM floor`() {
+        assertFalse(DeviceGate.fitsModel(totalMemBytes = twoGb, modelSizeBytes = 50 * mb))
+    }
+
+    @Test
+    fun `a 1GB model fits a 4GB device`() {
+        assertTrue(DeviceGate.fitsModel(totalMemBytes = fourGb, modelSizeBytes = 1024 * mb))
+    }
 }
