@@ -50,3 +50,68 @@ en	I not want eat	I do not want to eat
 en	you want play	you want to play
 en	we want watch television	we want to watch television
 en	I want eat biscuit	I want to eat the biscuit
+# --- expansion: more persons, agreement, preposition insertion, idioms, negation ---
+it	tu mangiare pane	tu mangi il pane
+it	lui volere acqua	lui vuole l'acqua
+it	lei volere latte	lei vuole il latte
+it	noi mangiare pizza	noi mangiamo la pizza
+it	voi giocare	voi giocate
+it	loro dormire	loro dormono
+it	lui essere felice	lui è felice
+it	lei essere stanco	lei è stanca
+it	noi essere stanco	noi siamo stanchi
+it	loro essere arrabbiato	loro sono arrabbiati
+it	io bere acqua	io bevo l'acqua
+it	io mangiare frutta	io mangio la frutta
+it	io mangiare banana	io mangio la banana
+it	io mangiare carne	io mangio la carne
+it	io volere pane	io voglio il pane
+it	io volere acqua	io voglio l'acqua
+it	io volere caffè	io voglio il caffè
+it	io volere cioccolato	io voglio il cioccolato
+it	io volere carota	io voglio la carota
+it	io volere cereali	io voglio i cereali
+it	io volere caramella	io voglio la caramella
+it	io volere macchina	io voglio la macchina
+it	io andare scuola	io vado a scuola
+it	io andare bagno	io vado in bagno
+it	noi andare casa	noi andiamo a casa
+it	io volere andare casa	io voglio andare a casa
+it	io volere giocare parco	io voglio giocare al parco
+it	io volere bere caffè	io voglio bere il caffè
+it	fame	ho fame
+it	sete	ho sete
+it	sonno	ho sonno
+it	paura	ho paura
+it	io avere sonno	io ho sonno
+it	io avere paura	io ho paura
+it	io stare bene	io sto bene
+it	io essere malato	io sono malato
+it	io potere giocare	io posso giocare
+it	io dovere dormire	io devo dormire
+it	io volere fare pipì	io voglio fare pipì
+it	io volere lavare denti	io voglio lavare i denti
+it	io volere aiuto	io voglio aiuto
+it	io non volere dormire	non voglio dormire
+it	io non avere fame	non ho fame
+it	io non volere acqua	io non voglio l'acqua
+en	you eat bread	you eat the bread
+en	he want water	he wants the water
+en	she want milk	she wants the milk
+en	we eat pizza	we eat the pizza
+en	they sleep	they sleep
+en	I drink water	I drink the water
+en	I eat fruit	I eat the fruit
+en	I want bread	I want the bread
+en	I want water	I want the water
+en	I go school	I go to school
+en	I go bathroom	I go to the bathroom
+en	I am sick	I am sick
+en	I want sleep	I want to sleep
+en	I not want sleep	I do not want to sleep
+en	I want help	I want help
+en	I can play	I can play
+en	I must sleep	I must sleep
+en	he is happy	he is happy
+en	she is tired	she is tired
+en	we are tired	we are tired
