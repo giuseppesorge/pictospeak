@@ -1,10 +1,10 @@
 package io.github.giuseppesorge.pictospeak.tools.lexiconbuild
 
-import io.github.giuseppesorge.pictospeak.nlg.api.AdjectiveEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Auxiliary
-import io.github.giuseppesorge.pictospeak.nlg.api.Gender
-import io.github.giuseppesorge.pictospeak.nlg.api.LexiconEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Person
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.AdjectiveEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.Auxiliary
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.Gender
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.LexiconEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.Person
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path

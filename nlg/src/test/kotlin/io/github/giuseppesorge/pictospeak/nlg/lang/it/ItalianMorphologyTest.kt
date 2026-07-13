@@ -1,6 +1,5 @@
 package io.github.giuseppesorge.pictospeak.nlg.lang.it
 
-import io.github.giuseppesorge.pictospeak.nlg.api.Gender
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

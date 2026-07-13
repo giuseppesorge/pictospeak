@@ -1,12 +1,12 @@
 package io.github.giuseppesorge.pictospeak
 
-import io.github.giuseppesorge.pictospeak.nlg.api.AdjectiveEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Lexicon
-import io.github.giuseppesorge.pictospeak.nlg.api.NounEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Person
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 import io.github.giuseppesorge.pictospeak.nlg.api.Pos
-import io.github.giuseppesorge.pictospeak.nlg.api.VerbEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.AdjectiveEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.ItalianLexicon
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.NounEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.Person
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.VerbEntry
 import kotlinx.serialization.json.Json
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -24,7 +24,7 @@ class LexiconAssetsTest {
     private val json = Json { ignoreUnknownKeys = true }
     private val language = "it"
 
-    private fun lexicon(): Lexicon =
+    private fun lexicon(): ItalianLexicon =
         json.decodeFromString(Files.readString(assets.resolve("lexicon/lexicon_$language.json")))
 
     private fun catalog(): List<PictogramToken> =

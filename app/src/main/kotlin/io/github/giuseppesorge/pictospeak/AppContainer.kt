@@ -3,13 +3,11 @@ package io.github.giuseppesorge.pictospeak
 import android.content.Context
 import io.github.giuseppesorge.pictospeak.data.AssetVocabularyRepository
 import io.github.giuseppesorge.pictospeak.data.VocabularyRepository
-import io.github.giuseppesorge.pictospeak.nlg.api.Lexicon
 import io.github.giuseppesorge.pictospeak.nlg.api.SentenceEngine
 import io.github.giuseppesorge.pictospeak.nlg.api.SentenceRefiner
 import io.github.giuseppesorge.pictospeak.nlg.engine.TemplateSentenceEngine
 import io.github.giuseppesorge.pictospeak.speech.AndroidTtsGateway
 import io.github.giuseppesorge.pictospeak.speech.TtsGateway
-import kotlinx.serialization.json.Json
 
 /**
  * Manual dependency wiring — deliberately no DI framework (docs/adr/0003).
@@ -18,18 +16,18 @@ import kotlinx.serialization.json.Json
 class AppContainer(
     private val appContext: Context,
 ) {
-    // Language selection becomes profile-driven when profiles land; "it" is the first
-    // implemented LanguagePack (docs/language-packs.md).
-    // The lexicon is a ~130KB JSON parsed once, lazily (measured negligible against the
-    // cold-start budget; revisit if the M1 gate numbers ever say otherwise).
+    // Active language — becomes profile-driven when profiles land. Italian and English are
+    // the supported LanguagePacks (docs/language-packs.md).
+    private val language = "it"
+
+    // The engine parses the pack's lexicon JSON once, lazily (a ~130KB read; negligible
+    // against the cold-start budget). The engine never names a lexicon type — each realizer
+    // owns its own, so adding a language is a new pack, not an engine change.
     val sentenceEngine: SentenceEngine by lazy {
-        TemplateSentenceEngine(language = "it", lexicon = loadLexicon("it"))
+        TemplateSentenceEngine.forLanguage(language, readAsset("lexicon/lexicon_$language.json"))
     }
 
-    private fun loadLexicon(language: String): Lexicon =
-        appContext.assets.open("lexicon/lexicon_$language.json").use { stream ->
-            Json { ignoreUnknownKeys = true }.decodeFromString(stream.readBytes().decodeToString())
-        }
+    private fun readAsset(path: String): String = appContext.assets.open(path).use { it.readBytes().decodeToString() }
 
     /** Null in the foss flavor and on non-capable devices — templates are the product. */
     val sentenceRefiner: SentenceRefiner? by lazy { RefinerFactory.create() }
@@ -37,6 +35,6 @@ class AppContainer(
     val ttsGateway: TtsGateway by lazy { AndroidTtsGateway(appContext) }
 
     val vocabularyRepository: VocabularyRepository by lazy {
-        AssetVocabularyRepository(appContext, language = "it")
+        AssetVocabularyRepository(appContext, language = language)
     }
 }

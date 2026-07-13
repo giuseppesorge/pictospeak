@@ -1,10 +1,10 @@
 package io.github.giuseppesorge.pictospeak.tools.lexiconbuild
 
-import io.github.giuseppesorge.pictospeak.nlg.api.AdjectiveEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Lexicon
-import io.github.giuseppesorge.pictospeak.nlg.api.LexiconEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.NounEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.VerbEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.AdjectiveEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.ItalianLexicon
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.LexiconEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.NounEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.VerbEntry
 import kotlinx.serialization.json.Json
 import java.nio.file.Files
 import java.nio.file.Path
@@ -61,7 +61,7 @@ fun main(args: Array<String>) {
     val assetsDir = repoRoot.resolve("app/src/main/assets/lexicon")
     Files.createDirectories(assetsDir)
     val json = Json { prettyPrint = true }
-    val lexicon = Lexicon(language = lang, entries = entries, unsupported = unsupported.sorted())
+    val lexicon = ItalianLexicon(language = lang, entries = entries, unsupported = unsupported.sorted())
     Files.writeString(assetsDir.resolve("lexicon_$lang.json"), json.encodeToString(lexicon))
     writeReferenceTable(repoRoot, lang, rows, entries.map { it.lemma }.toSet())
     writeLicense(assetsDir)

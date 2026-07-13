@@ -8,7 +8,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class TemplateSentenceEngineTest {
-    private val engine = TemplateSentenceEngine(language = "it")
+    private val engine = TemplateSentenceEngine.forLanguage("it", null)
 
     private fun token(
         lemma: String,

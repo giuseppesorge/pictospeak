@@ -1,8 +1,5 @@
 package io.github.giuseppesorge.pictospeak.nlg.lang.it
 
-import io.github.giuseppesorge.pictospeak.nlg.api.AdjectiveEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Gender
-
 /**
  * Italian article selection and agreement — pure phonological/morphological rules
  * (docs/grammar-v1.md items 4-6). Word-specific facts stay in the lexicon; only

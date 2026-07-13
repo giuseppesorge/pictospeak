@@ -31,8 +31,17 @@ application {
     mainClass.set("io.github.giuseppesorge.pictospeak.tools.lexiconbuild.MainKt")
 }
 
+// English pack builder (rule-based morphology + curated irregulars; no Morph-it!):
+//   ./gradlew :tools:lexicon-build:runEn
+tasks.register<JavaExec>("runEn") {
+    group = "application"
+    description = "Build the English lexicon asset (lexicon_en.json)."
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("io.github.giuseppesorge.pictospeak.tools.lexiconbuilden.MainKt")
+}
+
 dependencies {
-    implementation(project(":nlg")) // Lexicon model: single source of truth for the asset format
+    implementation(project(":nlg")) // lexicon models: single source of truth for the asset format
     implementation(libs.serialization.json)
 
     testImplementation(libs.junit4)

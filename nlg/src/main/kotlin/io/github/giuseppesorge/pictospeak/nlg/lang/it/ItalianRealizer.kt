@@ -1,16 +1,9 @@
 package io.github.giuseppesorge.pictospeak.nlg.lang.it
 
-import io.github.giuseppesorge.pictospeak.nlg.api.AdjectiveEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Auxiliary
 import io.github.giuseppesorge.pictospeak.nlg.api.CandidateSource
-import io.github.giuseppesorge.pictospeak.nlg.api.Gender
-import io.github.giuseppesorge.pictospeak.nlg.api.Lexicon
-import io.github.giuseppesorge.pictospeak.nlg.api.NounEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Person
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 import io.github.giuseppesorge.pictospeak.nlg.api.Pos
 import io.github.giuseppesorge.pictospeak.nlg.api.SentenceCandidate
-import io.github.giuseppesorge.pictospeak.nlg.api.VerbEntry
 import io.github.giuseppesorge.pictospeak.nlg.lang.LanguageRealizer
 
 /**
@@ -31,7 +24,7 @@ import io.github.giuseppesorge.pictospeak.nlg.lang.LanguageRealizer
  * as alternative).
  */
 class ItalianRealizer(
-    lexicon: Lexicon,
+    lexicon: ItalianLexicon,
 ) : LanguageRealizer {
     private val entries = lexicon.entries.associateBy { it.lemma.lowercase() }
     private val avere = entries["avere"] as? VerbEntry

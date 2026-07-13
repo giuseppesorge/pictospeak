@@ -1,11 +1,11 @@
 package io.github.giuseppesorge.pictospeak.tools.lexiconbuild
 
-import io.github.giuseppesorge.pictospeak.nlg.api.AdjectiveEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Gender
-import io.github.giuseppesorge.pictospeak.nlg.api.LexiconEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.NounEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Person
-import io.github.giuseppesorge.pictospeak.nlg.api.VerbEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.AdjectiveEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.Gender
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.LexiconEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.NounEntry
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.Person
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.VerbEntry
 
 internal val PERSON_TAGS =
     mapOf(

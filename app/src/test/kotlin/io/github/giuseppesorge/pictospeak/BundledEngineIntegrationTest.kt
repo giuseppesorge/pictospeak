@@ -1,7 +1,6 @@
 package io.github.giuseppesorge.pictospeak
 
 import io.github.giuseppesorge.pictospeak.nlg.api.CandidateSource
-import io.github.giuseppesorge.pictospeak.nlg.api.Lexicon
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 import io.github.giuseppesorge.pictospeak.nlg.engine.TemplateSentenceEngine
 import kotlinx.serialization.json.Json
@@ -19,13 +18,12 @@ class BundledEngineIntegrationTest {
     private val json = Json { ignoreUnknownKeys = true }
     private val assets = Paths.get("src/main/assets")
 
-    private val lexicon: Lexicon =
-        json.decodeFromString(Files.readString(assets.resolve("lexicon/lexicon_it.json")))
     private val catalog: Map<String, PictogramToken> =
         json
             .decodeFromString<List<PictogramToken>>(Files.readString(assets.resolve("arasaac/catalog_it.json")))
             .associateBy { it.lemma.lowercase() }
-    private val engine = TemplateSentenceEngine(language = "it", lexicon = lexicon)
+    private val engine =
+        TemplateSentenceEngine.forLanguage("it", Files.readString(assets.resolve("lexicon/lexicon_it.json")))
 
     private fun tokens(vararg lemmas: String): List<PictogramToken> =
         lemmas.map { requireNotNull(catalog[it]) { "lemma '$it' not in bundled catalog" } }

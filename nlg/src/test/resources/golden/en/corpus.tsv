@@ -1,0 +1,68 @@
+# Golden corpus — the executable spec of grammar v1 (English).
+# Format: space-separated tokens "lemma:POS" <TAB> expected DEFAULT candidate.
+# "CONCAT" = no pattern may match; the only candidate is the concat fallback.
+# Change lines only with linguistic justification in the PR (docs/grammar-v1.md).
+#
+# --- present simple, S-V, base vs 3rd-person -s ------------------------------
+I:MISC eat:VERB	I eat
+you:MISC eat:VERB	you eat
+he:MISC eat:VERB	he eats
+she:MISC eat:VERB	she eats
+it:MISC eat:VERB	it eats
+we:MISC eat:VERB	we eat
+they:MISC eat:VERB	they eat
+he:MISC go:VERB	he goes
+she:MISC watch:VERB	she watches
+they:MISC sleep:VERB	they sleep
+# --- pro-drop default: no subject -> "I" ------------------------------------
+eat:VERB	I eat
+sleep:VERB	I sleep
+# --- S-V-O with definite article default ------------------------------------
+I:MISC eat:VERB pizza:NOUN	I eat the pizza
+he:MISC eat:VERB pizza:NOUN	he eats the pizza
+I:MISC drink:VERB water:NOUN	I drink the water
+mum:NOUN eat:VERB pizza:NOUN	the mum eats the pizza
+# --- want + to-infinitive ----------------------------------------------------
+I:MISC want:VERB eat:VERB pizza:NOUN	I want to eat the pizza
+want:VERB eat:VERB pizza:NOUN	I want to eat the pizza
+he:MISC want:VERB eat:VERB	he wants to eat
+they:MISC want:VERB drink:VERB water:NOUN	they want to drink the water
+# --- want + object (no infinitive) ------------------------------------------
+I:MISC want:VERB pizza:NOUN	I want the pizza
+he:MISC want:VERB water:NOUN	he wants the water
+# --- modal can/must + bare infinitive ---------------------------------------
+I:MISC can:VERB go:VERB	I can go
+he:MISC can:VERB go:VERB	he can go
+we:MISC must:VERB sleep:VERB	we must sleep
+I:MISC can:VERB eat:VERB pizza:NOUN	I can eat the pizza
+# --- copula + adjective (invariable) ----------------------------------------
+I:MISC be:VERB happy:DESCRIPTOR	I am happy
+you:MISC be:VERB tired:DESCRIPTOR	you are tired
+he:MISC be:VERB tired:DESCRIPTOR	he is tired
+she:MISC be:VERB happy:DESCRIPTOR	she is happy
+we:MISC be:VERB tired:DESCRIPTOR	we are tired
+they:MISC be:VERB happy:DESCRIPTOR	they are happy
+mum:NOUN be:VERB tired:DESCRIPTOR	the mum is tired
+# --- prenominal adjective + a/an by sound -----------------------------------
+I:MISC want:VERB big:DESCRIPTOR pizza:NOUN	I want the big pizza
+I:MISC eat:VERB red:DESCRIPTOR apple:NOUN	I eat the red apple
+I:MISC want:VERB eat:VERB big:DESCRIPTOR pizza:NOUN	I want to eat the big pizza
+# --- negation with do-support -----------------------------------------------
+I:MISC not:DESCRIPTOR eat:VERB	I do not eat
+he:MISC not:DESCRIPTOR eat:VERB	he does not eat
+not:DESCRIPTOR eat:VERB pizza:NOUN	I do not eat the pizza
+I:MISC not:DESCRIPTOR want:VERB eat:VERB	I do not want to eat
+he:MISC not:DESCRIPTOR want:VERB eat:VERB	he does not want to eat
+she:MISC not:DESCRIPTOR be:VERB tired:DESCRIPTOR	she is not tired
+I:MISC not:DESCRIPTOR be:VERB happy:DESCRIPTOR	I am not happy
+I:MISC can:VERB not:DESCRIPTOR go:VERB	I cannot go
+he:MISC must:VERB not:DESCRIPTOR sleep:VERB	he must not sleep
+# --- out-of-scope / never-guess -> concat -----------------------------------
+I:MISC go:VERB house:NOUN	CONCAT
+sleep:VERB pizza:NOUN	CONCAT
+I:MISC can:VERB	CONCAT
+I:MISC eat:VERB drink:VERB	CONCAT
+big:DESCRIPTOR pizza:NOUN	CONCAT
+I:MISC eat:VERB big:DESCRIPTOR	CONCAT
+I:MISC be:VERB pizza:NOUN	CONCAT
+not:DESCRIPTOR I:MISC eat:VERB	CONCAT

@@ -3,6 +3,7 @@ package io.github.giuseppesorge.pictospeak.nlg.engine
 import io.github.giuseppesorge.pictospeak.nlg.api.CandidateSource
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 import io.github.giuseppesorge.pictospeak.nlg.api.Pos
+import io.github.giuseppesorge.pictospeak.nlg.lang.it.ItalianRealizer
 import io.github.giuseppesorge.pictospeak.nlg.lang.it.TestLexicon
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -13,7 +14,7 @@ import org.junit.Test
  * becomes a new line in the corpus (docs/grammar-v1.md).
  */
 class GoldenCorpusTest {
-    private val engine = TemplateSentenceEngine(language = "it", lexicon = TestLexicon.lexicon)
+    private val engine = TemplateSentenceEngine(ItalianRealizer(TestLexicon.lexicon))
 
     private data class Case(
         val line: Int,

@@ -37,7 +37,7 @@ class BoardViewModelTest {
 
     private fun viewModel() =
         BoardViewModel(
-            sentenceEngine = TemplateSentenceEngine(language = "it"),
+            sentenceEngine = TemplateSentenceEngine.forLanguage("it", null),
             sentenceRefiner = null,
             ttsGateway = tts,
             vocabularyRepository = FakeVocabularyRepository(listOf(io, mangiare)),

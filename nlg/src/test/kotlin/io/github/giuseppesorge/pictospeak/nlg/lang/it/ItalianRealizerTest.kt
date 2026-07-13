@@ -10,7 +10,7 @@ import org.junit.Test
 
 /** Alternatives and safety properties that the golden corpus (defaults only) cannot see. */
 class ItalianRealizerTest {
-    private val engine = TemplateSentenceEngine(language = "it", lexicon = TestLexicon.lexicon)
+    private val engine = TemplateSentenceEngine(ItalianRealizer(TestLexicon.lexicon))
 
     private fun t(
         lemma: String,
@@ -86,14 +86,14 @@ class ItalianRealizerTest {
 
     @Test
     fun `empty lexicon means concat-only engine`() {
-        val bare = TemplateSentenceEngine(language = "it")
+        val bare = TemplateSentenceEngine(ItalianRealizer(ItalianLexicon.parse(null)))
         val candidates = bare.propose(listOf(t("io", Pos.MISC), t("mangiare", Pos.VERB)))
         assertEquals(CandidateSource.FALLBACK_CONCAT, candidates.single().source)
     }
 
     @Test
     fun `unknown language is concat-only by design`() {
-        val engine = TemplateSentenceEngine(language = "xx", lexicon = TestLexicon.lexicon)
+        val engine = TemplateSentenceEngine.forLanguage("xx", null)
         val candidates = engine.propose(listOf(t("io", Pos.MISC), t("mangiare", Pos.VERB)))
         assertEquals(CandidateSource.FALLBACK_CONCAT, candidates.single().source)
     }

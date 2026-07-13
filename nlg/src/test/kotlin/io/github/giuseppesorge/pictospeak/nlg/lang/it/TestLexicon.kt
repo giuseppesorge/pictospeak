@@ -1,13 +1,5 @@
 package io.github.giuseppesorge.pictospeak.nlg.lang.it
 
-import io.github.giuseppesorge.pictospeak.nlg.api.AdjectiveEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Auxiliary
-import io.github.giuseppesorge.pictospeak.nlg.api.Gender
-import io.github.giuseppesorge.pictospeak.nlg.api.Lexicon
-import io.github.giuseppesorge.pictospeak.nlg.api.NounEntry
-import io.github.giuseppesorge.pictospeak.nlg.api.Person
-import io.github.giuseppesorge.pictospeak.nlg.api.VerbEntry
-
 /**
  * Self-contained fixture so the engine's tests do not depend on the bundled asset
  * (which is validated separately in :app). Includes "succedere" to encode the
@@ -34,7 +26,7 @@ object TestLexicon {
     // NOTE: object properties initialize top-to-bottom, so the verb entries are built here
     // inline (no forward references to helper lists).
     val lexicon =
-        Lexicon(
+        ItalianLexicon(
             language = "it",
             entries =
                 listOf(
