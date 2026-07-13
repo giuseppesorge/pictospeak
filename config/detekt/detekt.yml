@@ -7,6 +7,11 @@ naming:
     # Composable functions are PascalCase by Compose convention.
     ignoreAnnotated: ['Composable']
 
+complexity:
+  LongParameterList:
+    # Composable signatures idiomatically carry one lambda per user event.
+    ignoreAnnotated: ['Composable']
+
 style:
   MagicNumber:
     # Enum constructor arguments (e.g. the Fitzgerald ARGB palette) are the named

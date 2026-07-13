@@ -2,10 +2,14 @@ package io.github.giuseppesorge.pictospeak.ui.board
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import io.github.giuseppesorge.pictospeak.data.VocabularyRepository
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 import io.github.giuseppesorge.pictospeak.nlg.api.SentenceCandidate
 import io.github.giuseppesorge.pictospeak.nlg.api.SentenceEngine
 import io.github.giuseppesorge.pictospeak.nlg.api.SentenceRefiner
+import io.github.giuseppesorge.pictospeak.speech.ConfirmationGate
+import io.github.giuseppesorge.pictospeak.speech.TtsGateway
+import io.github.giuseppesorge.pictospeak.speech.TtsReadiness
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -17,6 +21,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeoutOrNull
 
 data class BoardUiState(
+    /** Board vocabulary from the bundled catalog (empty until loaded). */
+    val vocabulary: List<PictogramToken> = emptyList(),
     /** Message strip, in selection order. Capped — AAC messages are short by design. */
     val selection: List<PictogramToken> = emptyList(),
     /** Index 0 is ALWAYS the template default; an LLM candidate is only ever appended. */
@@ -27,12 +33,24 @@ data class BoardUiState(
 class BoardViewModel(
     private val sentenceEngine: SentenceEngine,
     private val sentenceRefiner: SentenceRefiner?,
+    private val ttsGateway: TtsGateway,
+    vocabularyRepository: VocabularyRepository,
     private val computeDispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(BoardUiState())
     val uiState: StateFlow<BoardUiState> = _uiState.asStateFlow()
 
+    val speaking: StateFlow<Boolean> = ttsGateway.speaking
+    val ttsReadiness: StateFlow<TtsReadiness> = ttsGateway.readiness
+
     private var recomputeJob: Job? = null
+
+    init {
+        viewModelScope.launch {
+            val vocabulary = vocabularyRepository.load()
+            _uiState.update { it.copy(vocabulary = vocabulary) }
+        }
+    }
 
     fun onPictogramTapped(token: PictogramToken) {
         if (_uiState.value.selection.size >= MAX_SELECTION) return
@@ -54,6 +72,21 @@ class BoardViewModel(
         _uiState.update { state ->
             if (index in state.candidates.indices) state.copy(selectedCandidateIndex = index) else state
         }
+    }
+
+    /**
+     * INVARIANT-1: the ONLY code path that leads to speech. This handler is invoked
+     * exclusively by the user's explicit tap on the speak button, and this is the single
+     * [ConfirmationGate.confirm] call site in the app.
+     */
+    fun onSpeakPressed() {
+        val state = _uiState.value
+        val candidate = state.candidates.getOrNull(state.selectedCandidateIndex) ?: return
+        ttsGateway.speak(ConfirmationGate.confirm(candidate))
+    }
+
+    fun onStopPressed() {
+        ttsGateway.stop()
     }
 
     private fun recompute() {

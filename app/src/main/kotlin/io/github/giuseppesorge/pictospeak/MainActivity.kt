@@ -33,6 +33,8 @@ class MainActivity : ComponentActivity() {
                                 BoardViewModel(
                                     sentenceEngine = container.sentenceEngine,
                                     sentenceRefiner = container.sentenceRefiner,
+                                    ttsGateway = container.ttsGateway,
+                                    vocabularyRepository = container.vocabularyRepository,
                                 )
                             }
                         BoardScreen(viewModel)

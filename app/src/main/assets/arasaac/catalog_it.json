@@ -1,0 +1,3122 @@
+[
+  {
+    "id": "2239",
+    "lemma": "ape",
+    "pos": "NOUN",
+    "label": "ape"
+  },
+  {
+    "id": "2242",
+    "lemma": "cappotto",
+    "pos": "NOUN",
+    "label": "cappotto"
+  },
+  {
+    "id": "2243",
+    "lemma": "nonna",
+    "pos": "NOUN",
+    "label": "nonna"
+  },
+  {
+    "id": "2244",
+    "lemma": "nonno",
+    "pos": "NOUN",
+    "label": "nonno"
+  },
+  {
+    "id": "2245",
+    "lemma": "noioso",
+    "pos": "DESCRIPTOR",
+    "label": "noioso"
+  },
+  {
+    "id": "2246",
+    "lemma": "olio di oliva",
+    "pos": "NOUN",
+    "label": "olio di oliva"
+  },
+  {
+    "id": "2247",
+    "lemma": "marciapiede",
+    "pos": "NOUN",
+    "label": "marciapiede"
+  },
+  {
+    "id": "2248",
+    "lemma": "acqua",
+    "pos": "NOUN",
+    "label": "acqua"
+  },
+  {
+    "id": "2249",
+    "lemma": "tappeto",
+    "pos": "NOUN",
+    "label": "tappeto"
+  },
+  {
+    "id": "2250",
+    "lemma": "cuscino",
+    "pos": "NOUN",
+    "label": "cuscino"
+  },
+  {
+    "id": "2251",
+    "lemma": "ambulanza",
+    "pos": "NOUN",
+    "label": "ambulanza"
+  },
+  {
+    "id": "2252",
+    "lemma": "anello",
+    "pos": "NOUN",
+    "label": "anello"
+  },
+  {
+    "id": "2253",
+    "lemma": "antenna",
+    "pos": "NOUN",
+    "label": "antenna"
+  },
+  {
+    "id": "2254",
+    "lemma": "ragno",
+    "pos": "NOUN",
+    "label": "ragno"
+  },
+  {
+    "id": "2255",
+    "lemma": "amici",
+    "pos": "NOUN",
+    "label": "amici"
+  },
+  {
+    "id": "2256",
+    "lemma": "albero",
+    "pos": "NOUN",
+    "label": "albero"
+  },
+  {
+    "id": "2257",
+    "lemma": "scoiattolo",
+    "pos": "NOUN",
+    "label": "scoiattolo"
+  },
+  {
+    "id": "2258",
+    "lemma": "armadio",
+    "pos": "NOUN",
+    "label": "armadio"
+  },
+  {
+    "id": "2259",
+    "lemma": "riso al pomodoro",
+    "pos": "NOUN",
+    "label": "riso al pomodoro"
+  },
+  {
+    "id": "2260",
+    "lemma": "ascensore",
+    "pos": "NOUN",
+    "label": "ascensore"
+  },
+  {
+    "id": "2261",
+    "lemma": "spaventato",
+    "pos": "DESCRIPTOR",
+    "label": "spaventato"
+  },
+  {
+    "id": "2262",
+    "lemma": "bus turistico",
+    "pos": "NOUN",
+    "label": "bus turistico"
+  },
+  {
+    "id": "2263",
+    "lemma": "autobus",
+    "pos": "NOUN",
+    "label": "autobus"
+  },
+  {
+    "id": "2264",
+    "lemma": "aereo",
+    "pos": "NOUN",
+    "label": "aereo"
+  },
+  {
+    "id": "2265",
+    "lemma": "zuccheriera",
+    "pos": "NOUN",
+    "label": "zuccheriera"
+  },
+  {
+    "id": "2266",
+    "lemma": "zuccheriera",
+    "pos": "NOUN",
+    "label": "zuccheriera"
+  },
+  {
+    "id": "2267",
+    "lemma": "bavaglino",
+    "pos": "NOUN",
+    "label": "bavaglino"
+  },
+  {
+    "id": "2268",
+    "lemma": "balena",
+    "pos": "NOUN",
+    "label": "balena"
+  },
+  {
+    "id": "2269",
+    "lemma": "pallone",
+    "pos": "NOUN",
+    "label": "pallone"
+  },
+  {
+    "id": "2270",
+    "lemma": "costume da bagno",
+    "pos": "NOUN",
+    "label": "costume da bagno"
+  },
+  {
+    "id": "2271",
+    "lemma": "fare il bagno",
+    "pos": "VERB",
+    "label": "fare il bagno"
+  },
+  {
+    "id": "2272",
+    "lemma": "vasca da bagno",
+    "pos": "NOUN",
+    "label": "vasca da bagno"
+  },
+  {
+    "id": "2273",
+    "lemma": "nave",
+    "pos": "NOUN",
+    "label": "nave"
+  },
+  {
+    "id": "2274",
+    "lemma": "sbattitore elettrico",
+    "pos": "NOUN",
+    "label": "sbattitore elettrico"
+  },
+  {
+    "id": "2275",
+    "lemma": "neonato",
+    "pos": "NOUN",
+    "label": "neonato"
+  },
+  {
+    "id": "2276",
+    "lemma": "bere",
+    "pos": "VERB",
+    "label": "bere"
+  },
+  {
+    "id": "2277",
+    "lemma": "bicicletta",
+    "pos": "NOUN",
+    "label": "bicicletta"
+  },
+  {
+    "id": "2278",
+    "lemma": "bidet",
+    "pos": "NOUN",
+    "label": "bidet"
+  },
+  {
+    "id": "2279",
+    "lemma": "bikini",
+    "pos": "NOUN",
+    "label": "bikini"
+  },
+  {
+    "id": "2280",
+    "lemma": "blusa",
+    "pos": "NOUN",
+    "label": "blusa"
+  },
+  {
+    "id": "2281",
+    "lemma": "panino",
+    "pos": "NOUN",
+    "label": "panino"
+  },
+  {
+    "id": "2282",
+    "lemma": "penna a sfera",
+    "pos": "NOUN",
+    "label": "penna a sfera"
+  },
+  {
+    "id": "2283",
+    "lemma": "bowling",
+    "pos": "NOUN",
+    "label": "bowling"
+  },
+  {
+    "id": "2284",
+    "lemma": "borsa",
+    "pos": "NOUN",
+    "label": "borsa"
+  },
+  {
+    "id": "2285",
+    "lemma": "lampadina",
+    "pos": "NOUN",
+    "label": "lampadina"
+  },
+  {
+    "id": "2286",
+    "lemma": "cancellare",
+    "pos": "VERB",
+    "label": "cancellare"
+  },
+  {
+    "id": "2287",
+    "lemma": "stivali",
+    "pos": "NOUN",
+    "label": "stivali"
+  },
+  {
+    "id": "2288",
+    "lemma": "bottiglia",
+    "pos": "NOUN",
+    "label": "bottiglia"
+  },
+  {
+    "id": "2289",
+    "lemma": "mutande",
+    "pos": "NOUN",
+    "label": "mutande"
+  },
+  {
+    "id": "2290",
+    "lemma": "sciarpa",
+    "pos": "NOUN",
+    "label": "sciarpa"
+  },
+  {
+    "id": "2291",
+    "lemma": "asino",
+    "pos": "NOUN",
+    "label": "asino"
+  },
+  {
+    "id": "2292",
+    "lemma": "buca delle lettere",
+    "pos": "NOUN",
+    "label": "buca delle lettere"
+  },
+  {
+    "id": "2293",
+    "lemma": "cassetta delle lettere",
+    "pos": "NOUN",
+    "label": "cassetta delle lettere"
+  },
+  {
+    "id": "2294",
+    "lemma": "cavallo",
+    "pos": "NOUN",
+    "label": "cavallo"
+  },
+  {
+    "id": "2295",
+    "lemma": "capra",
+    "pos": "NOUN",
+    "label": "capra"
+  },
+  {
+    "id": "2296",
+    "lemma": "caffè",
+    "pos": "NOUN",
+    "label": "caffè"
+  },
+  {
+    "id": "2297",
+    "lemma": "caffettiera",
+    "pos": "NOUN",
+    "label": "caffettiera"
+  },
+  {
+    "id": "2298",
+    "lemma": "calzini",
+    "pos": "NOUN",
+    "label": "calzini"
+  },
+  {
+    "id": "2299",
+    "lemma": "via",
+    "pos": "NOUN",
+    "label": "via"
+  },
+  {
+    "id": "2300",
+    "lemma": "accaldato",
+    "pos": "DESCRIPTOR",
+    "label": "accaldato"
+  },
+  {
+    "id": "2302",
+    "lemma": "strada",
+    "pos": "NOUN",
+    "label": "strada"
+  },
+  {
+    "id": "2303",
+    "lemma": "slip",
+    "pos": "NOUN",
+    "label": "slip"
+  },
+  {
+    "id": "2304",
+    "lemma": "letto",
+    "pos": "NOUN",
+    "label": "letto"
+  },
+  {
+    "id": "2305",
+    "lemma": "dromedario",
+    "pos": "NOUN",
+    "label": "dromedario"
+  },
+  {
+    "id": "2306",
+    "lemma": "camion",
+    "pos": "NOUN",
+    "label": "camion"
+  },
+  {
+    "id": "2307",
+    "lemma": "camion giocattolo",
+    "pos": "NOUN",
+    "label": "camion giocattolo"
+  },
+  {
+    "id": "2308",
+    "lemma": "camicia",
+    "pos": "NOUN",
+    "label": "camicia"
+  },
+  {
+    "id": "2309",
+    "lemma": "maglietta",
+    "pos": "NOUN",
+    "label": "maglietta"
+  },
+  {
+    "id": "2310",
+    "lemma": "maglietta",
+    "pos": "NOUN",
+    "label": "maglietta"
+  },
+  {
+    "id": "2311",
+    "lemma": "camicia da notte",
+    "pos": "NOUN",
+    "label": "camicia da notte"
+  },
+  {
+    "id": "2312",
+    "lemma": "granchio",
+    "pos": "NOUN",
+    "label": "granchio"
+  },
+  {
+    "id": "2313",
+    "lemma": "canguro",
+    "pos": "NOUN",
+    "label": "canguro"
+  },
+  {
+    "id": "2314",
+    "lemma": "stanco",
+    "pos": "DESCRIPTOR",
+    "label": "stanco"
+  },
+  {
+    "id": "2315",
+    "lemma": "cantare",
+    "pos": "VERB",
+    "label": "cantare"
+  },
+  {
+    "id": "2316",
+    "lemma": "carne",
+    "pos": "NOUN",
+    "label": "carne"
+  },
+  {
+    "id": "2317",
+    "lemma": "casa",
+    "pos": "NOUN",
+    "label": "casa"
+  },
+  {
+    "id": "2318",
+    "lemma": "nacchere",
+    "pos": "NOUN",
+    "label": "nacchere"
+  },
+  {
+    "id": "2319",
+    "lemma": "giubbotto",
+    "pos": "NOUN",
+    "label": "giubbotto"
+  },
+  {
+    "id": "2320",
+    "lemma": "mestolo",
+    "pos": "NOUN",
+    "label": "mestolo"
+  },
+  {
+    "id": "2322",
+    "lemma": "CD",
+    "pos": "NOUN",
+    "label": "CD"
+  },
+  {
+    "id": "2323",
+    "lemma": "cipolla",
+    "pos": "NOUN",
+    "label": "cipolla"
+  },
+  {
+    "id": "2324",
+    "lemma": "zebra",
+    "pos": "NOUN",
+    "label": "zebra"
+  },
+  {
+    "id": "2325",
+    "lemma": "scotch",
+    "pos": "NOUN",
+    "label": "scotch"
+  },
+  {
+    "id": "2326",
+    "lemma": "lavare i denti",
+    "pos": "VERB",
+    "label": "lavare i denti"
+  },
+  {
+    "id": "2327",
+    "lemma": "maiale",
+    "pos": "NOUN",
+    "label": "maiale"
+  },
+  {
+    "id": "2328",
+    "lemma": "cereali",
+    "pos": "NOUN",
+    "label": "cereali"
+  },
+  {
+    "id": "2329",
+    "lemma": "ciliegie",
+    "pos": "NOUN",
+    "label": "ciliegie"
+  },
+  {
+    "id": "2330",
+    "lemma": "birra",
+    "pos": "NOUN",
+    "label": "birra"
+  },
+  {
+    "id": "2331",
+    "lemma": "champignon",
+    "pos": "NOUN",
+    "label": "champignon"
+  },
+  {
+    "id": "2332",
+    "lemma": "tuta da ginnastica",
+    "pos": "NOUN",
+    "label": "tuta da ginnastica"
+  },
+  {
+    "id": "2333",
+    "lemma": "comignolo",
+    "pos": "NOUN",
+    "label": "comignolo"
+  },
+  {
+    "id": "2334",
+    "lemma": "cioccolato",
+    "pos": "NOUN",
+    "label": "cioccolato"
+  },
+  {
+    "id": "2335",
+    "lemma": "salsiccia stagionata",
+    "pos": "NOUN",
+    "label": "salsiccia stagionata"
+  },
+  {
+    "id": "2336",
+    "lemma": "cintura",
+    "pos": "NOUN",
+    "label": "cintura"
+  },
+  {
+    "id": "2337",
+    "lemma": "cigno",
+    "pos": "NOUN",
+    "label": "cigno"
+  },
+  {
+    "id": "2338",
+    "lemma": "Coca-Cola",
+    "pos": "NOUN",
+    "label": "Coca-Cola"
+  },
+  {
+    "id": "2339",
+    "lemma": "automobile",
+    "pos": "NOUN",
+    "label": "automobile"
+  },
+  {
+    "id": "2340",
+    "lemma": "macchinina",
+    "pos": "NOUN",
+    "label": "macchinina"
+  },
+  {
+    "id": "2341",
+    "lemma": "cucina",
+    "pos": "NOUN",
+    "label": "cucina"
+  },
+  {
+    "id": "2342",
+    "lemma": "cucinare",
+    "pos": "VERB",
+    "label": "cucinare"
+  },
+  {
+    "id": "2343",
+    "lemma": "coccodrillo",
+    "pos": "NOUN",
+    "label": "coccodrillo"
+  },
+  {
+    "id": "2344",
+    "lemma": "razzo",
+    "pos": "NOUN",
+    "label": "razzo"
+  },
+  {
+    "id": "2345",
+    "lemma": "colino",
+    "pos": "NOUN",
+    "label": "colino"
+  },
+  {
+    "id": "2346",
+    "lemma": "materassino",
+    "pos": "NOUN",
+    "label": "materassino"
+  },
+  {
+    "id": "2347",
+    "lemma": "collana",
+    "pos": "NOUN",
+    "label": "collana"
+  },
+  {
+    "id": "2348",
+    "lemma": "colorare",
+    "pos": "VERB",
+    "label": "colorare"
+  },
+  {
+    "id": "2349",
+    "lemma": "mangiare",
+    "pos": "VERB",
+    "label": "mangiare"
+  },
+  {
+    "id": "2350",
+    "lemma": "aquilone",
+    "pos": "NOUN",
+    "label": "aquilone"
+  },
+  {
+    "id": "2351",
+    "lemma": "coniglio",
+    "pos": "NOUN",
+    "label": "coniglio"
+  },
+  {
+    "id": "2352",
+    "lemma": "confuso",
+    "pos": "DESCRIPTOR",
+    "label": "confuso"
+  },
+  {
+    "id": "2353",
+    "lemma": "portiere d'albergo",
+    "pos": "NOUN",
+    "label": "portiere d'albergo"
+  },
+  {
+    "id": "2354",
+    "lemma": "console",
+    "pos": "NOUN",
+    "label": "console"
+  },
+  {
+    "id": "2355",
+    "lemma": "contenitore per l'umido",
+    "pos": "NOUN",
+    "label": "contenitore per l'umido"
+  },
+  {
+    "id": "2356",
+    "lemma": "calice",
+    "pos": "NOUN",
+    "label": "calice"
+  },
+  {
+    "id": "2357",
+    "lemma": "tende",
+    "pos": "NOUN",
+    "label": "tende"
+  },
+  {
+    "id": "2358",
+    "lemma": "croissant",
+    "pos": "NOUN",
+    "label": "croissant"
+  },
+  {
+    "id": "2359",
+    "lemma": "quaderno",
+    "pos": "NOUN",
+    "label": "quaderno"
+  },
+  {
+    "id": "2360",
+    "lemma": "quadro",
+    "pos": "NOUN",
+    "label": "quadro"
+  },
+  {
+    "id": "2361",
+    "lemma": "secchiello e paletta",
+    "pos": "NOUN",
+    "label": "secchiello e paletta"
+  },
+  {
+    "id": "2362",
+    "lemma": "cucchiaio",
+    "pos": "NOUN",
+    "label": "cucchiaio"
+  },
+  {
+    "id": "2363",
+    "lemma": "mestolo",
+    "pos": "NOUN",
+    "label": "mestolo"
+  },
+  {
+    "id": "2364",
+    "lemma": "fiaba",
+    "pos": "NOUN",
+    "label": "fiaba"
+  },
+  {
+    "id": "2366",
+    "lemma": "grembiule da cucina",
+    "pos": "NOUN",
+    "label": "grembiule da cucina"
+  },
+  {
+    "id": "2367",
+    "lemma": "dolore",
+    "pos": "NOUN",
+    "label": "dolore"
+  },
+  {
+    "id": "2368",
+    "lemma": "ciambella",
+    "pos": "NOUN",
+    "label": "ciambella"
+  },
+  {
+    "id": "2369",
+    "lemma": "dormire",
+    "pos": "VERB",
+    "label": "dormire"
+  },
+  {
+    "id": "2370",
+    "lemma": "doccia",
+    "pos": "NOUN",
+    "label": "doccia"
+  },
+  {
+    "id": "2371",
+    "lemma": "fare la doccia",
+    "pos": "VERB",
+    "label": "fare la doccia"
+  },
+  {
+    "id": "2372",
+    "lemma": "elefante",
+    "pos": "NOUN",
+    "label": "elefante"
+  },
+  {
+    "id": "2373",
+    "lemma": "spina",
+    "pos": "NOUN",
+    "label": "spina"
+  },
+  {
+    "id": "2374",
+    "lemma": "arrabbiato",
+    "pos": "DESCRIPTOR",
+    "label": "arrabbiato"
+  },
+  {
+    "id": "2375",
+    "lemma": "infermiera",
+    "pos": "NOUN",
+    "label": "infermiera"
+  },
+  {
+    "id": "2376",
+    "lemma": "ammalarsi",
+    "pos": "VERB",
+    "label": "ammalarsi"
+  },
+  {
+    "id": "2377",
+    "lemma": "insalata",
+    "pos": "NOUN",
+    "label": "insalata"
+  },
+  {
+    "id": "2378",
+    "lemma": "impianto stereo",
+    "pos": "NOUN",
+    "label": "impianto stereo"
+  },
+  {
+    "id": "2379",
+    "lemma": "scala",
+    "pos": "NOUN",
+    "label": "scala"
+  },
+  {
+    "id": "2380",
+    "lemma": "scrivere",
+    "pos": "VERB",
+    "label": "scrivere"
+  },
+  {
+    "id": "2381",
+    "lemma": "ascoltare",
+    "pos": "VERB",
+    "label": "ascoltare"
+  },
+  {
+    "id": "2382",
+    "lemma": "scolapasta",
+    "pos": "NOUN",
+    "label": "scolapasta"
+  },
+  {
+    "id": "2383",
+    "lemma": "spaghetti",
+    "pos": "NOUN",
+    "label": "spaghetti"
+  },
+  {
+    "id": "2384",
+    "lemma": "asparagi",
+    "pos": "NOUN",
+    "label": "asparagi"
+  },
+  {
+    "id": "2385",
+    "lemma": "specchio",
+    "pos": "NOUN",
+    "label": "specchio"
+  },
+  {
+    "id": "2386",
+    "lemma": "scaffale",
+    "pos": "NOUN",
+    "label": "scaffale"
+  },
+  {
+    "id": "2387",
+    "lemma": "studiare",
+    "pos": "VERB",
+    "label": "studiare"
+  },
+  {
+    "id": "2389",
+    "lemma": "stufa elettrica",
+    "pos": "NOUN",
+    "label": "stufa elettrica"
+  },
+  {
+    "id": "2390",
+    "lemma": "scavatrice",
+    "pos": "NOUN",
+    "label": "scavatrice"
+  },
+  {
+    "id": "2391",
+    "lemma": "gonna",
+    "pos": "NOUN",
+    "label": "gonna"
+  },
+  {
+    "id": "2392",
+    "lemma": "famiglia",
+    "pos": "NOUN",
+    "label": "famiglia"
+  },
+  {
+    "id": "2393",
+    "lemma": "lampione",
+    "pos": "NOUN",
+    "label": "lampione"
+  },
+  {
+    "id": "2394",
+    "lemma": "statuetta",
+    "pos": "NOUN",
+    "label": "statuetta"
+  },
+  {
+    "id": "2395",
+    "lemma": "fisioterapista",
+    "pos": "NOUN",
+    "label": "fisioterapista"
+  },
+  {
+    "id": "2396",
+    "lemma": "flauto",
+    "pos": "NOUN",
+    "label": "flauto"
+  },
+  {
+    "id": "2397",
+    "lemma": "foca",
+    "pos": "NOUN",
+    "label": "foca"
+  },
+  {
+    "id": "2398",
+    "lemma": "fogli",
+    "pos": "NOUN",
+    "label": "fogli"
+  },
+  {
+    "id": "2399",
+    "lemma": "lavandino",
+    "pos": "NOUN",
+    "label": "lavandino"
+  },
+  {
+    "id": "2400",
+    "lemma": "fragola",
+    "pos": "NOUN",
+    "label": "fragola"
+  },
+  {
+    "id": "2401",
+    "lemma": "freddoloso",
+    "pos": "DESCRIPTOR",
+    "label": "freddoloso"
+  },
+  {
+    "id": "2402",
+    "lemma": "biscotti",
+    "pos": "NOUN",
+    "label": "biscotti"
+  },
+  {
+    "id": "2403",
+    "lemma": "gallina",
+    "pos": "NOUN",
+    "label": "gallina"
+  },
+  {
+    "id": "2404",
+    "lemma": "gallo",
+    "pos": "NOUN",
+    "label": "gallo"
+  },
+  {
+    "id": "2405",
+    "lemma": "ceci",
+    "pos": "NOUN",
+    "label": "ceci"
+  },
+  {
+    "id": "2406",
+    "lemma": "gatto",
+    "pos": "NOUN",
+    "label": "gatto"
+  },
+  {
+    "id": "2407",
+    "lemma": "mongolfiera",
+    "pos": "NOUN",
+    "label": "mongolfiera"
+  },
+  {
+    "id": "2408",
+    "lemma": "palloncino",
+    "pos": "NOUN",
+    "label": "palloncino"
+  },
+  {
+    "id": "2409",
+    "lemma": "gomma per cancellare",
+    "pos": "NOUN",
+    "label": "gomma per cancellare"
+  },
+  {
+    "id": "2410",
+    "lemma": "gorilla",
+    "pos": "NOUN",
+    "label": "gorilla"
+  },
+  {
+    "id": "2411",
+    "lemma": "berretto",
+    "pos": "NOUN",
+    "label": "berretto"
+  },
+  {
+    "id": "2412",
+    "lemma": "cappello da sci",
+    "pos": "NOUN",
+    "label": "cappello da sci"
+  },
+  {
+    "id": "2413",
+    "lemma": "spillatrice",
+    "pos": "NOUN",
+    "label": "spillatrice"
+  },
+  {
+    "id": "2414",
+    "lemma": "rubinetto",
+    "pos": "NOUN",
+    "label": "rubinetto"
+  },
+  {
+    "id": "2415",
+    "lemma": "guanti",
+    "pos": "NOUN",
+    "label": "guanti"
+  },
+  {
+    "id": "2417",
+    "lemma": "chitarra",
+    "pos": "NOUN",
+    "label": "chitarra"
+  },
+  {
+    "id": "2418",
+    "lemma": "gustare",
+    "pos": "VERB",
+    "label": "gustare"
+  },
+  {
+    "id": "2419",
+    "lemma": "hamburger",
+    "pos": "NOUN",
+    "label": "hamburger"
+  },
+  {
+    "id": "2420",
+    "lemma": "cono gelato",
+    "pos": "NOUN",
+    "label": "cono gelato"
+  },
+  {
+    "id": "2421",
+    "lemma": "elicottero",
+    "pos": "NOUN",
+    "label": "elicottero"
+  },
+  {
+    "id": "2422",
+    "lemma": "sorella",
+    "pos": "NOUN",
+    "label": "sorella"
+  },
+  {
+    "id": "2423",
+    "lemma": "fratello",
+    "pos": "NOUN",
+    "label": "fratello"
+  },
+  {
+    "id": "2424",
+    "lemma": "ippopotamo",
+    "pos": "NOUN",
+    "label": "ippopotamo"
+  },
+  {
+    "id": "2425",
+    "lemma": "formica",
+    "pos": "NOUN",
+    "label": "formica"
+  },
+  {
+    "id": "2426",
+    "lemma": "forno",
+    "pos": "NOUN",
+    "label": "forno"
+  },
+  {
+    "id": "2427",
+    "lemma": "uovo",
+    "pos": "NOUN",
+    "label": "uovo"
+  },
+  {
+    "id": "2428",
+    "lemma": "uovo fritto",
+    "pos": "NOUN",
+    "label": "uovo fritto"
+  },
+  {
+    "id": "2429",
+    "lemma": "infuso",
+    "pos": "NOUN",
+    "label": "infuso"
+  },
+  {
+    "id": "2430",
+    "lemma": "water",
+    "pos": "NOUN",
+    "label": "water"
+  },
+  {
+    "id": "2431",
+    "lemma": "interruttore",
+    "pos": "NOUN",
+    "label": "interruttore"
+  },
+  {
+    "id": "2432",
+    "lemma": "andare",
+    "pos": "VERB",
+    "label": "andare"
+  },
+  {
+    "id": "2433",
+    "lemma": "prosciutto crudo",
+    "pos": "NOUN",
+    "label": "prosciutto crudo"
+  },
+  {
+    "id": "2434",
+    "lemma": "giardino",
+    "pos": "NOUN",
+    "label": "giardino"
+  },
+  {
+    "id": "2435",
+    "lemma": "brocca",
+    "pos": "NOUN",
+    "label": "brocca"
+  },
+  {
+    "id": "2436",
+    "lemma": "maglione",
+    "pos": "NOUN",
+    "label": "maglione"
+  },
+  {
+    "id": "2437",
+    "lemma": "giraffa",
+    "pos": "NOUN",
+    "label": "giraffa"
+  },
+  {
+    "id": "2438",
+    "lemma": "fagiolini",
+    "pos": "NOUN",
+    "label": "fagiolini"
+  },
+  {
+    "id": "2439",
+    "lemma": "giocare",
+    "pos": "VERB",
+    "label": "giocare"
+  },
+  {
+    "id": "2440",
+    "lemma": "matita",
+    "pos": "NOUN",
+    "label": "matita"
+  },
+  {
+    "id": "2441",
+    "lemma": "lavandino",
+    "pos": "NOUN",
+    "label": "lavandino"
+  },
+  {
+    "id": "2442",
+    "lemma": "lavatrice",
+    "pos": "NOUN",
+    "label": "lavatrice"
+  },
+  {
+    "id": "2443",
+    "lemma": "lavarsi le mani",
+    "pos": "VERB",
+    "label": "lavarsi le mani"
+  },
+  {
+    "id": "2444",
+    "lemma": "lavastoviglie",
+    "pos": "NOUN",
+    "label": "lavastoviglie"
+  },
+  {
+    "id": "2445",
+    "lemma": "latte",
+    "pos": "NOUN",
+    "label": "latte"
+  },
+  {
+    "id": "2446",
+    "lemma": "lattuga",
+    "pos": "NOUN",
+    "label": "lattuga"
+  },
+  {
+    "id": "2447",
+    "lemma": "leggere",
+    "pos": "VERB",
+    "label": "leggere"
+  },
+  {
+    "id": "2448",
+    "lemma": "lenticchie",
+    "pos": "NOUN",
+    "label": "lenticchie"
+  },
+  {
+    "id": "2449",
+    "lemma": "leone",
+    "pos": "NOUN",
+    "label": "leone"
+  },
+  {
+    "id": "2450",
+    "lemma": "libro",
+    "pos": "NOUN",
+    "label": "libro"
+  },
+  {
+    "id": "2451",
+    "lemma": "chiavi",
+    "pos": "NOUN",
+    "label": "chiavi"
+  },
+  {
+    "id": "2454",
+    "lemma": "logopedista",
+    "pos": "NOUN",
+    "label": "logopedista"
+  },
+  {
+    "id": "2455",
+    "lemma": "maccheroni",
+    "pos": "NOUN",
+    "label": "maccheroni"
+  },
+  {
+    "id": "2456",
+    "lemma": "maestra",
+    "pos": "NOUN",
+    "label": "maestra"
+  },
+  {
+    "id": "2457",
+    "lemma": "maestro",
+    "pos": "NOUN",
+    "label": "maestro"
+  },
+  {
+    "id": "2458",
+    "lemma": "mamma",
+    "pos": "NOUN",
+    "label": "mamma"
+  },
+  {
+    "id": "2459",
+    "lemma": "coperta",
+    "pos": "NOUN",
+    "label": "coperta"
+  },
+  {
+    "id": "2460",
+    "lemma": "tovaglia",
+    "pos": "NOUN",
+    "label": "tovaglia"
+  },
+  {
+    "id": "2461",
+    "lemma": "burro",
+    "pos": "NOUN",
+    "label": "burro"
+  },
+  {
+    "id": "2462",
+    "lemma": "mela",
+    "pos": "NOUN",
+    "label": "mela"
+  },
+  {
+    "id": "2463",
+    "lemma": "maracas",
+    "pos": "NOUN",
+    "label": "maracas"
+  },
+  {
+    "id": "2464",
+    "lemma": "nauseato",
+    "pos": "DESCRIPTOR",
+    "label": "nauseato"
+  },
+  {
+    "id": "2465",
+    "lemma": "farfalla",
+    "pos": "NOUN",
+    "label": "farfalla"
+  },
+  {
+    "id": "2466",
+    "lemma": "calze velate",
+    "pos": "NOUN",
+    "label": "calze velate"
+  },
+  {
+    "id": "2467",
+    "lemma": "medico",
+    "pos": "NOUN",
+    "label": "medico"
+  },
+  {
+    "id": "2468",
+    "lemma": "pesca",
+    "pos": "NOUN",
+    "label": "pesca"
+  },
+  {
+    "id": "2469",
+    "lemma": "melone",
+    "pos": "NOUN",
+    "label": "melone"
+  },
+  {
+    "id": "2470",
+    "lemma": "marmellata",
+    "pos": "NOUN",
+    "label": "marmellata"
+  },
+  {
+    "id": "2471",
+    "lemma": "tavolo da ping pong",
+    "pos": "NOUN",
+    "label": "tavolo da ping pong"
+  },
+  {
+    "id": "2472",
+    "lemma": "metro",
+    "pos": "NOUN",
+    "label": "metro"
+  },
+  {
+    "id": "2473",
+    "lemma": "forno a microonde",
+    "pos": "NOUN",
+    "label": "forno a microonde"
+  },
+  {
+    "id": "2474",
+    "lemma": "vedere",
+    "pos": "VERB",
+    "label": "vedere"
+  },
+  {
+    "id": "2475",
+    "lemma": "zaino",
+    "pos": "NOUN",
+    "label": "zaino"
+  },
+  {
+    "id": "2476",
+    "lemma": "assistente",
+    "pos": "NOUN",
+    "label": "assistente"
+  },
+  {
+    "id": "2477",
+    "lemma": "scimmia",
+    "pos": "NOUN",
+    "label": "scimmia"
+  },
+  {
+    "id": "2478",
+    "lemma": "mosca",
+    "pos": "NOUN",
+    "label": "mosca"
+  },
+  {
+    "id": "2479",
+    "lemma": "zanzara",
+    "pos": "NOUN",
+    "label": "zanzara"
+  },
+  {
+    "id": "2480",
+    "lemma": "motocicletta",
+    "pos": "NOUN",
+    "label": "motocicletta"
+  },
+  {
+    "id": "2482",
+    "lemma": "bambola",
+    "pos": "NOUN",
+    "label": "bambola"
+  },
+  {
+    "id": "2483",
+    "lemma": "arancia",
+    "pos": "NOUN",
+    "label": "arancia"
+  },
+  {
+    "id": "2484",
+    "lemma": "bambina",
+    "pos": "NOUN",
+    "label": "bambina"
+  },
+  {
+    "id": "2485",
+    "lemma": "bambino",
+    "pos": "NOUN",
+    "label": "bambino"
+  },
+  {
+    "id": "2486",
+    "lemma": "odorare",
+    "pos": "VERB",
+    "label": "odorare"
+  },
+  {
+    "id": "2487",
+    "lemma": "computer",
+    "pos": "NOUN",
+    "label": "computer"
+  },
+  {
+    "id": "2488",
+    "lemma": "orso",
+    "pos": "NOUN",
+    "label": "orso"
+  },
+  {
+    "id": "2489",
+    "lemma": "pecora",
+    "pos": "NOUN",
+    "label": "pecora"
+  },
+  {
+    "id": "2490",
+    "lemma": "uccello",
+    "pos": "NOUN",
+    "label": "uccello"
+  },
+  {
+    "id": "2492",
+    "lemma": "racchetta da ping pong",
+    "pos": "NOUN",
+    "label": "racchetta da ping pong"
+  },
+  {
+    "id": "2493",
+    "lemma": "colomba",
+    "pos": "NOUN",
+    "label": "colomba"
+  },
+  {
+    "id": "2494",
+    "lemma": "pane",
+    "pos": "NOUN",
+    "label": "pane"
+  },
+  {
+    "id": "2495",
+    "lemma": "tamburello",
+    "pos": "NOUN",
+    "label": "tamburello"
+  },
+  {
+    "id": "2496",
+    "lemma": "strofinaccio da cucina",
+    "pos": "NOUN",
+    "label": "strofinaccio da cucina"
+  },
+  {
+    "id": "2497",
+    "lemma": "padre",
+    "pos": "NOUN",
+    "label": "padre"
+  },
+  {
+    "id": "2498",
+    "lemma": "cestino per rifiuti",
+    "pos": "NOUN",
+    "label": "cestino per rifiuti"
+  },
+  {
+    "id": "2499",
+    "lemma": "fermata dell'autobus",
+    "pos": "NOUN",
+    "label": "fermata dell'autobus"
+  },
+  {
+    "id": "2500",
+    "lemma": "ombrello",
+    "pos": "NOUN",
+    "label": "ombrello"
+  },
+  {
+    "id": "2501",
+    "lemma": "Parchis",
+    "pos": "NOUN",
+    "label": "Parchis"
+  },
+  {
+    "id": "2502",
+    "lemma": "torta",
+    "pos": "NOUN",
+    "label": "torta"
+  },
+  {
+    "id": "2503",
+    "lemma": "patata",
+    "pos": "NOUN",
+    "label": "patata"
+  },
+  {
+    "id": "2505",
+    "lemma": "patatine fritte",
+    "pos": "NOUN",
+    "label": "patatine fritte"
+  },
+  {
+    "id": "2506",
+    "lemma": "pattini",
+    "pos": "NOUN",
+    "label": "pattini"
+  },
+  {
+    "id": "2507",
+    "lemma": "skateboard",
+    "pos": "NOUN",
+    "label": "skateboard"
+  },
+  {
+    "id": "2508",
+    "lemma": "monopattino",
+    "pos": "NOUN",
+    "label": "monopattino"
+  },
+  {
+    "id": "2509",
+    "lemma": "tacchino",
+    "pos": "NOUN",
+    "label": "tacchino"
+  },
+  {
+    "id": "2510",
+    "lemma": "colla stick",
+    "pos": "NOUN",
+    "label": "colla stick"
+  },
+  {
+    "id": "2511",
+    "lemma": "incollare",
+    "pos": "VERB",
+    "label": "incollare"
+  },
+  {
+    "id": "2512",
+    "lemma": "pettinarsi",
+    "pos": "VERB",
+    "label": "pettinarsi"
+  },
+  {
+    "id": "2514",
+    "lemma": "palla da tennis",
+    "pos": "NOUN",
+    "label": "palla da tennis"
+  },
+  {
+    "id": "2515",
+    "lemma": "orecchini",
+    "pos": "NOUN",
+    "label": "orecchini"
+  },
+  {
+    "id": "2517",
+    "lemma": "cane",
+    "pos": "NOUN",
+    "label": "cane"
+  },
+  {
+    "id": "2518",
+    "lemma": "persiana",
+    "pos": "NOUN",
+    "label": "persiana"
+  },
+  {
+    "id": "2519",
+    "lemma": "pesce",
+    "pos": "NOUN",
+    "label": "pesce"
+  },
+  {
+    "id": "2520",
+    "lemma": "pesce",
+    "pos": "NOUN",
+    "label": "pesce"
+  },
+  {
+    "id": "2521",
+    "lemma": "pianoforte",
+    "pos": "NOUN",
+    "label": "pianoforte"
+  },
+  {
+    "id": "2522",
+    "lemma": "pigiama",
+    "pos": "NOUN",
+    "label": "pigiama"
+  },
+  {
+    "id": "2523",
+    "lemma": "pennello",
+    "pos": "NOUN",
+    "label": "pennello"
+  },
+  {
+    "id": "2525",
+    "lemma": "ananas",
+    "pos": "NOUN",
+    "label": "ananas"
+  },
+  {
+    "id": "2526",
+    "lemma": "lavagna",
+    "pos": "NOUN",
+    "label": "lavagna"
+  },
+  {
+    "id": "2527",
+    "lemma": "pizza",
+    "pos": "NOUN",
+    "label": "pizza"
+  },
+  {
+    "id": "2528",
+    "lemma": "ferro da stiro",
+    "pos": "NOUN",
+    "label": "ferro da stiro"
+  },
+  {
+    "id": "2529",
+    "lemma": "plastilina",
+    "pos": "NOUN",
+    "label": "plastilina"
+  },
+  {
+    "id": "2530",
+    "lemma": "banana",
+    "pos": "NOUN",
+    "label": "banana"
+  },
+  {
+    "id": "2531",
+    "lemma": "piatti",
+    "pos": "NOUN",
+    "label": "piatti"
+  },
+  {
+    "id": "2532",
+    "lemma": "piatto",
+    "pos": "NOUN",
+    "label": "piatto"
+  },
+  {
+    "id": "2533",
+    "lemma": "pulcino",
+    "pos": "NOUN",
+    "label": "pulcino"
+  },
+  {
+    "id": "2534",
+    "lemma": "coscia di pollo",
+    "pos": "NOUN",
+    "label": "coscia di pollo"
+  },
+  {
+    "id": "2535",
+    "lemma": "porta",
+    "pos": "NOUN",
+    "label": "porta"
+  },
+  {
+    "id": "2537",
+    "lemma": "bracciale",
+    "pos": "NOUN",
+    "label": "bracciale"
+  },
+  {
+    "id": "2538",
+    "lemma": "punteruolo",
+    "pos": "NOUN",
+    "label": "punteruolo"
+  },
+  {
+    "id": "2539",
+    "lemma": "purè",
+    "pos": "NOUN",
+    "label": "purè"
+  },
+  {
+    "id": "2540",
+    "lemma": "puzzle",
+    "pos": "NOUN",
+    "label": "puzzle"
+  },
+  {
+    "id": "2541",
+    "lemma": "formaggio",
+    "pos": "NOUN",
+    "label": "formaggio"
+  },
+  {
+    "id": "2542",
+    "lemma": "rampa",
+    "pos": "NOUN",
+    "label": "rampa"
+  },
+  {
+    "id": "2543",
+    "lemma": "rana",
+    "pos": "NOUN",
+    "label": "rana"
+  },
+  {
+    "id": "2544",
+    "lemma": "racchetta",
+    "pos": "NOUN",
+    "label": "racchetta"
+  },
+  {
+    "id": "2545",
+    "lemma": "strappare",
+    "pos": "VERB",
+    "label": "strappare"
+  },
+  {
+    "id": "2546",
+    "lemma": "topo",
+    "pos": "NOUN",
+    "label": "topo"
+  },
+  {
+    "id": "2547",
+    "lemma": "tagliare",
+    "pos": "VERB",
+    "label": "tagliare"
+  },
+  {
+    "id": "2548",
+    "lemma": "rete",
+    "pos": "NOUN",
+    "label": "rete"
+  },
+  {
+    "id": "2549",
+    "lemma": "orologio",
+    "pos": "NOUN",
+    "label": "orologio"
+  },
+  {
+    "id": "2550",
+    "lemma": "rinoceronte",
+    "pos": "NOUN",
+    "label": "rinoceronte"
+  },
+  {
+    "id": "2551",
+    "lemma": "lenzuola",
+    "pos": "NOUN",
+    "label": "lenzuola"
+  },
+  {
+    "id": "2552",
+    "lemma": "cavatappi",
+    "pos": "NOUN",
+    "label": "cavatappi"
+  },
+  {
+    "id": "2553",
+    "lemma": "temperamatite",
+    "pos": "NOUN",
+    "label": "temperamatite"
+  },
+  {
+    "id": "2554",
+    "lemma": "saliera",
+    "pos": "NOUN",
+    "label": "saliera"
+  },
+  {
+    "id": "2555",
+    "lemma": "salsiccia",
+    "pos": "NOUN",
+    "label": "salsiccia"
+  },
+  {
+    "id": "2556",
+    "lemma": "sandali",
+    "pos": "NOUN",
+    "label": "sandali"
+  },
+  {
+    "id": "2557",
+    "lemma": "anguria",
+    "pos": "NOUN",
+    "label": "anguria"
+  },
+  {
+    "id": "2558",
+    "lemma": "padella",
+    "pos": "NOUN",
+    "label": "padella"
+  },
+  {
+    "id": "2559",
+    "lemma": "sassofono",
+    "pos": "NOUN",
+    "label": "sassofono"
+  },
+  {
+    "id": "2560",
+    "lemma": "asciugacapelli",
+    "pos": "NOUN",
+    "label": "asciugacapelli"
+  },
+  {
+    "id": "2561",
+    "lemma": "pera",
+    "pos": "NOUN",
+    "label": "pera"
+  },
+  {
+    "id": "2562",
+    "lemma": "pappagallo",
+    "pos": "NOUN",
+    "label": "pappagallo"
+  },
+  {
+    "id": "2563",
+    "lemma": "anatra",
+    "pos": "NOUN",
+    "label": "anatra"
+  },
+  {
+    "id": "2564",
+    "lemma": "tamburello",
+    "pos": "NOUN",
+    "label": "tamburello"
+  },
+  {
+    "id": "2565",
+    "lemma": "pantalone",
+    "pos": "NOUN",
+    "label": "pantalone"
+  },
+  {
+    "id": "2566",
+    "lemma": "asciugarsi le mani",
+    "pos": "VERB",
+    "label": "asciugarsi le mani"
+  },
+  {
+    "id": "2567",
+    "lemma": "semaforo",
+    "pos": "NOUN",
+    "label": "semaforo"
+  },
+  {
+    "id": "2568",
+    "lemma": "serpente",
+    "pos": "NOUN",
+    "label": "serpente"
+  },
+  {
+    "id": "2569",
+    "lemma": "tovagliolo",
+    "pos": "NOUN",
+    "label": "tovagliolo"
+  },
+  {
+    "id": "2570",
+    "lemma": "poltrona",
+    "pos": "NOUN",
+    "label": "poltrona"
+  },
+  {
+    "id": "2571",
+    "lemma": "divano",
+    "pos": "NOUN",
+    "label": "divano"
+  },
+  {
+    "id": "2572",
+    "lemma": "cappello",
+    "pos": "NOUN",
+    "label": "cappello"
+  },
+  {
+    "id": "2573",
+    "lemma": "zuppa",
+    "pos": "NOUN",
+    "label": "zuppa"
+  },
+  {
+    "id": "2574",
+    "lemma": "sorpreso",
+    "pos": "DESCRIPTOR",
+    "label": "sorpreso"
+  },
+  {
+    "id": "2575",
+    "lemma": "pavimento",
+    "pos": "NOUN",
+    "label": "pavimento"
+  },
+  {
+    "id": "2576",
+    "lemma": "reggiseno",
+    "pos": "NOUN",
+    "label": "reggiseno"
+  },
+  {
+    "id": "2577",
+    "lemma": "asse da stiro",
+    "pos": "NOUN",
+    "label": "asse da stiro"
+  },
+  {
+    "id": "2578",
+    "lemma": "tamburo",
+    "pos": "NOUN",
+    "label": "tamburo"
+  },
+  {
+    "id": "2579",
+    "lemma": "torta di compleanno",
+    "pos": "NOUN",
+    "label": "torta di compleanno"
+  },
+  {
+    "id": "2580",
+    "lemma": "taxi",
+    "pos": "NOUN",
+    "label": "taxi"
+  },
+  {
+    "id": "2581",
+    "lemma": "tazza da caffè",
+    "pos": "NOUN",
+    "label": "tazza da caffè"
+  },
+  {
+    "id": "2582",
+    "lemma": "tazza",
+    "pos": "NOUN",
+    "label": "tazza"
+  },
+  {
+    "id": "2583",
+    "lemma": "soffitto",
+    "pos": "NOUN",
+    "label": "soffitto"
+  },
+  {
+    "id": "2584",
+    "lemma": "tetto",
+    "pos": "NOUN",
+    "label": "tetto"
+  },
+  {
+    "id": "2585",
+    "lemma": "telefono a rotella",
+    "pos": "NOUN",
+    "label": "telefono a rotella"
+  },
+  {
+    "id": "2586",
+    "lemma": "telefono",
+    "pos": "NOUN",
+    "label": "telefono"
+  },
+  {
+    "id": "2588",
+    "lemma": "forchetta",
+    "pos": "NOUN",
+    "label": "forchetta"
+  },
+  {
+    "id": "2589",
+    "lemma": "squalo",
+    "pos": "NOUN",
+    "label": "squalo"
+  },
+  {
+    "id": "2590",
+    "lemma": "tigre",
+    "pos": "NOUN",
+    "label": "tigre"
+  },
+  {
+    "id": "2591",
+    "lemma": "forbice",
+    "pos": "NOUN",
+    "label": "forbice"
+  },
+  {
+    "id": "2592",
+    "lemma": "campanello",
+    "pos": "NOUN",
+    "label": "campanello"
+  },
+  {
+    "id": "2593",
+    "lemma": "asciugamano",
+    "pos": "NOUN",
+    "label": "asciugamano"
+  },
+  {
+    "id": "2594",
+    "lemma": "pomodoro",
+    "pos": "NOUN",
+    "label": "pomodoro"
+  },
+  {
+    "id": "2595",
+    "lemma": "toro",
+    "pos": "NOUN",
+    "label": "toro"
+  },
+  {
+    "id": "2596",
+    "lemma": "tartaruga",
+    "pos": "NOUN",
+    "label": "tartaruga"
+  },
+  {
+    "id": "2598",
+    "lemma": "tostapane",
+    "pos": "NOUN",
+    "label": "tostapane"
+  },
+  {
+    "id": "2599",
+    "lemma": "lavorare",
+    "pos": "VERB",
+    "label": "lavorare"
+  },
+  {
+    "id": "2600",
+    "lemma": "trattore",
+    "pos": "NOUN",
+    "label": "trattore"
+  },
+  {
+    "id": "2601",
+    "lemma": "costume da bagno",
+    "pos": "NOUN",
+    "label": "costume da bagno"
+  },
+  {
+    "id": "2602",
+    "lemma": "tram",
+    "pos": "NOUN",
+    "label": "tram"
+  },
+  {
+    "id": "2603",
+    "lemma": "treno",
+    "pos": "NOUN",
+    "label": "treno"
+  },
+  {
+    "id": "2604",
+    "lemma": "triangolo",
+    "pos": "NOUN",
+    "label": "triangolo"
+  },
+  {
+    "id": "2605",
+    "lemma": "triciclo",
+    "pos": "NOUN",
+    "label": "triciclo"
+  },
+  {
+    "id": "2606",
+    "lemma": "triste",
+    "pos": "DESCRIPTOR",
+    "label": "triste"
+  },
+  {
+    "id": "2607",
+    "lemma": "tromba",
+    "pos": "NOUN",
+    "label": "tromba"
+  },
+  {
+    "id": "2608",
+    "lemma": "tu",
+    "pos": "PROPER_NAME",
+    "label": "tu"
+  },
+  {
+    "id": "2609",
+    "lemma": "mucca",
+    "pos": "NOUN",
+    "label": "mucca"
+  },
+  {
+    "id": "2610",
+    "lemma": "bicchiere",
+    "pos": "NOUN",
+    "label": "bicchiere"
+  },
+  {
+    "id": "2611",
+    "lemma": "finestra",
+    "pos": "NOUN",
+    "label": "finestra"
+  },
+  {
+    "id": "2612",
+    "lemma": "ventilatore",
+    "pos": "NOUN",
+    "label": "ventilatore"
+  },
+  {
+    "id": "2613",
+    "lemma": "vestito",
+    "pos": "NOUN",
+    "label": "vestito"
+  },
+  {
+    "id": "2614",
+    "lemma": "vino",
+    "pos": "NOUN",
+    "label": "vino"
+  },
+  {
+    "id": "2615",
+    "lemma": "violino",
+    "pos": "NOUN",
+    "label": "violino"
+  },
+  {
+    "id": "2616",
+    "lemma": "xilofono",
+    "pos": "NOUN",
+    "label": "xilofono"
+  },
+  {
+    "id": "2617",
+    "lemma": "io",
+    "pos": "PROPER_NAME",
+    "label": "io"
+  },
+  {
+    "id": "2618",
+    "lemma": "yogurt",
+    "pos": "NOUN",
+    "label": "yogurt"
+  },
+  {
+    "id": "2619",
+    "lemma": "carota",
+    "pos": "NOUN",
+    "label": "carota"
+  },
+  {
+    "id": "2620",
+    "lemma": "pantofole",
+    "pos": "NOUN",
+    "label": "pantofole"
+  },
+  {
+    "id": "2621",
+    "lemma": "scarpette",
+    "pos": "NOUN",
+    "label": "scarpette"
+  },
+  {
+    "id": "2622",
+    "lemma": "scarpe",
+    "pos": "NOUN",
+    "label": "scarpe"
+  },
+  {
+    "id": "2623",
+    "lemma": "volpe",
+    "pos": "NOUN",
+    "label": "volpe"
+  },
+  {
+    "id": "2624",
+    "lemma": "succo d'arancia",
+    "pos": "NOUN",
+    "label": "succo d'arancia"
+  },
+  {
+    "id": "2625",
+    "lemma": "succo d'ananas",
+    "pos": "NOUN",
+    "label": "succo d'ananas"
+  },
+  {
+    "id": "2626",
+    "lemma": "0",
+    "pos": "DESCRIPTOR",
+    "label": "0"
+  },
+  {
+    "id": "2627",
+    "lemma": "1",
+    "pos": "DESCRIPTOR",
+    "label": "1"
+  },
+  {
+    "id": "2628",
+    "lemma": "2",
+    "pos": "DESCRIPTOR",
+    "label": "2"
+  },
+  {
+    "id": "2629",
+    "lemma": "3",
+    "pos": "DESCRIPTOR",
+    "label": "3"
+  },
+  {
+    "id": "2630",
+    "lemma": "4",
+    "pos": "DESCRIPTOR",
+    "label": "4"
+  },
+  {
+    "id": "2631",
+    "lemma": "5",
+    "pos": "DESCRIPTOR",
+    "label": "5"
+  },
+  {
+    "id": "2632",
+    "lemma": "6",
+    "pos": "DESCRIPTOR",
+    "label": "6"
+  },
+  {
+    "id": "2633",
+    "lemma": "7",
+    "pos": "DESCRIPTOR",
+    "label": "7"
+  },
+  {
+    "id": "2634",
+    "lemma": "8",
+    "pos": "DESCRIPTOR",
+    "label": "8"
+  },
+  {
+    "id": "2635",
+    "lemma": "9",
+    "pos": "DESCRIPTOR",
+    "label": "9"
+  },
+  {
+    "id": "2636",
+    "lemma": "avvocato",
+    "pos": "NOUN",
+    "label": "avvocato"
+  },
+  {
+    "id": "2637",
+    "lemma": "aprire",
+    "pos": "VERB",
+    "label": "aprire"
+  },
+  {
+    "id": "2638",
+    "lemma": "aquila",
+    "pos": "NOUN",
+    "label": "aquila"
+  },
+  {
+    "id": "2639",
+    "lemma": "ago",
+    "pos": "NOUN",
+    "label": "ago"
+  },
+  {
+    "id": "2640",
+    "lemma": "aria condizionata",
+    "pos": "NOUN",
+    "label": "aria condizionata"
+  },
+  {
+    "id": "2641",
+    "lemma": "aglio",
+    "pos": "NOUN",
+    "label": "aglio"
+  },
+  {
+    "id": "2642",
+    "lemma": "muratore",
+    "pos": "NOUN",
+    "label": "muratore"
+  },
+  {
+    "id": "2643",
+    "lemma": "puntaspilli",
+    "pos": "NOUN",
+    "label": "puntaspilli"
+  },
+  {
+    "id": "2644",
+    "lemma": "pinza",
+    "pos": "NOUN",
+    "label": "pinza"
+  },
+  {
+    "id": "2645",
+    "lemma": "vongola",
+    "pos": "NOUN",
+    "label": "vongola"
+  },
+  {
+    "id": "2646",
+    "lemma": "mandorle",
+    "pos": "NOUN",
+    "label": "mandorle"
+  },
+  {
+    "id": "2647",
+    "lemma": "altoparlanti",
+    "pos": "NOUN",
+    "label": "altoparlanti"
+  },
+  {
+    "id": "2648",
+    "lemma": "giallo",
+    "pos": "DESCRIPTOR",
+    "label": "giallo"
+  },
+  {
+    "id": "2649",
+    "lemma": "architetto",
+    "pos": "NOUN",
+    "label": "architetto"
+  },
+  {
+    "id": "2650",
+    "lemma": "struzzo",
+    "pos": "NOUN",
+    "label": "struzzo"
+  },
+  {
+    "id": "2651",
+    "lemma": "zappa",
+    "pos": "NOUN",
+    "label": "zappa"
+  },
+  {
+    "id": "2652",
+    "lemma": "ballo",
+    "pos": "NOUN",
+    "label": "ballo"
+  },
+  {
+    "id": "2653",
+    "lemma": "ballerina",
+    "pos": "NOUN",
+    "label": "ballerina"
+  },
+  {
+    "id": "2654",
+    "lemma": "scendere",
+    "pos": "VERB",
+    "label": "scendere"
+  },
+  {
+    "id": "2655",
+    "lemma": "bilancia",
+    "pos": "NOUN",
+    "label": "bilancia"
+  },
+  {
+    "id": "2656",
+    "lemma": "vassoio",
+    "pos": "NOUN",
+    "label": "vassoio"
+  },
+  {
+    "id": "2657",
+    "lemma": "barba",
+    "pos": "NOUN",
+    "label": "barba"
+  },
+  {
+    "id": "2658",
+    "lemma": "scopare",
+    "pos": "VERB",
+    "label": "scopare"
+  },
+  {
+    "id": "2659",
+    "lemma": "bilancia pesapersone",
+    "pos": "NOUN",
+    "label": "bilancia pesapersone"
+  },
+  {
+    "id": "2660",
+    "lemma": "melanzana",
+    "pos": "NOUN",
+    "label": "melanzana"
+  },
+  {
+    "id": "2661",
+    "lemma": "baffo",
+    "pos": "NOUN",
+    "label": "baffo"
+  },
+  {
+    "id": "2662",
+    "lemma": "bianco",
+    "pos": "DESCRIPTOR",
+    "label": "bianco"
+  },
+  {
+    "id": "2663",
+    "lemma": "bocca",
+    "pos": "NOUN",
+    "label": "bocca"
+  },
+  {
+    "id": "2664",
+    "lemma": "pompiere",
+    "pos": "NOUN",
+    "label": "pompiere"
+  },
+  {
+    "id": "2665",
+    "lemma": "cioccolatini",
+    "pos": "NOUN",
+    "label": "cioccolatini"
+  },
+  {
+    "id": "2666",
+    "lemma": "bosco",
+    "pos": "NOUN",
+    "label": "bosco"
+  },
+  {
+    "id": "2667",
+    "lemma": "stivali",
+    "pos": "NOUN",
+    "label": "stivali"
+  },
+  {
+    "id": "2668",
+    "lemma": "bottone",
+    "pos": "NOUN",
+    "label": "bottone"
+  },
+  {
+    "id": "2669",
+    "lemma": "braccio",
+    "pos": "NOUN",
+    "label": "braccio"
+  },
+  {
+    "id": "2670",
+    "lemma": "pennello",
+    "pos": "NOUN",
+    "label": "pennello"
+  },
+  {
+    "id": "2671",
+    "lemma": "gufo",
+    "pos": "NOUN",
+    "label": "gufo"
+  },
+  {
+    "id": "2672",
+    "lemma": "cavalluccio marino",
+    "pos": "NOUN",
+    "label": "cavalluccio marino"
+  },
+  {
+    "id": "2673",
+    "lemma": "testa",
+    "pos": "NOUN",
+    "label": "testa"
+  },
+  {
+    "id": "2674",
+    "lemma": "arachidi",
+    "pos": "NOUN",
+    "label": "arachidi"
+  },
+  {
+    "id": "2675",
+    "lemma": "cadere",
+    "pos": "VERB",
+    "label": "cadere"
+  },
+  {
+    "id": "2676",
+    "lemma": "cassetta degli attrezzi",
+    "pos": "NOUN",
+    "label": "cassetta degli attrezzi"
+  },
+  {
+    "id": "2677",
+    "lemma": "cassa",
+    "pos": "NOUN",
+    "label": "cassa"
+  },
+  {
+    "id": "2678",
+    "lemma": "zucchina",
+    "pos": "NOUN",
+    "label": "zucchina"
+  },
+  {
+    "id": "2679",
+    "lemma": "zucca",
+    "pos": "NOUN",
+    "label": "zucca"
+  },
+  {
+    "id": "2680",
+    "lemma": "macchina fotografica",
+    "pos": "NOUN",
+    "label": "macchina fotografica"
+  },
+  {
+    "id": "2681",
+    "lemma": "barman",
+    "pos": "NOUN",
+    "label": "barman"
+  },
+  {
+    "id": "2682",
+    "lemma": "betoniera",
+    "pos": "NOUN",
+    "label": "betoniera"
+  },
+  {
+    "id": "2683",
+    "lemma": "campagna",
+    "pos": "NOUN",
+    "label": "campagna"
+  },
+  {
+    "id": "2684",
+    "lemma": "faccia",
+    "pos": "NOUN",
+    "label": "faccia"
+  },
+  {
+    "id": "2685",
+    "lemma": "chiocciola",
+    "pos": "NOUN",
+    "label": "chiocciola"
+  },
+  {
+    "id": "2686",
+    "lemma": "caramella",
+    "pos": "NOUN",
+    "label": "caramella"
+  },
+  {
+    "id": "2687",
+    "lemma": "falegname",
+    "pos": "NOUN",
+    "label": "falegname"
+  },
+  {
+    "id": "2688",
+    "lemma": "lettera",
+    "pos": "NOUN",
+    "label": "lettera"
+  },
+  {
+    "id": "2689",
+    "lemma": "portafoglio",
+    "pos": "NOUN",
+    "label": "portafoglio"
+  },
+  {
+    "id": "2690",
+    "lemma": "postino",
+    "pos": "NOUN",
+    "label": "postino"
+  },
+  {
+    "id": "2691",
+    "lemma": "casco",
+    "pos": "NOUN",
+    "label": "casco"
+  },
+  {
+    "id": "2692",
+    "lemma": "cemento",
+    "pos": "NOUN",
+    "label": "cemento"
+  },
+  {
+    "id": "2693",
+    "lemma": "scopa",
+    "pos": "NOUN",
+    "label": "scopa"
+  },
+  {
+    "id": "2694",
+    "lemma": "spazzolino",
+    "pos": "NOUN",
+    "label": "spazzolino"
+  },
+  {
+    "id": "2695",
+    "lemma": "spazzola",
+    "pos": "NOUN",
+    "label": "spazzola"
+  },
+  {
+    "id": "2696",
+    "lemma": "cervello",
+    "pos": "NOUN",
+    "label": "cervello"
+  },
+  {
+    "id": "2697",
+    "lemma": "chiudere",
+    "pos": "VERB",
+    "label": "chiudere"
+  },
+  {
+    "id": "2698",
+    "lemma": "gilet",
+    "pos": "NOUN",
+    "label": "gilet"
+  },
+  {
+    "id": "2699",
+    "lemma": "shampoo",
+    "pos": "NOUN",
+    "label": "shampoo"
+  },
+  {
+    "id": "2700",
+    "lemma": "salumeria",
+    "pos": "NOUN",
+    "label": "salumeria"
+  },
+  {
+    "id": "2701",
+    "lemma": "chupa chups",
+    "pos": "NOUN",
+    "label": "chupa chups"
+  },
+  {
+    "id": "2702",
+    "lemma": "succhiare",
+    "pos": "VERB",
+    "label": "succhiare"
+  },
+  {
+    "id": "2703",
+    "lemma": "prugne",
+    "pos": "NOUN",
+    "label": "prugne"
+  },
+  {
+    "id": "2704",
+    "lemma": "città",
+    "pos": "NOUN",
+    "label": "città"
+  },
+  {
+    "id": "2705",
+    "lemma": "inchiodare",
+    "pos": "VERB",
+    "label": "inchiodare"
+  },
+  {
+    "id": "2706",
+    "lemma": "chiodi",
+    "pos": "NOUN",
+    "label": "chiodi"
+  },
+  {
+    "id": "2707",
+    "lemma": "gomito",
+    "pos": "NOUN",
+    "label": "gomito"
+  },
+  {
+    "id": "2708",
+    "lemma": "cavolo",
+    "pos": "NOUN",
+    "label": "cavolo"
+  },
+  {
+    "id": "2709",
+    "lemma": "colla",
+    "pos": "NOUN",
+    "label": "colla"
+  },
+  {
+    "id": "2710",
+    "lemma": "profumo",
+    "pos": "NOUN",
+    "label": "profumo"
+  },
+  {
+    "id": "2711",
+    "lemma": "cometa",
+    "pos": "NOUN",
+    "label": "cometa"
+  },
+  {
+    "id": "2712",
+    "lemma": "guidare",
+    "pos": "VERB",
+    "label": "guidare"
+  },
+  {
+    "id": "2713",
+    "lemma": "costruire",
+    "pos": "VERB",
+    "label": "costruire"
+  },
+  {
+    "id": "2714",
+    "lemma": "contare",
+    "pos": "VERB",
+    "label": "contare"
+  },
+  {
+    "id": "2715",
+    "lemma": "cuore",
+    "pos": "NOUN",
+    "label": "cuore"
+  },
+  {
+    "id": "2716",
+    "lemma": "cravatta",
+    "pos": "NOUN",
+    "label": "cravatta"
+  },
+  {
+    "id": "2717",
+    "lemma": "coro",
+    "pos": "NOUN",
+    "label": "coro"
+  },
+  {
+    "id": "2718",
+    "lemma": "corona",
+    "pos": "NOUN",
+    "label": "corona"
+  },
+  {
+    "id": "2719",
+    "lemma": "correre",
+    "pos": "VERB",
+    "label": "correre"
+  },
+  {
+    "id": "2720",
+    "lemma": "tagliare",
+    "pos": "VERB",
+    "label": "tagliare"
+  },
+  {
+    "id": "2721",
+    "lemma": "tagliaunghie",
+    "pos": "NOUN",
+    "label": "tagliaunghie"
+  },
+  {
+    "id": "2722",
+    "lemma": "cucire",
+    "pos": "VERB",
+    "label": "cucire"
+  },
+  {
+    "id": "2723",
+    "lemma": "cerniera lampo",
+    "pos": "NOUN",
+    "label": "cerniera lampo"
+  },
+  {
+    "id": "2724",
+    "lemma": "secchio dell'immondizia",
+    "pos": "NOUN",
+    "label": "secchio dell'immondizia"
+  },
+  {
+    "id": "2725",
+    "lemma": "secchio",
+    "pos": "NOUN",
+    "label": "secchio"
+  },
+  {
+    "id": "2726",
+    "lemma": "rasoio",
+    "pos": "NOUN",
+    "label": "rasoio"
+  },
+  {
+    "id": "2727",
+    "lemma": "collo",
+    "pos": "NOUN",
+    "label": "collo"
+  },
+  {
+    "id": "2728",
+    "lemma": "corpo",
+    "pos": "NOUN",
+    "label": "corpo"
+  },
+  {
+    "id": "2729",
+    "lemma": "grotta",
+    "pos": "NOUN",
+    "label": "grotta"
+  },
+  {
+    "id": "2730",
+    "lemma": "natiche",
+    "pos": "NOUN",
+    "label": "natiche"
+  },
+  {
+    "id": "2731",
+    "lemma": "dado",
+    "pos": "NOUN",
+    "label": "dado"
+  },
+  {
+    "id": "2732",
+    "lemma": "delfino",
+    "pos": "NOUN",
+    "label": "delfino"
+  },
+  {
+    "id": "2733",
+    "lemma": "dentista",
+    "pos": "NOUN",
+    "label": "dentista"
+  },
+  {
+    "id": "2734",
+    "lemma": "deserto",
+    "pos": "NOUN",
+    "label": "deserto"
+  },
+  {
+    "id": "2735",
+    "lemma": "deodorante",
+    "pos": "NOUN",
+    "label": "deodorante"
+  },
+  {
+    "id": "2736",
+    "lemma": "giravite",
+    "pos": "NOUN",
+    "label": "giravite"
+  },
+  {
+    "id": "2737",
+    "lemma": "denti",
+    "pos": "NOUN",
+    "label": "denti"
+  },
+  {
+    "id": "2738",
+    "lemma": "dinosauro",
+    "pos": "NOUN",
+    "label": "dinosauro"
+  },
+  {
+    "id": "2739",
+    "lemma": "dorato",
+    "pos": "DESCRIPTOR",
+    "label": "dorato"
+  },
+  {
+    "id": "2740",
+    "lemma": "elettricista",
+    "pos": "NOUN",
+    "label": "elettricista"
+  },
+  {
+    "id": "2741",
+    "lemma": "imbuto",
+    "pos": "NOUN",
+    "label": "imbuto"
+  },
+  {
+    "id": "2742",
+    "lemma": "entrare",
+    "pos": "VERB",
+    "label": "entrare"
+  },
+  {
+    "id": "2743",
+    "lemma": "scala portatile",
+    "pos": "NOUN",
+    "label": "scala portatile"
+  },
+  {
+    "id": "2744",
+    "lemma": "chiodo a uncino",
+    "pos": "NOUN",
+    "label": "chiodo a uncino"
+  },
+  {
+    "id": "2745",
+    "lemma": "scopa di paglia",
+    "pos": "NOUN",
+    "label": "scopa di paglia"
+  },
+  {
+    "id": "2746",
+    "lemma": "ascoltare musica",
+    "pos": "VERB",
+    "label": "ascoltare musica"
+  },
+  {
+    "id": "2747",
+    "lemma": "smalto per unghie",
+    "pos": "NOUN",
+    "label": "smalto per unghie"
+  },
+  {
+    "id": "2748",
+    "lemma": "schiena",
+    "pos": "NOUN",
+    "label": "schiena"
+  },
+  {
+    "id": "2749",
+    "lemma": "spugna",
+    "pos": "NOUN",
+    "label": "spugna"
+  },
+  {
+    "id": "2750",
+    "lemma": "schiuma da barba",
+    "pos": "NOUN",
+    "label": "schiuma da barba"
+  },
+  {
+    "id": "2751",
+    "lemma": "tabaccheria",
+    "pos": "NOUN",
+    "label": "tabaccheria"
+  },
+  {
+    "id": "2752",
+    "lemma": "stella",
+    "pos": "NOUN",
+    "label": "stella"
+  },
+  {
+    "id": "2775",
+    "lemma": "scarpe",
+    "pos": "NOUN",
+    "label": "scarpe"
+  },
+  {
+    "id": "2776",
+    "lemma": "negozio di scarpe",
+    "pos": "NOUN",
+    "label": "negozio di scarpe"
+  },
+  {
+    "id": "2777",
+    "lemma": "vomitare",
+    "pos": "VERB",
+    "label": "vomitare"
+  },
+  {
+    "id": "2778",
+    "lemma": "canto di Natale",
+    "pos": "NOUN",
+    "label": "canto di Natale"
+  },
+  {
+    "id": "2779",
+    "lemma": "ventoso",
+    "pos": "DESCRIPTOR",
+    "label": "ventoso"
+  },
+  {
+    "id": "2780",
+    "lemma": "veterinaria",
+    "pos": "NOUN",
+    "label": "veterinaria"
+  },
+  {
+    "id": "2781",
+    "lemma": "vestirsi",
+    "pos": "VERB",
+    "label": "vestirsi"
+  },
+  {
+    "id": "2782",
+    "lemma": "vedere la televisione",
+    "pos": "VERB",
+    "label": "vedere la televisione"
+  },
+  {
+    "id": "2783",
+    "lemma": "unghia",
+    "pos": "NOUN",
+    "label": "unghia"
+  },
+  {
+    "id": "2784",
+    "lemma": "torrone",
+    "pos": "NOUN",
+    "label": "torrone"
+  },
+  {
+    "id": "2785",
+    "lemma": "bullone",
+    "pos": "NOUN",
+    "label": "bullone"
+  },
+  {
+    "id": "2786",
+    "lemma": "pancia",
+    "pos": "NOUN",
+    "label": "pancia"
+  },
+  {
+    "id": "2787",
+    "lemma": "toast",
+    "pos": "NOUN",
+    "label": "toast"
+  },
+  {
+    "id": "2788",
+    "lemma": "vite",
+    "pos": "NOUN",
+    "label": "vite"
+  },
+  {
+    "id": "2789",
+    "lemma": "termometro",
+    "pos": "NOUN",
+    "label": "termometro"
+  },
+  {
+    "id": "2790",
+    "lemma": "tenaglia",
+    "pos": "NOUN",
+    "label": "tenaglia"
+  },
+  {
+    "id": "2791",
+    "lemma": "telefono",
+    "pos": "NOUN",
+    "label": "telefono"
+  },
+  {
+    "id": "2792",
+    "lemma": "tegola",
+    "pos": "NOUN",
+    "label": "tegola"
+  },
+  {
+    "id": "2793",
+    "lemma": "tastiera",
+    "pos": "NOUN",
+    "label": "tastiera"
+  },
+  {
+    "id": "2795",
+    "lemma": "salire",
+    "pos": "VERB",
+    "label": "salire"
+  },
+  {
+    "id": "2796",
+    "lemma": "soleggiato",
+    "pos": "DESCRIPTOR",
+    "label": "soleggiato"
+  },
+  {
+    "id": "2797",
+    "lemma": "militare",
+    "pos": "NOUN",
+    "label": "militare"
+  },
+  {
+    "id": "2798",
+    "lemma": "sole",
+    "pos": "PROPER_NAME",
+    "label": "sole"
+  },
+  {
+    "id": "2799",
+    "lemma": "sega",
+    "pos": "NOUN",
+    "label": "sega"
+  }
+]

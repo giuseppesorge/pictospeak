@@ -1,0 +1,7 @@
+{
+  "source": "https://api.arasaac.org/v1/pictograms/all/it",
+  "snapshotDate": "2026-07-13",
+  "pictograms": 520,
+  "imageSize": "300px PNG",
+  "note": "Uncurated spike set for the M1 performance gate; replaced by the therapist-reviewable curated core vocabulary at M2 (tools/core-vocabulary.csv)."
+}

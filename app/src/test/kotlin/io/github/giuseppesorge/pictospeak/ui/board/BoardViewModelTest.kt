@@ -1,5 +1,6 @@
 package io.github.giuseppesorge.pictospeak.ui.board
 
+import app.cash.turbine.TurbineTestContext
 import app.cash.turbine.test
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 import io.github.giuseppesorge.pictospeak.nlg.api.Pos
@@ -21,10 +22,12 @@ class BoardViewModelTest {
     private val dispatcher = StandardTestDispatcher()
     private val io = PictogramToken("t1", "io", Pos.MISC, "io")
     private val mangiare = PictogramToken("t2", "mangiare", Pos.VERB, "mangiare")
+    private lateinit var tts: FakeTtsGateway
 
     @Before
     fun setUp() {
         Dispatchers.setMain(dispatcher)
+        tts = FakeTtsGateway()
     }
 
     @After
@@ -36,23 +39,34 @@ class BoardViewModelTest {
         BoardViewModel(
             sentenceEngine = TemplateSentenceEngine(language = "it"),
             sentenceRefiner = null,
+            ttsGateway = tts,
+            vocabularyRepository = FakeVocabularyRepository(listOf(io, mangiare)),
             computeDispatcher = dispatcher,
         )
+
+    @Test
+    fun `vocabulary loads into state`() =
+        runTest(dispatcher) {
+            val vm = viewModel()
+            dispatcher.scheduler.advanceUntilIdle()
+            assertEquals(listOf(io, mangiare), vm.uiState.value.vocabulary)
+        }
 
     @Test
     fun `tapping pictograms appends to selection and proposes a candidate`() =
         runTest(dispatcher) {
             val vm = viewModel()
             vm.uiState.test {
-                assertEquals(emptyList<PictogramToken>(), awaitItem().selection)
+                skipItems(1) // initial empty state
 
                 vm.onPictogramTapped(io)
-                assertEquals(listOf(io), awaitItem().selection)
-                assertEquals("io", awaitItem().candidates.single().text)
+                assertEquals(listOf(io), expectMostRecentItemAfterIdle().selection)
 
                 vm.onPictogramTapped(mangiare)
-                assertEquals(listOf(io, mangiare), awaitItem().selection)
-                assertEquals("io mangiare", awaitItem().candidates.single().text)
+                val state = expectMostRecentItemAfterIdle()
+                assertEquals(listOf(io, mangiare), state.selection)
+                assertEquals("io mangiare", state.candidates.single().text)
+                cancelAndIgnoreRemainingEvents()
             }
         }
 
@@ -76,4 +90,45 @@ class BoardViewModelTest {
             dispatcher.scheduler.advanceUntilIdle()
             assertEquals(8, vm.uiState.value.selection.size)
         }
+
+    // INVARIANT-1 (docs/adr/0010): no event sequence except an explicit onSpeakPressed
+    // may reach TtsGateway.speak.
+    @Test
+    fun `composing, cycling, clearing never speaks`() =
+        runTest(dispatcher) {
+            val vm = viewModel()
+            vm.onPictogramTapped(io)
+            vm.onPictogramTapped(mangiare)
+            vm.onCandidateTapped(0)
+            vm.onBackspace()
+            vm.onPictogramTapped(mangiare)
+            vm.onClear()
+            dispatcher.scheduler.advanceUntilIdle()
+            assertTrue("INVARIANT-1 violated: speech without confirmation", tts.spoken.isEmpty())
+        }
+
+    @Test
+    fun `speak pressed confirms exactly the selected candidate`() =
+        runTest(dispatcher) {
+            val vm = viewModel()
+            vm.onPictogramTapped(io)
+            vm.onPictogramTapped(mangiare)
+            dispatcher.scheduler.advanceUntilIdle()
+            vm.onSpeakPressed()
+            assertEquals(listOf("io mangiare"), tts.spoken.map { it.text })
+        }
+
+    @Test
+    fun `speak with no candidates is a no-op`() =
+        runTest(dispatcher) {
+            val vm = viewModel()
+            dispatcher.scheduler.advanceUntilIdle()
+            vm.onSpeakPressed()
+            assertTrue(tts.spoken.isEmpty())
+        }
+
+    private fun TurbineTestContext<BoardUiState>.expectMostRecentItemAfterIdle(): BoardUiState {
+        dispatcher.scheduler.advanceUntilIdle()
+        return expectMostRecentItem()
+    }
 }

@@ -10,11 +10,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -25,30 +27,46 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTagsAsResourceId
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
 import io.github.giuseppesorge.pictospeak.R
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
-import io.github.giuseppesorge.pictospeak.nlg.api.Pos
 
 /**
- * Skeleton board (M0): selection strip + proposal bar + pictogram grid with Fitzgerald
- * coloring, wired end-to-end to the sentence engine. Real ARASAAC assets arrive at M2;
- * the confirm-to-speak bar arrives at M4 (INVARIANT-1 lives in :speech, not here).
+ * The board: selection strip + proposal bar (with the confirm-to-speak button, the app's
+ * ONLY speech entry point) + pictogram grid rendered from the bundled catalog.
+ * testTags are exposed as resource ids for the Macrobenchmark scroll journey.
  */
 @Composable
 fun BoardScreen(viewModel: BoardViewModel) {
     val state by viewModel.uiState.collectAsState()
+    val speaking by viewModel.speaking.collectAsState()
     Surface(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.padding(12.dp)) {
+        Column(
+            modifier =
+                Modifier
+                    .padding(12.dp)
+                    .semantics { testTagsAsResourceId = true },
+        ) {
             SelectionStrip(state.selection)
             ProposalBar(
                 state = state,
+                speaking = speaking,
                 onCandidateTapped = viewModel::onCandidateTapped,
+                onSpeakPressed = viewModel::onSpeakPressed,
+                onStopPressed = viewModel::onStopPressed,
                 onBackspace = viewModel::onBackspace,
                 onClear = viewModel::onClear,
             )
-            PictogramGrid(onPictogramTapped = viewModel::onPictogramTapped)
+            PictogramGrid(
+                vocabulary = state.vocabulary,
+                onPictogramTapped = viewModel::onPictogramTapped,
+            )
         }
     }
 }
@@ -59,7 +77,7 @@ private fun SelectionStrip(selection: List<PictogramToken>) {
         modifier =
             Modifier
                 .fillMaxWidth()
-                .height(56.dp),
+                .height(64.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         items(selection) { token ->
@@ -78,7 +96,10 @@ private fun SelectionStrip(selection: List<PictogramToken>) {
 @Composable
 private fun ProposalBar(
     state: BoardUiState,
+    speaking: Boolean,
     onCandidateTapped: (Int) -> Unit,
+    onSpeakPressed: () -> Unit,
+    onStopPressed: () -> Unit,
     onBackspace: () -> Unit,
     onClear: () -> Unit,
 ) {
@@ -102,48 +123,53 @@ private fun ProposalBar(
                         }
                     },
         )
+        if (speaking) {
+            Button(onClick = onStopPressed) { Text(stringResource(R.string.board_stop)) }
+        } else {
+            // The ONLY route to audio: explicit user confirmation of the visible proposal.
+            Button(
+                onClick = onSpeakPressed,
+                enabled = proposal != null,
+                modifier = Modifier.testTag("board-speak"),
+            ) { Text(stringResource(R.string.board_speak)) }
+        }
         TextButton(onClick = onBackspace) { Text(stringResource(R.string.board_backspace)) }
         TextButton(onClick = onClear) { Text(stringResource(R.string.board_clear)) }
     }
 }
 
 @Composable
-private fun PictogramGrid(onPictogramTapped: (PictogramToken) -> Unit) {
+private fun PictogramGrid(
+    vocabulary: List<PictogramToken>,
+    onPictogramTapped: (PictogramToken) -> Unit,
+) {
     LazyVerticalGrid(
-        columns = GridCells.Adaptive(minSize = 96.dp),
+        columns = GridCells.Adaptive(minSize = 112.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
+        modifier = Modifier.testTag("board-grid"),
     ) {
-        items(items = DemoVocabulary.tokens, key = { it.id }, contentType = { "pictogram" }) { token ->
-            Box(
+        items(items = vocabulary, key = { it.id }, contentType = { "pictogram" }) { token ->
+            Column(
                 modifier =
                     Modifier
-                        .height(96.dp)
                         .background(Color(FitzgeraldSlot.fromPos(token.pos).argb))
-                        .clickable { onPictogramTapped(token) },
-                contentAlignment = Alignment.Center,
+                        .clickable { onPictogramTapped(token) }
+                        .padding(6.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                Text(token.label, style = MaterialTheme.typography.titleMedium)
+                AsyncImage(
+                    model = "file:///android_asset/arasaac/${token.id}.png",
+                    contentDescription = token.label,
+                    modifier = Modifier.size(88.dp),
+                )
+                Text(
+                    token.label,
+                    style = MaterialTheme.typography.labelLarge,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
             }
         }
     }
-}
-
-/** Placeholder vocabulary until the ARASAAC pipeline lands (M2). */
-internal object DemoVocabulary {
-    val tokens: List<PictogramToken> =
-        listOf(
-            PictogramToken("demo-io", "io", Pos.MISC, "io"),
-            PictogramToken("demo-tu", "tu", Pos.MISC, "tu"),
-            PictogramToken("demo-volere", "volere", Pos.VERB, "volere"),
-            PictogramToken("demo-mangiare", "mangiare", Pos.VERB, "mangiare"),
-            PictogramToken("demo-bere", "bere", Pos.VERB, "bere"),
-            PictogramToken("demo-pizza", "pizza", Pos.NOUN, "pizza"),
-            PictogramToken("demo-acqua", "acqua", Pos.NOUN, "acqua"),
-            PictogramToken("demo-mamma", "mamma", Pos.NOUN, "mamma"),
-            PictogramToken("demo-grande", "grande", Pos.DESCRIPTOR, "grande"),
-            PictogramToken("demo-ciao", "ciao", Pos.SOCIAL, "ciao"),
-            PictogramToken("demo-grazie", "grazie", Pos.SOCIAL, "grazie"),
-            PictogramToken("demo-aiuto", "aiuto", Pos.SOCIAL, "aiuto"),
-        )
 }
