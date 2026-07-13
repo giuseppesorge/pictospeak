@@ -1,0 +1,2957 @@
+{
+    "language": "it",
+    "entries": [
+        {
+            "type": "noun",
+            "lemma": "mamma",
+            "gender": "FEMININE",
+            "singular": "mamma",
+            "plural": "mamme"
+        },
+        {
+            "type": "noun",
+            "lemma": "papà",
+            "gender": "MASCULINE",
+            "singular": "papà",
+            "plural": "papà"
+        },
+        {
+            "type": "noun",
+            "lemma": "nonna",
+            "gender": "FEMININE",
+            "singular": "nonna",
+            "plural": "nonne"
+        },
+        {
+            "type": "noun",
+            "lemma": "nonno",
+            "gender": "MASCULINE",
+            "singular": "nonno",
+            "plural": "nonni"
+        },
+        {
+            "type": "noun",
+            "lemma": "fratello",
+            "gender": "MASCULINE",
+            "singular": "fratello",
+            "plural": "fratelli"
+        },
+        {
+            "type": "noun",
+            "lemma": "sorella",
+            "gender": "FEMININE",
+            "singular": "sorella",
+            "plural": "sorelle"
+        },
+        {
+            "type": "noun",
+            "lemma": "zio",
+            "gender": "MASCULINE",
+            "singular": "zio",
+            "plural": "zii"
+        },
+        {
+            "type": "noun",
+            "lemma": "zia",
+            "gender": "FEMININE",
+            "singular": "zia",
+            "plural": "zie"
+        },
+        {
+            "type": "noun",
+            "lemma": "cugino",
+            "gender": "MASCULINE",
+            "singular": "cugino",
+            "plural": "cugini"
+        },
+        {
+            "type": "noun",
+            "lemma": "famiglia",
+            "gender": "FEMININE",
+            "singular": "famiglia",
+            "plural": "famiglie"
+        },
+        {
+            "type": "noun",
+            "lemma": "bambino",
+            "gender": "MASCULINE",
+            "singular": "bambino",
+            "plural": "bambini"
+        },
+        {
+            "type": "noun",
+            "lemma": "bambina",
+            "gender": "FEMININE",
+            "singular": "bambina",
+            "plural": "bambine"
+        },
+        {
+            "type": "noun",
+            "lemma": "neonato",
+            "gender": "MASCULINE",
+            "singular": "neonato",
+            "plural": "neonati"
+        },
+        {
+            "type": "noun",
+            "lemma": "amico",
+            "gender": "MASCULINE",
+            "singular": "amico",
+            "plural": "amici"
+        },
+        {
+            "type": "noun",
+            "lemma": "amica",
+            "gender": "FEMININE",
+            "singular": "amica",
+            "plural": "amiche"
+        },
+        {
+            "type": "noun",
+            "lemma": "maestra",
+            "gender": "FEMININE",
+            "singular": "maestra",
+            "plural": "maestre"
+        },
+        {
+            "type": "noun",
+            "lemma": "dottore",
+            "gender": "MASCULINE",
+            "singular": "dottore",
+            "plural": "dottori"
+        },
+        {
+            "type": "noun",
+            "lemma": "infermiera",
+            "gender": "FEMININE",
+            "singular": "infermiera",
+            "plural": "infermiere"
+        },
+        {
+            "type": "noun",
+            "lemma": "uomo",
+            "gender": "MASCULINE",
+            "singular": "uomo",
+            "plural": "uomini"
+        },
+        {
+            "type": "noun",
+            "lemma": "donna",
+            "gender": "FEMININE",
+            "singular": "donna",
+            "plural": "donne"
+        },
+        {
+            "type": "verb",
+            "lemma": "volere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "voluto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "voglio",
+                "SECOND_SINGULAR": "vuoi",
+                "THIRD_SINGULAR": "vuole",
+                "FIRST_PLURAL": "vogliamo",
+                "SECOND_PLURAL": "volete",
+                "THIRD_PLURAL": "vogliono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "potere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "potuto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "posso",
+                "SECOND_SINGULAR": "puoi",
+                "THIRD_SINGULAR": "può",
+                "FIRST_PLURAL": "possiamo",
+                "SECOND_PLURAL": "potete",
+                "THIRD_PLURAL": "possono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "dovere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "dovuto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "devo",
+                "SECOND_SINGULAR": "devi",
+                "THIRD_SINGULAR": "deve",
+                "FIRST_PLURAL": "dobbiamo",
+                "SECOND_PLURAL": "dovete",
+                "THIRD_PLURAL": "devono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "essere",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "stato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "sono",
+                "SECOND_SINGULAR": "sei",
+                "THIRD_SINGULAR": "è",
+                "FIRST_PLURAL": "siamo",
+                "SECOND_PLURAL": "siete",
+                "THIRD_PLURAL": "sono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "avere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "avuto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "ho",
+                "SECOND_SINGULAR": "hai",
+                "THIRD_SINGULAR": "ha",
+                "FIRST_PLURAL": "abbiamo",
+                "SECOND_PLURAL": "avete",
+                "THIRD_PLURAL": "hanno"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "fare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "fatto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "faccio",
+                "SECOND_SINGULAR": "fai",
+                "THIRD_SINGULAR": "fa",
+                "FIRST_PLURAL": "facciamo",
+                "SECOND_PLURAL": "fate",
+                "THIRD_PLURAL": "fanno"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "andare",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "andato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "vado",
+                "SECOND_SINGULAR": "vai",
+                "THIRD_SINGULAR": "va",
+                "FIRST_PLURAL": "andiamo",
+                "SECOND_PLURAL": "andate",
+                "THIRD_PLURAL": "vanno"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "venire",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "venuto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "vengo",
+                "SECOND_SINGULAR": "vieni",
+                "THIRD_SINGULAR": "viene",
+                "FIRST_PLURAL": "veniamo",
+                "SECOND_PLURAL": "venite",
+                "THIRD_PLURAL": "vengono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "mangiare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "mangiato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "mangio",
+                "SECOND_SINGULAR": "mangi",
+                "THIRD_SINGULAR": "mangia",
+                "FIRST_PLURAL": "mangiamo",
+                "SECOND_PLURAL": "mangiate",
+                "THIRD_PLURAL": "mangiano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "bere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "bevuto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "bevo",
+                "SECOND_SINGULAR": "bevi",
+                "THIRD_SINGULAR": "beve",
+                "FIRST_PLURAL": "beviamo",
+                "SECOND_PLURAL": "bevete",
+                "THIRD_PLURAL": "bevono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "dormire",
+            "auxiliary": "AVERE",
+            "pastParticiple": "dormito",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "dormo",
+                "SECOND_SINGULAR": "dormi",
+                "THIRD_SINGULAR": "dorme",
+                "FIRST_PLURAL": "dormiamo",
+                "SECOND_PLURAL": "dormite",
+                "THIRD_PLURAL": "dormono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "giocare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "giocato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "gioco",
+                "SECOND_SINGULAR": "giochi",
+                "THIRD_SINGULAR": "gioca",
+                "FIRST_PLURAL": "giochiamo",
+                "SECOND_PLURAL": "giocate",
+                "THIRD_PLURAL": "giocano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "guardare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "guardato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "guardo",
+                "SECOND_SINGULAR": "guardi",
+                "THIRD_SINGULAR": "guarda",
+                "FIRST_PLURAL": "guardiamo",
+                "SECOND_PLURAL": "guardate",
+                "THIRD_PLURAL": "guardano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "ascoltare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "ascoltato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "ascolto",
+                "SECOND_SINGULAR": "ascolti",
+                "THIRD_SINGULAR": "ascolta",
+                "FIRST_PLURAL": "ascoltiamo",
+                "SECOND_PLURAL": "ascoltate",
+                "THIRD_PLURAL": "ascoltano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "parlare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "parlato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "parlo",
+                "SECOND_SINGULAR": "parli",
+                "THIRD_SINGULAR": "parla",
+                "FIRST_PLURAL": "parliamo",
+                "SECOND_PLURAL": "parlate",
+                "THIRD_PLURAL": "parlano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "dare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "dato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "do",
+                "SECOND_SINGULAR": "dai",
+                "THIRD_SINGULAR": "dà",
+                "FIRST_PLURAL": "diamo",
+                "SECOND_PLURAL": "date",
+                "THIRD_PLURAL": "danno"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "prendere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "preso",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "prendo",
+                "SECOND_SINGULAR": "prendi",
+                "THIRD_SINGULAR": "prende",
+                "FIRST_PLURAL": "prendiamo",
+                "SECOND_PLURAL": "prendete",
+                "THIRD_PLURAL": "prendono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "mettere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "messo",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "metto",
+                "SECOND_SINGULAR": "metti",
+                "THIRD_SINGULAR": "mette",
+                "FIRST_PLURAL": "mettiamo",
+                "SECOND_PLURAL": "mettete",
+                "THIRD_PLURAL": "mettono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "aprire",
+            "auxiliary": "AVERE",
+            "pastParticiple": "aperto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "apro",
+                "SECOND_SINGULAR": "apri",
+                "THIRD_SINGULAR": "apre",
+                "FIRST_PLURAL": "apriamo",
+                "SECOND_PLURAL": "aprite",
+                "THIRD_PLURAL": "aprono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "chiudere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "chiuso",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "chiudo",
+                "SECOND_SINGULAR": "chiudi",
+                "THIRD_SINGULAR": "chiude",
+                "FIRST_PLURAL": "chiudiamo",
+                "SECOND_PLURAL": "chiudete",
+                "THIRD_PLURAL": "chiudono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "lavare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "lavato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "lavo",
+                "SECOND_SINGULAR": "lavi",
+                "THIRD_SINGULAR": "lava",
+                "FIRST_PLURAL": "laviamo",
+                "SECOND_PLURAL": "lavate",
+                "THIRD_PLURAL": "lavano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "vestirsi",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "vestito",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "vesto",
+                "SECOND_SINGULAR": "vesti",
+                "THIRD_SINGULAR": "veste",
+                "FIRST_PLURAL": "vestiamo",
+                "SECOND_PLURAL": "vestite",
+                "THIRD_PLURAL": "vestono"
+            },
+            "reflexive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "aiutare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "aiutato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "aiuto",
+                "SECOND_SINGULAR": "aiuti",
+                "THIRD_SINGULAR": "aiuta",
+                "FIRST_PLURAL": "aiutiamo",
+                "SECOND_PLURAL": "aiutate",
+                "THIRD_PLURAL": "aiutano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "finire",
+            "auxiliary": "AVERE",
+            "pastParticiple": "finito",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "finisco",
+                "SECOND_SINGULAR": "finisci",
+                "THIRD_SINGULAR": "finisce",
+                "FIRST_PLURAL": "finiamo",
+                "SECOND_PLURAL": "finite",
+                "THIRD_PLURAL": "finiscono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "aspettare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "aspettato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "aspetto",
+                "SECOND_SINGULAR": "aspetti",
+                "THIRD_SINGULAR": "aspetta",
+                "FIRST_PLURAL": "aspettiamo",
+                "SECOND_PLURAL": "aspettate",
+                "THIRD_PLURAL": "aspettano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "comprare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "comprato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "compro",
+                "SECOND_SINGULAR": "compri",
+                "THIRD_SINGULAR": "compra",
+                "FIRST_PLURAL": "compriamo",
+                "SECOND_PLURAL": "comprate",
+                "THIRD_PLURAL": "comprano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "leggere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "letto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "leggo",
+                "SECOND_SINGULAR": "leggi",
+                "THIRD_SINGULAR": "legge",
+                "FIRST_PLURAL": "leggiamo",
+                "SECOND_PLURAL": "leggete",
+                "THIRD_PLURAL": "leggono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "scrivere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "scritto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "scrivo",
+                "SECOND_SINGULAR": "scrivi",
+                "THIRD_SINGULAR": "scrive",
+                "FIRST_PLURAL": "scriviamo",
+                "SECOND_PLURAL": "scrivete",
+                "THIRD_PLURAL": "scrivono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "disegnare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "disegnato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "disegno",
+                "SECOND_SINGULAR": "disegni",
+                "THIRD_SINGULAR": "disegna",
+                "FIRST_PLURAL": "disegniamo",
+                "SECOND_PLURAL": "disegnate",
+                "THIRD_PLURAL": "disegnano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "cantare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "cantato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "canto",
+                "SECOND_SINGULAR": "canti",
+                "THIRD_SINGULAR": "canta",
+                "FIRST_PLURAL": "cantiamo",
+                "SECOND_PLURAL": "cantate",
+                "THIRD_PLURAL": "cantano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "camminare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "camminato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "cammino",
+                "SECOND_SINGULAR": "cammini",
+                "THIRD_SINGULAR": "cammina",
+                "FIRST_PLURAL": "camminiamo",
+                "SECOND_PLURAL": "camminate",
+                "THIRD_PLURAL": "camminano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "correre",
+            "auxiliary": "AVERE",
+            "pastParticiple": "corso",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "corro",
+                "SECOND_SINGULAR": "corri",
+                "THIRD_SINGULAR": "corre",
+                "FIRST_PLURAL": "corriamo",
+                "SECOND_PLURAL": "correte",
+                "THIRD_PLURAL": "corrono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "sedersi",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "seduto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "siedo",
+                "SECOND_SINGULAR": "siedi",
+                "THIRD_SINGULAR": "siede",
+                "FIRST_PLURAL": "sediamo",
+                "SECOND_PLURAL": "sedete",
+                "THIRD_PLURAL": "siedono"
+            },
+            "reflexive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "alzarsi",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "alzato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "alzo",
+                "SECOND_SINGULAR": "alzi",
+                "THIRD_SINGULAR": "alza",
+                "FIRST_PLURAL": "alziamo",
+                "SECOND_PLURAL": "alzate",
+                "THIRD_PLURAL": "alzano"
+            },
+            "reflexive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "amare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "amato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "amo",
+                "SECOND_SINGULAR": "ami",
+                "THIRD_SINGULAR": "ama",
+                "FIRST_PLURAL": "amiamo",
+                "SECOND_PLURAL": "amate",
+                "THIRD_PLURAL": "amano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "piacere",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "piaciuto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "piaccio",
+                "SECOND_SINGULAR": "piaci",
+                "THIRD_SINGULAR": "piace",
+                "FIRST_PLURAL": "piacciamo",
+                "SECOND_PLURAL": "piacete",
+                "THIRD_PLURAL": "piacciono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "sentire",
+            "auxiliary": "AVERE",
+            "pastParticiple": "sentito",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "sento",
+                "SECOND_SINGULAR": "senti",
+                "THIRD_SINGULAR": "sente",
+                "FIRST_PLURAL": "sentiamo",
+                "SECOND_PLURAL": "sentite",
+                "THIRD_PLURAL": "sentono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "vedere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "veduto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "vedo",
+                "SECOND_SINGULAR": "vedi",
+                "THIRD_SINGULAR": "vede",
+                "FIRST_PLURAL": "vediamo",
+                "SECOND_PLURAL": "vedete",
+                "THIRD_PLURAL": "vedono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "capire",
+            "auxiliary": "AVERE",
+            "pastParticiple": "capito",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "capisco",
+                "SECOND_SINGULAR": "capisci",
+                "THIRD_SINGULAR": "capisce",
+                "FIRST_PLURAL": "capiamo",
+                "SECOND_PLURAL": "capite",
+                "THIRD_PLURAL": "capiscono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "sapere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "saputo",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "so",
+                "SECOND_SINGULAR": "sai",
+                "THIRD_SINGULAR": "sa",
+                "FIRST_PLURAL": "sappiamo",
+                "SECOND_PLURAL": "sapete",
+                "THIRD_PLURAL": "sanno"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "dire",
+            "auxiliary": "AVERE",
+            "pastParticiple": "detto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "dico",
+                "SECOND_SINGULAR": "dici",
+                "THIRD_SINGULAR": "dice",
+                "FIRST_PLURAL": "diciamo",
+                "SECOND_PLURAL": "dite",
+                "THIRD_PLURAL": "dicono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "chiedere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "chiesto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "chiedo",
+                "SECOND_SINGULAR": "chiedi",
+                "THIRD_SINGULAR": "chiede",
+                "FIRST_PLURAL": "chiediamo",
+                "SECOND_PLURAL": "chiedete",
+                "THIRD_PLURAL": "chiedono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "rispondere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "risposto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "rispondo",
+                "SECOND_SINGULAR": "rispondi",
+                "THIRD_SINGULAR": "risponde",
+                "FIRST_PLURAL": "rispondiamo",
+                "SECOND_PLURAL": "rispondete",
+                "THIRD_PLURAL": "rispondono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "cercare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "cercato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "cerco",
+                "SECOND_SINGULAR": "cerchi",
+                "THIRD_SINGULAR": "cerca",
+                "FIRST_PLURAL": "cerchiamo",
+                "SECOND_PLURAL": "cercate",
+                "THIRD_PLURAL": "cercano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "trovare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "trovato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "trovo",
+                "SECOND_SINGULAR": "trovi",
+                "THIRD_SINGULAR": "trova",
+                "FIRST_PLURAL": "troviamo",
+                "SECOND_PLURAL": "trovate",
+                "THIRD_PLURAL": "trovano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "portare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "portato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "porto",
+                "SECOND_SINGULAR": "porti",
+                "THIRD_SINGULAR": "porta",
+                "FIRST_PLURAL": "portiamo",
+                "SECOND_PLURAL": "portate",
+                "THIRD_PLURAL": "portano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "tenere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "tenuto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "tengo",
+                "SECOND_SINGULAR": "tieni",
+                "THIRD_SINGULAR": "tiene",
+                "FIRST_PLURAL": "teniamo",
+                "SECOND_PLURAL": "tenete",
+                "THIRD_PLURAL": "tengono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "lasciare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "lasciato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "lascio",
+                "SECOND_SINGULAR": "lasci",
+                "THIRD_SINGULAR": "lascia",
+                "FIRST_PLURAL": "lasciamo",
+                "SECOND_PLURAL": "lasciate",
+                "THIRD_PLURAL": "lasciano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "saltare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "saltato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "salto",
+                "SECOND_SINGULAR": "salti",
+                "THIRD_SINGULAR": "salta",
+                "FIRST_PLURAL": "saltiamo",
+                "SECOND_PLURAL": "saltate",
+                "THIRD_PLURAL": "saltano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "ballare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "ballato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "ballo",
+                "SECOND_SINGULAR": "balli",
+                "THIRD_SINGULAR": "balla",
+                "FIRST_PLURAL": "balliamo",
+                "SECOND_PLURAL": "ballate",
+                "THIRD_PLURAL": "ballano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "nuotare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "nuotato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "nuoto",
+                "SECOND_SINGULAR": "nuoti",
+                "THIRD_SINGULAR": "nuota",
+                "FIRST_PLURAL": "nuotiamo",
+                "SECOND_PLURAL": "nuotate",
+                "THIRD_PLURAL": "nuotano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "salire",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "salito",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "salgo",
+                "SECOND_SINGULAR": "sali",
+                "THIRD_SINGULAR": "sale",
+                "FIRST_PLURAL": "saliamo",
+                "SECOND_PLURAL": "salite",
+                "THIRD_PLURAL": "salgono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "scendere",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "sceso",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "scendo",
+                "SECOND_SINGULAR": "scendi",
+                "THIRD_SINGULAR": "scende",
+                "FIRST_PLURAL": "scendiamo",
+                "SECOND_PLURAL": "scendete",
+                "THIRD_PLURAL": "scendono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "entrare",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "entrato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "entro",
+                "SECOND_SINGULAR": "entri",
+                "THIRD_SINGULAR": "entra",
+                "FIRST_PLURAL": "entriamo",
+                "SECOND_PLURAL": "entrate",
+                "THIRD_PLURAL": "entrano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "uscire",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "uscito",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "esco",
+                "SECOND_SINGULAR": "esci",
+                "THIRD_SINGULAR": "esce",
+                "FIRST_PLURAL": "usciamo",
+                "SECOND_PLURAL": "uscite",
+                "THIRD_PLURAL": "escono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "cominciare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "cominciato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "comincio",
+                "SECOND_SINGULAR": "cominci",
+                "THIRD_SINGULAR": "comincia",
+                "FIRST_PLURAL": "cominciamo",
+                "SECOND_PLURAL": "cominciate",
+                "THIRD_PLURAL": "cominciano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "fermare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "fermato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "fermo",
+                "SECOND_SINGULAR": "fermi",
+                "THIRD_SINGULAR": "ferma",
+                "FIRST_PLURAL": "fermiamo",
+                "SECOND_PLURAL": "fermate",
+                "THIRD_PLURAL": "fermano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "accendere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "acceso",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "accendo",
+                "SECOND_SINGULAR": "accendi",
+                "THIRD_SINGULAR": "accende",
+                "FIRST_PLURAL": "accendiamo",
+                "SECOND_PLURAL": "accendete",
+                "THIRD_PLURAL": "accendono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "spegnere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "spento",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "spengo",
+                "SECOND_SINGULAR": "spegni",
+                "THIRD_SINGULAR": "spegne",
+                "FIRST_PLURAL": "spegniamo",
+                "SECOND_PLURAL": "spegnete",
+                "THIRD_PLURAL": "spengono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "rompere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "rotto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "rompo",
+                "SECOND_SINGULAR": "rompi",
+                "THIRD_SINGULAR": "rompe",
+                "FIRST_PLURAL": "rompiamo",
+                "SECOND_PLURAL": "rompete",
+                "THIRD_PLURAL": "rompono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "pulire",
+            "auxiliary": "AVERE",
+            "pastParticiple": "pulito",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "pulisco",
+                "SECOND_SINGULAR": "pulisci",
+                "THIRD_SINGULAR": "pulisce",
+                "FIRST_PLURAL": "puliamo",
+                "SECOND_PLURAL": "pulite",
+                "THIRD_PLURAL": "puliscono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "cucinare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "cucinato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "cucino",
+                "SECOND_SINGULAR": "cucini",
+                "THIRD_SINGULAR": "cucina",
+                "FIRST_PLURAL": "cuciniamo",
+                "SECOND_PLURAL": "cucinate",
+                "THIRD_PLURAL": "cucinano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "tagliare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "tagliato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "taglio",
+                "SECOND_SINGULAR": "tagli",
+                "THIRD_SINGULAR": "taglia",
+                "FIRST_PLURAL": "tagliamo",
+                "SECOND_PLURAL": "tagliate",
+                "THIRD_PLURAL": "tagliano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "toccare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "toccato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "tocco",
+                "SECOND_SINGULAR": "tocchi",
+                "THIRD_SINGULAR": "tocca",
+                "FIRST_PLURAL": "tocchiamo",
+                "SECOND_PLURAL": "toccate",
+                "THIRD_PLURAL": "toccano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "baciare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "baciato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "bacio",
+                "SECOND_SINGULAR": "baci",
+                "THIRD_SINGULAR": "bacia",
+                "FIRST_PLURAL": "baciamo",
+                "SECOND_PLURAL": "baciate",
+                "THIRD_PLURAL": "baciano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "abbracciare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "abbracciato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "abbraccio",
+                "SECOND_SINGULAR": "abbracci",
+                "THIRD_SINGULAR": "abbraccia",
+                "FIRST_PLURAL": "abbracciamo",
+                "SECOND_PLURAL": "abbracciate",
+                "THIRD_PLURAL": "abbracciano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "piangere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "pianto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "piango",
+                "SECOND_SINGULAR": "piangi",
+                "THIRD_SINGULAR": "piange",
+                "FIRST_PLURAL": "piangiamo",
+                "SECOND_PLURAL": "piangete",
+                "THIRD_PLURAL": "piangono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "ridere",
+            "auxiliary": "AVERE",
+            "pastParticiple": "riso",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "rido",
+                "SECOND_SINGULAR": "ridi",
+                "THIRD_SINGULAR": "ride",
+                "FIRST_PLURAL": "ridiamo",
+                "SECOND_PLURAL": "ridete",
+                "THIRD_PLURAL": "ridono"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "gridare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "gridato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "grido",
+                "SECOND_SINGULAR": "gridi",
+                "THIRD_SINGULAR": "grida",
+                "FIRST_PLURAL": "gridiamo",
+                "SECOND_PLURAL": "gridate",
+                "THIRD_PLURAL": "gridano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "ricordare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "ricordato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "ricordo",
+                "SECOND_SINGULAR": "ricordi",
+                "THIRD_SINGULAR": "ricorda",
+                "FIRST_PLURAL": "ricordiamo",
+                "SECOND_PLURAL": "ricordate",
+                "THIRD_PLURAL": "ricordano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "dimenticare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "dimenticato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "dimentico",
+                "SECOND_SINGULAR": "dimentichi",
+                "THIRD_SINGULAR": "dimentica",
+                "FIRST_PLURAL": "dimentichiamo",
+                "SECOND_PLURAL": "dimenticate",
+                "THIRD_PLURAL": "dimenticano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "imparare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "imparato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "imparo",
+                "SECOND_SINGULAR": "impari",
+                "THIRD_SINGULAR": "impara",
+                "FIRST_PLURAL": "impariamo",
+                "SECOND_PLURAL": "imparate",
+                "THIRD_PLURAL": "imparano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "studiare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "studiato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "studio",
+                "SECOND_SINGULAR": "studi",
+                "THIRD_SINGULAR": "studia",
+                "FIRST_PLURAL": "studiamo",
+                "SECOND_PLURAL": "studiate",
+                "THIRD_PLURAL": "studiano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "lavorare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "lavorato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "lavoro",
+                "SECOND_SINGULAR": "lavori",
+                "THIRD_SINGULAR": "lavora",
+                "FIRST_PLURAL": "lavoriamo",
+                "SECOND_PLURAL": "lavorate",
+                "THIRD_PLURAL": "lavorano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "riposare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "riposato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "riposo",
+                "SECOND_SINGULAR": "riposi",
+                "THIRD_SINGULAR": "riposa",
+                "FIRST_PLURAL": "riposiamo",
+                "SECOND_PLURAL": "riposate",
+                "THIRD_PLURAL": "riposano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "svegliarsi",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "svegliato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "sveglio",
+                "SECOND_SINGULAR": "svegli",
+                "THIRD_SINGULAR": "sveglia",
+                "FIRST_PLURAL": "svegliamo",
+                "SECOND_PLURAL": "svegliate",
+                "THIRD_PLURAL": "svegliano"
+            },
+            "reflexive": true
+        },
+        {
+            "type": "verb",
+            "lemma": "telefonare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "telefonato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "telefono",
+                "SECOND_SINGULAR": "telefoni",
+                "THIRD_SINGULAR": "telefona",
+                "FIRST_PLURAL": "telefoniamo",
+                "SECOND_PLURAL": "telefonate",
+                "THIRD_PLURAL": "telefonano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "pagare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "pagato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "pago",
+                "SECOND_SINGULAR": "paghi",
+                "THIRD_SINGULAR": "paga",
+                "FIRST_PLURAL": "paghiamo",
+                "SECOND_PLURAL": "pagate",
+                "THIRD_PLURAL": "pagano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "pensare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "pensato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "penso",
+                "SECOND_SINGULAR": "pensi",
+                "THIRD_SINGULAR": "pensa",
+                "FIRST_PLURAL": "pensiamo",
+                "SECOND_PLURAL": "pensate",
+                "THIRD_PLURAL": "pensano"
+            }
+        },
+        {
+            "type": "verb",
+            "lemma": "cadere",
+            "auxiliary": "ESSERE",
+            "pastParticiple": "caduto",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "cado",
+                "SECOND_SINGULAR": "cadi",
+                "THIRD_SINGULAR": "cade",
+                "FIRST_PLURAL": "cadiamo",
+                "SECOND_PLURAL": "cadete",
+                "THIRD_PLURAL": "cadono"
+            }
+        },
+        {
+            "type": "noun",
+            "lemma": "acqua",
+            "gender": "FEMININE",
+            "singular": "acqua",
+            "plural": "acque"
+        },
+        {
+            "type": "noun",
+            "lemma": "latte",
+            "gender": "MASCULINE",
+            "singular": "latte",
+            "plural": "latti"
+        },
+        {
+            "type": "noun",
+            "lemma": "succo",
+            "gender": "MASCULINE",
+            "singular": "succo",
+            "plural": "succhi"
+        },
+        {
+            "type": "noun",
+            "lemma": "tè",
+            "gender": "MASCULINE",
+            "singular": "tè",
+            "plural": "tè"
+        },
+        {
+            "type": "noun",
+            "lemma": "pane",
+            "gender": "MASCULINE",
+            "singular": "pane",
+            "plural": "pani"
+        },
+        {
+            "type": "noun",
+            "lemma": "pasta",
+            "gender": "FEMININE",
+            "singular": "pasta",
+            "plural": "paste"
+        },
+        {
+            "type": "noun",
+            "lemma": "pizza",
+            "gender": "FEMININE",
+            "singular": "pizza",
+            "plural": "pizze"
+        },
+        {
+            "type": "noun",
+            "lemma": "riso",
+            "gender": "FEMININE",
+            "singular": "riso",
+            "plural": "risa"
+        },
+        {
+            "type": "noun",
+            "lemma": "panino",
+            "gender": "MASCULINE",
+            "singular": "panino",
+            "plural": "panini"
+        },
+        {
+            "type": "noun",
+            "lemma": "carne",
+            "gender": "FEMININE",
+            "singular": "carne",
+            "plural": "carni"
+        },
+        {
+            "type": "noun",
+            "lemma": "pollo",
+            "gender": "MASCULINE",
+            "singular": "pollo",
+            "plural": "polli"
+        },
+        {
+            "type": "noun",
+            "lemma": "pesce",
+            "gender": "MASCULINE",
+            "singular": "pesce",
+            "plural": "pesci"
+        },
+        {
+            "type": "noun",
+            "lemma": "prosciutto",
+            "gender": "MASCULINE",
+            "singular": "prosciutto",
+            "plural": "prosciutti"
+        },
+        {
+            "type": "noun",
+            "lemma": "uovo",
+            "gender": "FEMININE",
+            "singular": "uovo",
+            "plural": "uova"
+        },
+        {
+            "type": "noun",
+            "lemma": "formaggio",
+            "gender": "MASCULINE",
+            "singular": "formaggio",
+            "plural": "formaggi"
+        },
+        {
+            "type": "noun",
+            "lemma": "yogurt",
+            "gender": "MASCULINE",
+            "singular": "yogurt",
+            "plural": "yogurt"
+        },
+        {
+            "type": "noun",
+            "lemma": "minestra",
+            "gender": "FEMININE",
+            "singular": "minestra",
+            "plural": "minestre"
+        },
+        {
+            "type": "noun",
+            "lemma": "insalata",
+            "gender": "FEMININE",
+            "singular": "insalata",
+            "plural": "insalate"
+        },
+        {
+            "type": "noun",
+            "lemma": "biscotto",
+            "gender": "MASCULINE",
+            "singular": "biscotto",
+            "plural": "biscotti"
+        },
+        {
+            "type": "noun",
+            "lemma": "torta",
+            "gender": "FEMININE",
+            "singular": "torta",
+            "plural": "torte"
+        },
+        {
+            "type": "noun",
+            "lemma": "gelato",
+            "gender": "MASCULINE",
+            "singular": "gelato",
+            "plural": "gelati"
+        },
+        {
+            "type": "noun",
+            "lemma": "cioccolato",
+            "gender": "MASCULINE",
+            "singular": "cioccolato",
+            "plural": "cioccolati"
+        },
+        {
+            "type": "noun",
+            "lemma": "caramella",
+            "gender": "FEMININE",
+            "singular": "caramella",
+            "plural": "caramelle"
+        },
+        {
+            "type": "noun",
+            "lemma": "marmellata",
+            "gender": "FEMININE",
+            "singular": "marmellata",
+            "plural": "marmellate"
+        },
+        {
+            "type": "noun",
+            "lemma": "burro",
+            "gender": "MASCULINE",
+            "singular": "burro",
+            "plural": "burri"
+        },
+        {
+            "type": "noun",
+            "lemma": "frutta",
+            "gender": "FEMININE",
+            "singular": "frutta",
+            "plural": "frutte"
+        },
+        {
+            "type": "noun",
+            "lemma": "mela",
+            "gender": "FEMININE",
+            "singular": "mela",
+            "plural": "mele"
+        },
+        {
+            "type": "noun",
+            "lemma": "banana",
+            "gender": "FEMININE",
+            "singular": "banana",
+            "plural": "banane"
+        },
+        {
+            "type": "noun",
+            "lemma": "arancia",
+            "gender": "FEMININE",
+            "singular": "arancia",
+            "plural": "arance"
+        },
+        {
+            "type": "noun",
+            "lemma": "fragola",
+            "gender": "FEMININE",
+            "singular": "fragola",
+            "plural": "fragole"
+        },
+        {
+            "type": "noun",
+            "lemma": "pera",
+            "gender": "FEMININE",
+            "singular": "pera",
+            "plural": "pere"
+        },
+        {
+            "type": "noun",
+            "lemma": "uva",
+            "gender": "FEMININE",
+            "singular": "uva",
+            "plural": "uve"
+        },
+        {
+            "type": "noun",
+            "lemma": "ciliegia",
+            "gender": "FEMININE",
+            "singular": "ciliegia",
+            "plural": "ciliegie"
+        },
+        {
+            "type": "noun",
+            "lemma": "anguria",
+            "gender": "FEMININE",
+            "singular": "anguria",
+            "plural": "angurie"
+        },
+        {
+            "type": "noun",
+            "lemma": "pesca",
+            "gender": "FEMININE",
+            "singular": "pesca",
+            "plural": "pesche"
+        },
+        {
+            "type": "noun",
+            "lemma": "verdura",
+            "gender": "FEMININE",
+            "singular": "verdura",
+            "plural": "verdure"
+        },
+        {
+            "type": "noun",
+            "lemma": "pomodoro",
+            "gender": "MASCULINE",
+            "singular": "pomodoro",
+            "plural": "pomodori"
+        },
+        {
+            "type": "noun",
+            "lemma": "patata",
+            "gender": "FEMININE",
+            "singular": "patata",
+            "plural": "patate"
+        },
+        {
+            "type": "noun",
+            "lemma": "carota",
+            "gender": "FEMININE",
+            "singular": "carota",
+            "plural": "carote"
+        },
+        {
+            "type": "noun",
+            "lemma": "zucchero",
+            "gender": "MASCULINE",
+            "singular": "zucchero",
+            "plural": "zuccheri"
+        },
+        {
+            "type": "noun",
+            "lemma": "sale",
+            "gender": "MASCULINE",
+            "singular": "sale",
+            "plural": "sali"
+        },
+        {
+            "type": "noun",
+            "lemma": "olio",
+            "gender": "MASCULINE",
+            "singular": "olio",
+            "plural": "olii"
+        },
+        {
+            "type": "noun",
+            "lemma": "colazione",
+            "gender": "FEMININE",
+            "singular": "colazione",
+            "plural": "colazioni"
+        },
+        {
+            "type": "noun",
+            "lemma": "pranzo",
+            "gender": "MASCULINE",
+            "singular": "pranzo",
+            "plural": "pranzi"
+        },
+        {
+            "type": "noun",
+            "lemma": "cena",
+            "gender": "FEMININE",
+            "singular": "cena",
+            "plural": "cene"
+        },
+        {
+            "type": "noun",
+            "lemma": "merenda",
+            "gender": "FEMININE",
+            "singular": "merenda",
+            "plural": "merende"
+        },
+        {
+            "type": "noun",
+            "lemma": "fame",
+            "gender": "FEMININE",
+            "singular": "fame",
+            "plural": "fami"
+        },
+        {
+            "type": "noun",
+            "lemma": "sete",
+            "gender": "FEMININE",
+            "singular": "sete",
+            "plural": "seti"
+        },
+        {
+            "type": "noun",
+            "lemma": "casa",
+            "gender": "FEMININE",
+            "singular": "casa",
+            "plural": "case"
+        },
+        {
+            "type": "noun",
+            "lemma": "letto",
+            "gender": "MASCULINE",
+            "singular": "letto",
+            "plural": "letti"
+        },
+        {
+            "type": "noun",
+            "lemma": "bagno",
+            "gender": "MASCULINE",
+            "singular": "bagno",
+            "plural": "bagni"
+        },
+        {
+            "type": "noun",
+            "lemma": "telefono",
+            "gender": "MASCULINE",
+            "singular": "telefono",
+            "plural": "telefoni"
+        },
+        {
+            "type": "noun",
+            "lemma": "televisione",
+            "gender": "FEMININE",
+            "singular": "televisione",
+            "plural": "televisioni"
+        },
+        {
+            "type": "noun",
+            "lemma": "giocattolo",
+            "gender": "MASCULINE",
+            "singular": "giocattolo",
+            "plural": "giocattoli"
+        },
+        {
+            "type": "noun",
+            "lemma": "tavolo",
+            "gender": "MASCULINE",
+            "singular": "tavolo",
+            "plural": "tavoli"
+        },
+        {
+            "type": "noun",
+            "lemma": "sedia",
+            "gender": "FEMININE",
+            "singular": "sedia",
+            "plural": "sedie"
+        },
+        {
+            "type": "noun",
+            "lemma": "porta",
+            "gender": "FEMININE",
+            "singular": "porta",
+            "plural": "porte"
+        },
+        {
+            "type": "noun",
+            "lemma": "finestra",
+            "gender": "FEMININE",
+            "singular": "finestra",
+            "plural": "finestre"
+        },
+        {
+            "type": "noun",
+            "lemma": "cucina",
+            "gender": "FEMININE",
+            "singular": "cucina",
+            "plural": "cucine"
+        },
+        {
+            "type": "noun",
+            "lemma": "libro",
+            "gender": "MASCULINE",
+            "singular": "libro",
+            "plural": "libri"
+        },
+        {
+            "type": "noun",
+            "lemma": "penna",
+            "gender": "FEMININE",
+            "singular": "penna",
+            "plural": "penne"
+        },
+        {
+            "type": "noun",
+            "lemma": "zaino",
+            "gender": "MASCULINE",
+            "singular": "zaino",
+            "plural": "zaini"
+        },
+        {
+            "type": "noun",
+            "lemma": "palla",
+            "gender": "FEMININE",
+            "singular": "palla",
+            "plural": "palle"
+        },
+        {
+            "type": "noun",
+            "lemma": "bicchiere",
+            "gender": "MASCULINE",
+            "singular": "bicchiere",
+            "plural": "bicchieri"
+        },
+        {
+            "type": "noun",
+            "lemma": "piatto",
+            "gender": "MASCULINE",
+            "singular": "piatto",
+            "plural": "piatti"
+        },
+        {
+            "type": "noun",
+            "lemma": "cucchiaio",
+            "gender": "MASCULINE",
+            "singular": "cucchiaio",
+            "plural": "cucchiai"
+        },
+        {
+            "type": "noun",
+            "lemma": "forchetta",
+            "gender": "FEMININE",
+            "singular": "forchetta",
+            "plural": "forchette"
+        },
+        {
+            "type": "noun",
+            "lemma": "coltello",
+            "gender": "MASCULINE",
+            "singular": "coltello",
+            "plural": "coltelli"
+        },
+        {
+            "type": "noun",
+            "lemma": "sapone",
+            "gender": "MASCULINE",
+            "singular": "sapone",
+            "plural": "saponi"
+        },
+        {
+            "type": "noun",
+            "lemma": "asciugamano",
+            "gender": "MASCULINE",
+            "singular": "asciugamano",
+            "plural": "asciugamani"
+        },
+        {
+            "type": "noun",
+            "lemma": "spazzolino",
+            "gender": "MASCULINE",
+            "singular": "spazzolino",
+            "plural": "spazzolini"
+        },
+        {
+            "type": "noun",
+            "lemma": "dentifricio",
+            "gender": "MASCULINE",
+            "singular": "dentifricio",
+            "plural": "dentifrici"
+        },
+        {
+            "type": "noun",
+            "lemma": "fazzoletto",
+            "gender": "MASCULINE",
+            "singular": "fazzoletto",
+            "plural": "fazzoletti"
+        },
+        {
+            "type": "noun",
+            "lemma": "pigiama",
+            "gender": "MASCULINE",
+            "singular": "pigiama",
+            "plural": "pigiami"
+        },
+        {
+            "type": "noun",
+            "lemma": "giacca",
+            "gender": "FEMININE",
+            "singular": "giacca",
+            "plural": "giacche"
+        },
+        {
+            "type": "noun",
+            "lemma": "luce",
+            "gender": "FEMININE",
+            "singular": "luce",
+            "plural": "luci"
+        },
+        {
+            "type": "noun",
+            "lemma": "divano",
+            "gender": "MASCULINE",
+            "singular": "divano",
+            "plural": "divani"
+        },
+        {
+            "type": "noun",
+            "lemma": "cuscino",
+            "gender": "MASCULINE",
+            "singular": "cuscino",
+            "plural": "cuscini"
+        },
+        {
+            "type": "noun",
+            "lemma": "coperta",
+            "gender": "FEMININE",
+            "singular": "coperta",
+            "plural": "coperte"
+        },
+        {
+            "type": "noun",
+            "lemma": "specchio",
+            "gender": "MASCULINE",
+            "singular": "specchio",
+            "plural": "specchi"
+        },
+        {
+            "type": "noun",
+            "lemma": "doccia",
+            "gender": "FEMININE",
+            "singular": "doccia",
+            "plural": "docce"
+        },
+        {
+            "type": "noun",
+            "lemma": "frigorifero",
+            "gender": "MASCULINE",
+            "singular": "frigorifero",
+            "plural": "frigoriferi"
+        },
+        {
+            "type": "noun",
+            "lemma": "orologio",
+            "gender": "MASCULINE",
+            "singular": "orologio",
+            "plural": "orologi"
+        },
+        {
+            "type": "noun",
+            "lemma": "testa",
+            "gender": "FEMININE",
+            "singular": "testa",
+            "plural": "teste"
+        },
+        {
+            "type": "noun",
+            "lemma": "occhio",
+            "gender": "MASCULINE",
+            "singular": "occhio",
+            "plural": "occhi"
+        },
+        {
+            "type": "noun",
+            "lemma": "orecchio",
+            "gender": "FEMININE",
+            "singular": "orecchio",
+            "plural": "orecchie"
+        },
+        {
+            "type": "noun",
+            "lemma": "naso",
+            "gender": "MASCULINE",
+            "singular": "naso",
+            "plural": "nasi"
+        },
+        {
+            "type": "noun",
+            "lemma": "bocca",
+            "gender": "FEMININE",
+            "singular": "bocca",
+            "plural": "bocche"
+        },
+        {
+            "type": "noun",
+            "lemma": "dente",
+            "gender": "MASCULINE",
+            "singular": "dente",
+            "plural": "denti"
+        },
+        {
+            "type": "noun",
+            "lemma": "lingua",
+            "gender": "FEMININE",
+            "singular": "lingua",
+            "plural": "lingue"
+        },
+        {
+            "type": "noun",
+            "lemma": "collo",
+            "gender": "MASCULINE",
+            "singular": "collo",
+            "plural": "colli"
+        },
+        {
+            "type": "noun",
+            "lemma": "mano",
+            "gender": "FEMININE",
+            "singular": "mano",
+            "plural": "mani"
+        },
+        {
+            "type": "noun",
+            "lemma": "braccio",
+            "gender": "FEMININE",
+            "singular": "braccio",
+            "plural": "braccia"
+        },
+        {
+            "type": "noun",
+            "lemma": "gamba",
+            "gender": "FEMININE",
+            "singular": "gamba",
+            "plural": "gambe"
+        },
+        {
+            "type": "noun",
+            "lemma": "piede",
+            "gender": "MASCULINE",
+            "singular": "piede",
+            "plural": "piedi"
+        },
+        {
+            "type": "noun",
+            "lemma": "pancia",
+            "gender": "FEMININE",
+            "singular": "pancia",
+            "plural": "pance"
+        },
+        {
+            "type": "noun",
+            "lemma": "schiena",
+            "gender": "FEMININE",
+            "singular": "schiena",
+            "plural": "schiene"
+        },
+        {
+            "type": "noun",
+            "lemma": "dolore",
+            "gender": "MASCULINE",
+            "singular": "dolore",
+            "plural": "dolori"
+        },
+        {
+            "type": "noun",
+            "lemma": "febbre",
+            "gender": "FEMININE",
+            "singular": "febbre",
+            "plural": "febbri"
+        },
+        {
+            "type": "noun",
+            "lemma": "tosse",
+            "gender": "FEMININE",
+            "singular": "tosse",
+            "plural": "tossi"
+        },
+        {
+            "type": "adjective",
+            "lemma": "malato",
+            "masculineSingular": "malato",
+            "feminineSingular": "malata",
+            "masculinePlural": "malati",
+            "femininePlural": "malate"
+        },
+        {
+            "type": "noun",
+            "lemma": "medicina",
+            "gender": "FEMININE",
+            "singular": "medicina",
+            "plural": "medicine"
+        },
+        {
+            "type": "noun",
+            "lemma": "cerotto",
+            "gender": "MASCULINE",
+            "singular": "cerotto",
+            "plural": "cerotti"
+        },
+        {
+            "type": "noun",
+            "lemma": "termometro",
+            "gender": "MASCULINE",
+            "singular": "termometro",
+            "plural": "termometri"
+        },
+        {
+            "type": "verb",
+            "lemma": "vomitare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "vomitato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "vomito",
+                "SECOND_SINGULAR": "vomiti",
+                "THIRD_SINGULAR": "vomita",
+                "FIRST_PLURAL": "vomitiamo",
+                "SECOND_PLURAL": "vomitate",
+                "THIRD_PLURAL": "vomitano"
+            }
+        },
+        {
+            "type": "adjective",
+            "lemma": "felice",
+            "masculineSingular": "felice",
+            "feminineSingular": "felice",
+            "masculinePlural": "felici",
+            "femininePlural": "felici"
+        },
+        {
+            "type": "adjective",
+            "lemma": "triste",
+            "masculineSingular": "triste",
+            "feminineSingular": "triste",
+            "masculinePlural": "tristi",
+            "femininePlural": "tristi"
+        },
+        {
+            "type": "adjective",
+            "lemma": "arrabbiato",
+            "masculineSingular": "arrabbiato",
+            "feminineSingular": "arrabbiata",
+            "masculinePlural": "arrabbiati",
+            "femininePlural": "arrabbiate"
+        },
+        {
+            "type": "adjective",
+            "lemma": "stanco",
+            "masculineSingular": "stanco",
+            "feminineSingular": "stanca",
+            "masculinePlural": "stanchi",
+            "femininePlural": "stanche"
+        },
+        {
+            "type": "adjective",
+            "lemma": "spaventato",
+            "masculineSingular": "spaventato",
+            "feminineSingular": "spaventata",
+            "masculinePlural": "spaventati",
+            "femininePlural": "spaventate"
+        },
+        {
+            "type": "adjective",
+            "lemma": "annoiato",
+            "masculineSingular": "annoiato",
+            "feminineSingular": "annoiata",
+            "masculinePlural": "annoiati",
+            "femininePlural": "annoiate"
+        },
+        {
+            "type": "adjective",
+            "lemma": "sorpreso",
+            "masculineSingular": "sorpreso",
+            "feminineSingular": "sorpresa",
+            "masculinePlural": "sorpresi",
+            "femininePlural": "sorprese"
+        },
+        {
+            "type": "adjective",
+            "lemma": "contento",
+            "masculineSingular": "contento",
+            "feminineSingular": "contenta",
+            "masculinePlural": "contenti",
+            "femininePlural": "contente"
+        },
+        {
+            "type": "adjective",
+            "lemma": "confuso",
+            "masculineSingular": "confuso",
+            "feminineSingular": "confusa",
+            "masculinePlural": "confusi",
+            "femininePlural": "confuse"
+        },
+        {
+            "type": "adjective",
+            "lemma": "tranquillo",
+            "masculineSingular": "tranquillo",
+            "feminineSingular": "tranquilla",
+            "masculinePlural": "tranquilli",
+            "femininePlural": "tranquille"
+        },
+        {
+            "type": "adjective",
+            "lemma": "nervoso",
+            "masculineSingular": "nervoso",
+            "feminineSingular": "nervosa",
+            "masculinePlural": "nervosi",
+            "femininePlural": "nervose"
+        },
+        {
+            "type": "adjective",
+            "lemma": "preoccupato",
+            "masculineSingular": "preoccupato",
+            "feminineSingular": "preoccupata",
+            "masculinePlural": "preoccupati",
+            "femininePlural": "preoccupate"
+        },
+        {
+            "type": "noun",
+            "lemma": "paura",
+            "gender": "FEMININE",
+            "singular": "paura",
+            "plural": "paure"
+        },
+        {
+            "type": "noun",
+            "lemma": "amore",
+            "gender": "MASCULINE",
+            "singular": "amore",
+            "plural": "amori"
+        },
+        {
+            "type": "noun",
+            "lemma": "puzzle",
+            "gender": "MASCULINE",
+            "singular": "puzzle",
+            "plural": "puzzle"
+        },
+        {
+            "type": "noun",
+            "lemma": "bambola",
+            "gender": "FEMININE",
+            "singular": "bambola",
+            "plural": "bambole"
+        },
+        {
+            "type": "noun",
+            "lemma": "macchinina",
+            "gender": "FEMININE",
+            "singular": "macchinina",
+            "plural": "macchinine"
+        },
+        {
+            "type": "noun",
+            "lemma": "altalena",
+            "gender": "FEMININE",
+            "singular": "altalena",
+            "plural": "altalene"
+        },
+        {
+            "type": "noun",
+            "lemma": "parco",
+            "gender": "MASCULINE",
+            "singular": "parco",
+            "plural": "parchi"
+        },
+        {
+            "type": "noun",
+            "lemma": "bicicletta",
+            "gender": "FEMININE",
+            "singular": "bicicletta",
+            "plural": "biciclette"
+        },
+        {
+            "type": "noun",
+            "lemma": "quaderno",
+            "gender": "MASCULINE",
+            "singular": "quaderno",
+            "plural": "quaderni"
+        },
+        {
+            "type": "noun",
+            "lemma": "matita",
+            "gender": "FEMININE",
+            "singular": "matita",
+            "plural": "matite"
+        },
+        {
+            "type": "noun",
+            "lemma": "colla",
+            "gender": "FEMININE",
+            "singular": "colla",
+            "plural": "colle"
+        },
+        {
+            "type": "verb",
+            "lemma": "colorare",
+            "auxiliary": "AVERE",
+            "pastParticiple": "colorato",
+            "presentIndicative": {
+                "FIRST_SINGULAR": "coloro",
+                "SECOND_SINGULAR": "colori",
+                "THIRD_SINGULAR": "colora",
+                "FIRST_PLURAL": "coloriamo",
+                "SECOND_PLURAL": "colorate",
+                "THIRD_PLURAL": "colorano"
+            }
+        },
+        {
+            "type": "noun",
+            "lemma": "musica",
+            "gender": "FEMININE",
+            "singular": "musica",
+            "plural": "musiche"
+        },
+        {
+            "type": "noun",
+            "lemma": "film",
+            "gender": "MASCULINE",
+            "singular": "film",
+            "plural": "films"
+        },
+        {
+            "type": "noun",
+            "lemma": "computer",
+            "gender": "MASCULINE",
+            "singular": "computer",
+            "plural": "computers"
+        },
+        {
+            "type": "noun",
+            "lemma": "festa",
+            "gender": "FEMININE",
+            "singular": "festa",
+            "plural": "feste"
+        },
+        {
+            "type": "noun",
+            "lemma": "regalo",
+            "gender": "MASCULINE",
+            "singular": "regalo",
+            "plural": "regali"
+        },
+        {
+            "type": "noun",
+            "lemma": "macchina",
+            "gender": "FEMININE",
+            "singular": "macchina",
+            "plural": "macchine"
+        },
+        {
+            "type": "noun",
+            "lemma": "autobus",
+            "gender": "MASCULINE",
+            "singular": "autobus",
+            "plural": "autobus"
+        },
+        {
+            "type": "noun",
+            "lemma": "supermercato",
+            "gender": "MASCULINE",
+            "singular": "supermercato",
+            "plural": "supermercati"
+        },
+        {
+            "type": "noun",
+            "lemma": "piscina",
+            "gender": "FEMININE",
+            "singular": "piscina",
+            "plural": "piscine"
+        },
+        {
+            "type": "noun",
+            "lemma": "negozio",
+            "gender": "MASCULINE",
+            "singular": "negozio",
+            "plural": "negozi"
+        },
+        {
+            "type": "noun",
+            "lemma": "ospedale",
+            "gender": "MASCULINE",
+            "singular": "ospedale",
+            "plural": "ospedali"
+        },
+        {
+            "type": "noun",
+            "lemma": "farmacia",
+            "gender": "FEMININE",
+            "singular": "farmacia",
+            "plural": "farmacie"
+        },
+        {
+            "type": "noun",
+            "lemma": "chiesa",
+            "gender": "FEMININE",
+            "singular": "chiesa",
+            "plural": "chiese"
+        },
+        {
+            "type": "noun",
+            "lemma": "mare",
+            "gender": "MASCULINE",
+            "singular": "mare",
+            "plural": "mari"
+        },
+        {
+            "type": "noun",
+            "lemma": "spiaggia",
+            "gender": "FEMININE",
+            "singular": "spiaggia",
+            "plural": "spiaggie"
+        },
+        {
+            "type": "noun",
+            "lemma": "montagna",
+            "gender": "FEMININE",
+            "singular": "montagna",
+            "plural": "montagne"
+        },
+        {
+            "type": "noun",
+            "lemma": "città",
+            "gender": "FEMININE",
+            "singular": "citta'",
+            "plural": "citta'"
+        },
+        {
+            "type": "noun",
+            "lemma": "strada",
+            "gender": "FEMININE",
+            "singular": "strada",
+            "plural": "strade"
+        },
+        {
+            "type": "noun",
+            "lemma": "treno",
+            "gender": "MASCULINE",
+            "singular": "treno",
+            "plural": "treni"
+        },
+        {
+            "type": "noun",
+            "lemma": "aereo",
+            "gender": "MASCULINE",
+            "singular": "aereo",
+            "plural": "aerei"
+        },
+        {
+            "type": "noun",
+            "lemma": "moto",
+            "gender": "FEMININE",
+            "singular": "moto",
+            "plural": "moto"
+        },
+        {
+            "type": "noun",
+            "lemma": "barca",
+            "gender": "FEMININE",
+            "singular": "barca",
+            "plural": "barche"
+        },
+        {
+            "type": "noun",
+            "lemma": "taxi",
+            "gender": "MASCULINE",
+            "singular": "taxi",
+            "plural": "taxi"
+        },
+        {
+            "type": "noun",
+            "lemma": "metropolitana",
+            "gender": "FEMININE",
+            "singular": "metropolitana",
+            "plural": "metropolitane"
+        },
+        {
+            "type": "noun",
+            "lemma": "stazione",
+            "gender": "FEMININE",
+            "singular": "stazione",
+            "plural": "stazioni"
+        },
+        {
+            "type": "noun",
+            "lemma": "fermata",
+            "gender": "FEMININE",
+            "singular": "fermata",
+            "plural": "fermate"
+        },
+        {
+            "type": "noun",
+            "lemma": "semaforo",
+            "gender": "MASCULINE",
+            "singular": "semaforo",
+            "plural": "semafori"
+        },
+        {
+            "type": "noun",
+            "lemma": "ascensore",
+            "gender": "MASCULINE",
+            "singular": "ascensore",
+            "plural": "ascensori"
+        },
+        {
+            "type": "noun",
+            "lemma": "scala",
+            "gender": "FEMININE",
+            "singular": "scala",
+            "plural": "scale"
+        },
+        {
+            "type": "noun",
+            "lemma": "ristorante",
+            "gender": "MASCULINE",
+            "singular": "ristorante",
+            "plural": "ristoranti"
+        },
+        {
+            "type": "noun",
+            "lemma": "bar",
+            "gender": "MASCULINE",
+            "singular": "bar",
+            "plural": "bar"
+        },
+        {
+            "type": "adjective",
+            "lemma": "dopo",
+            "masculineSingular": "dopo",
+            "feminineSingular": "dopa",
+            "masculinePlural": "dopi",
+            "femininePlural": "dope"
+        },
+        {
+            "type": "noun",
+            "lemma": "giorno",
+            "gender": "MASCULINE",
+            "singular": "giorno",
+            "plural": "giorni"
+        },
+        {
+            "type": "noun",
+            "lemma": "notte",
+            "gender": "FEMININE",
+            "singular": "notte",
+            "plural": "notti"
+        },
+        {
+            "type": "noun",
+            "lemma": "mattina",
+            "gender": "FEMININE",
+            "singular": "mattina",
+            "plural": "mattine"
+        },
+        {
+            "type": "adjective",
+            "lemma": "caldo",
+            "masculineSingular": "caldo",
+            "feminineSingular": "calda",
+            "masculinePlural": "caldi",
+            "femininePlural": "calde"
+        },
+        {
+            "type": "adjective",
+            "lemma": "freddo",
+            "masculineSingular": "freddo",
+            "feminineSingular": "fredda",
+            "masculinePlural": "freddi",
+            "femininePlural": "fredde"
+        },
+        {
+            "type": "noun",
+            "lemma": "sole",
+            "gender": "MASCULINE",
+            "singular": "sole",
+            "plural": "soli"
+        },
+        {
+            "type": "noun",
+            "lemma": "pioggia",
+            "gender": "FEMININE",
+            "singular": "pioggia",
+            "plural": "pioggie"
+        },
+        {
+            "type": "noun",
+            "lemma": "neve",
+            "gender": "FEMININE",
+            "singular": "neve",
+            "plural": "nevi"
+        },
+        {
+            "type": "noun",
+            "lemma": "vento",
+            "gender": "MASCULINE",
+            "singular": "vento",
+            "plural": "venti"
+        },
+        {
+            "type": "noun",
+            "lemma": "estate",
+            "gender": "FEMININE",
+            "singular": "estate",
+            "plural": "estati"
+        },
+        {
+            "type": "noun",
+            "lemma": "inverno",
+            "gender": "MASCULINE",
+            "singular": "inverno",
+            "plural": "inverni"
+        },
+        {
+            "type": "noun",
+            "lemma": "albero",
+            "gender": "MASCULINE",
+            "singular": "albero",
+            "plural": "alberi"
+        },
+        {
+            "type": "noun",
+            "lemma": "fiore",
+            "gender": "MASCULINE",
+            "singular": "fiore",
+            "plural": "fiori"
+        },
+        {
+            "type": "noun",
+            "lemma": "cane",
+            "gender": "MASCULINE",
+            "singular": "cane",
+            "plural": "cani"
+        },
+        {
+            "type": "noun",
+            "lemma": "gatto",
+            "gender": "MASCULINE",
+            "singular": "gatto",
+            "plural": "gatti"
+        },
+        {
+            "type": "noun",
+            "lemma": "aiuto",
+            "gender": "MASCULINE",
+            "singular": "aiuto",
+            "plural": "aiuti"
+        },
+        {
+            "type": "adjective",
+            "lemma": "grande",
+            "masculineSingular": "grande",
+            "feminineSingular": "grande",
+            "masculinePlural": "grandi",
+            "femininePlural": "grandi"
+        },
+        {
+            "type": "adjective",
+            "lemma": "piccolo",
+            "masculineSingular": "piccolo",
+            "feminineSingular": "piccola",
+            "masculinePlural": "piccoli",
+            "femininePlural": "piccole"
+        },
+        {
+            "type": "adjective",
+            "lemma": "molto",
+            "masculineSingular": "molto",
+            "feminineSingular": "molta",
+            "masculinePlural": "molti",
+            "femininePlural": "molte"
+        },
+        {
+            "type": "adjective",
+            "lemma": "poco",
+            "masculineSingular": "poco",
+            "feminineSingular": "poca",
+            "masculinePlural": "pochi",
+            "femininePlural": "poche"
+        },
+        {
+            "type": "adjective",
+            "lemma": "tutto",
+            "masculineSingular": "tutto",
+            "feminineSingular": "tutta",
+            "masculinePlural": "tutti",
+            "femininePlural": "tutte"
+        },
+        {
+            "type": "adjective",
+            "lemma": "altro",
+            "masculineSingular": "altro",
+            "feminineSingular": "altra",
+            "masculinePlural": "altri",
+            "femininePlural": "altre"
+        },
+        {
+            "type": "adjective",
+            "lemma": "bello",
+            "masculineSingular": "bello",
+            "feminineSingular": "bella",
+            "masculinePlural": "belli",
+            "femininePlural": "belle"
+        },
+        {
+            "type": "adjective",
+            "lemma": "brutto",
+            "masculineSingular": "brutto",
+            "feminineSingular": "brutta",
+            "masculinePlural": "brutti",
+            "femininePlural": "brutte"
+        },
+        {
+            "type": "adjective",
+            "lemma": "buono",
+            "masculineSingular": "buono",
+            "feminineSingular": "buona",
+            "masculinePlural": "buoni",
+            "femininePlural": "buone"
+        },
+        {
+            "type": "adjective",
+            "lemma": "cattivo",
+            "masculineSingular": "cattivo",
+            "feminineSingular": "cattiva",
+            "masculinePlural": "cattivi",
+            "femininePlural": "cattive"
+        },
+        {
+            "type": "adjective",
+            "lemma": "nuovo",
+            "masculineSingular": "nuovo",
+            "feminineSingular": "nuova",
+            "masculinePlural": "nuovi",
+            "femininePlural": "nuove"
+        },
+        {
+            "type": "adjective",
+            "lemma": "vecchio",
+            "masculineSingular": "vecchio",
+            "feminineSingular": "vecchia",
+            "masculinePlural": "vecchi",
+            "femininePlural": "vecchie"
+        },
+        {
+            "type": "adjective",
+            "lemma": "pulito",
+            "masculineSingular": "pulito",
+            "feminineSingular": "pulita",
+            "masculinePlural": "puliti",
+            "femininePlural": "pulite"
+        },
+        {
+            "type": "adjective",
+            "lemma": "sporco",
+            "masculineSingular": "sporco",
+            "feminineSingular": "sporca",
+            "masculinePlural": "sporchi",
+            "femininePlural": "sporche"
+        },
+        {
+            "type": "adjective",
+            "lemma": "aperto",
+            "masculineSingular": "aperto",
+            "feminineSingular": "aperta",
+            "masculinePlural": "aperti",
+            "femininePlural": "aperte"
+        },
+        {
+            "type": "adjective",
+            "lemma": "chiuso",
+            "masculineSingular": "chiuso",
+            "feminineSingular": "chiusa",
+            "masculinePlural": "chiusi",
+            "femininePlural": "chiuse"
+        },
+        {
+            "type": "adjective",
+            "lemma": "veloce",
+            "masculineSingular": "veloce",
+            "feminineSingular": "veloce",
+            "masculinePlural": "veloci",
+            "femininePlural": "veloci"
+        },
+        {
+            "type": "adjective",
+            "lemma": "lento",
+            "masculineSingular": "lento",
+            "feminineSingular": "lenta",
+            "masculinePlural": "lenti",
+            "femininePlural": "lente"
+        },
+        {
+            "type": "adjective",
+            "lemma": "alto",
+            "masculineSingular": "alto",
+            "feminineSingular": "alta",
+            "masculinePlural": "alti",
+            "femininePlural": "alte"
+        },
+        {
+            "type": "adjective",
+            "lemma": "basso",
+            "masculineSingular": "basso",
+            "feminineSingular": "bassa",
+            "masculinePlural": "bassi",
+            "femininePlural": "basse"
+        },
+        {
+            "type": "adjective",
+            "lemma": "duro",
+            "masculineSingular": "duro",
+            "feminineSingular": "dura",
+            "masculinePlural": "duri",
+            "femininePlural": "dure"
+        },
+        {
+            "type": "adjective",
+            "lemma": "morbido",
+            "masculineSingular": "morbido",
+            "feminineSingular": "morbida",
+            "masculinePlural": "morbidi",
+            "femininePlural": "morbide"
+        },
+        {
+            "type": "adjective",
+            "lemma": "dolce",
+            "masculineSingular": "dolce",
+            "feminineSingular": "dolce",
+            "masculinePlural": "dolci",
+            "femininePlural": "dolci"
+        },
+        {
+            "type": "adjective",
+            "lemma": "salato",
+            "masculineSingular": "salato",
+            "feminineSingular": "salata",
+            "masculinePlural": "salati",
+            "femininePlural": "salate"
+        },
+        {
+            "type": "adjective",
+            "lemma": "pieno",
+            "masculineSingular": "pieno",
+            "feminineSingular": "piena",
+            "masculinePlural": "pieni",
+            "femininePlural": "piene"
+        },
+        {
+            "type": "adjective",
+            "lemma": "vuoto",
+            "masculineSingular": "vuoto",
+            "feminineSingular": "vuota",
+            "masculinePlural": "vuoti",
+            "femininePlural": "vuote"
+        },
+        {
+            "type": "adjective",
+            "lemma": "uguale",
+            "masculineSingular": "uguale",
+            "feminineSingular": "uguale",
+            "masculinePlural": "uguali",
+            "femininePlural": "uguali"
+        },
+        {
+            "type": "adjective",
+            "lemma": "diverso",
+            "masculineSingular": "diverso",
+            "feminineSingular": "diversa",
+            "masculinePlural": "diversi",
+            "femininePlural": "diverse"
+        },
+        {
+            "type": "adjective",
+            "lemma": "tuo",
+            "masculineSingular": "tuo",
+            "feminineSingular": "tua",
+            "masculinePlural": "tuo",
+            "femininePlural": "tue"
+        },
+        {
+            "type": "adjective",
+            "lemma": "bagnato",
+            "masculineSingular": "bagnato",
+            "feminineSingular": "bagnata",
+            "masculinePlural": "bagnati",
+            "femininePlural": "bagnate"
+        },
+        {
+            "type": "adjective",
+            "lemma": "rotto",
+            "masculineSingular": "rotto",
+            "feminineSingular": "rotta",
+            "masculinePlural": "rotti",
+            "femininePlural": "rotte"
+        },
+        {
+            "type": "adjective",
+            "lemma": "lungo",
+            "masculineSingular": "lungo",
+            "feminineSingular": "lunga",
+            "masculinePlural": "lunghi",
+            "femininePlural": "lunghe"
+        },
+        {
+            "type": "adjective",
+            "lemma": "corto",
+            "masculineSingular": "corto",
+            "feminineSingular": "corta",
+            "masculinePlural": "corti",
+            "femininePlural": "corte"
+        },
+        {
+            "type": "adjective",
+            "lemma": "rosso",
+            "masculineSingular": "rosso",
+            "feminineSingular": "rossa",
+            "masculinePlural": "rossi",
+            "femininePlural": "rosse"
+        },
+        {
+            "type": "adjective",
+            "lemma": "blu",
+            "masculineSingular": "blu",
+            "feminineSingular": "blu",
+            "masculinePlural": "blu",
+            "femininePlural": "blu"
+        },
+        {
+            "type": "adjective",
+            "lemma": "giallo",
+            "masculineSingular": "giallo",
+            "feminineSingular": "gialla",
+            "masculinePlural": "gialli",
+            "femininePlural": "gialle"
+        },
+        {
+            "type": "adjective",
+            "lemma": "verde",
+            "masculineSingular": "verde",
+            "feminineSingular": "verde",
+            "masculinePlural": "verdi",
+            "femininePlural": "verdi"
+        },
+        {
+            "type": "adjective",
+            "lemma": "nero",
+            "masculineSingular": "nero",
+            "feminineSingular": "nera",
+            "masculinePlural": "neri",
+            "femininePlural": "nere"
+        },
+        {
+            "type": "adjective",
+            "lemma": "bianco",
+            "masculineSingular": "bianco",
+            "feminineSingular": "bianca",
+            "masculinePlural": "bianchi",
+            "femininePlural": "bianche"
+        },
+        {
+            "type": "adjective",
+            "lemma": "arancione",
+            "masculineSingular": "arancione",
+            "feminineSingular": "arancione",
+            "masculinePlural": "arancioni",
+            "femininePlural": "arancioni"
+        },
+        {
+            "type": "adjective",
+            "lemma": "rosa",
+            "masculineSingular": "rosa",
+            "feminineSingular": "rosa",
+            "masculinePlural": "rosa",
+            "femininePlural": "rosa"
+        },
+        {
+            "type": "adjective",
+            "lemma": "viola",
+            "masculineSingular": "viola",
+            "feminineSingular": "viola",
+            "masculinePlural": "viola",
+            "femininePlural": "viola"
+        },
+        {
+            "type": "adjective",
+            "lemma": "marrone",
+            "masculineSingular": "marrone",
+            "feminineSingular": "marrone",
+            "masculinePlural": "marroni",
+            "femininePlural": "marroni"
+        },
+        {
+            "type": "noun",
+            "lemma": "colore",
+            "gender": "MASCULINE",
+            "singular": "colore",
+            "plural": "colori"
+        },
+        {
+            "type": "noun",
+            "lemma": "numero",
+            "gender": "MASCULINE",
+            "singular": "numero",
+            "plural": "numeri"
+        },
+        {
+            "type": "noun",
+            "lemma": "scuola",
+            "gender": "FEMININE",
+            "singular": "scuola",
+            "plural": "scuole"
+        },
+        {
+            "type": "noun",
+            "lemma": "caffè",
+            "gender": "MASCULINE",
+            "singular": "caffè",
+            "plural": "caffè"
+        }
+    ],
+    "unsupported": [
+        "adesso",
+        "ancora",
+        "bene",
+        "bolle",
+        "capelli",
+        "carta igienica",
+        "cartoni animati",
+        "cereali",
+        "chiavi",
+        "cinque",
+        "costruzioni",
+        "dieci",
+        "domani",
+        "due",
+        "fare la cacca",
+        "fare pipì",
+        "forbici",
+        "ieri",
+        "lavare i denti",
+        "logopedista",
+        "là",
+        "mal di pancia",
+        "mal di testa",
+        "male",
+        "mio",
+        "niente",
+        "non",
+        "nove",
+        "occhiali",
+        "oggi",
+        "otto",
+        "pastelli",
+        "patatine fritte",
+        "più",
+        "prima",
+        "quattro",
+        "quello",
+        "questo",
+        "qui",
+        "scarpe",
+        "sei",
+        "sette",
+        "tablet",
+        "tre",
+        "uno"
+    ]
+}

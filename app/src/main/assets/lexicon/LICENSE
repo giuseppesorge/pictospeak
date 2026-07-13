@@ -1,0 +1,10 @@
+The lexicon data in this directory is DERIVED from Morph-it! (Eros Zanchetta and
+Marco Baroni, "Morph-it! A free corpus-based morphological resource for the Italian
+language") and is NOT covered by the repository's Apache-2.0 code license.
+
+Morph-it! is dual-licensed under the Creative Commons Attribution-ShareAlike 2.0
+license and the GNU Lesser General Public License (LGPL). This project uses it
+under the LGPL option (see docs/adr/0006 for the licensing layering).
+
+The derived lexicon files here are therefore distributed under the LGPL.
+Derivation is fully reproducible: see PROVENANCE.md and tools/lexicon-build.

@@ -23,3 +23,4 @@ include(":llm")
 include(":benchmark")
 // Offline content pipeline CLIs — run manually per release, never shipped (tools/README.md).
 include(":tools:arasaac-fetch")
+include(":tools:lexicon-build")

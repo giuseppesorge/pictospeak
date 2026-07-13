@@ -1,0 +1,20 @@
+lemma,type,f1,f2,f3,f4
+# Hand-curated patches for Morph-it! data gaps and variant-form selection (each line
+# documents WHY). Types:
+#   adjective: f1=masc.sing f2=fem.sing f3=masc.plur f4=fem.plur (replaces the whole entry)
+#   verb-form: f1=PERSON f2=form (patches one present-indicative cell; the form must still
+#              exist in Morph-it! for that lemma — the tool verifies it)
+# triste: Morph-it! 0.48 tags the singular as ADJ:pos+f+p (data bug) and lacks m+s/f+s rows.
+triste,adjective,triste,triste,tristi,tristi
+# marrone: only present as NOUN-M in Morph-it!; as a color adjective it is two-form.
+marrone,adjective,marrone,marrone,marroni,marroni
+# essere: Morph-it! lists both "è" and "é"; only "è" is correct Italian.
+essere,verb-form,THIRD_SINGULAR,è,
+# dovere: "debbono" is a dated variant; modern standard is "devono".
+dovere,verb-form,THIRD_PLURAL,devono,
+# dare: modern standard spells "do" and "dai" without accents ("dà" keeps it).
+dare,verb-form,FIRST_SINGULAR,do,
+dare,verb-form,SECOND_SINGULAR,dai,
+# sedersi: standard 1st/2nd plural are "sediamo"/"sedete", not the diphthongized variants.
+sedersi,verb-form,FIRST_PLURAL,sediamo,
+sedersi,verb-form,SECOND_PLURAL,sedete,
