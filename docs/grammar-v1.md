@@ -19,40 +19,41 @@ Universal rules (every language):
 - Golden-file test corpora live in `nlg/src/test/resources/golden/{lang}/`; goldens change
   only with linguistic justification in the PR.
 
-## Italian (`it`) — v1 scope
-
-Included:
-
-1. **Presente indicativo**, 6 persons; -are/-ere/-ire conjugations incl. -isc- verbs;
-   irregular presente forms from the lexicon.
-2. **Modal + infinitive**: volere/potere/dovere + infinito
-   ("io volere mangiare pizza" → "io voglio mangiare la pizza").
-3. **Passato prossimo** with per-verb auxiliary (essere/avere) as lexicon data and
-   participle agreement under essere. (The auxiliary is famously not rule-derivable:
-   "è successo", never "ha successo".)
-4. **Articles** (definite/indefinite) with phonological rules: il/lo/l'/la/i/gli/le,
-   un/uno/una/un'; lo/gli before s+consonant, z, gn, ps; elision before vowels.
-5. **Preposizioni articolate** for di/a/da/in/su (per/tra/fra never contract).
-6. **Gender/number agreement** noun ↔ adjective.
-7. **Negation**: pre-verbal "non".
-8. Sentence patterns: S-V, S-V-O(±Adj), S-Modal-Inf-O, negated variants, passato-prossimo
-   variants, social-phrase passthrough (ciao/grazie/aiuto…).
-
-Explicitly excluded (v1): clitics, congiuntivo, passives, passato remoto, imperativo,
-questions.
-
-Lexicon entry (Italian): lemma, POS, gender, singular/plural, verb class, auxiliary,
-past participle, irregular presente forms. Derived offline from Morph-it! (LGPL option)
-intersected with a curated core vocabulary (`tools/core-vocabulary.csv`).
+Canonical example (English pack): "I want eat pizza" → "I want to eat pizza".
 
 ## English (`en`) — v1 scope
 
 Included: present simple (3rd-person -s), modal want/can/must + to-infinitive, simple past
 (irregular forms as lexicon data), articles a/an/the (phonological a/an rule),
 plural -s/-es with irregulars from the lexicon, negation with do-support in the fixed
-patterns above, the same sentence patterns as Italian.
+patterns listed below, sentence patterns: S-V, S-V-O(±Adj), S-Modal-Inf-O, negated and
+past variants, social-phrase passthrough.
 
 Explicitly excluded (v1): progressive/perfect aspects, questions, passives, phrasal verbs.
+
+## Italian (`it`) — v1 scope
+
+Included:
+
+1. **Presente indicativo**, 6 persons; -are/-ere/-ire conjugations incl. -isc- verbs;
+   irregular presente forms from the lexicon.
+2. **Modal + infinitive**: volere/potere/dovere + infinitive.
+3. **Passato prossimo** with per-verb auxiliary (essere/avere) as lexicon data and
+   participle agreement under essere. (The auxiliary is famously not rule-derivable:
+   "è successo", never "ha successo".)
+4. **Articles** (definite/indefinite) with phonological rules: il/lo/l'/la/i/gli/le,
+   un/uno/una/un'; lo/gli before s+consonant, z, gn, ps; elision before vowels.
+5. **Articulated prepositions** for di/a/da/in/su (per/tra/fra never contract).
+6. **Gender/number agreement** noun ↔ adjective.
+7. **Negation**: pre-verbal "non".
+8. Same sentence-pattern set as English.
+
+Explicitly excluded (v1): clitics, subjunctive, passives, passato remoto, imperative,
+questions.
+
+Lexicon entry (Italian): lemma, POS, gender, singular/plural, verb class, auxiliary,
+past participle, irregular present forms. Derived offline from Morph-it! (LGPL option)
+intersected with a curated core vocabulary (`tools/core-vocabulary.csv`).
 
 ## Adding a language
 

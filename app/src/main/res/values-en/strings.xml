@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">PictoSpeak</string>
-    <string name="board_proposal_placeholder">Tap pictograms to compose a sentence</string>
-    <string name="board_clear">Clear</string>
-    <string name="board_backspace">Backspace</string>
-</resources>

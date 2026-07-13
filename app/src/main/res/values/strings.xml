@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Default string resources. Per-language content lives in LanguagePacks (docs/language-packs.md). -->
+<!-- Default string resources (English fallback). Per-language UI strings live in
+     values-{lang}/; per-language content lives in LanguagePacks (docs/language-packs.md). -->
 <resources>
     <string name="app_name">PictoSpeak</string>
-    <string name="board_proposal_placeholder">Tocca i pittogrammi per comporre una frase</string>
-    <string name="board_clear">Cancella</string>
-    <string name="board_backspace">Indietro</string>
+    <string name="board_proposal_placeholder">Tap pictograms to compose a sentence</string>
+    <string name="board_clear">Clear</string>
+    <string name="board_backspace">Backspace</string>
 </resources>

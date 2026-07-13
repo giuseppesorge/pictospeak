@@ -11,9 +11,9 @@ speaks it with the native Android text-to-speech voice.
 ## Why another AAC app
 
 - **Grammar, not word salad.** PictoSpeak turns a telegraphic pictogram sequence
-  ("io volere mangiare pizza") into a grammatical sentence ("io voglio mangiare la pizza")
-  with a rule-based engine that runs entirely on the device. No surveyed app does this
-  offline on Android.
+  ("I want eat pizza") into a grammatical sentence ("I want to eat pizza") with a
+  rule-based engine that runs entirely on the device — in every supported language.
+  No surveyed app does this offline on Android.
 - **100% offline, forever free.** No backend, no account, no analytics, no ads, no
   in-app purchases, zero recurring costs. Privacy by design: nothing ever leaves the device.
 - **Made for cheap hardware.** The performance target is a ~2 GB-RAM Android 10 tablet —

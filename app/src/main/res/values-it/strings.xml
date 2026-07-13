@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PictoSpeak</string>
+    <string name="board_proposal_placeholder">Tocca i pittogrammi per comporre una frase</string>
+    <string name="board_clear">Cancella</string>
+    <string name="board_backspace">Indietro</string>
+</resources>
