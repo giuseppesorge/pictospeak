@@ -71,3 +71,103 @@ imported ∧ license accepted ∧ opt-in. Otherwise `RefinerFactory.create` retu
 - The app already de-duplicates: if the LLM merely echoes the template draft, no extra
   candidate is shown (`LlmRewrite.cleanResponse`). Preference is only meaningful on rows
   where the LLM actually differs.
+
+## Fine-tune walkthrough (verified against Google AI Edge docs, 2026-07)
+
+Two phases. **Do Phase 0 first** — it proves the whole on-device path works before you spend
+any time training. Every command below was checked against the LiteRT-LM "convert-and-run"
+tutorial and the litert-community model card; pin/verify tool versions as they move (LiteRT-LM
+is pre-1.0).
+
+Prerequisites: a Hugging Face account, and **accept the Gemma Terms of Use** at
+`huggingface.co/google/gemma-3-270m-it` (the model is gated). Gemma weights carry flow-down
+obligations — never commit or rehost them (llm/NOTICE-models.md).
+
+### Phase 0 — validate the pipeline with the pre-converted baseline (~30 min, no training)
+
+1. Desktop smoke test (downloads the ready-made `.litertlm`):
+   ```bash
+   pip install -U litert-lm
+   huggingface-cli login                      # paste your HF token
+   litert-lm run --from-huggingface-repo=litert-community/gemma-3-270m-it \
+     --prompt="Rewrite into one natural Italian sentence: io volere mangiare pizza"
+   ```
+2. Find the downloaded file and copy it onto the phone, then import it in the app:
+   ```bash
+   # the model lands in the HF cache; locate the .litertlm it just ran
+   find ~/.cache/huggingface -name '*.litertlm' | head
+   adb push <that-file>.litertlm /sdcard/Download/gemma3-270m.litertlm
+   ```
+   On the phone (play flavor): Settings → "AI assistant" → Import model → pick it in Download
+   → accept the license → enable. Compose a sentence and confirm a labeled "AI suggestion"
+   candidate appears. **This validates :llm/LiteRtSentenceRefiner + ModelStore + DeviceGate on
+   real hardware.** If the raw baseline's Italian is weak, that's expected — Phase 1 fixes it.
+
+### Phase 1 — QLoRA fine-tune for the pictogram→sentence task
+
+1. **Build the training data** (pure Python, local):
+   ```bash
+   cd tools/llm-lab && python3 build_training_data.py     # → data/train.jsonl, data/val.jsonl
+   ```
+   The seed set is small (~45 rows); **augment it** with more real board compositions before a
+   serious run. Upload `train.jsonl` + `val.jsonl` to the Colab session.
+
+2. **Fine-tune on a free Colab T4** (paste into cells; TRL's API moves — adjust arg names to
+   your installed version):
+   ```python
+   !pip install -q -U transformers trl peft bitsandbytes accelerate datasets
+   from huggingface_hub import login; login()            # HF token; Gemma ToU accepted
+   import torch
+   from datasets import load_dataset
+   from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+   from peft import LoraConfig, PeftModel
+   from trl import SFTTrainer, SFTConfig
+
+   MODEL = "google/gemma-3-270m-it"
+   tok = AutoTokenizer.from_pretrained(MODEL)
+   bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
+       bnb_4bit_compute_dtype=torch.bfloat16, bnb_4bit_use_double_quant=True)
+   model = AutoModelForCausalLM.from_pretrained(MODEL, quantization_config=bnb,
+       device_map="auto", attn_implementation="eager")
+
+   ds = load_dataset("json", data_files={"train":"train.jsonl","validation":"val.jsonl"})
+   peft = LoraConfig(r=16, lora_alpha=32, lora_dropout=0.05, bias="none", task_type="CAUSAL_LM",
+       target_modules=["q_proj","k_proj","v_proj","o_proj","gate_proj","up_proj","down_proj"])
+   cfg = SFTConfig(output_dir="out", num_train_epochs=3, per_device_train_batch_size=8,
+       gradient_accumulation_steps=2, learning_rate=2e-4, lr_scheduler_type="cosine",
+       warmup_ratio=0.03, logging_steps=10, bf16=True, max_length=256,
+       completion_only_loss=True, report_to="none")   # train only on the completion
+   SFTTrainer(model=model, args=cfg, train_dataset=ds["train"],
+       eval_dataset=ds["validation"], peft_config=peft, processing_class=tok).train()
+   ```
+
+3. **Merge the adapter and push to HF** (export needs a plain HF model, not a bare adapter):
+   ```python
+   base = AutoModelForCausalLM.from_pretrained(MODEL, torch_dtype=torch.bfloat16)
+   merged = PeftModel.from_pretrained(base, "out").merge_and_unload()
+   merged.save_pretrained("gemma3-270m-pictospeak"); tok.save_pretrained("gemma3-270m-pictospeak")
+   merged.push_to_hub("YOUR-USER/gemma3-270m-pictospeak", private=True)
+   tok.push_to_hub("YOUR-USER/gemma3-270m-pictospeak", private=True)
+   ```
+
+4. **Convert to `.litertlm`** (same tool as Phase 0; check `--help` for q8/int4 quant flags):
+   ```bash
+   !uv tool install litert-torch-nightly litert-lm
+   !litert-torch export_hf --model=YOUR-USER/gemma3-270m-pictospeak \
+       --output_dir=/content/out-litertlm --externalize_embedder
+   !litert-lm run /content/out-litertlm/model.litertlm --prompt="Words: io andare casa\nDraft: io andare casa\nSentence:"
+   ```
+   Download `/content/out-litertlm/model.litertlm`.
+
+5. **Import + measure on real hardware** (the actual M6 deliverable):
+   ```bash
+   adb push model.litertlm /sdcard/Download/gemma3-270m-pictospeak.litertlm
+   ```
+   Re-import in the app, then run the go/no-go protocol per tier (floor tablet + a ≥4 GB phone)
+   and record the numbers in `docs/llm-experiment.md` → Results. A documented **no-go on 2 GB**
+   is a valid result.
+
+Notes: the training Draft is the telegraphic word sequence (worst-case), so the model learns to
+always produce a grammatical sentence. For higher fidelity, regenerate the Draft field from the
+real template engine's output and retrain. The app de-duplicates: if the model just echoes the
+template draft, no extra candidate is shown (LlmRewrite.cleanResponse).

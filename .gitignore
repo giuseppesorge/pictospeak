@@ -26,3 +26,6 @@ keystore.properties
 
 # Claude Code runtime artifacts
 .claude/
+
+# Generated LLM training data (regenerate with build_training_data.py)
+tools/llm-lab/data/
