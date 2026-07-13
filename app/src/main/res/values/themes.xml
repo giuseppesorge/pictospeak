@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Base window theme (light). The Compose UI supplies the real Material 3 colors; this only
+     sets the pre-Compose window background so there is no light flash before first frame.
+     The dark variant lives in values-night/. Edge-to-edge system bars are configured at
+     runtime (enableEdgeToEdge). -->
+<resources>
+    <style name="Theme.PictoSpeak" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+</resources>

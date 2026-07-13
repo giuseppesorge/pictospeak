@@ -46,6 +46,7 @@ import coil3.compose.AsyncImage
 import io.github.giuseppesorge.pictospeak.R
 import io.github.giuseppesorge.pictospeak.nlg.api.PictogramToken
 import io.github.giuseppesorge.pictospeak.speech.TtsReadiness
+import io.github.giuseppesorge.pictospeak.ui.theme.OnPictogram
 
 /**
  * The board: selection strip + proposal bar (with the confirm-to-speak button, the app's
@@ -160,6 +161,7 @@ private fun SelectionStrip(selection: List<PictogramToken>) {
         items(selection) { token ->
             Surface(
                 color = Color(FitzgeraldSlot.fromPos(token.pos).argb),
+                contentColor = OnPictogram,
                 shape = MaterialTheme.shapes.small,
             ) {
                 Text(
@@ -302,6 +304,8 @@ private fun PictoCell(
         Text(
             token.label,
             style = MaterialTheme.typography.labelLarge,
+            // Fixed dark text: the Fitzgerald cell color is bright in both themes.
+            color = OnPictogram,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )
@@ -313,11 +317,12 @@ private fun FolderCell(
     folder: BoardCellUi.Folder,
     onFolderTapped: (String) -> Unit,
 ) {
+    // Folders are chrome, not content — they follow the theme (adapt to dark mode).
     Column(
         modifier =
             Modifier
-                .background(FOLDER_BACKGROUND)
-                .border(2.dp, FOLDER_BORDER)
+                .background(MaterialTheme.colorScheme.surfaceContainerHighest)
+                .border(2.dp, MaterialTheme.colorScheme.outlineVariant)
                 .heightIn(min = 48.dp)
                 .semantics(mergeDescendants = true) {
                     role = Role.Button
@@ -338,6 +343,7 @@ private fun FolderCell(
         Text(
             "📁 ${folder.name}",
             style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.onSurface,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )
@@ -350,8 +356,8 @@ private fun BackCell(onBackToHome: () -> Unit) {
     Column(
         modifier =
             Modifier
-                .background(FOLDER_BACKGROUND)
-                .border(2.dp, FOLDER_BORDER)
+                .background(MaterialTheme.colorScheme.surfaceContainerHighest)
+                .border(2.dp, MaterialTheme.colorScheme.outlineVariant)
                 .heightIn(min = 48.dp)
                 .semantics(mergeDescendants = true) {
                     role = Role.Button
@@ -363,12 +369,10 @@ private fun BackCell(onBackToHome: () -> Unit) {
         Box(modifier = Modifier.size(88.dp), contentAlignment = Alignment.Center) {
             Text("⬅️", style = MaterialTheme.typography.displaySmall)
         }
-        Text(stringResource(R.string.board_back_home), style = MaterialTheme.typography.labelLarge)
+        Text(
+            stringResource(R.string.board_back_home),
+            style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.onSurface,
+        )
     }
 }
-
-@Suppress("MagicNumber") // single documented folder palette (docs/ui-conventions.md)
-private val FOLDER_BACKGROUND = Color(0xFFEDEDED)
-
-@Suppress("MagicNumber")
-private val FOLDER_BORDER = Color(0xFFBDBDBD)

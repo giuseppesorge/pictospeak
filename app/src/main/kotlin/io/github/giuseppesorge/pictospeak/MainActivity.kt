@@ -6,7 +6,6 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -25,6 +24,7 @@ import io.github.giuseppesorge.pictospeak.ui.board.BoardViewModel
 import io.github.giuseppesorge.pictospeak.ui.settings.LlmSettingsState
 import io.github.giuseppesorge.pictospeak.ui.settings.SettingsScreen
 import io.github.giuseppesorge.pictospeak.ui.setup.TtsSetupScreen
+import io.github.giuseppesorge.pictospeak.ui.theme.PictoSpeakTheme
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.util.Locale
@@ -51,7 +51,7 @@ class MainActivity : ComponentActivity() {
         // own content (WindowInsets.safeDrawing) so nothing hides under the status/nav bars.
         enableEdgeToEdge()
         val container = (application as AacApplication).container
-        setContent { MaterialTheme { App(container) } }
+        setContent { PictoSpeakTheme { App(container) } }
     }
 
     override fun onTrimMemory(level: Int) {
